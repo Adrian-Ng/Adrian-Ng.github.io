@@ -5,14 +5,14 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # `jekyll serve`. If you change this file, please restart the server process.
 
-minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "sunrise" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
 title                    : "Adrian Ng's Notes"
 title_separator          : "-"
 name                     : "Adrian Ng"
-description              : "An amazing website."
+description              : " space for my notes"
 url                      : "http://adrian.ng" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "Adrian-Ng/Adrian-Ng.github.io"# GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -90,10 +90,10 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "Adrian Ng"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an amazing person."
-  location         : "Somewhere"
+  bio              : "I am a data person."
+  location         : "London"
   email            :
   uri              :
   home             : # null (default), "absolute or relative url to link to author home"
