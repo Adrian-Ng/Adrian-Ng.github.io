@@ -8,7 +8,7 @@
 minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "en-US"
+locale                   : "en-UK"
 title                    : "Adrian Ng's Notes"
 title_separator          : "-"
 name                     : "Adrian Ng"
@@ -92,7 +92,7 @@ analytics:
 author:
   name             : "Adrian Ng"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am a data person."
+  bio              : "MSc Data Science & Analytics"
   location         : "London"
   email            :
   uri              :
