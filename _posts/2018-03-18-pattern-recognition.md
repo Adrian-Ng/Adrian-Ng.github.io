@@ -8,4 +8,4 @@ It just so happens that my surname and Nigeria's top level domain (TLD) have som
 
 The purpose of this page is to have a handy place for my reference notes on Data Science and coding in general. The primary audience is myself, but if someone stumbles upon this place and finds something useful, then great!
 
-Adrian
+Adrian.
