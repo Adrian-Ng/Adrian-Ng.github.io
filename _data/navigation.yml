@@ -5,9 +5,9 @@ main:
 	- title: "About"
 		url: http://adrian.ng/about/	
 	- title: "Notes"
-		url: http://adrian.ng/notes/
-	- title "Posts"
-		url: http://adrian.ng/posts/
+		url: /notes/
+#	- title "Posts"
+#		url: http://adrian.ng/posts/
  # - title: "Sample Posts"
   #   url: /year-archive/
   # - title: "Sample Collections"
