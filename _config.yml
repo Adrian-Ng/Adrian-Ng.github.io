@@ -271,3 +271,18 @@ defaults:
     values:
       layout: single
       author_profile: true
+
+collections:
+  SQL:
+    output: true
+    permalink: /:collection/:path/
+
+defaults:
+  # _sql
+  - scope:
+      path: ""
+      type: SQL
+    values:
+      layout: single
+      author_profile: false
+      share: true

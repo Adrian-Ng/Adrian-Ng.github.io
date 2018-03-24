@@ -2,12 +2,14 @@
 main:
 #  - title: "Quick-Start Guide"
  #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-#- title: "About"
-#		url: http://adrian.ng/about/	
-   - title: "Notes"
-     url: /notes/
-#	- title "Posts"
-#		url: http://adrian.ng/posts/
+   - title: "About"
+     url: /about/	
+   - title: "Coding"
+     url: /coding/
+   - title: "Data Science"
+     url: /dataScience/
+#   - title "Posts"
+ #    url: http://adrian.ng/posts/
  # - title: "Sample Posts"
   #   url: /year-archive/
   # - title: "Sample Collections"
