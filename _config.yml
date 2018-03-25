@@ -278,7 +278,7 @@ collections:
     permalink: /:collection/:path/
 
 defaults:
-  # _sql
+  # _SQL
   - scope:
       path: ""
       type: SQL

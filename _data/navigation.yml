@@ -6,6 +6,8 @@ main:
      url: /about/	
    - title: "Notes"
      url: /notes/
+   - title: "SQL"
+     url: http://adrian.ng/SQL/Basic-DDL/
 #	- title "Posts"
 #		url: http://adrian.ng/posts/
  # - title: "Sample Posts"
