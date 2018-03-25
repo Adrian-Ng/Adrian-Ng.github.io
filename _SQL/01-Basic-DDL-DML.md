@@ -6,7 +6,8 @@ toc: true
 ---
 
 Structured Query Language (SQL) is an easy-to-learn, high level language that you'll find being used pretty much wherever you come across relational databases.
-It's used in essentially two ways: building databases and retrieving data from these databases.
+It is used in essentially two ways: building databases and retrieving data from these databases.
+
 That is, we can divide the language into two broad categories: Data Definition Language (DDL) and Data Manipulation Language (DML).
 Here, we will take a quick look at some basic examples of DDL and DML.
 
@@ -22,7 +23,7 @@ Suppose I'm creating a database for a website that allows users to sign up and l
 Let's start by creating a really simple table: _Songs_. 
 This table would contain a record for every single song in our database.
 
-The schema (=structure) of _Song_ would be:
+The schema (or structure) of _Song_ would be:
 
 Column|Data Type
 ---|---
@@ -30,7 +31,7 @@ ID|int
 Name|nvarchar(100)
 Artist|nvarchar(100)
 
-And if we were to try to store data in _Songs_, it would look something like:
+And if we were to look at the data in _Songs_, it would look something like:
 
 ID|Name|Artist
 ---|---|---
@@ -49,8 +50,9 @@ CREATE TABLE Songs (
 
 You can see we have defined names for its columns and their data types.
 
-For ID, we have also defined the IDENTITY property as starting at 1 _and_ incrementing by 1.
-And by adding PRIMARY KEY, we constrain ID such that each value must be unique and not contain any NULL values.
+For ID, we have also defined:
+* the IDENTITY property: values of ID start at 1 _and_ increment by 1.
+* the PRIMARY KEY constraint: each value must be unique and not contain any NULL values.
 
 
 ### ALTER
