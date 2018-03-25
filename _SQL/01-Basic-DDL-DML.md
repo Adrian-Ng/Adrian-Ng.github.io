@@ -174,7 +174,6 @@ ID|Name|Duration
 2|Billie Jean|293
 3|The Winner Takes It All|295
 
-#### ORDER BY Column
 
 Let's be more specific and write a query that returns the name of the song with the longest duration.
 
@@ -193,7 +192,6 @@ Our result:
 |---|
 |The Winner Takes It All|
 
-#### ORDER BY Length of String
 
 Incidentally, we would get the same result if we were to query the name of the song with the longest name!
 But let's just instead write a query that returns the name of the song with the _shortest_ name and the number of characters in its name.
@@ -209,9 +207,9 @@ ORDER BY
 ```
 
 That is:
-|Name|numChar
-|---|---|
-|Our House|9|
+Name|numChar
+---|---
+Our House|9
 
 
 
