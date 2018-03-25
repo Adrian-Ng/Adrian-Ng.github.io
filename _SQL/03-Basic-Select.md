@@ -15,6 +15,7 @@ SELECT
 	*
 FROM dbo.Songs;
 ```
+
 ID|Name|Duration
 ---|---|---
 1|Under Pressure|249
@@ -22,6 +23,8 @@ ID|Name|Duration
 3|The Winner Takes It All|295
 
 ### ORDER BY
+
+Let's combine TOP with an ORDER By to get the song with the longest duration.
 
 ```sql
 SELECT
