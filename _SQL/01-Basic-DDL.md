@@ -25,15 +25,15 @@ ID|Name|Artist
 1|The Best|Tina Turner
 2|Eternal Flame|The Bangles
 3|Time After Time|Cyndi Lauper
-...|...|..
+...|...|...
 
 This is how you create this table.
 ```sql
-CREATE TABLE dbo.Song 
-(	ID int IDENTITY(1,1) PRIMARY KEY
-,	Name varchar(100)
-,	Artist varchar(100)
-	);
+	CREATE TABLE dbo.Song (
+		ID int IDENTITY(1,1) PRIMARY KEY
+	,	Name varchar(100)
+	,	Artist varchar(100)
+		);
 ```
 
 ##ALTER
@@ -43,21 +43,23 @@ So we want to drop it from our table.
 This is how you drop a column.
 
 ```sql
-ALTER TABLE dbo.Song
-DROP COLUMN Artist;
+	ALTER TABLE dbo.Song
+	DROP COLUMN Artist;
 ```
 
-But we've also realised that it would be helpful if we could store information regarding the duration (in seconds) of each song. 
-So we will simply add another column to our table:
+But we've also realised that it would be helpful if we could store the duration of each song in this table instead.
+We will measure the duration in seconds and will store this as an integer.
+This is how we add another column to our table:
 
 ```sql
-ALTER TABLE dbo.Song
-ADD Duration int;
+	ALTER TABLE dbo.Song
+	ADD Duration int;
 ```
 
 Now our table looks like:
 
 ID|Name|Duration
+---|---|---
 1|The Best|330
 2|Eternal Flame|238
 3|Time After Time|241
@@ -68,7 +70,7 @@ ID|Name|Duration
 To remove this table from our database, we write:
 
 ```sql
-DROP TABLE dbo.Song;
+	DROP TABLE dbo.Song;
 ```
 
 ##TRUNCATE
@@ -76,7 +78,7 @@ DROP TABLE dbo.Song;
 Say we want to drop and immediately recreate the table, we write:
 
 ```sql
-TRUNCATE TABLE dbo.Song;
+	TRUNCATE TABLE dbo.Song;
 ```
 
 Note: This performs an operation that produces an outcome very similar to DELETE. The key difference is that TRUNCATE is DDL, whereas DELETE is Data Manipulation Language (DML).
