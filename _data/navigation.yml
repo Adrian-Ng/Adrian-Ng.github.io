@@ -16,3 +16,19 @@ main:
   #   url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
+
+
+# SQL links
+SQL:
+   - title: SQL Basics
+     children:
+     - title: "DDL and DML"
+       url: /SQL/Basics-DDL-DML/
+     - title: "Joins"
+       url: /SQL/Basics-Joins/
+     - title: "Select Statements"
+       url: /SQL/Basics-Select/
+     - title: "Group By"
+       url: /SQL/Basics-Group-By/
+
+    - title: SQL Advanced
