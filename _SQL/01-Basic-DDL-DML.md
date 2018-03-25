@@ -2,7 +2,7 @@
 title: "SQL Basics: DDL & DML"
 permalink: /SQL/Basics-DDL-DML/
 excerpt: "A quick look at DDL and DML for SQL."
-#toc: true
+toc: true
 ---
 
 Structured Query Language (SQL) is an easy-to-learn, high level language that you'll find being used pretty much wherever you come across relational databases.
@@ -27,8 +27,8 @@ The schema (=structure) of _Song_ would be:
 Column|Data Type
 ---|---
 ID|int
-Name|varchar(100)
-Artist| varchar(100)
+Name|nvarchar(100)
+Artist|nvarchar(100)
 
 And if we were to try to store data in _Songs_, it would look something like:
 
@@ -43,18 +43,20 @@ This is how you create this table.
 ```sql
 CREATE TABLE Songs (
 	ID	int IDENTITY(1,1) PRIMARY KEY
-,	Name	varchar(100)
-,	Artist	varchar(100));
+,	Name	nvarchar(100)
+,	Artist	nvarchar(100));
 ```
 
-When we create a table, we generally define names for its columns and their data types.
-Here we have also defined the IDENTITY property for ID as starting at 1 and incrementing by 1.
-And by adding PRIMARY KEY, we have also defined a constraint on ID such that each value of ID must be unique and not contain any NULL values.
+You can see we have defined names for its columns and their data types.
+
+For ID, we have also defined the IDENTITY property as starting at 1 _and_ incrementing by 1.
+And by adding PRIMARY KEY, we constrain ID such that each value must be unique and not contain any NULL values.
 
 
 ### ALTER
 
 Now say we've decided that we don't like having the _Artist_ field included in _Songs_. 
+Artists should ideally have their own table.
 So we want to drop it from our table. 
 This is how you drop a column.
 
@@ -72,14 +74,13 @@ ALTER TABLE Songs
 ADD Duration int;
 ```
 
-Now our table looks like:
+Now our the schema of our table looks like:
 
-ID|Name|Duration
----|---|---
-1|Under Pressure|249
-2|Billie Jean|293
-3|The Winner Takes It All|295
-...|...|...
+Column|Data type
+---|---
+ID|int
+Name|nvarchar(100)
+Duration|int
 
 ### DROP
 
