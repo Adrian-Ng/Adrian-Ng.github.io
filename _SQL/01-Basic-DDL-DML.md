@@ -89,7 +89,7 @@ Duration|int
 To remove this table from our database, we write:
 
 ```sql
-DROP TABLE dbo.Song;
+DROP TABLE Song;
 ```
 
 ### TRUNCATE
@@ -97,7 +97,7 @@ DROP TABLE dbo.Song;
 Say we want to drop and immediately recreate the table, we write:
 
 ```sql
-TRUNCATE TABLE dbo.Song;
+TRUNCATE TABLE Song;
 ```
 
 Note: This performs an operation that produces an outcome very similar to a DELETE statement (details below). 
@@ -116,14 +116,11 @@ Our first example is actually neither of the above!
 ### INSERT INTO
 
 Recall our _Songs_ table.
-We created the table. 
-But it doesn't contain any data.
-That's because we didn't put any data in it!
-
+Let us now put some data in there:
 
 
 ```sql
-INSERT INTO dbo.Songs
+INSERT INTO Songs
 VALUES
 	('Under Pressure','249')
 ,	('Billie Jean','293')
@@ -132,14 +129,38 @@ VALUES
 ,	('Take On Me','225')
 ```
 
+### UPDATE
+
+With UPDATE statements, we can change the values in our table to something else.
+We can be as blunt or as deft as we need to be.
+We can change every value in a column or just a subset of values or simply a single value.
+
+This is how we change the name of one song in our table:
+
+```sql
+UPDATE Songs
+SET 'Thriller'
+WHERE Name = 'Billie Jean';
+```
+
+As such, we have now renamed _Billie Jean_ to _Thriller_.
+
+### DELETE
+
+Suppose it turns out we're not allowed to have any Thriller in our database. 
+Therefore, we have to delete it from _Songs_.
+
+```sql
+DELETE Songs
+WHERE Name = 'Thriller';
+```
+
 ### SELECT
 
 The SELECT statement is our bread and butter in the SQL world (ed: why is it not at the top of this page then?). 
-It's our gateway to the data. Without it, the database would be useless. Data would just sit there, not being looked at.
+Without it we would not be able to look at our data.
 
-#### *
-
-To start off with, let's select some data from dbo.Songs.
+Let's retrieve all rows of data from Songs.
 
 ```sql
 SELECT
@@ -150,66 +171,12 @@ FROM dbo.Songs;
 ID|Name|Duration
 ---|---|---
 1|Under Pressure|249
-2|Billie Jean|293
 3|The Winner Takes It All|295
 4|Our House|203
 5|Take On Me|225
 
-#### TOP
+Of course, _Thriller_ is no longer there!
 
-We can even limit our query to return only a specific number of results.
-
-```sql
-SELECT 
-	TOP 3
-	*
-FROM dbo.Songs;
-```
-
-Which would return the top three rows by ID:
-
-ID|Name|Duration
----|---|---
-1|Under Pressure|249
-2|Billie Jean|293
-3|The Winner Takes It All|295
-
-
-Let's be more specific and write a query that returns the name of the song with the longest duration.
-
-```sql
-SELECT
-	TOP 1
-	Name
-FROM dbo.Songs
-ORDER BY 
-	Duration DESC;
-```
-
-Our result:
-
-|Name|
-|---|
-|The Winner Takes It All|
-
-
-Incidentally, we would get the same result if we were to query the name of the song with the longest name!
-But let's just instead write a query that returns the name of the song with the _shortest_ name and the number of characters in its name.
-
-```sql
-SELECT
-	TOP 1
-	Name
-,	LEN(Name) AS numChar
-FROM dbo.Songs
-ORDER BY 
-	LEN(Name) ASC;
-```
-
-That is:
-Name|numChar
----|---
-Our House|9
 
 
 
