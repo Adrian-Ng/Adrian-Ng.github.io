@@ -11,8 +11,7 @@ The DDL for all these objects is generally the same.
 
 Note: I am not a DBA. So if you are looking for information on how to build the perfect relational database, look elsewhere!
 
-
-##CREATE
+## CREATE
 
 Suppose I'm creating a database for a website that allows users to sign up and listen to music. 
 Let's start by creating a really simple table, _Song_. 
@@ -36,7 +35,7 @@ This is how you create this table.
 		);
 ```
 
-##ALTER
+## ALTER
 
 Now say we've decided that we don't like having the _Artist_ field included in _Song_. 
 So we want to drop it from our table. 
@@ -65,7 +64,7 @@ ID|Name|Duration
 3|Time After Time|241
 ...|...|...
 
-##DROP
+## DROP
 
 To remove this table from our database, we write:
 
@@ -73,7 +72,7 @@ To remove this table from our database, we write:
 	DROP TABLE dbo.Song;
 ```
 
-##TRUNCATE
+## TRUNCATE
 
 Say we want to drop and immediately recreate the table, we write:
 
