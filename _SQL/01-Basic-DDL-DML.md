@@ -19,10 +19,18 @@ The DDL for all these objects is generally the same: CREATE, ALTER, DROP.
 ### CREATE
 
 Suppose I'm creating a database for a website that allows users to sign up and listen to music. 
-Let's start by creating a really simple table, _Song_. 
+Let's start by creating a really simple table: _Songs_. 
 This table would contain a record for every single song in our database.
 
-For example, it would look something like:
+The schema (=structure) of _Song_ would be:
+
+Column|Data Type
+---|---
+ID|int
+Name|varchar(100)
+Artist| varchar(100)
+
+And if we were to try to store data in _Songs_, it would look something like:
 
 ID|Name|Artist
 ---|---|---
@@ -33,20 +41,25 @@ ID|Name|Artist
 
 This is how you create this table.
 ```sql
-CREATE TABLE dbo.Song (
-	ID int IDENTITY(1,1) PRIMARY KEY
-,	Name varchar(100)
-,	Artist varchar(100));
+CREATE TABLE Songs (
+	ID	int IDENTITY(1,1) PRIMARY KEY
+,	Name	varchar(100)
+,	Artist	varchar(100));
 ```
+
+When we create a table, we generally define names for its columns and their data types.
+Here we have also defined the IDENTITY property for ID as starting at 1 and incrementing by 1.
+And by adding PRIMARY KEY, we have also defined a constraint on ID such that each value of ID must be unique and not contain any NULL values.
+
 
 ### ALTER
 
-Now say we've decided that we don't like having the _Artist_ field included in _Song_. 
+Now say we've decided that we don't like having the _Artist_ field included in _Songs_. 
 So we want to drop it from our table. 
 This is how you drop a column.
 
 ```sql
-ALTER TABLE dbo.Song
+ALTER TABLE Songs
 DROP COLUMN Artist;
 ```
 
@@ -55,7 +68,7 @@ We will measure the duration in seconds and will store this as an integer.
 This is how we add another column to our table:
 
 ```sql
-ALTER TABLE dbo.Song
+ALTER TABLE Songs
 ADD Duration int;
 ```
 
