@@ -137,6 +137,8 @@ VALUES
 The SELECT statement is our bread and butter in the SQL world (ed: why is it not at the top of this page then?). 
 It's our gateway to the data. Without it, the database would be useless. Data would just sit there, not being looked at.
 
+#### *
+
 To start off with, let's select some data from dbo.Songs.
 
 ```sql
@@ -152,6 +154,8 @@ ID|Name|Duration
 3|The Winner Takes It All|295
 4|Our House|203
 5|Take On Me|225
+
+#### TOP
 
 We can even limit our query to return only a specific number of results.
 
@@ -170,11 +174,13 @@ ID|Name|Duration
 2|Billie Jean|293
 3|The Winner Takes It All|295
 
-Let's be more specific and query only the _Names_ of the top 3 longest songs.
+#### ORDER BY Column
+
+Let's be more specific and write a query that returns the name of the song with the longest duration.
 
 ```sql
 SELECT
-	TOP 3
+	TOP 1
 	Name
 FROM dbo.Songs
 ORDER BY 
@@ -184,10 +190,29 @@ ORDER BY
 Our result:
 
 |Name|
----|
+|---|
 |The Winner Takes It All|
-|Billie Jean|
-|Under Pressure|
+
+#### ORDER BY Length of String
+
+Incidentally, we would get the same result if we were to query the name of the song with the longest name!
+But let's just instead write a query that returns the name of the song with the _shortest_ name and the number of characters in its name.
+
+```sql
+SELECT
+	TOP 1
+	Name
+,	LEN(Name) AS numChar
+FROM dbo.Songs
+ORDER BY 
+	LEN(Name) ASC;
+```
+
+That is:
+|Name|numChar
+|---|---|
+|Our House|9|
+
 
 
 
