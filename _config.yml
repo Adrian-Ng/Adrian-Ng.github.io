@@ -287,4 +287,4 @@ defaults:
       author_profile: false
       share: true
       sidebar:
-        nav: "docs"
+        nav: "SQL"
