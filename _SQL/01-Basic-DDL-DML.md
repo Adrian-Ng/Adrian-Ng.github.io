@@ -19,7 +19,7 @@ The DDL for all these objects is generally the same: CREATE, ALTER, DROP.
 
 ### CREATE
 
-Suppose I'm creating a database for a website that allows users to sign up and listen to music. 
+Suppose I'm creating a database for a website that allows users to sign up and listen to music (read: Spotify clone). 
 Let's start by creating a really simple table: _Songs_. 
 This table would contain a record for every single song in our database.
 
@@ -31,7 +31,7 @@ ID|int
 Name|nvarchar(100)
 Artist|nvarchar(100)
 
-And if we were to look at the data in _Songs_, it would look something like:
+And if we were to look at the data in _Songs_, it could look something like:
 
 ID|Name|Artist
 ---|---|---
@@ -57,10 +57,9 @@ For ID, we have also defined:
 
 ### ALTER
 
-Now say we've decided that we don't like having the _Artist_ field included in _Songs_. 
-Artists should ideally have their own table.
+Now say we've decided that we don't like having the _Artist_ field included in _Songs_ (Artists should ideally have their own table).
 So we want to drop it from our table. 
-This is how you drop a column.
+This is how you drop a column from a table:
 
 ```sql
 ALTER TABLE Songs
@@ -68,7 +67,8 @@ DROP COLUMN Artist;
 ```
 
 But we've also realised that it would be helpful if we could store the duration of each song in this table instead.
-We will measure the duration in seconds and will store this as an integer.
+We measure the duration in seconds so we will store this as an integer.
+
 This is how we add another column to our table:
 
 ```sql
@@ -105,10 +105,22 @@ The key difference is that TRUNCATE is DDL, whereas DELETE is DML.
 This means you can _rollback_ a DELETE statement. But _not_ a TRUNCATE statement.
 {: .notice--warning}
 
+
+## Data Manipulation Language
+
+Data Manipulation Language is what we use when are working with the data _within_ the database. 
+For example, this could mean retrieving data with a SELECT statement, using an UPDATE statement, or removing data with a DELETE statement.
+
+Our first example is actually neither of the above!
+
 ### INSERT INTO
 
-Lastly, we probably want to insert some data into dbo.Songs. 
-We have created the table. But it doesn't contain any data.
+Recall our _Songs_ table.
+We created the table. 
+But it doesn't contain any data.
+That's because we didn't put any data in it!
+
+
 
 ```sql
 INSERT INTO dbo.Songs
@@ -119,12 +131,6 @@ VALUES
 ,	('Our House','203')
 ,	('Take On Me','225')
 ```
-
-
-## Data Manipulation Language
-
-Data Manipulation Language is what we use when are working with the data _within_ the database. 
-For example, this could mean retrieving data with a SELECT statement, using an UPDATE statement, or removing data with a DELETE statement.
 
 ### SELECT
 
@@ -141,35 +147,49 @@ FROM dbo.Songs;
 
 ID|Name|Duration
 ---|---|---
-1|The Best|330
-2|Eternal Flame|238
-3|Time After Time|241
-4|Take My Breath Away|256
-5|
+1|Under Pressure|249
+2|Billie Jean|293
+3|The Winner Takes It All|295
+4|Our House|203
+5|Take On Me|225
 
 We can even limit our query to return only a specific number of results.
 
 ```sql
 SELECT 
-	TOP 1
+	TOP 3
 	*
 FROM dbo.Songs;
 ```
 
+Which would return the top three rows by ID:
+
 ID|Name|Duration
 ---|---|---
-1|The Best|330
+1|Under Pressure|249
+2|Billie Jean|293
+3|The Winner Takes It All|295
 
-Or, if we fancied, we could order our results:
+Let's be more specific and query only the _Names_ of the top 3 longest songs.
 
 ```sql
 SELECT
-	*
+	TOP 3
+	Name
 FROM dbo.Songs
 ORDER BY 
-	Duration DESC
-,	Name ASC;
+	Duration DESC;
 ```
+
+Our result:
+
+Name
+---
+The Winner Takes It All
+Billie Jean
+Under Pressure
+
+
 
 
 
