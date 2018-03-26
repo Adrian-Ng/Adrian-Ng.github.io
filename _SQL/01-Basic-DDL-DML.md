@@ -160,7 +160,9 @@ WHERE Name = 'Thriller';
 The SELECT statement is our bread and butter in the SQL world (ed: why is it not at the top of this page then?). 
 Without it we would not be able to look at our data.
 
-Let's retrieve all rows of data from Songs.
+There are many different ways of selecting from a table.
+But we are coming to the end of this page.
+Let's just retrieve all rows of data from Songs.
 
 ```sql
 SELECT
