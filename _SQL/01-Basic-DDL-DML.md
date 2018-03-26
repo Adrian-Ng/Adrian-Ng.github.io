@@ -40,7 +40,6 @@ ID|Name|Artist
 3|The Winner Takes It All|ABBA
 ...|...|...
 
-This is how you create this table.
 ```sql
 CREATE TABLE Songs (
 	ID	int IDENTITY(1,1) PRIMARY KEY
@@ -57,9 +56,8 @@ For ID, we have also defined:
 
 ### ALTER
 
-Now say we've decided that we don't like having the _Artist_ field included in _Songs_ (Artists should ideally have their own table).
+Now say we've decided that we don't like having the _Artist_ field included in _Songs_ (Artists should ideally have their own table!).
 So we want to drop it from our table. 
-This is how you drop a column from a table:
 
 ```sql
 ALTER TABLE Songs
@@ -67,9 +65,7 @@ DROP COLUMN Artist;
 ```
 
 But we've also realised that it would be helpful if we could store the duration of each song in this table instead.
-We measure the duration in seconds so we will store this as an integer.
-
-This is how we add another column to our table:
+If we measure the duration in seconds we can store this as an integer!
 
 ```sql
 ALTER TABLE Songs
@@ -86,7 +82,7 @@ Duration|int
 
 ### DROP
 
-To remove this table from our database, we write:
+To remove this table from our database:
 
 ```sql
 DROP TABLE Song;
@@ -94,7 +90,7 @@ DROP TABLE Song;
 
 ### TRUNCATE
 
-Say we want to drop and immediately recreate the table, we write:
+To drop and immediately recreate the table:
 
 ```sql
 TRUNCATE TABLE Song;
@@ -111,13 +107,10 @@ This means you can _rollback_ a DELETE statement. But _not_ a TRUNCATE statement
 Data Manipulation Language is what we use when are working with the data _within_ the database. 
 For example, this could mean retrieving data with a SELECT statement, using an UPDATE statement, or removing data with a DELETE statement.
 
-Our first example is actually neither of the above!
-
 ### INSERT INTO
 
 Recall our _Songs_ table.
-Let us now put some data in there:
-
+Let's insert some data in there!
 
 ```sql
 INSERT INTO Songs
@@ -133,9 +126,9 @@ VALUES
 
 With UPDATE statements, we can change the values in our table to something else.
 We can be as blunt or as deft as we need to be.
-We can change every value in a column or just a subset of values or simply a single value.
+For instance, we can change every value in a column or just a subset of values or simply a single value.
 
-This is how we change the name of one song in our table:
+Let's rename _Billie Jean_ to _Thriller_.
 
 ```sql
 UPDATE Songs
@@ -143,11 +136,10 @@ SET 'Thriller'
 WHERE Name = 'Billie Jean';
 ```
 
-As such, we have now renamed _Billie Jean_ to _Thriller_.
-
 ### DELETE
 
 Suppose it turns out we're not allowed to have any Thriller in our database. 
+The lawyers say no.
 Therefore, we have to delete it from _Songs_.
 
 ```sql
@@ -162,7 +154,7 @@ Without it we would not be able to look at our data.
 
 There are many different ways of selecting from a table.
 But we are coming to the end of this page.
-Let's just retrieve all rows of data from Songs.
+To finish, let's just retrieve everything from Songs.
 
 ```sql
 SELECT
