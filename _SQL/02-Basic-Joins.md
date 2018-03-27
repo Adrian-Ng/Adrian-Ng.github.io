@@ -23,7 +23,7 @@ CROSS JOIN [rightTable]
 ```
 
 Notice that there's no aliasing and no joining fields.
-We're not performing matching - we're just composingt tuple combinations between the two tables.K
+We're not performing matching - we're just composing tuple combinations between the two tables.
 ### INNER JOIN
 
 ```sql
@@ -56,7 +56,7 @@ ON left.Id = right.ID;
 ## SEMI-JOINS
 
 These lack the _syntactic sugar_ of the joins above. 
-But funnily enough if find that the syntax of semi-joins tends to more natural human language.
+But funnily enough I find that the syntax of semi-joins tends to more natural human language.
 
 Another big upside is that they are **fast**.
 
@@ -65,9 +65,9 @@ There are just two types of semi-joins that I want to show you.
 ### LEFT SEMI JOIN
 
 Use case:
-	* Values in your joining field exist in both tables.
-	* You _only_ want to return columns from the left table.
-	* Speed is a concern (when isn't it?)
+* Values in your joining field exist in both tables.
+* You _only_ want to return columns from the left table.
+* Speed is a concern (when isn't it?)
 
 ```sql
 SELECT
