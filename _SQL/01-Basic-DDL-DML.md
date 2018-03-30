@@ -20,7 +20,7 @@ The DDL for all these objects is generally the same: `CREATE`, `ALTER`, `DROP`.
 ### CREATE
 
 Suppose I'm creating a database for a website that allows users to sign up and listen to music (read: Spotify clone). 
-Let's start by creating a really simple table: `Songs`. 
+Let's start by creating a really simple table: _Songs_.
 This table would contain a record for every single song in our database.
 
 The schema (or structure) of _Song_ would be:
@@ -50,8 +50,8 @@ CREATE TABLE Songs (
 You can see we have defined names for its columns and their data types.
 
 For ID, we have also defined:
-* the IDENTITY property: values of ID start at 1 _and_ increment by 1.
-* the PRIMARY KEY constraint: each value must be unique and not contain any NULL values.
+* the `IDENTITY` property: values of ID start at 1 _and_ increment by 1.
+* the `PRIMARY KEY` constraint: each value must be unique and not contain any NULL values.
 
 
 ### ALTER
@@ -96,16 +96,16 @@ To drop and immediately recreate the table:
 TRUNCATE TABLE Song;
 ```
 
-Note: This performs an operation that produces an outcome very similar to a DELETE statement (details below). 
-The key difference is that TRUNCATE is DDL, whereas DELETE is DML.
-This means you can _rollback_ a DELETE statement. But _not_ a TRUNCATE statement.
+Note: This performs an operation that produces an outcome very similar to a `DELETE` statement (details below). 
+The key difference is that `TRUNCATE` is DDL, whereas `DELETE` is DML.
+This means you can _rollback_ a `DELETE` statement. But _not_ a `TRUNCATE` statement.
 {: .notice--warning}
 
 
 ## Data Manipulation Language
 
 Data Manipulation Language is what we use when are working with the data _within_ the database. 
-For example, this could mean retrieving data with a SELECT statement, using an UPDATE statement, or removing data with a DELETE statement.
+For example, this could mean retrieving data with a `SELECT` statement, using an `UPDATE` statement, or removing data with a `DELETE` statement.
 
 ### INSERT INTO
 
@@ -115,16 +115,16 @@ Let's insert some data in there!
 ```sql
 INSERT INTO Songs
 VALUES
-	('Under Pressure','249')
-,	('Billie Jean','293')
-,	('The Winner Takes It All','295')
-,	('Our House','203')
-,	('Take On Me','225')
+	('Under Pressure',249)
+,	('Billie Jean',293)
+,	('The Winner Takes It All',295)
+,	('Our House',203)
+,	('Take On Me',225)
 ```
 
 ### UPDATE
 
-With UPDATE statements, we can change the values in our table to something else.
+With `UPDATE` statements, we can change the values in our table to something else.
 We can be as blunt or as deft as we need to be.
 For instance, we can change every value in a column or just a subset of values or simply a single value.
 
@@ -149,7 +149,7 @@ WHERE Name = 'Thriller';
 
 ### SELECT
 
-The SELECT statement is our bread and butter in the SQL world (ed: why is it not at the top of this page then?). 
+The `SELECT` statement is our bread and butter in the SQL world (ed: why is it not at the top of this page then?). 
 Without it we would not be able to look at our data.
 
 There are many different ways of selecting from a table.
