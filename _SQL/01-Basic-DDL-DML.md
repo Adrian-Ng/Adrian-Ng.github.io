@@ -54,6 +54,8 @@ Notice we have also added a couple things:
 * the `IDENTITY` property: values of `ID` start at 1 _and_ increment by 1.
 * the `PRIMARY KEY` constraint: each value must be unique and not contain any `NULL` values.
 
+Now the values of `ID` will be generated automatically and correctly as the table grows.
+One less thing to worry about.
 
 ### ALTER
 
@@ -151,7 +153,7 @@ VALUES
 ```
 
 Now, manually entering data into our table in this fashion is really slow and tedious.
-Suppose I've got another table, `dbo.moreSong` which has many songs in it and has both columns I need: `SongName` and `Duration¬.
+Suppose I've got another table, `dbo.moreSong` which has many songs in it and has both columns I need: `SongName` and `Duration`.
 
 ```sql
 INSERT INTO dbo.Song
