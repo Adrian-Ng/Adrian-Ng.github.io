@@ -109,7 +109,7 @@ This means you can _rollback_ a `DELETE` statement. But _not_ a `TRUNCATE` state
 
 Data Manipulation Language is what we use when are working with the data itself. 
 For example, this could mean :
-* populating a table with 'INSERT'
+* populating a table with `INSERT`
 * returning data with `SELECT` 
 * changing data with `UPDATE`
 * removing data with `DELETE`
@@ -117,7 +117,7 @@ For example, this could mean :
 
 ### INSERT INTO
 
-Let's return to our newly created table `dbo.Song` and populate it using `INSERT`.
+Let's return to our newly created table `dbo.Song` and populate it with... songs.
 We will use songs from _Now That's What I Call The 80s_.
 
 ```sql
@@ -153,10 +153,13 @@ ID|Name|Duration
 
 ### SELECT INTO
 
-`SELECT INTO` is actually another example of syntactic sugar because it is both DDL _and_ DML.
-It combines three operations into one: `CREATE`, `SELECT`, and `INSERT`..
-In doing so this allows us to conveniently _copy_ data from one table to another (including temp tables and table variables).
+`SELECT INTO` is an interesting example of syntactic sugar.
+It is a single statement comprised of both **DDL** and **DML**:
+* `CREATE`
+* `SELECT`
+* `INSERT`
 
+In doing so this allows us to easily _copy_ data from one table to another.
 
 ```sql
 SELECT
@@ -167,9 +170,7 @@ FROM dbo.Song;
 
 ### UPDATE
 
-With `UPDATE` statements, we can change the values in our table to something else.
-We can be as blunt or as deft as we need to be.
-For instance, we can change every value in a column or just a subset of values or simply a single value.
+With `UPDATE`, we can change the values in our table to something else.
 
 Let's rename _Billie Jean_ to _Thriller_.
 
@@ -181,14 +182,16 @@ WHERE Name = 'Billie Jean';
 
 ### DELETE
 
-Suppose it turns out we're not allowed to have any Thriller in our database. 
-The lawyers say no.
-Therefore, we have to delete it from _Songs_.
+Suppose it turns out we're not allowed to have any Thriller in our database (the lawyers say no).
+And we _have_ to delete it from _Songs_.
 
 ```sql
 DELETE dbo.Song
 WHERE Name = 'Thriller';
 ```
+
+Adrian Ng
+2018-03-30
 
 
 
