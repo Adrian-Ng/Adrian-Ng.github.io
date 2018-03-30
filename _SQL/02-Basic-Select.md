@@ -10,7 +10,7 @@ But, they are incredibly versatile and when used correctly can give us precise c
 
 Let's take a look at a few simple ways we can use `SELECT`.
 
-### Column Selection
+## Column Selection
 
 To return all the columns from our table, we simply write
 
@@ -44,7 +44,7 @@ SELECT
 FROM	dbo.Song;
 ```
 
-### TOP
+## TOP
 
 To return a specific number of rows from `dbo.Song` (say, 3):
 
@@ -64,7 +64,7 @@ ID|Name|Duration
 This is the top 3 based on the physical ordering of the table.
 But we can also specify an ordering of our chosing.
 
-### ORDER BY
+## ORDER BY
 
 Let's combine 'TOP' with 'ORDER BY' to get the song with the longest duration.
 
@@ -86,9 +86,11 @@ ID|Name|Duration
 **Note:** we don't actually need to use `TOP` in combination with `ORDER BY`. Remove `TOP 1` from the above example and we will return every result from the table.
 {: .notice--info}
 
-### WHERE
+## WHERE
 
 When we are only in _specific_ rows of data we use the `WHERE` clause to specify conditions over our selection.
+
+### Equality
 
 For instance, we are only interested returning _Billie Jean_:
 
@@ -97,10 +99,12 @@ SELECT
 	*
 FROM dbo.Songs
 WHERE Name = 'Billie Jean';
-
 ```
+
 **Note:** the opposite of `=` is `<>` _or_ `!=` but I think the latter is deprecated.
 {: .notice--info}
+
+### List
 
 We might be interested in a list of songs:
 
@@ -110,6 +114,7 @@ SELECT
 FROM dbo.Songs
 WHERE Name IN ('Billie Jean','Billie Jean');
 ```
+
 {%  capture notice-text %}
 * The opposite of `IN` is `NOT IN`
 * If you have _very large_ list of songs use a **left semi join** or **anti left semi join** instead of `WHERE`.
@@ -119,6 +124,8 @@ WHERE Name IN ('Billie Jean','Billie Jean');
   <h4>Note:</h4> 
   {{ notice-text | markdownify }} 
 </div>
+
+### Wildcards
 
 Say we are interested in all songs beginning with the letter **T**.
 
@@ -130,14 +137,16 @@ WHERE Name LIKE 'T%';
 ```
 
 {% capture notice-text %}
-* `%` is a wildcard and is used to substitute **any number** of characters (including zero).
-* `_` is also a wildcard and is used to substitute **a single** character.
+* `%` can substitute **any number** of characters (including zero).
+* `_` can substitute **a single** character.
 {% endcapture %}
 
 <div class="notice--info">
-  <h4>Note:</h4> 
+  <h4>Wildcards:</h4> 
   {{ notice-text | markdownify }} 
 </div>
+
+### Inequalities
 
 Say we are interested in all songs shorter than 4 minutes.
 
