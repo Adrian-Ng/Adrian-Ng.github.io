@@ -98,7 +98,10 @@ SELECT
 FROM dbo.Songs
 WHERE Name = 'Billie Jean';
 ```
-We might be interested in a list of songs.
+Note: the opposite of `=` is `<>` or `!=` but I think the latter is deprecated.
+{: .notice-info}
+
+We might be interested in a list of songs:
 
 ```sql
 SELECT
@@ -106,6 +109,25 @@ SELECT
 FROM dbo.Songs
 WHERE Name IN ('Billie Jean','Billie Jean');
 ```
+
+Note:
+* The opposite of `IN` is `NOT IN`
+* If you have _very large_ list of songs use a left semi join or anti left semi join instead of `WHERE`.
+{: .notice-info}
+
+Say we are interested in all songs beginning with the letter **T**.
+
+```sql
+SELECT
+	*
+FROM dbo.Songs
+WHERE Name LIKE 'T%';
+```
+
+Note:
+* `%` is a wildcard and is used to substitute **any number** of characters (including zero).
+* `_` is also a wildcard and is used to substitute **a single** character.
+{: .notice--info}
 
 Say we are interested in all songs shorter than 4 minutes. 
 
@@ -116,20 +138,22 @@ FROM dbo.Songs
 WHERE Duration < 240;
 ```
 
-We could even combine multiple `WHERE`clauses with logical operators (`AND`,`OR`)
-Let's return songs that begin with _T_ and are shorter than 4 minutes.
+We could even accommodate multiple conditions with  logical operators (`AND`,`OR`).
+Let's return songs that begin are shorter than 4 minutes but also longer than (or equal to) 3 minutes.
 
 ```sql
 SELECT
 	*
 FROM	dbo.Songs
 WHERE Duration < 240
-AND Name LIKE 'T%';
+AND Duration >= 210;
 ```
 
-`%` is a wildcard and is used to substitute **any number** of characters (including zero).
-`_` is also a wildcard and is used to substitute **a single** character.
+Note: I'm not a fan of using `BETWEEN`. Your mileage may vary but I like how there is no ambiguity between `>` and `>=` or `<` and `<=`.
 {: .notice--info}
+
+
+
 
 
 
