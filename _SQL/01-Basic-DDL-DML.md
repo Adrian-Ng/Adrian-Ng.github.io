@@ -8,22 +8,27 @@ toc: true
 Structured Query Language (SQL) is an easy-to-learn, high level language that you'll find being used pretty much wherever you come across relational databases.
 It is used in essentially two ways: building databases and retrieving data from these databases.
 
-That is, we can divide the language into two broad categories: Data Definition Language (DDL) and Data Manipulation Language (DML).
-Here, we will take a quick look at some basic examples of DDL and DML.
+That is, we can divide the language into two broad categories: 
+* Data Definition Language (DDL) 
+* Data Manipulation Language (DML).
+
+On this page, we will take a quick look at some basic examples of DDL and DML.
 
 ## Data Definition Language
 
 Data Definition Language is what we use when we are creating, altering, or removing database objects.
-These objects could include tables, views, or stored procedures. But this is not an exhaustive list.
-The DDL for all these objects is generally the same: `CREATE`, `ALTER`, `DROP`.
+For instance:
+* `CREATE TABLE`
+* `ALTER TABLE` 
+* `DROP TABLE`.
 
 ### CREATE
 
-Suppose I'm creating a database for a website that allows users to sign up and listen to music (read: Spotify clone). 
-Let's start by creating a really simple table: _Songs_.
+Suppose we are creating a database for a website that allows users to sign up and listen to music (a _Spotify_ clone). 
+Let's start by creating a really simple table on the default schema: `dbo.Song`.
 This table would contain a record for every single song in our database.
 
-The schema (or structure) of _Song_ would be:
+The column data types could be defined as:
 
 Column|Data Type
 ---|---
@@ -31,7 +36,7 @@ ID|int
 Name|nvarchar(100)
 Artist|nvarchar(100)
 
-And if we were to look at the data in _Songs_, it could look something like:
+And if we were to look at the data in `dbo.Song`, it could look something like:
 
 ID|Name|Artist
 ---|---|---
@@ -41,26 +46,24 @@ ID|Name|Artist
 ...|...|...
 
 ```sql
-CREATE TABLE Songs (
+CREATE TABLE dbo.Song (
 	ID	int IDENTITY(1,1) PRIMARY KEY
 ,	Name	nvarchar(100)
 ,	Artist	nvarchar(100));
 ```
 
-You can see we have defined names for its columns and their data types.
-
-For ID, we have also defined:
-* the `IDENTITY` property: values of ID start at 1 _and_ increment by 1.
-* the `PRIMARY KEY` constraint: each value must be unique and not contain any NULL values.
+Notice we have also added a couple things:
+* the `IDENTITY` property: values of `ID` start at 1 _and_ increment by 1.
+* the `PRIMARY KEY` constraint: each value must be unique and not contain any `NULL` values.
 
 
 ### ALTER
 
-Now say we've decided that we don't like having the _Artist_ field included in _Songs_ (Artists should ideally have their own table!).
-So we want to drop it from our table. 
+Now say we've decided that we don't like having the _Artist_ field in `dbo.Song` because we think Artists should get their own table (where they can live happily normalised).
+So we want to remove it from our table using `DROP COLUMN`.
 
 ```sql
-ALTER TABLE Songs
+ALTER TABLE dbo.Song
 DROP COLUMN Artist;
 ```
 
@@ -68,7 +71,7 @@ But we've also realised that it would be helpful if we could store the duration 
 If we measure the duration in seconds we can store this as an integer!
 
 ```sql
-ALTER TABLE Songs
+ALTER TABLE dbo.Song
 ADD Duration int;
 ```
 
@@ -85,7 +88,7 @@ Duration|int
 To remove this table from our database:
 
 ```sql
-DROP TABLE Song;
+DROP TABLE dbo.Song;
 ```
 
 ### TRUNCATE
@@ -93,7 +96,7 @@ DROP TABLE Song;
 To drop and immediately recreate the table:
 
 ```sql
-TRUNCATE TABLE Song;
+TRUNCATE TABLE dbo.Song;
 ```
 
 Note: This performs an operation that produces an outcome very similar to a `DELETE` statement (details below). 
@@ -104,22 +107,62 @@ This means you can _rollback_ a `DELETE` statement. But _not_ a `TRUNCATE` state
 
 ## Data Manipulation Language
 
-Data Manipulation Language is what we use when are working with the data _within_ the database. 
-For example, this could mean retrieving data with a `SELECT` statement, using an `UPDATE` statement, or removing data with a `DELETE` statement.
+Data Manipulation Language is what we use when are working with the data itself. 
+For example, this could mean :
+* populating a table with 'INSERT'
+* returning data with `SELECT` 
+* changing data with `UPDATE`
+* removing data with `DELETE`
+
 
 ### INSERT INTO
 
-Recall our _Songs_ table.
-Let's insert some data in there!
+Let's return to our newly created table `dbo.Song` and populate it using `INSERT`.
+We will use songs from _Now That's What I Call The 80s_.
 
 ```sql
-INSERT INTO Songs
+INSERT INTO dbo.Song
 VALUES
 	('Under Pressure',249)
 ,	('Billie Jean',293)
 ,	('The Winner Takes It All',295)
 ,	('Our House',203)
-,	('Take On Me',225)
+,	('Take On Me',225);
+```
+
+### SELECT
+
+The `SELECT` statement is our bread and butter in the SQL world (ed: why is it not at the top of this page then?). 
+And there are a lot of way of augmenting it in order to define exactly what data we need to return.
+
+But in its most basic configuration, `SELECT` looks like this:
+
+```sql
+SELECT
+	*
+FROM dbo.Songs;
+``` 
+
+ID|Name|Duration
+---|---|---
+1|Under Pressure|249
+2|Billie Jean|293
+3|The Winner Takes It All|295
+4|Our House|203
+5|Take On Me|225
+
+### SELECT INTO
+
+`SELECT INTO` is actually another example of syntactic sugar because it is both DDL _and_ DML.
+It combines three operations into one: `CREATE`, `SELECT`, and `INSERT`..
+In doing so this allows us to conveniently _copy_ data from one table to another (including temp tables and table variables).
+
+
+```sql
+SELECT
+	*
+INTO dbo.SomeOtherTable
+FROM dbo.Song;
 ```
 
 ### UPDATE
@@ -131,7 +174,7 @@ For instance, we can change every value in a column or just a subset of values o
 Let's rename _Billie Jean_ to _Thriller_.
 
 ```sql
-UPDATE Songs
+UPDATE dbo.Song
 SET 'Thriller'
 WHERE Name = 'Billie Jean';
 ```
@@ -143,33 +186,10 @@ The lawyers say no.
 Therefore, we have to delete it from _Songs_.
 
 ```sql
-DELETE Songs
+DELETE dbo.Song
 WHERE Name = 'Thriller';
 ```
 
-### SELECT
-
-The `SELECT` statement is our bread and butter in the SQL world (ed: why is it not at the top of this page then?). 
-Without it we would not be able to look at our data.
-
-There are many different ways of selecting from a table.
-But we are coming to the end of this page.
-To finish, let's just retrieve everything from Songs.
-
-```sql
-SELECT
-	*
-FROM dbo.Songs;
-``` 
-
-ID|Name|Duration
----|---|---
-1|Under Pressure|249
-3|The Winner Takes It All|295
-4|Our House|203
-5|Take On Me|225
-
-Of course, _Thriller_ is no longer there!
 
 
 
