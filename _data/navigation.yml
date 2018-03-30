@@ -24,10 +24,10 @@ SQL:
      children:
      - title: "DDL and DML"
        url: /SQL/Basics-DDL-DML/
-     - title: "Joins"
-       url: /SQL/Basics-Joins/
      - title: "Select Statements"
        url: /SQL/Basics-Select/
+     - title: "Joins"
+       url: /SQL/Basics-Joins/
      - title: "Group By"
        url: /SQL/Basics-Group-By/
     
