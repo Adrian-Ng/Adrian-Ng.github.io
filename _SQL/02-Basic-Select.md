@@ -98,8 +98,8 @@ SELECT
 FROM dbo.Songs
 WHERE Name = 'Billie Jean';
 ```
-Note: the opposite of `=` is `<>` or `!=` but I think the latter is deprecated.
-{: .notice-info}
+Note: the opposite of `=` is `<>` _or_ `!=` but I think the latter is deprecated.
+{: .notice--info}
 
 We might be interested in a list of songs:
 
@@ -110,10 +110,9 @@ FROM dbo.Songs
 WHERE Name IN ('Billie Jean','Billie Jean');
 ```
 
-Note:
-* The opposite of `IN` is `NOT IN`
-* If you have _very large_ list of songs use a left semi join or anti left semi join instead of `WHERE`.
-{: .notice-info}
+ * The opposite of `IN` is `NOT IN`
+ * If you have _very large_ list of songs use a **left semi join** or **anti left semi join*7* instead of `WHERE`.
+{: .notice--info}
 
 Say we are interested in all songs beginning with the letter **T**.
 
@@ -124,9 +123,9 @@ FROM dbo.Songs
 WHERE Name LIKE 'T%';
 ```
 
-Note:
-* `%` is a wildcard and is used to substitute **any number** of characters (including zero).
-* `_` is also a wildcard and is used to substitute **a single** character.
+
+ * `%` is a wildcard and is used to substitute **any number** of characters (including zero).
+ * `_` is also a wildcard and is used to substitute **a single** character.
 {: .notice--info}
 
 Say we are interested in all songs shorter than 4 minutes. 
@@ -149,7 +148,7 @@ WHERE Duration < 240
 AND Duration >= 210;
 ```
 
-Note: I'm not a fan of using `BETWEEN`. Your mileage may vary but I like how there is no ambiguity between `>` and `>=` or `<` and `<=`.
+Note: I'm not a fan of using `BETWEEN` (look it up). Your mileage may vary but I like how there is no ambiguity between `>` and `>=` or `<` and `<=`.
 {: .notice--info}
 
 
