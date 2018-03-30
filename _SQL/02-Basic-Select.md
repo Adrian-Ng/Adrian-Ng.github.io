@@ -19,6 +19,7 @@ SELECT
 	*
 FROM dbo.Song;
 ```
+
 ID|Name|Duration
 ---|---|---
 1|Under Pressure|249
@@ -32,10 +33,9 @@ ID|Name|Duration
 9|Relax|238
 10|Gold|231
 
-
-But say we don't want to return results from every column.
-We are interested in just a subset of columns.
-We just explicitly name the columns we need.
+But suppose we don't want to return results from every column.
+We are only interested in a subset of columns.
+So we explicitly name the columns we need.
 
 ```sql
 SELECT
@@ -116,7 +116,7 @@ FROM dbo.Songs
 WHERE Duration < 240;
 ```
 
-We could even combine multiple `WHERE`clauses with logical operators.
+We could even combine multiple `WHERE`clauses with logical operators (`AND`,`OR`)
 Let's return songs that begin with _T_ and are shorter than 4 minutes.
 
 ```sql
