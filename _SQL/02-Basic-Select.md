@@ -83,7 +83,7 @@ ID|Name|Duration
 2|Billie Jean|293
 8|Do You Really Want To Hurt Me|263
 
-Note that we don't actually need to use `TOP` in combination with `ORDER BY`. Remove `TOP 1` from the above example and we will return every result from the table.
+**Note:** we don't actually need to use `TOP` in combination with `ORDER BY`. Remove `TOP 1` from the above example and we will return every result from the table.
 {: .notice--info}
 
 ### WHERE
@@ -97,8 +97,9 @@ SELECT
 	*
 FROM dbo.Songs
 WHERE Name = 'Billie Jean';
+
 ```
-Note: the opposite of `=` is `<>` _or_ `!=` but I think the latter is deprecated.
+**Note:** the opposite of `=` is `<>` _or_ `!=` but I think the latter is deprecated.
 {: .notice--info}
 
 We might be interested in a list of songs:
@@ -140,7 +141,8 @@ WHERE Name LIKE 'T%';
 
 Say we are interested in all songs shorter than 4 minutes.
 
-```sql SELECT
+```sql 
+SELECT
 	*
 FROM dbo.Songs
 WHERE Duration < 240;
