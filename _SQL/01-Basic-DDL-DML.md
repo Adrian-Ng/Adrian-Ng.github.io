@@ -15,12 +15,12 @@ Here, we will take a quick look at some basic examples of DDL and DML.
 
 Data Definition Language is what we use when we are creating, altering, or removing database objects.
 These objects could include tables, views, or stored procedures. But this is not an exhaustive list.
-The DDL for all these objects is generally the same: CREATE, ALTER, DROP.
+The DDL for all these objects is generally the same: `CREATE`, `ALTER`, `DROP`.
 
 ### CREATE
 
 Suppose I'm creating a database for a website that allows users to sign up and listen to music (read: Spotify clone). 
-Let's start by creating a really simple table: _Songs_. 
+Let's start by creating a really simple table: `Songs`. 
 This table would contain a record for every single song in our database.
 
 The schema (or structure) of _Song_ would be:

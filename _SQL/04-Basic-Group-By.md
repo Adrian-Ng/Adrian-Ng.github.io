@@ -9,4 +9,6 @@ toc: true
 
 ## AGGREGATION
 
+## HAVING
 
+## CUBE
