@@ -109,10 +109,15 @@ SELECT
 FROM dbo.Songs
 WHERE Name IN ('Billie Jean','Billie Jean');
 ```
+{%  capture notice-text %}
+* The opposite of `IN` is `NOT IN`
+* If you have _very large_ list of songs use a **left semi join** or **anti left semi join** instead of `WHERE`.
+{% endcapture %}
 
- * The opposite of `IN` is `NOT IN`
- * If you have _very large_ list of songs use a **left semi join** or **anti left semi join*7* instead of `WHERE`.
-{: .notice--info}
+<div class="notice--info">
+  <h4>Note:</h4> 
+  {{ notice-text | markdownify }} 
+</div>
 
 Say we are interested in all songs beginning with the letter **T**.
 
@@ -123,15 +128,19 @@ FROM dbo.Songs
 WHERE Name LIKE 'T%';
 ```
 
+{% capture notice-text %}
+* `%` is a wildcard and is used to substitute **any number** of characters (including zero).
+* `_` is also a wildcard and is used to substitute **a single** character.
+{% endcapture %}
 
- * `%` is a wildcard and is used to substitute **any number** of characters (including zero).
- * `_` is also a wildcard and is used to substitute **a single** character.
-{: .notice--info}
+<div class="notice--info">
+  <h4>Note:</h4> 
+  {{ notice-text | markdownify }} 
+</div>
 
-Say we are interested in all songs shorter than 4 minutes. 
+Say we are interested in all songs shorter than 4 minutes.
 
-```sql
-SELECT
+```sql SELECT
 	*
 FROM dbo.Songs
 WHERE Duration < 240;
