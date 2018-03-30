@@ -10,9 +10,7 @@ It is used in essentially two ways: building databases and retrieving data from 
 
 That is, we can divide the language into two broad categories: 
 * Data Definition Language (DDL) 
-* Data Manipulation Language (DML).
-
-On this page, we will take a quick look at some basic examples of DDL and DML.
+* Data Manipulation Language (DML)
 
 ## Data Definition Language
 
@@ -20,7 +18,7 @@ Data Definition Language is what we use when we are creating, altering, or remov
 For instance:
 * `CREATE TABLE`
 * `ALTER TABLE` 
-* `DROP TABLE`.
+* `DROP TABLE`
 
 ### CREATE
 
@@ -59,8 +57,9 @@ Notice we have also added a couple things:
 
 ### ALTER
 
-Now say we've decided that we don't like having the _Artist_ field in `dbo.Song` because we think Artists should get their own table (where they can live happily normalised).
-So we want to remove it from our table using `DROP COLUMN`.
+Now say we've decided that we don't like having the _Artist_ field in `dbo.Song` because we think Artists should get their own table.
+
+So we will remove it from our table using `DROP COLUMN`.
 
 ```sql
 ALTER TABLE dbo.Song
@@ -68,7 +67,8 @@ DROP COLUMN Artist;
 ```
 
 But we've also realised that it would be helpful if we could store the duration of each song in this table instead.
-If we measure the duration in seconds we can store this as an integer!
+
+Let's measure the duration in seconds so we can store this as an integer.
 
 ```sql
 ALTER TABLE dbo.Song
@@ -109,31 +109,15 @@ This means you can _rollback_ a `DELETE` statement. But _not_ a `TRUNCATE` state
 
 Data Manipulation Language is what we use when are working with the data itself. 
 For example, this could mean :
-* populating a table with `INSERT`
 * returning data with `SELECT` 
+* populating a table with `INSERT`
 * changing data with `UPDATE`
 * removing data with `DELETE`
-
-
-### INSERT INTO
-
-Let's return to our newly created table `dbo.Song` and populate it with... songs.
-We will use songs from _Now That's What I Call The 80s_.
-
-```sql
-INSERT INTO dbo.Song
-VALUES
-	('Under Pressure',249)
-,	('Billie Jean',293)
-,	('The Winner Takes It All',295)
-,	('Our House',203)
-,	('Take On Me',225);
-```
 
 ### SELECT
 
 The `SELECT` statement is our bread and butter in the SQL world (ed: why is it not at the top of this page then?). 
-And there are a lot of way of augmenting it in order to define exactly what data we need to return.
+And there are a lot of way of augmenting it in order to define exactly what data we want it to return.
 
 But in its most basic configuration, `SELECT` looks like this:
 
@@ -151,20 +135,43 @@ ID|Name|Duration
 4|Our House|203
 5|Take On Me|225
 
+### INSERT INTO
+
+The above `SELECT` implies that `dbo.Songs' only has 5 songs.
+Let's populate it with more songs.
+
+```sql
+INSERT INTO dbo.Song
+VALUES
+	('The Tide Is High', 231)
+,	('Red Red Wine',182)
+,	('Do You Really Want To Hurt Me',263)
+,	('Relax',238)
+,	('Gold',231);
+```
+
+Now, manually entering data into our table in this fashion is really slow and tedious.
+Suppose I've got another table, `dbo.moreSong` which has many songs in it and has both columns I need: `SongName` and `Duration¬.
+
+```sql
+INSERT INTO dbo.Song
+SELECT
+	SongName
+,	Duration
+FROM	dbo.moreSong;
+```
+
 ### SELECT INTO
 
 `SELECT INTO` is an interesting example of syntactic sugar.
-It is a single statement comprised of both **DDL** and **DML**:
-* `CREATE`
-* `SELECT`
-* `INSERT`
+It both **DDL** and **DML** because it comprises `CREATE`, `SELECT`, and `INSERT`.
 
-In doing so this allows us to easily _copy_ data from one table to another.
+Put simply, allows us to easily _copy_ data from one table by creating another table.
 
 ```sql
 SELECT
 	*
-INTO dbo.SomeOtherTable
+INTO dbo.newSongTable
 FROM dbo.Song;
 ```
 
@@ -189,22 +196,4 @@ And we _have_ to delete it from _Songs_.
 DELETE dbo.Song
 WHERE Name = 'Thriller';
 ```
-
-Adrian Ng
-2018-03-30
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
