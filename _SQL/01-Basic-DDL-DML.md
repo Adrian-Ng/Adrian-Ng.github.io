@@ -153,6 +153,7 @@ VALUES
 ```
 
 Now, manually entering data into our table in this fashion is really slow and tedious.
+
 Suppose I've got another table, `dbo.moreSong` which has many songs in it and has both columns I need: `SongName` and `Duration`.
 
 ```sql
@@ -162,13 +163,14 @@ SELECT
 ,	Duration
 FROM	dbo.moreSong;
 ```
+This essentially copies everything from `dbo.moreSong` into `dbo.Song`.
 
 ### SELECT INTO
 
 `SELECT INTO` is an interesting example of syntactic sugar.
 It both **DDL** and **DML** because it comprises `CREATE`, `SELECT`, and `INSERT`.
 
-Put simply, allows us to easily _copy_ data from one table by creating another table.
+Put simply, allows us to easily _copy_ data from one table into a new table.
 
 ```sql
 SELECT
