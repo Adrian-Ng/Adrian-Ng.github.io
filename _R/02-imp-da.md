@@ -19,7 +19,7 @@ $$
 ### Assumption of X
 
 $$
-f_k(x) = \frac{1}{\sqrt{2\pi} \sigma_k} exp \left(-\frac{1}{2\sigma_k^2} (x-\mu_k)^2
+f_k(x) = \frac{1}{\sqrt{2\pi} \sigma_k} exp \left(-\frac{1}{2\sigma_k^2} (x-\mu_k)^2 \right
 $$
 
 ## Linear Discriminant Analysis
@@ -33,7 +33,7 @@ $$
 ### Variance
 
 $$
-\sigma^2 = \frac{1}{n-k}\sum_{k=1}^K\sum{i:y_i =k} (x_i-\mu\hat_k)^2
+\sigma^2 = \frac{1}{n-k}\sum_{k=1}^K\sum_{i:y_i =k} (x_i-\mu\hat_k)^2
 $$
 
 ### Classifier for multinomial classification
