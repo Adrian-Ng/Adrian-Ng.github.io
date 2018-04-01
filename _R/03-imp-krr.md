@@ -38,7 +38,7 @@ $$
 $$
 
 $$
-K(x,x') = x\cdot x' = \sum_{j=1}^p x_j \cdot x'_j
+K(x,x') = \left( 1 + \sum_{j=1}^p x_j x'_j \right)^d
 $$
 
 ```R
@@ -48,6 +48,11 @@ polynomial_k <- function (x, x.prime, d) {
 ```
 
 ### RADIAL KERNEL
+
+$$
+K(x,x') = exp \left(-\gamma \sum_{j=1}^p (x_j-x'_j)^2 \right)
+$$
+
 ```R
 radial_k <- function (x, x.prime, g) {	
 	r <- apply(		x.prime
@@ -64,6 +69,10 @@ radial_k <- function (x, x.prime, g) {
 ```
 
 ### LINEAR KERNEL
+
+$$
+K(x,x') = x\cdot x' = \sum_{j=1}^p x_j \cdot x'_j
+$$
 
 ```R
 linear_k <-function (x,x.prime) {
