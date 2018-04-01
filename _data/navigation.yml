@@ -8,6 +8,8 @@ main:
      url: /notes/
    - title: "SQL"
      url: http://adrian.ng/SQL/Basics-DDL-DML/
+   - title: "R Language"
+     url: http://adrian.ng/R/imp-knn/
 #	- title "Posts"
 #		url: http://adrian.ng/posts/
  # - title: "Sample Posts"
