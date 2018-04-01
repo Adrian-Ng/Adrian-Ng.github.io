@@ -38,13 +38,6 @@
     {% else %}
       {% capture script_path %}{{ script | absolute_url }}{% endcapture %}
     {% endif %}
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  tex2jax: {
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-    inlineMath: [['$','$']]
-  }
-});
     <script src="{{ script_path }}"></script>
   {% endfor %}
 {% endif %}
