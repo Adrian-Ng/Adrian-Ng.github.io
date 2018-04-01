@@ -48,18 +48,18 @@ knn_general <- function
 R does not appear to have a function of finding model values. 
 
 ```R
-modlab <- function  
-	(xx){	
-	modlab <- aggregate(	as.numeric(xx)
-						,	by=list(as.numeric(xx))
-						,	FUN = length
-						)	[which.max(aggregate(	as.numeric(xx)
-												,	by=list(as.numeric(xx))
-												,	FUN = length
-												)	$x
-										),1
-							]
-	return(modlab)
+modlab <- function
+	(xx){
+	modlab <- aggregate(	
+		as.numeric(xx)
+	,	by=list(as.numeric(xx))
+	,	FUN = length
+	)	[which.max(aggregate(	
+			as.numeric(xx)
+		,	by=list(as.numeric(xx))
+		,	FUN = length
+		)	$x),1]
+return(modlab)
 }
 ```
 
@@ -81,7 +81,7 @@ This stores the predicted labels for our `testObject` of every nearest neighbour
 
 ```R
 predicted		<- data.frame(testObject[,1]);
-names(predicted)[1]	<- paste("testID");	
+names(predicted)[1]	<- paste("testID");
 ```
 This converts `testID` from factor to numeric to maintain ordering.
 
