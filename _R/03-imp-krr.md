@@ -20,9 +20,7 @@ KRR <- function
 
 ### POLYNOMIAL KERNEL	
 
-{% raw %}
-$$a^2 + b^2 = c^2$$ 
-{% endraw %}
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" />
 
 ```R
 polynomial_k <- function (x, x.prime, d) {
@@ -86,6 +84,7 @@ k	<- polynomial_k(m.trainObject,t(m.testObject),parameter);
 ```
 
 ### Radial
+```R
 else if (km == 1) {
 K	<- radial_k(df.trainObject,df.trainObject,parameter);
 k	<- radial_k(df.trainObject,df.testObject,parameter);
