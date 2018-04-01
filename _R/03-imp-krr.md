@@ -37,6 +37,10 @@ $$
 \end{align*}
 $$
 
+$$
+K(x,x') = x\cdot x' = \sum_{j=1}^p x_j \cdot x'_j
+$$
+
 ```R
 polynomial_k <- function (x, x.prime, d) {
 	return(I((1 +	x %*% x.prime)^d));		
