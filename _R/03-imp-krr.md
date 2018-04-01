@@ -3,11 +3,8 @@ title: "R Implementation: Kernel Ridge Regression"
 permalink: /R/imp-krr/
 excerpt: "An Implementation of Kernel Ridge Regression in R by Adrian Ng"
 toc: true
+mathjax:true
 ---
-
-<script type="text/javascript" async
-  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
 
 ## DEFINE KRR CLASS
 ```R
