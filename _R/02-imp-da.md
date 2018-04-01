@@ -14,7 +14,7 @@ There's nothing here yet.
 
 $$
 p_k(x) = (Y = k\vert X =x) = \frac{\pi_k f_k(x)}{\sum_{l=1}^K \pi_l f_l(x)}
-$$$
+$$
 
 ### Assumption of X
 
@@ -27,7 +27,7 @@ $$
 ### Classifier
 
 $$
-\delta(x) = \frac{\mu_k}{\sigma^2}x-\frac{\mu_k^2}{2\sigma^2} + log \pi_k
+\delta(x) = \frac{\mu_k}{\sigma^2}x-\frac{\mu_k^2}{2\sigma^2} + \log \pi_k
 $$
 
 ### Variance
@@ -39,7 +39,7 @@ $$
 ### Classifier for multinomial classification
 
 $$
-\delta_k(x) = x^T\Sigma^{-1} \mu_k - \frac{1}{2}\mu^T_k\Sigma^{-1}\sigma_k + log \pi_k
+\delta_k(x) = x^T\Sigma^{-1} \mu_k - \frac{1}{2}\mu^T_k\Sigma^{-1}\sigma_k + \log \pi_k
 $$
 
 ## Quadratic Discriminant Analysis
@@ -47,7 +47,7 @@ $$
 ### Classifer
 
 $$
-\delta_k(x) = -\frac{1}{2} log\vert\Sigma_k\vert - \frac{1}{2}(x-\mu_k)^T\Sigma_k^{-1}(x-\sigma_k) + log\pi_k
+\delta_k(x) = -\frac{1}{2} log\vert\Sigma_k\vert - \frac{1}{2}(x-\mu_k)^T\Sigma_k^{-1}(x-\sigma_k) + \log\pi_k
 $$
 
 
