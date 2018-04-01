@@ -299,4 +299,4 @@ defaults:
       author_profile: false
       share: true
       sidebar:
-        nav: "R"
+        nav: "R Language"
