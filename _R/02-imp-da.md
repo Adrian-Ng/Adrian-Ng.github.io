@@ -33,7 +33,7 @@ $$
 ### Variance
 
 $$
-\sigma^2 = \frac{1}{n-k} \sum_{k=1}^K \sum_{i:y_i =k} (x_i - \mu\hat_k)^2
+\sigma^2 = \frac{1}{n-k} \sum_{k=1}^K \sum_{i\colon y_i =k} (x_i - \mu\hat_k)^2
 $$
 
 ### Classifier for multinomial classification
