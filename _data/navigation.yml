@@ -30,4 +30,14 @@ SQL:
        url: /SQL/Basics-Joins/
      - title: "Group By"
        url: /SQL/Basics-Group-By/
-    
+
+# R links
+R:
+   - title: Implementation    
+     children:
+     - title: "k Nearest Neighbours"
+       url: /R/imp-knn/
+     - title: "Discriminant Analysis"
+       url: /R/imp-da/
+     - title: "Kernel Ridge Regression"
+       url: /R/imp-krr/

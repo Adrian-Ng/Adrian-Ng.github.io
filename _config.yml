@@ -276,7 +276,9 @@ collections:
   SQL:
     output: true
     permalink: /:collection/:path/
-
+  R:
+    output: true
+    permalink: /:collection/:path/
 defaults:
   # _SQL
   - scope:
@@ -288,3 +290,13 @@ defaults:
       share: true
       sidebar:
         nav: "SQL"
+  # _R
+  - scope:
+      path: ""
+      type: R
+    values:
+      layout: single
+      author_profile: false
+      share: true
+      sidebar:
+        nav: "R"
