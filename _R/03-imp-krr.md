@@ -19,6 +19,11 @@ KRR <- function
 ```
 
 ### POLYNOMIAL KERNEL	
+
+{% raw %}
+$$a^2 + b^2 = c^2$$ --> note that all equations between these tags will not need escaping! 
+{% endraw %}
+
 ```R
 polynomial_k <- function (x, x.prime, d) {
 	return(I((1 +	x %*% x.prime)^d));		
