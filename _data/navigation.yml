@@ -34,7 +34,7 @@ SQL:
        url: /SQL/Basics-Group-By/
 
 # R links
-R:
+R Language:
    - title: Implementation    
      children:
      - title: "k Nearest Neighbours"
