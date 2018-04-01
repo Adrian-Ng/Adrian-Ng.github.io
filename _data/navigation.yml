@@ -41,3 +41,11 @@ R Language:
        url: /R/imp-da/
      - title: "Kernel Ridge Regression"
        url: /R/imp-krr/
+     - title: "Regression Neural Network"
+       url: /R/imp-rnn/
+     - title: "Decision Stumps"
+       url: /R/imp-ds/
+     - title: "Hierachical Clustering"
+       url: /R/imp-hc/
+
+
