@@ -19,7 +19,7 @@ $$
 ### Assumption of X
 
 $$
-f_k(x) = \frac{1}{\sqrt{2\pi} \sigma_k} exp \left(-\frac{1}{2\sigma_k^2} (x-\mu_k)^2 \right)
+f_k(x) = \frac{1}{\sqrt{2\pi} \sigma_k} \exp \left(-\frac{1}{2\sigma_k^2} (x-\mu_k)^2 \right)
 $$
 
 ## Linear Discriminant Analysis
@@ -47,7 +47,7 @@ $$
 ### Classifer
 
 $$
-\delta_k(x) = -\frac{1}{2} log\vert\Sigma_k\vert - \frac{1}{2}(x-\mu_k)^T\Sigma_k^{-1}(x-\sigma_k) + \log\pi_k
+\delta_k(x) = -\frac{1}{2} \log \vert\Sigma_k\vert - \frac{1}{2}(x-\mu_k)^T\Sigma_k^{-1}(x-\sigma_k) + \log\pi_k
 $$
 
 
