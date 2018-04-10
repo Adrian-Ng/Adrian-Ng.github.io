@@ -5,6 +5,10 @@ excerpt: "An implementation of K Nearest Neighbours in R Language by Adrian Ng"
 toc: true
 ---
 
+## DOWNLOAD
+
+[ynn.r](/R/NN.r)
+
 ## Intro
 
 A generalized function for calculating nearest neighbours for any value of k.
