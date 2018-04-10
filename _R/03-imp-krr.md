@@ -6,6 +6,10 @@ toc: true
 mathjax: true
 ---
 
+## DOWNLOAD 
+
+[KRR.r](/R/KRR.r)
+
 ## DEFINE KRR CLASS
 ```R
 KRR <- function
@@ -33,7 +37,7 @@ polynomial_k <- function (x, x.prime, d) {
 ### RADIAL KERNEL
 
 $$
-K(x,x') = exp \left(-\gamma \sum_{j=1}^p (x_j-x'_j)^2 \right)
+K(x,x') = \exp \left(-\gamma \sum_{j=1}^p (x_j-x'_j)^2 \right)
 $$
 
 ```R
