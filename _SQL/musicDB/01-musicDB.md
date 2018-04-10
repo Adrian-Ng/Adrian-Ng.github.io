@@ -1,6 +1,6 @@
 ---
 title: "PostgreSQL: Music DB"
-permalink:/SQL/musicDB/
+permalink: /SQL/musicDB/
 excerpt: "Creating a Music DB in PostgreSQL"
 toc: true
 ---
