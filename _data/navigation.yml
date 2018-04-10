@@ -20,7 +20,7 @@ main:
 
 # SQL links
 SQL:
-   - title: SQL Basics
+   - title: T-SQL Basics
      children:
      - title: "DDL and DML"
        url: /SQL/Basics-DDL-DML/
@@ -30,6 +30,10 @@ SQL:
        url: /SQL/Basics-Joins/
      - title: "Group By"
        url: /SQL/Basics-Group-By/
+   - title: PostgreSQL
+     children:
+     - title: "Music DB"
+       url: /SQL/musicDB/
 
 # R links
 R Language:
