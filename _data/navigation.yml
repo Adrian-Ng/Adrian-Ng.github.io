@@ -8,10 +8,10 @@ main:
      url: http://adrian.ng/SQL/Basics-DDL-DML/
    - title: "R Language"
      url: http://adrian.ng/R/imp-knn/
-#  - title: "Java"
-#    url: http://adrian.ng/Java/
-#  - title: "MATLAB"
-#    url: http://adrian.ng/matlab/
+   - title: "Java"
+     url: http://adrian.ng/java/Basics/Intro
+   - title: "MATLAB"
+     url: http://adrian.ng/matlab/Basics/Intro
 
 
 # SQL links
