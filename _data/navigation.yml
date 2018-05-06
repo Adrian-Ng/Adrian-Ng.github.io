@@ -57,14 +57,40 @@ R Language:
 Java:
    - title: Basics
      children:
-     -  title: "Intro"
-     -  url: /java/Basics/Intro
+     - title: "Intro"
+       url: /java/Basics/Intro/
+
+   - title: PageRank
+     children:
+     - title: "UrlExtractor"
+       url: /java/PageRank/UrlExtractor/
+     - title: "ArticleIndexer"
+       url: /java/PageRank/ArticleIndexer/
+     - title: "PageRank"
+       url: /java/PageRank/PageRank/
+
    - title: Hadoop
      children:
      - title: "Intro"
-     - url: /java/Hadoop/Intro/
+       url: /java/Hadoop/Intro/
   
    - title: Value at Risk
      children:
      - title: "Intro"
-     - url /java/VaR/Intro/
+       url: /java/VaR/Intro/
+
+# MATLAB links
+MATLAB:
+   - title: Basics
+     children: 
+     - title: "Intro"
+       url: /matlab/Basics/Intro/
+
+   - title: Hidden Markov Models
+     children:
+     - title: "alpha"
+       url: /matlab/hmm/alpha/
+     - title: "beta"
+       url: /matlab/hmm/beta/
+     - title: "gamma"
+       url: /matlab/hmm/gamma/

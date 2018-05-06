@@ -279,6 +279,12 @@ collections:
   R:
     output: true
     permalink: /:collection/:path/
+  Java:
+    output: true
+    permalink: /:collection/:path/
+  MATLAB:
+    output: true
+    permalink: /:collection/:path/
 defaults:
   # _SQL
   - scope:
@@ -300,3 +306,25 @@ defaults:
       share: true
       sidebar:
         nav: "R Language"
+
+  # _java
+  - scope:
+      path: ""
+      type: java
+    values:
+      layout: single
+      author_profile: false
+      share: true
+      sidebar:
+        nav: "Java"
+
+  # _matlab
+  - scope:
+      path: ""
+      type: matlab
+    values:
+      layout: single
+      author_profile: false
+      share: true
+      sidebar:
+         nav: "MATLAB"
