@@ -25,6 +25,10 @@ SQL:
        url: /SQL/Basics-Joins/
      - title: "Group By"
        url: /SQL/Basics-Group-By/
+   - title: Advanced Stuff
+     children:
+     - title: "Recursion"
+       url: /SQL/Advanced/Recursion/
    - title: PostgreSQL
      children:
      - title: "Music DB"

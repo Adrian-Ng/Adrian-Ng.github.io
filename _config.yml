@@ -306,7 +306,6 @@ defaults:
       share: true
       sidebar:
         nav: "R Language"
-
   # _java
   - scope:
       path: ""
@@ -317,7 +316,6 @@ defaults:
       share: true
       sidebar:
         nav: "Java"
-
   # _matlab
   - scope:
       path: ""
