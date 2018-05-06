@@ -16,7 +16,7 @@ For example, suppose we have a string of pipe separated data: Eggs|Milk|Juice|Br
 
 Let's write a SQL query that can separate this string to a column of values.
 
-```SQL
+```sql
 DECLARE @str varchar(100)
 SET @str = 'Eggs|Milk|Juice|Bread|';
 
