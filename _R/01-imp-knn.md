@@ -7,7 +7,7 @@ toc: true
 
 ## DOWNLOAD
 
-[ynn.r](/R/NN.r)
+[nn.r](/R/NN.r)
 
 ## Intro
 
