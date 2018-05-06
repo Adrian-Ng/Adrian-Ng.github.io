@@ -8,14 +8,10 @@ main:
      url: http://adrian.ng/SQL/Basics-DDL-DML/
    - title: "R Language"
      url: http://adrian.ng/R/imp-knn/
-#	- title "Posts"
-#		url: http://adrian.ng/posts/
- # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
+#  - title: "Java"
+#    url: http://adrian.ng/Java/
+#  - title: "MATLAB"
+#    url: http://adrian.ng/matlab/
 
 
 # SQL links
