@@ -1,6 +1,5 @@
-
 ---
-title: "DML: UPDATET Statements"
+title: "DML: UPDATE Statements"
 permalink: /SQL/dml/update/
 excerpt: "A look at ways of writing UPDATE statements in SQL by Adrian Ng"
 toc: true
