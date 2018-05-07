@@ -30,9 +30,9 @@ SELECT
 	SUBSTRING(@str,0,CHARINDEX(',',@str,1)) AS output
 ,	SUBSTRING(@str,CHARINDEX(',',@str,1) + 1, LEN(@str)) AS remainder
 ```
-output|remainder
----|---
-Eggs|Milk,Juice,Bread
+|output|remainder|
+|---|---|
+|Eggs|Milk|
 
 We've split our string into two parts: `output` and `remainder`, which is to be split further in the recursive part.
 
