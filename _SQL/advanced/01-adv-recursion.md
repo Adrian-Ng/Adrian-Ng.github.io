@@ -8,42 +8,50 @@ classes: wide
 
 Recursion is possible in SQL via the use of a type of subquery known as a Common Table Element (CTE).
 One handy feature of CTEs is that they have names which makes it easy for us to reference these subqueries when we want.
-We can write CTEs such that we reference the CTE from _within_ the CTE. 
 
-That is, we write a CTE that applies some transformation to some input recursively until some stopping condition is met.
+Furthermore, we can write CTEs such that we reference the CTE from _within_ the CTE. 
+That is, we write a CTE that applies some transformation to some input recursively until some __stopping condition__ is met.
 
 One general area where I find recursion to be particularly useful in SQL is regex. 
-For example, suppose we have a string of pipe-separated values: Eggs|Milk|Juice|Bread
+For example, suppose we have a string of comma-separated values:
 
 ```sql
-DECLARE @str = 'Eggs|Milk|Juice|Bread|';
+DECLARE @str = 'Eggs,Milk,Juice,Bread,';
 ```
 
+## Anchor Member
+
 Now, let's write a SQL query that can separate this string to a column of values.
-First we write the _anchor_. This is the output on the first iteration.
+A recursive subquery is written in two parts. First we write the __anchor__. 
+This is the output on the first iteration.
 
 ```sql
 SELECT
-	SUBSTRING(@str,0,CHARINDEX('|',@str,1)) AS output
-	,	SUBSTRING(@str,CHARINDEX('|',@str,1) + 1, LEN(@str)) as remainder
+	SUBSTRING(@str,0,CHARINDEX(',',@str,1)) AS output
+,	SUBSTRING(@str,CHARINDEX(',',@str,1) + 1, LEN(@str)) AS remainder
 ```
-
 |output|remainder|
 |---|---|
-|Eggs|Milk|Juice|Bread||
+|Eggs|Milk,Juice,Bread|
 
+We've split our string into two parts: `output` and `remainder`, which is to be split further in the recursive part.
 
+## Recursive Part
+
+Then we write the the __recursive__ part, which is identical to our transformation in the Anchor but has `remainder` as the input.
+In this part we invoke the CTE.
+We will also include a stopping condition, which stops the recursion when there are no more commas in `remainder`.
 
 ```sql
 WITH cteRecursion AS (
-	SELECT
-		SUBSTRING(@str,0,CHARINDEX('|',@str,1)) AS output
-	,	SUBSTRING(@str,CHARINDEX('|',@str,1) + 1, LEN(@str)) as remainder
-	UNION ALL SELECT
-		SUBSTRING(remainder,0,CHARINDEX('|',remainder,1))
-	,	SUBSTRING(remainder,CHARINDEX('|',remainder,1) + 1, LEN(remainder))
-	FROM cteRecursion
-	WHERE CHARINDEX('|', remainder,1) <> 0
+	SELECT  -- anchor members
+		SUBSTRING(@str,0,CHARINDEX(',',@str,1)) AS output
+	,	SUBSTRING(@str,CHARINDEX(',',@str,1) + 1, LEN(@str)) as remainder
+	UNION ALL SELECT -- recursive members
+		SUBSTRING(remainder,0,CHARINDEX(',',remainder,1))
+	,	SUBSTRING(remainder,CHARINDEX(',',remainder,1) + 1, LEN(remainder))
+	FROM cteRecursion -- invoke CTE
+	WHERE CHARINDEX(',', remainder,1) <> 0 -- stopping condition
 	)
 SELECT 
 	output
