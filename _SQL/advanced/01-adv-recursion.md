@@ -13,14 +13,26 @@ We can write CTEs such that we reference the CTE from _within_ the CTE.
 That is, we write a CTE that applies some transformation to some input recursively until some stopping condition is met.
 
 One general area where I find recursion to be particularly useful in SQL is regex. 
-For example, suppose we have a string of pipe separated data: Eggs|Milk|Juice|Bread
+For example, suppose we have a string of pipe-separated values: Eggs|Milk|Juice|Bread
 
 ```sql
-DECLARE @str varchar(100)
-SET @str = 'Eggs|Milk|Juice|Bread|';
+DECLARE @str = 'Eggs|Milk|Juice|Bread|';
 ```
 
 Now, let's write a SQL query that can separate this string to a column of values.
+First we write the _anchor_. This is the output on the first iteration.
+
+```sql
+SELECT
+	SUBSTRING(@str,0,CHARINDEX('|',@str,1)) AS output
+	,	SUBSTRING(@str,CHARINDEX('|',@str,1) + 1, LEN(@str)) as remainder
+```
+
+|output|remainder|
+|---|---|
+|Eggs|Milk|Juice|Bread||
+
+
 
 ```sql
 WITH cteRecursion AS (
