@@ -6,7 +6,7 @@ toc: true
 ---
 
 Structured Query Language (SQL) is an easy-to-learn, albeit, high level language that you'll find being used pretty much wherever you come across relational databases.
-It is used in essentially two ways: building databases and retrieving data from these databases.
+It is used in essentially two ways: __building databases__ and __manipulating data__.
 
 That is, we can divide the language into two broad categories: 
 * Data Definition Language (DDL) 
