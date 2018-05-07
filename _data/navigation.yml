@@ -37,6 +37,8 @@ SQL:
        url: /SQL/ddl/drop/
    - title: Data Manipulation Language
      children:
+     - title: "Intro"
+       url: /SQL/dml/intro/
      - title: "Select"
        url: /SQL/dml/select/
      - title: "Insert"
