@@ -25,12 +25,12 @@ SQL:
        url: /SQL/Basics-Joins/
      - title: "Group By"
        url: /SQL/Basics-Group-By/
-   - title: DDL
+   - title: Data Definition Language
      children:
      - title: "Create"
        url: /SQL/ddl/create/
      - title: "Alter"
-       url: "/SQL/ddl/alter/
+       url: /SQL/ddl/alter/
      - title: "Drop"
        url: /SQL/ddl/drop/
 #   - title: DML
