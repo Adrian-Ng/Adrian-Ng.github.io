@@ -18,14 +18,25 @@ We could even drop a whole bunch of tables:
 DROP TABLE dbo.Artist, dbo.Album, dbo.Playlist;
 ```
 
+## View
+
 Let's drop our view `dbo.vLongSong`.
 
 ```sql
 DROP VIEW dbo.vLongSong;
 ```
 
+## Index
+
 Let's drop our index on `dbo.Song`.
 
 ```sql
 DROP INDEX IX_NAME ON dbo.Song;
+```
+## Stored Procedure
+
+Let's drop our stored procedure `dbo.spSelectTableAndView`.
+
+```sql
+DROP PROCEDURE dbo.spSelectTableAndView;
 ```
