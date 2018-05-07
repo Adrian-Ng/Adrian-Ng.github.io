@@ -33,7 +33,7 @@ SELECT
 
 |output|remainder|
 |---|---|
-|Eggs|Milk|
+|Eggs|Milk,Juice,Bread|
 
 We've split our string into two parts: `output` and `remainder`, which is to be split further in the recursive part.
 
