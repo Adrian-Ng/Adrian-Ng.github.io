@@ -39,7 +39,7 @@ CREATE VIEW dbo.vLongSongs AS
 Let's a create a non-clustered index on dbo.Songs.
 
 ```sql
-CREATE NONCLUSTERED INDEX IX_PRIMARY ON dbo.Songs (Name);
+CREATE NONCLUSTERED INDEX IX_NAME ON dbo.Songs (Name);
 ```
 
 ## Stored Procedure
@@ -51,7 +51,7 @@ SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-CREATE PROCEDURE dbo.SelectTableAndView
+CREATE PROCEDURE dbo.spSelectTableAndView
 AS
 BEGIN
 	SET NOCOUNT ON;
