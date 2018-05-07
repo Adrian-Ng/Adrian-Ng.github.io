@@ -8,9 +8,11 @@ toc: true
 ## Syntactic Suguar
 
 `SELECT INTO` is an example of __syntactic sugar__.
-It is both **DDL** and **DML** because it is both `CREATE TABLE`, and `INSERT INTO`.
+It is both **DDL** and **DML** because it invokes both
+* `CREATE TABLE`
+* `INSERT INTO`.
 
-Put simply, allows us to easily _copy_ data from one table into a new table.
+It allows us to easily __copy data__ from one table into a new table.
 We write it like this:
 
 ```sql
