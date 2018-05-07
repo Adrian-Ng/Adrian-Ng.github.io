@@ -35,12 +35,12 @@ SQL:
        url: /SQL/ddl/alter/
      - title: "Drop"
        url: /SQL/ddl/drop/
-#   - title: DML
-#     children:
-#     - title: "Select"
-#       url: /SQL/dml/select/
-#     - title: "Insert"
-#       url: /SQL/dml/insert/
+   - title: DML
+     children:
+     - title: "Select"
+       url: /SQL/dml/select/
+     - title: "Insert"
+       url: /SQL/dml/insert/
 #     - title: "Select Into"
 #       url: /SQL/dml/selectinto/
 #     - title: "Update"
