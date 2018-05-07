@@ -30,6 +30,7 @@ SELECT
 	SUBSTRING(@str,0,CHARINDEX(',',@str,1)) AS output
 ,	SUBSTRING(@str,CHARINDEX(',',@str,1) + 1, LEN(@str)) AS remainder
 ```
+
 |output|remainder|
 |---|---|
 |Eggs|Milk|
