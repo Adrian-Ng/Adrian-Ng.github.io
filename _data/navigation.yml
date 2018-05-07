@@ -27,6 +27,8 @@ SQL:
        url: /SQL/Basics-Group-By/
    - title: Data Definition Language
      children:
+     - title: "Intro"
+       url: /SQL/ddl/intro/
      - title: "Create"
        url: /SQL/ddl/create/
      - title: "Alter"
