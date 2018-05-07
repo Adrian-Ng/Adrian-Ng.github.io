@@ -26,7 +26,7 @@ SET Duration = NULL;
 
 ## Single value
 
-Let's change  song in `dbo.Songs`..
+Let's update `Duration` for a single song in `dbo.Songs`.
 
 ```sql
 UPDATE dbo.Song
@@ -51,7 +51,10 @@ Let's update the entire table. But use a case statement to update the `Descripti
 
 ```sql
 UPDATE dbo.Song
-SET Description = CASE WHEN Duration >= 300 THEN 'Long Song' ELSE 'Short Song' END
+SET Description = CASE  WHEN Duration >= 300 
+			THEN 'Long Song' 
+			ELSE 'Short Song' 
+			END
 ```
 
 
