@@ -69,7 +69,8 @@ ON t1.Letters1 = t2.Letters2
 ```
 
 This is similar to an `INNER JOIN` but relaxes the condition that the joining fields must _always_ match.
-In addition to returning matching tuples, it returns tuples from the left table `table1` don't match to anything in the right table `table2`.
+
+In addition to returning matching tuples, it returns tuples from the left table that don't match to anything in the right table.
 
 The result set will have the same number of tuples as the left table.
 
