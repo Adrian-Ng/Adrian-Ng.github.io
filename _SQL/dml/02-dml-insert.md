@@ -1,6 +1,6 @@
 ---
-title: "DML: SELECT Statements"
-permalink: /SQL/dml/select/
+title: "DML: INSERT Statements"
+permalink: /SQL/dml/insert/
 excerpt: "A look at ways of writing SELECT statements in SQL by Adrian Ng"
 toc: true
 ---
@@ -20,9 +20,9 @@ VALUES
 ,	('Gold',231);
 ```
 
-## Inserting from SELECT
+But, manually entering data into our table in this fashion is really slow and tedious!
 
-Now, manually entering data into our table in this fashion is really slow and tedious.
+## Inserting from SELECT
 
 Suppose I've got another table, `dbo.moreSong` which has... _more_ songs (and conveniently shares the same schema).
 
