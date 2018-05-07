@@ -45,8 +45,8 @@ SQL:
        url: /SQL/dml/insert/
      - title: "Select Into"
        url: /SQL/dml/selectinto/
-#     - title: "Update"
-#       url: /SQL/dml/update/
+     - title: "Update"
+       url: /SQL/dml/update/
 #     - title: "Delete"
 #       url: /SQL/dml/delete/
 #   - title: Joins
