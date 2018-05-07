@@ -35,7 +35,7 @@ SQL:
        url: /SQL/ddl/alter/
      - title: "Drop"
        url: /SQL/ddl/drop/
-   - title: DML
+   - title: Data Manipulation Language
      children:
      - title: "Select"
        url: /SQL/dml/select/
