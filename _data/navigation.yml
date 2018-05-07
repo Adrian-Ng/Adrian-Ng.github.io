@@ -5,7 +5,7 @@ main:
    - title: "About"
      url: /about/	
    - title: "SQL"
-     url: http://adrian.ng/SQL/Basics-DDL-DML/
+     url: http://adrian.ng/SQL/ddl/intro/
    - title: "R Language"
      url: http://adrian.ng/R/imp-knn/
    - title: "Java"
@@ -15,16 +15,16 @@ main:
 
 # SQL links
 SQL:
-   - title: T-SQL Basics
-     children:
-     - title: "DDL and DML"
-       url: /SQL/Basics-DDL-DML/
-     - title: "Select Statements"
-       url: /SQL/Basics-Select/
-     - title: "Joins"
-       url: /SQL/Basics-Joins/
-     - title: "Group By"
-       url: /SQL/Basics-Group-By/
+#   - title: T-SQL Basics
+#     children:
+#     - title: "DDL and DML"
+#       url: /SQL/Basics-DDL-DML/
+#     - title: "Select Statements"
+#       url: /SQL/Basics-Select/
+#     - title: "Joins"
+#       url: /SQL/Basics-Joins/
+#     - title: "Group By"
+#       url: /SQL/Basics-Group-By/
    - title: Data Definition Language
      children:
      - title: "Intro"
