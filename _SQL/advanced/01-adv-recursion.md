@@ -30,17 +30,16 @@ SELECT
 	SUBSTRING(@str,0,CHARINDEX(',',@str,1)) AS output
 ,	SUBSTRING(@str,CHARINDEX(',',@str,1) + 1, LEN(@str)) AS remainder
 ```
-|output|remainder|
-|---|---|
-|Eggs|Milk,Juice,Bread|
+output|remainder
+---|---
+Eggs|Milk,Juice,Bread
 
 We've split our string into two parts: `output` and `remainder`, which is to be split further in the recursive part.
 
 ## Recursive Part
 
-Then we write the the __recursive__ part, which is identical to our transformation in the Anchor but has `remainder` as the input.
-In this part we invoke the CTE.
-We will also include a stopping condition, which stops the recursion when there are no more commas in `remainder`.
+The __recursive__ part is identical to our transformation in the Anchor but has `remainder` as the input.
+Here we invoke the CTE and include a stopping condition, which stops the recursion when `remainder` contains no more commas.
 
 ```sql
 WITH cteRecursion AS (
