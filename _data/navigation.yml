@@ -29,8 +29,8 @@ SQL:
      children:
      - title: "Create"
        url: /SQL/ddl/create/
-#     - title: "Alter"
-#       url: "/SQL/ddl/alter/
+     - title: "Alter"
+       url: "/SQL/ddl/alter/
 #     - title: "Drop"
 #       url: /SQL/ddl/drop/
 #   - title: DML
