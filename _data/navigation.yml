@@ -29,38 +29,38 @@ SQL:
      children:
      - title: "Create"
        url: /SQL/ddl/create/
-     - title: "Alter"
-       url: "/SQL/ddl/alter/
-     - title: "Drop"
-       url: /SQL/ddl/drop/
-   - title: DML
-     children:
-     - title: "Select"
-       url: /SQL/dml/select/
-     - title: "Insert"
-       url: /SQL/dml/insert/
-     - title: "Select Into"
-       url: /SQL/dml/selectinto/
-     - title: "Update"
-       url: /SQL/dml/update/
-     - title: "Delete"
-       url: /SQL/dml/delete/
-   - title: Joins
-     children:
-     - title: "Cartesian Joins"
-       url: /SQL/joins/cartesian/
-     - title: "Semi Joins"
-       url: /SQL/joins/semi/
-   - title: Aggregation
-     children:
-     - title: "functions"
-       url: /SQL/aggregation/functions/
-     - title: "Group By"
-       url: /SQL/aggregation/groupby/
-     - title: "Having"
-       url: /SQL/aggregation/having/
-     - title: "Cube"
-       url: /SQL/aggregation/cube/
+#     - title: "Alter"
+#       url: "/SQL/ddl/alter/
+#     - title: "Drop"
+#       url: /SQL/ddl/drop/
+#   - title: DML
+#     children:
+#     - title: "Select"
+#       url: /SQL/dml/select/
+#     - title: "Insert"
+#       url: /SQL/dml/insert/
+#     - title: "Select Into"
+#       url: /SQL/dml/selectinto/
+#     - title: "Update"
+#       url: /SQL/dml/update/
+#     - title: "Delete"
+#       url: /SQL/dml/delete/
+#   - title: Joins
+#     children:
+#     - title: "Cartesian Joins"
+#       url: /SQL/joins/cartesian/
+#     - title: "Semi Joins"
+#       url: /SQL/joins/semi/
+#   - title: Aggregation
+#     children:
+#    - title: "functions"
+#       url: /SQL/aggregation/functions/
+#     - title: "Group By"
+#       url: /SQL/aggregation/groupby/
+#     - title: "Having"
+#       url: /SQL/aggregation/having/
+#     - title: "Cube"
+#       url: /SQL/aggregation/cube/
    - title: Advanced Stuff
      children:
      - title: "Recursion"
