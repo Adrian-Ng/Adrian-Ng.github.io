@@ -16,7 +16,7 @@ ALTER TABLE dbo.Songs
 ADD year int;
 ```
 
-### Drop 
+### Drop Column
 
 Let's remove a column from a table.
 
@@ -50,7 +50,7 @@ Let's rebuild our index.
 ALTER INDEX IX_NAME ON dbo.Songs REBUILD;
 ```
 
-##
+## Stored Procedure
 
 Let's alter our stored procedure.
 
