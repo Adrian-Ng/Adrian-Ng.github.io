@@ -38,7 +38,7 @@ FROM cteRecursion;
 ```
 
 |output|
----
+|---|
 |Eggs|
 |Milk|
 |Juice|
