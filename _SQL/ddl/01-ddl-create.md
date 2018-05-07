@@ -11,9 +11,9 @@ Let's create a table `dbo.Song`.
 
 ```sql
 CREATE TABLE dbo.Song (
-	ID	int IDENTITY(1,1) PRIMARY KEY
-,	Name	nvarchar(100)
-,	Artist	nvarchar(100));
+	ID		int IDENTITY(1,1) PRIMARY KEY
+,	Name		nvarchar(100)
+,	Duration	int);
 ```
 
 ## View
@@ -21,11 +21,10 @@ CREATE TABLE dbo.Song (
 A view is a _stored query_ that allows us encapsulate a larger query into a database object that we can reference like a table object.
 
 ```sql
-SELECT * FROM dbo.vLongSongs;
+SELECT * FROM dbo.vLongSongs; -- select from view
 ```
-where `dbo.vLongSongs` is our view. 
 
-To create a view:
+To create a really simple view:
 
 ```sql
 CREATE VIEW dbo.vLongSongs AS 
@@ -45,7 +44,7 @@ CREATE NONCLUSTERED INDEX IX_PRIMARY ON dbo.Songs (Name);
 
 ## Stored Procedure
 
-Let's create a __very simple__ stored procedure that selects 100 rows from both a table and from a view.
+Let's create a __very simple__ stored procedure that selects 100 rows from _both_ a table and from a view.
 
 ```sql
 SET ANSI_NULLS ON
