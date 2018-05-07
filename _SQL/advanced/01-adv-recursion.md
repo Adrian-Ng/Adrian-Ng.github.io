@@ -13,20 +13,21 @@ Let's name our cte `cteRecursion`.
 Now, we can invoke `cteRecursion` from _within_ `cteRecursion`. 
 That is, we write a CTE that applies some transformation to some input recursively until some __stopping condition__ is met.
 
-The pseudocode for this CTE is as follows:
+## Pseudocode
 
 ```sql
 WITH cteRecursion AS (
 	SELECT 
-		anchor members
-	UNION ALL 
-	SELECT 
-		recursive members
+		anchorMembers
+	UNION ALL SELECT 
+		recursiveMembers
 	FROM cteRecursion
 	)
 SELECT * FROM cteRecursion;
 ```
 As you can see, the CTE contains a union between so-called __anchor members__ and __recursive members__.
+
+## Handling Regex
 
 One general area where I find recursion to be particularly useful in SQL is regex. 
 For example, suppose we have a string of comma-separated values:
@@ -34,6 +35,8 @@ For example, suppose we have a string of comma-separated values:
 ```sql
 DECLARE @str = 'Eggs,Milk,Juice,Bread,';
 ```
+
+## Anchor
 
 Now, let's write a SQL query that can separate this string to a column of values.
 First we write the transformation for our anchor members `output` and `remainder`.
@@ -49,7 +52,9 @@ SELECT
 |---|---|
 |Eggs|Milk,Juice,Bread|
 
-We've split our string into two parts: `output` and `remainder`, which we recurse through on subsequent iterations.
+We've split our string into two parts: `output` and `remainder`, which then we recurse through on subsequent iterations.
+
+## Recursion
 
 The transformations for the recursive members are identical to the transformations for the anchor members.
 But now we invoke `cteRecursion` and include a stopping condition, which stops the recursion when `remainder` contains no more commas.
