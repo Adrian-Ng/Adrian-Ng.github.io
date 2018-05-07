@@ -31,8 +31,8 @@ SQL:
        url: /SQL/ddl/create/
      - title: "Alter"
        url: "/SQL/ddl/alter/
-#     - title: "Drop"
-#       url: /SQL/ddl/drop/
+     - title: "Drop"
+       url: /SQL/ddl/drop/
 #   - title: DML
 #     children:
 #     - title: "Select"
