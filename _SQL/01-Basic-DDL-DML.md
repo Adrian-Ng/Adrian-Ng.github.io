@@ -124,9 +124,7 @@ And there are a lot of way of augmenting it in order to define exactly what data
 But in its most basic configuration, `SELECT` looks like this:
 
 ```sql
-SELECT
-	*
-FROM dbo.Songs;
+SELECT * FROM dbo.Songs;
 ``` 
 
 ID|Name|Duration
