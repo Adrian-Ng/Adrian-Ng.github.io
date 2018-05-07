@@ -2,7 +2,7 @@
 title: "SQL Advanced: Recursion"
 permalink: /SQL/Advanced/Recursion/
 excerpt: "Recursion in SQL"
-toc: true
+#toc: true
 classes: wide
 ---
 
@@ -38,6 +38,7 @@ FROM cteRecursion;
 ```
 
 |output|
+---
 |Eggs|
 |Milk|
 |Juice|
