@@ -15,12 +15,14 @@ That is, we write a CTE that applies some transformation to some input recursive
 One general area where I find recursion to be particularly useful in SQL is regex. 
 For example, suppose we have a string of pipe separated data: Eggs|Milk|Juice|Bread
 
-Let's write a SQL query that can separate this string to a column of values.
-
 ```sql
 DECLARE @str varchar(100)
 SET @str = 'Eggs|Milk|Juice|Bread|';
+```
 
+Now, let's write a SQL query that can separate this string to a column of values.
+
+```sql
 WITH cteRecursion AS (
 	SELECT
 		SUBSTRING(@str,0,CHARINDEX('|',@str,1)) AS output
