@@ -10,7 +10,7 @@ classes: wide
 ## Formula
 
 $$
-P(H_T = s_i, v_1,...,v_T) = \alpha_T = P(V_t|s_j)\sum_{i=1}^N \alpha_{T-1}(i)p_{i,j}
+\mathbb{P}(H_T = s_i, v_1,...,v_T) = \alpha_T = \mathbb{P}(V_t|s_j)\sum_{i=1}^N \alpha_{T-1}(i)p_{i,j}
 $$
 
 ## Implementation
