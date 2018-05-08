@@ -15,7 +15,7 @@ $$
 
 ## Implementation
 
-```
+```matlab
 function b = beta_dynamic(M,p,B,v)
     
     [N, ~] = size(M);
