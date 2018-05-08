@@ -35,6 +35,8 @@ SQL:
        url: /SQL/ddl/alter/
      - title: "Drop"
        url: /SQL/ddl/drop/
+     - title: "Truncate"
+       url: /SQL/ddl/truncate/
    - title: Data Manipulation Language
      children:
      - title: "Intro"
