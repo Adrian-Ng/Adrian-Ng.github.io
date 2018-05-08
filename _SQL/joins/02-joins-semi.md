@@ -12,7 +12,7 @@ But funnily enough I find that the syntax of semi-joins tends to more natural hu
 
 Another big upside is that they are **faster** than cartesian joins.
 
-There are just two types of semi-joins.
+There are just two types of semi-joins that I am interested in.
 
 ### LEFT SEMI JOIN
 
