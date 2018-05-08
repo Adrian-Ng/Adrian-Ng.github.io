@@ -2,7 +2,7 @@
 title: "DDL: Truncate"
 permalink: /SQL/ddl/truncate/
 excerpt: "A look at Alter Statements in SQL by Adrian Ng"
-toc: true
+toc: false
 ---
 
 `TRUNCATE` will do two things for you:
