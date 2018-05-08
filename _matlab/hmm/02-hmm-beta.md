@@ -10,7 +10,7 @@ classes: wide
 ## Formula
 
 $$
-\mathbb{P}(v_{t+1},...,v_T|H_t = s_i) \beta_{t(i)} = \sum_{j=1}^N \beta_{t+1}(j)\cdot \mathbb(v_{t+1}|H_{t+1} = s_j)
+\mathbb{P}(v_{t+1},...,v_T|H_t = s_i) \beta_{t(i)} = \sum_{j=1}^N \beta_{t+1}(j)\cdot \mathbb{P}(v_{t+1}|H_{t+1} = s_j)
 $$
 
 ## Implementation
