@@ -15,7 +15,7 @@ $$
 
 ## Implementation
 
-```
+```matlab
 function g = gamma_dynamic(alpha,beta) 
     %return alphas and betas
         a = alpha;
