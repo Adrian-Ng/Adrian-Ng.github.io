@@ -4,12 +4,13 @@ permalink: /matlab/hmm/alpha/
 excerpt: "How to compute alpha for Hidden Markov Models in MATLAB by Adrian Ng"
 toc: true
 mathjax: true
+classes: wide
 ---
 
 ## Formula
 
 $$
-P((H_T = s_i, v_1,...,v_T) = \alpha_T = P(V_t|s_j)\sum_(i=1)^N \alpha_(T-1)(i)p_(i,j)
+P(H_T = s_i, v_1,...,v_T) = \alpha_T = P(V_t|s_j)\sum_{i=1}^N \alpha_{T-1}(i)p_{i,j}
 $$
 
 ## Implementation
