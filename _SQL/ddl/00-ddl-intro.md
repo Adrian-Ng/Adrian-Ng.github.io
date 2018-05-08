@@ -15,4 +15,4 @@ That is, we can divide the language into two broad categories:
 ## Data Definition Language
 
 Data Definition Language is what we use when we are creating, altering, or removing database objects.
-That is, when working with tables, views, or what-have-you, you may invoke `CREATE`, `ALTER`, or `DROP`.
+That is, when working with tables, views, or what-have-you, you may be using `CREATE`, `ALTER`, or `DROP` statements
