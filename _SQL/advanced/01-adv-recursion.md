@@ -52,7 +52,8 @@ SELECT
 |---|---|
 |Eggs|Milk,Juice,Bread|
 
-We've split our string into two parts: `output` and `remainder`, which then we recurse through on subsequent iterations.
+We've split our string into two parts: `output` and `remainder`. 
+We recurse through the latter on subsequent iterations.
 
 ## Recursion
 
