@@ -2,7 +2,7 @@
 title: "DDL: Intro"
 permalink: /SQL/dml/intro/
 excerpt: "An intro to DML in SQL by Adrian Ng"
-toc: true
+toc: false
 ---
 
 Structured Query Language (SQL) is an easy-to-learn, albeit, high level language that you'll find being used pretty much wherever you come across relational databases.
