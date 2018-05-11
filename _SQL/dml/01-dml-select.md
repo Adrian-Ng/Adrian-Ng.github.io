@@ -33,9 +33,8 @@ ID|Name|Duration
 9|Relax|238
 10|Gold|231
 
-But suppose we don't want to return results from every column.
-We are only interested in a subset of columns.
-So we explicitly name the columns we need.
+Suppose we don't want to return results from every column and are only interested in a subset of the columns.
+This time we must explicitly name the subset of columns we want to see.
 
 ```sql
 SELECT
@@ -88,7 +87,7 @@ ID|Name|Duration
 
 ## WHERE
 
-When we are only in _specific_ rows of data we use the `WHERE` clause to specify conditions over our selection.
+When we are interested in only _specific_ rows of data we use the `WHERE` clause to specify conditions over our selection.
 
 ### Equality
 
@@ -117,7 +116,7 @@ WHERE Name IN ('Billie Jean','Billie Jean');
 
 {%  capture notice-text %}
 * The opposite of `IN` is `NOT IN`
-* If you have _very large_ list of songs use a **left semi join** or **anti left semi join** instead of `WHERE`.
+* If you have _very large_ list of songs, consider joining instead.
 {% endcapture %}
 
 <div class="notice--info">
