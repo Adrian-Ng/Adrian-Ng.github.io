@@ -12,7 +12,8 @@ main:
      url: http://adrian.ng/java/Basics/Intro/
    - title: "MATLAB"
      url: http://adrian.ng/matlab/Basics/Intro/
-
+   - title: "Python"
+     url: http://adrian.ng/python/Basics/Intro/
 # SQL links
 SQL:
 #   - title: T-SQL Basics
@@ -130,3 +131,10 @@ MATLAB:
        url: /matlab/hmm/beta/
      - title: "gamma"
        url: /matlab/hmm/gamma/
+
+# Python links
+Python:
+    - title: Basics
+      children:
+      - title: "Intro"
+        url: /python/Basics/Intro/
