@@ -31,15 +31,15 @@ FROM OPENQUERY([remoteServer],
 	')
 ```
 
-Notice how we have a query in single quotes. This is the query that gets passed to `remoteServer` and executed.
-And because we're using a `WHERE` clause to specify that I only want to return a specific tuple, then only one tuple will be returned to the local server.
+Notice how we have a query in single quotes. This is the query that is executed on `remoteServer`.
+And because we're using a `WHERE` clause to specify that we only want to return a specific tuple, then only one tuple will be returned to the local server.
 
 ### Set-Based Filtering in Openquery
 
-But what if I have more than one `acccountNo` that need to pull from the remote server? 
+But what if I have more than one `acccountNo` that I need to pull from the remote server? 
 What if I have a hundred?
 
-First thing that probably comes to mind is to stick those accounts into a temp table and rewrite the openquery to only rows that match to the temp table... right?
+First thing that probably comes to mind is to stick those accounts into a temp table and rewrite the openquery to perform matching the temp table... right?
 
 Right! But that won't work. Remember - the openquery is executed remotely - far out of scope from where your temp table sits!
 
@@ -48,7 +48,9 @@ But that means the remote server is going to have to query that table on the loc
 This might work.
 
 But for sake of argument, suppose you find yourself in a situation where you can't use a temp table, user table, nor stick every item into a really long `WHERE` clause.
-Then we might want to try using XML.
+
+Solution: Since the remote server is being sent a query, why not also include some data at the same time?
+Why not bake this data into our `OPENQUERY` using XML?
 
 ### Using XML
 
