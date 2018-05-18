@@ -64,6 +64,15 @@ SELECT @XMLStr = (
 		FOR XML AUTO);
 ```
 
+When it comes to reading this XML in SQL, we do so as follows:
+
+```
+SELECT
+	Tbl.Col.value('@a','int') AS accountNo
+FROM @xml.nodes('//t')Tbl(Col)
+```
+
+
 Next, we use  __dynamic SQL__ to pass the contents of  `@XMLStr` to the `OPENQUERY`.
 
 ```
