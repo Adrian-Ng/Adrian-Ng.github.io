@@ -52,7 +52,7 @@ Then we might want to try using XML.
 
 ### Using XML
 
-Let's pretend we've got a hundred accounts in a temp table `#accountNo`.
+Let's pretend we've got a hundred accounts in `#accountNo`.
 In the first step, we express `#accountNo` as an XML string.
 
 ```sql
@@ -65,7 +65,7 @@ SELECT @XMLStr = (
 ```
 Our datatype is `varchar` (instead of `XML`) because we are using dynamic SQL.
 But on the remote server, we will need an `XML` datatype because we will need to use `XML` methods to read the data using SQL DML.
-
+So we read the `XML` like this:
 
 ```sql
 DECLARE @xml xml;
@@ -98,7 +98,8 @@ SET @dSQL = '
 		FROM [BankDB].[dbo].[Customer] AS [c]
 		WHERE EXISTS (SELECT 1 FROM [cteXML] WHERE [c].[accountNo] = [accountNo]
 		'')
-	'
+	';
+EXEC (@dSQL);
 ```
 
 And so without _too much_ verbosity, we are able to filter an `OPENQUERY` using the contents of a temp table!
