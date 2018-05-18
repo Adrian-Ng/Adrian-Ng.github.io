@@ -53,7 +53,7 @@ Then we might want to try using XML.
 ### Using XML
 
 Let's pretend we've got a hundred accounts in a temp table `#accountNo`.
-In the first step, we convert this `#accountNo to an XML string `@XMLStr`.
+In the first step, we express `#accountNo` as an XML string.
 
 ```sql
 DECLARE @XMLStr varchar(max);
