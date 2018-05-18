@@ -72,6 +72,8 @@ SQL:
      children:
      - title: "Recursion"
        url: /SQL/Advanced/Recursion/
+     - title: "Openquery... and XML"
+       url: /SQL/Advanced/openquery-xml/
    - title: PostgreSQL
      children:
      - title: "Music DB"
