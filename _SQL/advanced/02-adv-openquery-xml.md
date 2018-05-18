@@ -6,6 +6,13 @@ excerpt: "When XML can come to the rescue and make Openqueries even more fun in 
 classes: wide
 ---
 
+## Intro
+
+This is an unorthodox solution. And it came to me two years ago working on a problem that had very particular constraints.
+
+The underlying idea is to use an `OPENQUERY` to send both a query and some XML to the remote server.
+This makes for some very fast set-based filtering.
+
 ## Openquery
 
 Openqueries (OQ) make pulling data from a remote server really fast by delegating processing duties to the remote server.
