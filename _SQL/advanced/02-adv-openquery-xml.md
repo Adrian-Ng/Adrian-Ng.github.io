@@ -63,15 +63,17 @@ SELECT @XMLStr = (
 		FROM #accountNo AS [t] 
 		FOR XML AUTO);
 ```
-
-When it comes to reading this XML in SQL, we do so as follows:
+Our datatype is `varchar` (instead of `XML`) because we are using dynamic SQL.
+But on the remote server, we will need an `XML` datatype because we will need to use `XML` methods to read the data using SQL DML.
+Therefore, we convert the `varchar` to `XML` to `SELECT` as follows:
 
 ```
+DECLARE @xml xml;
+SET @xml = @XMLStr;
 SELECT
 	Tbl.Col.value('@a','int') AS accountNo
 FROM @xml.nodes('//t')Tbl(Col)
 ```
-
 
 Next, we use  __dynamic SQL__ to pass the contents of  `@XMLStr` to the `OPENQUERY`.
 
