@@ -18,7 +18,7 @@ In other words, cross-server queries take much less time with `OPENQUERY`!
 
 For example, I would query my remote server in this way:
 
-```
+```sql
 SELECT
 	*
 FROM OPENQUERY([remoteServer],
@@ -55,7 +55,7 @@ Then we might want to try using XML.
 Let's pretend we've got a hundred accounts in a temp table `#accountNo`.
 In the first step, we convert this `#accountNo to an XML string `@XMLStr`.
 
-```
+```sql
 DECLARE @XMLStr varchar(max);
 SELECT @XMLStr = (
 		SELECT 
@@ -65,9 +65,9 @@ SELECT @XMLStr = (
 ```
 Our datatype is `varchar` (instead of `XML`) because we are using dynamic SQL.
 But on the remote server, we will need an `XML` datatype because we will need to use `XML` methods to read the data using SQL DML.
-Therefore, we convert the `varchar` to `XML` to `SELECT` as follows:
 
-```
+
+```sql
 DECLARE @xml xml;
 SET @xml = @XMLStr;
 SELECT
@@ -77,7 +77,7 @@ FROM @xml.nodes('//t')Tbl(Col)
 
 Next, we use  __dynamic SQL__ to pass the contents of  `@XMLStr` to the `OPENQUERY`.
 
-```
+```sql
 DECLARE @dSQL varchar(max);
 
 SET @dSQL = '
