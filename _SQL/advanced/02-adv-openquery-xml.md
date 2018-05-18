@@ -9,10 +9,10 @@ classes: wide
 ## Openquery
 
 Openqueries (OQ) make pulling data from a remote server really fast by delegating processing duties to the remote server.
-That is, the query you write in your OQ will be executed remotely such that any transformations, filtering, or what-have-you occur before any data is sent to the local server.
+That is the `OPENQUERY` is executed remotely such that any transformation, filter, or what-have-you is performed _only_ onl the remote server..
 
-If you query a remote server without the openquery, the entire table is sent across _before_ any processing is performed. 
-In other words, cross-server queries take much less time with `OPENQUERY`!.
+If you query a table on a remote server without normally, the entire table is sent across _before_ any processing is performed. 
+In other words, cross-server queries take much less time with `OPENQUERY`!
 
 ### with Where Clause
 
@@ -21,13 +21,20 @@ For example, I would query my remote server in this way:
 ```
 SELECT
 	*
-FROM OPENQUERY([remoteServer],'SELECT FirstName, LastName, BankDetails FROM CorpBank.dbo.Customers WHERE accountNo = 123456')
+FROM OPENQUERY([remoteServer],
+	'	SELECT 
+			FirstName
+		,	LastName
+		,	BankDetails 
+		FROM BankDB.dbo.Customers 
+		WHERE accountNo = 123456
+	')
 ```
 
-Notice how I've got a query in single quotes within a query. That is the query that gets passed to `remoteServer` and executed.
+Notice how we have a query in single quotes. This is the query that gets passed to `remoteServer` and executed.
 And because we're using a `WHERE` clause to specify that I only want to return a specific tuple, then only one tuple will be returned to the local server.
 
-### with XML
+### Set-Based Filtering in Openquery
 
 But what if I have more than one `acccountNo` that need to pull from the remote server? 
 What if I have a hundred?
@@ -57,29 +64,30 @@ SELECT @XMLStr = (
 		FOR XML AUTO);
 ```
 
-Next, we use  __dynamic SQL__ to pass the contents of  `@XMLStr' to the `OPENQUERY`.
+Next, we use  __dynamic SQL__ to pass the contents of  `@XMLStr` to the `OPENQUERY`.
 
 ```
 DECLARE @dSQL varchar(max);
 
 SET @dSQL = '
-		SELECT 
-			*
-		FROM OPENQUERY([remoteServer],''
-						DECLARE @xml xml
-						SET @xml = ''''' + @XMLStr + ''''';
-						WITH [cteXML] AS (
-							SELECT
-								Tbl.Col.value(''''@a'''',''''int'''') AS accountNo
-							FROM @xml.nodes(''''//t'''')Tbl(Col)
-							)
-						SELECT
-							FirstName
-						,	LastName
-						,	BankDetails
-						FROM [BankDB].[dbo].[Customer] AS [c]
-						WHERE EXISTS (SELECT 1 FROM [cteXML] WHERE [c].[accountNo] = [accountNo]
-		'')'
+	SELECT 
+		*
+	FROM OPENQUERY([remoteServer],''
+		DECLARE @xml xml
+		SET @xml = ''''' + @XMLStr + ''''';
+		WITH [cteXML] AS (
+			SELECT
+				Tbl.Col.value(''''@a'''',''''int'''') AS accountNo
+			FROM @xml.nodes(''''//t'''')Tbl(Col)
+			)
+		SELECT
+			FirstName
+		,	LastName
+		,	BankDetails
+		FROM [BankDB].[dbo].[Customer] AS [c]
+		WHERE EXISTS (SELECT 1 FROM [cteXML] WHERE [c].[accountNo] = [accountNo]
+		'')
+	'
 ```
 
 And so without _too much_ verbosity, we are able to filter an `OPENQUERY` using the contents of a temp table!
