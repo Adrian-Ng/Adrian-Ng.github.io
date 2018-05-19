@@ -95,9 +95,9 @@ analytics:
 author:
   name             : "Adrian Ng"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "MSc Data Science & Analytics"
+  bio              : "Graduate Data Engineer, MSc Data Science and Analytics"
   location         : "London"
-  email            : "contact@adrian.ng"
+  email            : "hi@adrian.ng"
   uri              :
   home             : # null (default), "absolute or relative url to link to author home"
   bitbucket        :
