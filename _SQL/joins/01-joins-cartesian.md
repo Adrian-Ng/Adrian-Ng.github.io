@@ -50,7 +50,7 @@ $$
 \sigma (R_1 \times R_2)
 $$ 
 
-Where $$\times$ represents the cartesian product.
+Where $$\times$$ represents the cartesian product.
 
 ### SQL
 
@@ -62,7 +62,7 @@ SELECT
 FROM R1
 CROSS JOIN R2
 ```
-Note that unlike INNER JOIN, we aren't matching on anything. 
+Note that unlike `INNER JOIN`, we aren't matching on anything. 
 
 ### Output
 This produces
@@ -81,8 +81,8 @@ C & D \\ \hline
 \end{array} 
 $$
 
-The result-set of a cartesian product will always be of deterministic length determined by the product of the number of tuples between the two relations.
-This means our SQL query will return $$3 \times 2 $$ tuples.
+As you can see, our SQL query has returned $$3 \times 2 $$ tuples.
+The result-set of a cartesian product will always be of deterministic length $$M \times N$$ where $$M$$ and $$N$$ represent the respective lengths of the two relations.
 
 ## INNER JOIN
 
@@ -94,7 +94,11 @@ $$
 \sigma_{\alpha = \beta} (T_2 \times T_2)
 $$
 
+In other words, we _again_ compute a cartesian product and return __only__ the tuples that match on the joining fields.
+
 ### SQL
+
+The syntax for `INNER JOIN` in SQL resembles something like this:
 
 ```sql
 SELECT 
@@ -105,11 +109,20 @@ INNER JOIN R2
 ON R1.alpha = R2.beta
 ```
 
-This computes a cartesian join and returns _only_ the tuples that match on the __joining fields__.
+### Output
 
-|LettersAE|LettersCD|
-|---|---|
-|C|C|
+Our result-set looks like this:
+
+$$
+\sigma (R_1\times R_2) = 
+\begin{array}{|c|c|}
+\hline
+\alpha & \beta \\ \hline 
+C & C \\ \hline
+\end{array} 
+$$
+
+In this case we have returned just the one tuple. But `INNER JOIN` can return any number of tuples in the range $$0 <= M\times N$$. It just depends on the number of matching tuples. 
 
 ## LEFT JOIN
 
