@@ -39,29 +39,33 @@ $$
 
 ## CROSS JOIN
 
+In SQL, we use `CROSS JOIN` to compute the cartesian product of two relations.
+That is, we compute all possible __combinations__ of tuples.
+
 ### Relational Algebra
 
 We can mathematically represent the cartesian product of two relations as follows:
 
 $$
-\sigma (T_1 \times T_2)
+\sigma (R_1 \times R_2)
 $$ 
+
+Where $$\times$ represents the cartesian product.
 
 ### SQL
 
-In SQL, we can use `CROSS JOIN` to compute the cartesian product:
+To use `CROSS JOIN` in SQL, we would write something like the following:
 
 ```sql
 SELECT
 	*
-FROM table1
-CROSS JOIN table2
+FROM R1
+CROSS JOIN R2
 ```
-
-This computes all possible combination of tuples and will return a set of size 3x2.
-This is also known as a  __cartesian join__ or __cartesian product__.
+Note that unlike INNER JOIN, we aren't matching on anything. 
 
 ### Output
+This produces
 
 $$
 \sigma (R_1\times R_2) = 
@@ -77,18 +81,28 @@ C & D \\ \hline
 \end{array} 
 $$
 
-
-
-
+The result-set of a cartesian product will always be of deterministic length determined by the product of the number of tuples between the two relations.
+This means our SQL query will return $$3 \times 2 $$ tuples.
 
 ## INNER JOIN
 
+### Relational Algebra
+
+In relational algebra, we represent an `INNER JOIN` as follows:
+
+$$
+\sigma_{\alpha = \beta} (T_2 \times T_2)
+$$
+
+### SQL
+
 ```sql
 SELECT 
-	 *
-FROM table1 AS t1
-INNER JOIN table2 AS t2
-ON t1.LettersAE = t2.LettersCD
+	alpha
+,	beta
+FROM R1
+INNER JOIN R2
+ON R1.alpha = R2.beta
 ```
 
 This computes a cartesian join and returns _only_ the tuples that match on the __joining fields__.
