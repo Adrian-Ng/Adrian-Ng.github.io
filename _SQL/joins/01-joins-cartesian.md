@@ -49,7 +49,7 @@ $$
 
 ### SQL
 
-In SQL, we can use `CROSS JOIN` compute the cartesian product:
+In SQL, we can use `CROSS JOIN` to compute the cartesian product:
 
 ```sql
 SELECT
