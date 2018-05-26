@@ -60,12 +60,13 @@ R_1\times\R_2 =
 \begin{array}{|c|c|}
 \hline
 \alpha $ \beta \\ \hline
-A $ C \\ \hline
-B $ C \\ \hline
-C $ C \\ \hline
-A $ D \\ \hline
-B $ D \\ \hline 
-C $ D \\ \hline 
+A $ C \\ 
+B $ C \\ 
+C $ C \\ 
+A $ D \\ 
+B $ D \\ e 
+C $ D \\ \hline
+\end{array} 
 $$
 
 
