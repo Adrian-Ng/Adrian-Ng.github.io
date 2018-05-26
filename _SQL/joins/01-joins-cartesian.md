@@ -5,6 +5,25 @@ excerpt: "A look at the various cartesian joins in SQL by Adrian Ng"
 toc: true
 ---
 
+## Intro
+
+When joining two relations via use of, say, `CROSS`, `INNER`, or `LEFT` joins, it is very important to understand the ramifications of such an undertaking. 
+These kind of join are powerful and easy to implement due to their friendly _syntactic sugar_ and are used all the time by SQL professionals to great effect. 
+
+However, it is not uncommon to see these wielded improperly. This page will advise on and against the various use cases of __cartesian joins_. 
+
+## Relational Algebra
+
+$$
+\begin{array}{|c|c|c|c|}
+\hline
+1& -1 & 1 & -1 \\ \hline
+ & & &\\ \hline
+ &  & &\\ \hline
+ &  & &\\ \hline.
+\end{array}
+$$
+
 Consider `table1`:
 
 |LettersAE|
