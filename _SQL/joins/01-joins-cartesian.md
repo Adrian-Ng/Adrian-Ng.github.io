@@ -41,6 +41,12 @@ $$
 
 ### Relational Algebra
 
+We can mathematically represent the cartesian product of two relations as follows:
+
+$$
+\sigma (T_1 \times T_2)
+$$ 
+
 ### SQL
 
 ```sql
@@ -56,7 +62,7 @@ This is also known as a  __cartesian join__ or __cartesian product__.
 ### Output
 
 $$
-R_1\times\R_2 = 
+R_1\timesR_2 = 
 \begin{array}{|c|c|}
 \hline
 \alpha & \beta \\ \hline
