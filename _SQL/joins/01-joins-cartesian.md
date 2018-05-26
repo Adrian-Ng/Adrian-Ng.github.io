@@ -23,9 +23,9 @@ $$
 \begin{array}{|c|}
 \hline
 \alpha \\ \hline
-A\\ \hline
-B\\ \hline
-C\\ \hline.
+A\\
+B\\
+C\\
 \end{array}
 \qquad
 \begin{array}{|c|c|c|c|}
