@@ -15,15 +15,19 @@ However, it is not uncommon to see these wielded improperly. This page will advi
 
 ## Relational Algebra
 
+Let's first consider the following two relations:
+
+
+
 $$
-\begin{array}{|c|c|c|c|}
+\begin{array}{|c|}
 \hline
-1& -1 & 1 & -1 \\ \hline
- & & &\\ \hline
- &  & &\\ \hline
- &  & &\\ \hline.
+\alpha \\ \hline
+A\\ \hline
+B\\ \hline
+C\\ \hline.
 \end{array}
-\quad
+\qquad
 \begin{array}{|c|c|c|c|}
 \hline
 1& -1 & 1 & -1 \\ \hline
