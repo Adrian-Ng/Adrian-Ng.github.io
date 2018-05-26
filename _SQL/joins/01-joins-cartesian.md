@@ -49,6 +49,8 @@ $$
 
 ### SQL
 
+In SQL, we can use `CROSS JOIN` compute the cartesian product:
+
 ```sql
 SELECT
 	*
