@@ -15,10 +15,9 @@ However, it is not uncommon to see these wielded improperly. This page will advi
 
 ## Relations
 
-Let's first consider the following two relations $$R_1$$ and $$R_2$$:
+For each of our examples on this page, we will consider the following two relations: $$R_1$$ and $$R_2$$:
 
 $$
-
 R_1 =
 \begin{array}{|c|}
 \hline
@@ -40,6 +39,8 @@ $$
 
 ## CROSS JOIN
 
+### Relational Algebra
+
 ### SQL
 
 ```sql
@@ -54,16 +55,21 @@ This is also known as a  __cartesian join__ or __cartesian product__.
 
 ### Output
 
-|LettersAE|LettersCD|
-|---|---|
-|A|C|
-|B|C|
-|C|C|
-|A|D|
-|B|D|
-|C|D|
+$$
+R_1\times\R_2 = 
+\begin{array}{|c|c|}
+\hline
+\alpha $ \beta \\ \hline
+A $ C \\ \hline
+B $ C \\ \hline
+C $ C \\ \hline
+A $ D \\ \hline
+B $ D \\ \hline 
+C $ D \\ \hline 
+$$
 
-### Relational Algebra
+
+
 
 
 ## INNER JOIN
