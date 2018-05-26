@@ -23,7 +23,7 @@ $$
  &  & &\\ \hline
  &  & &\\ \hline.
 \end{array}
-\hspace
+\hfill
 \begin{array}{|c|c|c|c|}
 \hline
 1& -1 & 1 & -1 \\ \hline
