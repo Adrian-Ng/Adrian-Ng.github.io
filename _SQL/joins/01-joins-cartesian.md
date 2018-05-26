@@ -59,13 +59,13 @@ $$
 R_1\times\R_2 = 
 \begin{array}{|c|c|}
 \hline
-\alpha $ \beta \\ \hline
-A $ C \\ 
-B $ C \\ 
-C $ C \\ 
-A $ D \\ 
-B $ D \\  
-C $ D \\ \hline
+\alpha & \beta \\ \hline
+A & C \\ 
+B & C \\ 
+C & C \\ 
+A & D \\ 
+B & D \\  
+C & D \\ \hline
 \end{array} 
 $$
 
