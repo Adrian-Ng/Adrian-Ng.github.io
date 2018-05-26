@@ -15,25 +15,27 @@ However, it is not uncommon to see these wielded improperly. This page will advi
 
 ## Relational Algebra
 
-Let's first consider the following two relations:
+Let's first consider the following two relations $$R_1$$ and $$R_2$$:
 
 
 
 $$
+
+R_1 =
 \begin{array}{|c|}
 \hline
 \alpha \\ \hline
 A\\
 B\\
-C\\
+C\\ \hline
 \end{array}
 \qquad
+R_2 =
 \begin{array}{|c|c|c|c|}
 \hline
-1& -1 & 1 & -1 \\ \hline
- & & &\\ \hline
- &  & &\\ \hline
- &  & &\\ \hline.
+\beta \\ \hline
+C\\ \hline
+D\\ \hline
 \end{array}
 $$
 
