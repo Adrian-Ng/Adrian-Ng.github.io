@@ -13,11 +13,9 @@ These kind of join are powerful and easy to implement due to their friendly _syn
 
 However, it is not uncommon to see these wielded improperly. This page will advise on and against the various use cases of __cartesian joins__.
 
-## Relational Algebra
+## Relations
 
 Let's first consider the following two relations $$R_1$$ and $$R_2$$:
-
-
 
 $$
 
@@ -39,22 +37,10 @@ D\\ \hline
 \end{array}
 $$
 
-Consider `table1`:
-
-|LettersAE|
-|---|
-|A|
-|B|
-|C|
-
-and `table2`:
-
-|LettersCD|
-|---|
-|C|
-|D|
 
 ## CROSS JOIN
+
+### SQL
 
 ```sql
 SELECT
@@ -66,6 +52,8 @@ CROSS JOIN table2
 This computes all possible combination of tuples and will return a set of size 3x2.
 This is also known as a  __cartesian join__ or __cartesian product__.
 
+### Output
+
 |LettersAE|LettersCD|
 |---|---|
 |A|C|
@@ -74,6 +62,8 @@ This is also known as a  __cartesian join__ or __cartesian product__.
 |A|D|
 |B|D|
 |C|D|
+
+### Relational Algebra
 
 
 ## INNER JOIN
