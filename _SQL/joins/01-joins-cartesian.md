@@ -64,7 +64,7 @@ A $ C \\
 B $ C \\ 
 C $ C \\ 
 A $ D \\ 
-B $ D \\ e 
+B $ D \\  
 C $ D \\ \hline
 \end{array} 
 $$
