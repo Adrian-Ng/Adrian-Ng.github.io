@@ -23,6 +23,14 @@ $$
  &  & &\\ \hline
  &  & &\\ \hline.
 \end{array}
+
+\begin{array}{|c|c|c|c|}
+\hline
+1& -1 & 1 & -1 \\ \hline
+ & & &\\ \hline
+ &  & &\\ \hline
+ &  & &\\ \hline.
+\end{array}
 $$
 
 Consider `table1`:
