@@ -62,7 +62,7 @@ This is also known as a  __cartesian join__ or __cartesian product__.
 ### Output
 
 $$
-R_1\timesR_2 = 
+\sigma (R_1\times R_2) = 
 \begin{array}{|c|c|}
 \hline
 \alpha & \beta \\ \hline
