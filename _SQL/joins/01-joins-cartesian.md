@@ -6,6 +6,15 @@ toc: true
 mathjax: true
 ---
 
+$$
+\def\ojoin{\setbox0=\hbox{$\Join$}%
+  \rule[-.02ex]{.25em}{.4pt}\llap{\rule[1.10ex]{.25em}{.4pt}}}
+\def\leftouterjoin{\mathbin{\ojoin\mkern-8.5mu\Join}}
+\def\rightouterjoin{\mathbin{\Join\mkern-8.5mu\ojoin}}
+\def\fullouterjoin{\mathbin{\ojoin\mkern-8.5mu\Join\mkern-8.5mu\ojoin}}
+$$
+
+
 ## Intro
 
 When joining two relations via use of, say, `CROSS`, `INNER`, or `LEFT` joins, it is very important to understand the ramifications of such an undertaking. 
