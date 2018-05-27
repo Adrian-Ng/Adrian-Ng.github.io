@@ -4,7 +4,7 @@ permalink: /SQL/joins/cartesian/
 excerpt: "A look at the various cartesian joins in SQL by Adrian Ng"
 toc: true
 mathjax: true
---
+---
 
 
 $$
