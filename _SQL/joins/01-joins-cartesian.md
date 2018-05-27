@@ -7,15 +7,6 @@ mathjax: true
 ---
 
 
-$$
-
-\def\ojoin{\setbox0=\hbox{$\bowtie$}%
-  \rule[-.02ex]{.25em}{.4pt}\llap{\rule[\ht0]{.25em}{.4pt}}}
-\def\leftouterjoin{\mathbin{\ojoin\mkern-5.8mu\bowtie}}
-\def\rightouterjoin{\mathbin{\bowtie\mkern-5.8mu\ojoin}}
-\def\fullouterjoin{\mathbin{\ojoin\mkern-5.8mu\bowtie\mkern-5.8mu\ojoin}}
-$$
-
 ## Intro
 
 When joining two relations via use of, say, `CROSS`, `INNER`, or `LEFT` joins, it is very important to understand the ramifications of such an undertaking. 
@@ -134,6 +125,11 @@ In this case we have returned just the one tuple. But `INNER JOIN` can return an
 ## LEFT JOIN
 
 ### Relational Algebra
+
+$$
+(R_1 \bowtie \R_2) ) \union 
+$$
+
 
 ```sql
 SELECT 
