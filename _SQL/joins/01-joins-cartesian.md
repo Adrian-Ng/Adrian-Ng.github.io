@@ -110,8 +110,6 @@ ON R1.alpha = R2.beta
 
 ### Output
 
-Our result-set looks like this:
-
 $$
 \sigma_{\alpha = \beta} (R_1\times R_2) = 
 \begin{array}{|c|c|}
@@ -124,6 +122,8 @@ $$
 In this case we have returned just the one tuple. But `INNER JOIN` can return any number of tuples in the range $$0 <= M\times N$$. It just depends on the number of matching tuples. 
 
 ## LEFT JOIN
+
+### Relational Algebra
 
 ```sql
 SELECT 
@@ -146,4 +146,14 @@ The result set will have the same number of tuples as the left table.
 |C|C|
 
 
+$$
+\leftouterjoin
+\sigma_{(\alpha = \beta)|| \beta = NULL} (R_1\times R_2) = 
+\begin{array}{|c|c|}
+\hline
+\alpha & \beta \\ \hline 
+A & NULL \\ \hline
+B
+\end{array} 
+$$
 
