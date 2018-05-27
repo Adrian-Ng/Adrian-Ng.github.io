@@ -4,16 +4,17 @@ permalink: /SQL/joins/cartesian/
 excerpt: "A look at the various cartesian joins in SQL by Adrian Ng"
 toc: true
 mathjax: true
----
+--
+
 
 $$
-\def\ojoin{\setbox0=\hbox{$\Join$}%
-  \rule[-.02ex]{.25em}{.4pt}\llap{\rule[1.10ex]{.25em}{.4pt}}}
-\def\leftouterjoin{\mathbin{\ojoin\mkern-8.5mu\Join}}
-\def\rightouterjoin{\mathbin{\Join\mkern-8.5mu\ojoin}}
-\def\fullouterjoin{\mathbin{\ojoin\mkern-8.5mu\Join\mkern-8.5mu\ojoin}}
-$$
 
+\def\ojoin{\setbox0=\hbox{$\bowtie$}%
+  \rule[-.02ex]{.25em}{.4pt}\llap{\rule[\ht0]{.25em}{.4pt}}}
+\def\leftouterjoin{\mathbin{\ojoin\mkern-5.8mu\bowtie}}
+\def\rightouterjoin{\mathbin{\bowtie\mkern-5.8mu\ojoin}}
+\def\fullouterjoin{\mathbin{\ojoin\mkern-5.8mu\bowtie\mkern-5.8mu\ojoin}}
+$$
 
 ## Intro
 
