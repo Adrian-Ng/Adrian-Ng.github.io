@@ -65,7 +65,6 @@ CROSS JOIN R2
 Note that unlike `INNER JOIN`, we aren't matching on anything. 
 
 ### Output
-This produces
 
 $$
 \sigma (R_1\times R_2) = 
@@ -114,7 +113,7 @@ ON R1.alpha = R2.beta
 Our result-set looks like this:
 
 $$
-\sigma (R_1\times R_2) = 
+\sigma_{\alpha = \beta} (R_1\times R_2) = 
 \begin{array}{|c|c|}
 \hline
 \alpha & \beta \\ \hline 
