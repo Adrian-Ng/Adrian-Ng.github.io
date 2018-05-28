@@ -127,7 +127,7 @@ In this case we have returned just the one tuple. But `INNER JOIN` can return an
 ### Relational Algebra
 
 $$
-(R_1 \bowtie \R_2) ) \union 
+(R_1 \bowtie \R_2) ) \cup 
 $$
 
 
