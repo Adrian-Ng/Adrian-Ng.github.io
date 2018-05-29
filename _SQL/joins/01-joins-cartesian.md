@@ -137,6 +137,13 @@ $$
 $$
  is our __inner join__
 
+$$
+\Pi_{R_1.\alpha}(\sigma_{\alpha = \beta} (R_1 \times R_2))
+$$ is the projection (=`SELECT`) of fields from the left table in the inner join
+
+
+
+
 ### SQL
 
 ```sql
