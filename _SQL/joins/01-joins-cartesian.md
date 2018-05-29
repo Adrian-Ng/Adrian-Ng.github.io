@@ -137,9 +137,11 @@ $$
 $$
  is our __inner join__
 
+$$\cup$$ means `UNION`
+
 $$
 \Pi_{R_1.\alpha}(\sigma_{\alpha = \beta} (R_1 \times R_2))
-$$ is the projection (=`SELECT`) of fields from the left table in the inner join
+$$ is the _projection_ of our inner join above. This time we project only fields from $$R_1$$ 
 
 
 
