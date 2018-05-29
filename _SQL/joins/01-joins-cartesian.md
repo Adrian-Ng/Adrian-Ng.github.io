@@ -127,7 +127,7 @@ In this case we have returned just the one tuple. But `INNER JOIN` can return an
 ### Relational Algebra
 
 $$
-(R_1 \bowtie \R_2) ) \cup ((R_1 - \pi_{R_1.\alpha}\sigma_{\alpha = \beta} (R_1 \times R_2)) \times {(\omega,...,\omega)})
+\sigma_{\alpha = \beta}(R_1 \times R_2) \cup ((R_1 - \Pi_{R_1.\alpha}(\sigma_{\alpha = \beta} (R_1 \times R_2))) \times {(\omega,...,\omega)})
 $$
 
 
