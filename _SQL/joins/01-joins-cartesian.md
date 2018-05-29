@@ -140,20 +140,14 @@ Let's break this down.
 $$
 \begin{array}{|c|c|}
 \hline
-\sigma_{\alpha = \beta}(R_1 \times R_2) & \text{inner join} \\
-((R_1 - \Pi_{R_1.\alpha}(\sigma_{\alpha = \beta} (R_1 \times R_2))) & \text{anti join} \\
-S{NULL} & \text{NULL for each attribute in } S \\
+\sigma_{\alpha = \beta}(R \times S) & \text{inner join} \\
+((R_1 - \Pi_{r_1,...,r_n}(\sigma_{\alpha = \beta} (R \times S))) & \text{anti join} \\
+S_{NULL} & \text{Singleton tuple with NULL for each attribute in } S \\
 \hline
 \end{array}
 $$
 
 $$\quad\cup$$ means `UNION`
-
-$$
-\quad\Pi_{R_1.\alpha}(\sigma_{\alpha = \beta} (R_1 \times R_2))
-$$ is the __projection__ of our inner join above. This time we project only fields from $$R_1$$ 
-
-
 
 
 ### SQL
