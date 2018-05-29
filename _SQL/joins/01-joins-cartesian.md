@@ -143,7 +143,6 @@ $$
 \sigma_{\alpha = \beta}(R_1 \times R_2) & \text{inner join} \\
 ((R_1 - \Pi_{R_1.\alpha}(\sigma_{\alpha = \beta} (R_1 \times R_2))) & \text{anti join} \\
 {(\omega,...,\omega)} & \text{NULL for each attribute in } R_2 \\
-\
 \hline
 \end{array}
 $$
