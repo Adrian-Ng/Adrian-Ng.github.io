@@ -133,15 +133,14 @@ $$
 Let's break this down.
 
 $$
-\sigma_{\alpha = \beta}(R_1 \times R_2)
-$$
- is our __inner join__
+\quad\sigma_{\alpha = \beta}(R_1 \times R_2)
+$$ is our __inner join__
 
-$$\cup$$ means `UNION`
+$$\quad\cup$$ means `UNION`
 
 $$
-\Pi_{R_1.\alpha}(\sigma_{\alpha = \beta} (R_1 \times R_2))
-$$ is the _projection_ of our inner join above. This time we project only fields from $$R_1$$ 
+\quad\Pi_{R_1.\alpha}(\sigma_{\alpha = \beta} (R_1 \times R_2))
+$$ is the __projection__ of our inner join above. This time we project only fields from $$R_1$$ 
 
 
 
