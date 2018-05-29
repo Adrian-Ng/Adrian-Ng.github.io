@@ -32,7 +32,8 @@ R_2 =
 \begin{array}{|c|c|c|c|}
 \hline
 \beta \\ \hline
-C\\ \hline
+C\\ 
+C\\ 
 D\\ \hline
 \end{array}
 $$
@@ -74,6 +75,9 @@ $$
 \alpha & \beta \\ \hline
 A & C \\ 
 B & C \\ 
+C & C \\
+A & C \\ 
+B & C \\ 
 C & C \\ 
 A & D \\ 
 B & D \\  
@@ -81,7 +85,7 @@ C & D \\ \hline
 \end{array} 
 $$
 
-As you can see, our SQL query has returned $$3 \times 2 $$ tuples.
+As you can see, our SQL query has returned $$3 \times 3 = 9 $$ tuples.
 The result-set of a cartesian product will always be of length $$M \times N$$, where $$M$$ and $$N$$ represent the respective lengths of the two relations.
 
 ## INNER JOIN
@@ -116,6 +120,7 @@ $$
 \begin{array}{|c|c|}
 \hline
 \alpha & \beta \\ \hline 
+C & C \\ 
 C & C \\ \hline
 \end{array} 
 $$
@@ -133,8 +138,12 @@ $$
 Let's break this down.
 
 $$
-\quad\sigma_{\alpha = \beta}(R_1 \times R_2)
-$$ is our __inner join__
+\begin{array}{|c|c|}
+\hline
+\sigma_{\alpha = \beta}(R_1 \times R_2) & INNER JOIN
+\cup & UNION
+
+$$
 
 $$\quad\cup$$ means `UNION`
 
