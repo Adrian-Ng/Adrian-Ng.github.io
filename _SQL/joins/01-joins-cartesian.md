@@ -95,10 +95,10 @@ The result-set of a cartesian product will always be of length $$M \times N$$, w
 In relational algebra, we represent an `INNER JOIN` as follows:
 
 $$
-\sigma_{\alpha = \beta} (T_2 \times T_2)
+\sigma_{\alpha = \beta} (R_1 \times R_2)
 $$
 
-In other words, we _again_ compute a cartesian product and return __only__ the tuples that match on the joining fields.
+In other words, we _again_ compute a cartesian product but return __only__ the tuples that match on the joining fields.
 
 ### SQL
 
@@ -132,7 +132,7 @@ In this case we have returned just the one tuple. But `INNER JOIN` can return an
 ### Relational Algebra
 
 $$
-\sigma_{\alpha = \beta}(R_1 \times R_2) \cup ((R_1 - \Pi_{R_1.\alpha}(\sigma_{\alpha = \beta} (R_1 \times R_2))) \times {(\omega,...,\omega)})
+\sigma_{\alpha = \beta}(R_1 \times R_2) \cup ((R_1 - \Pi_{\alpha}(\sigma_{\alpha = \beta} (R_1 \times R_2))) \times {(\omega,...,\omega)})
 $$
 
 Let's break this down.
@@ -140,8 +140,10 @@ Let's break this down.
 $$
 \begin{array}{|c|c|}
 \hline
-\sigma_{\alpha = \beta}(R_1 \times R_2) & \text{INNER JOIN} \\
-\cup & UNION \\
+\sigma_{\alpha = \beta}(R_1 \times R_2) & \text{inner join} \\
+((R_1 - \Pi_{R_1.\alpha}(\sigma_{\alpha = \beta} (R_1 \times R_2))) & \text{anti join} \\
+{(\omega,...,\omega)} & \text{NULL for each attribute in } R_2 \\
+\
 \hline
 \end{array}
 $$
