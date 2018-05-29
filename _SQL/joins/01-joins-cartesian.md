@@ -130,6 +130,14 @@ $$
 \sigma_{\alpha = \beta}(R_1 \times R_2) \cup ((R_1 - \Pi_{R_1.\alpha}(\sigma_{\alpha = \beta} (R_1 \times R_2))) \times {(\omega,...,\omega)})
 $$
 
+Let's break this down.
+
+$$
+\sigma_{\alpha = \beta}(R_1 \times R_2)
+$$
+ is our __inner join__
+
+### SQL
 
 ```sql
 SELECT 
