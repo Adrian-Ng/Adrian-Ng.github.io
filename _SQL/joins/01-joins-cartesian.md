@@ -140,8 +140,8 @@ Let's break this down.
 $$
 \begin{array}{|c|c|}
 \hline
-\sigma_{\alpha = \beta}(R_1 \times R_2) & INNER JOIN
-\cup & UNION
+\sigma_{\alpha = \beta}(R_1 \times R_2) & INNER JOIN \\
+\cup & UNION \\
 \hline
 \end{array}
 $$
