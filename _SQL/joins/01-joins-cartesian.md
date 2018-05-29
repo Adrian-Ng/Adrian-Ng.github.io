@@ -16,10 +16,10 @@ However, it is not uncommon to see these used improperly. This page will advise 
 
 ## Relations
 
-For each of our examples on this page, we will consider the following two relations: $$R_1$$ and $$R_2$$:
+For each of our examples on this page, we will consider the following two relations: $$R$$ and $$S$$:
 
 $$
-R_1 =
+R =
 \begin{array}{|c|}
 \hline
 \alpha \\ \hline
@@ -28,7 +28,7 @@ B\\
 C\\ \hline
 \end{array}
 \qquad
-R_2 =
+S =
 \begin{array}{|c|c|c|c|}
 \hline
 \beta \\ \hline
@@ -49,7 +49,7 @@ That is, we compute all possible __combinations__ of tuples.
 We can mathematically represent the cartesian product of two relations as follows:
 
 $$
-\sigma (R_1 \times R_2)
+\sigma (R \times S)
 $$ 
 
 Where $$\times$$ represents the cartesian product.
@@ -61,15 +61,15 @@ To use `CROSS JOIN` in SQL, we would write something like the following:
 ```sql
 SELECT
 	*
-FROM R1
-CROSS JOIN R2
+FROM R
+CROSS JOIN S
 ```
 Note that unlike `INNER JOIN`, we aren't matching on anything. 
 
 ### Output
 
 $$
-\sigma (R_1\times R_2) = 
+\sigma (R\times S) = 
 \begin{array}{|c|c|}
 \hline
 \alpha & \beta \\ \hline
@@ -95,7 +95,7 @@ The result-set of a cartesian product will always be of length $$M \times N$$, w
 In relational algebra, we represent an `INNER JOIN` as follows:
 
 $$
-\sigma_{\alpha = \beta} (R_1 \times R_2)
+\sigma_{\alpha = \beta} (R\times S)
 $$
 
 In other words, we _again_ compute a cartesian product but return __only__ the tuples that match on the joining fields.
@@ -108,15 +108,15 @@ The syntax for `INNER JOIN` in SQL resembles something like this:
 SELECT 
 	alpha
 ,	beta
-FROM R1
-INNER JOIN R2
-ON R1.alpha = R2.beta
+FROM R
+INNER JOIN S
+ON R.alpha = S.beta
 ```
 
 ### Output
 
 $$
-\sigma_{\alpha = \beta} (R_1\times R_2) = 
+\sigma_{\alpha = \beta} (R\times S) = 
 \begin{array}{|c|c|}
 \hline
 \alpha & \beta \\ \hline 
@@ -132,7 +132,7 @@ In this case we have returned just the one tuple. But `INNER JOIN` can return an
 ### Relational Algebra
 
 $$
-\sigma_{\alpha = \beta}(R_1 \times R_2) \cup ((R_1 - \Pi_{\alpha}(\sigma_{\alpha = \beta} (R_1 \times R_2))) \times {(\omega,...,\omega)})
+\sigma_{\alpha = \beta}(R\times S) \cup ((R - \Pi_{r_1,...r_n}(\sigma_{\alpha = \beta} (R \times S))) \times S_{NULL})
 $$
 
 Let's break this down.
@@ -142,7 +142,7 @@ $$
 \hline
 \sigma_{\alpha = \beta}(R_1 \times R_2) & \text{inner join} \\
 ((R_1 - \Pi_{R_1.\alpha}(\sigma_{\alpha = \beta} (R_1 \times R_2))) & \text{anti join} \\
-{(\omega,...,\omega)} & \text{NULL for each attribute in } R_2 \\
+S{NULL} & \text{NULL for each attribute in } S \\
 \hline
 \end{array}
 $$
