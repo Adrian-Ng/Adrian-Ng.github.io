@@ -140,7 +140,7 @@ Let's break this down.
 $$
 \begin{array}{|c|c|}
 \hline
-\sigma_{\alpha = \beta}(R_1 \times R_2) & \string{INNER JOIN} \\
+\sigma_{\alpha = \beta}(R_1 \times R_2) & \text{INNER JOIN} \\
 \cup & UNION \\
 \hline
 \end{array}
