@@ -141,13 +141,14 @@ $$
 \begin{array}{|c|c|}
 \hline
 \sigma_{\alpha = \beta}(R \times S) & \text{inner join} \\
-((R_1 - \Pi_{r_1,...,r_n}(\sigma_{\alpha = \beta} (R \times S))) & \text{anti join} \\
+((R_1 - \Pi_{r_1,...,r_n}(\sigma_{\alpha = \beta} (R \times S))) & \text{left anti semi join} \\
 S_{NULL} & \text{Singleton tuple with NULL for each attribute in } S \\
 \hline
 \end{array}
 $$
 
-$$\quad\cup$$ means `UNION`
+So it is more or less accurate to state that a Left Join is the union between an inner join and a left anti semi join.
+
 
 
 ### SQL
@@ -155,9 +156,9 @@ $$\quad\cup$$ means `UNION`
 ```sql
 SELECT 
  *
-FROM table1 AS t1
-LEFT JOIN table2 AS t2
-ON t1.LettersAE = t2.LettersCD
+FROM R
+LEFT JOIN S
+ON R.alpha = S.beta
 ```
 
 This is similar to an `INNER JOIN` but relaxes the condition that the joining fields must _always_ match.
