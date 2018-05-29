@@ -142,7 +142,8 @@ $$
 \hline
 \sigma_{\alpha = \beta}(R_1 \times R_2) & INNER JOIN
 \cup & UNION
-
+\hline
+\end{array}
 $$
 
 $$\quad\cup$$ means `UNION`
