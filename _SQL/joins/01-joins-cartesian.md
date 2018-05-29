@@ -12,7 +12,7 @@ mathjax: true
 When joining two relations via use of, say, `CROSS`, `INNER`, or `LEFT` joins, it is very important to understand the ramifications of such an undertaking. 
 These kind of join are powerful and easy to implement due to their friendly _syntactic sugar_ and are used all the time by SQL professionals to great effect. 
 
-However, it is not uncommon to see these wielded improperly. This page will advise on and against the various use cases of __cartesian joins__.
+However, it is not uncommon to see these used improperly. This page will advise on and against the various use cases of __cartesian joins__.
 
 ## Relations
 
@@ -82,7 +82,7 @@ C & D \\ \hline
 $$
 
 As you can see, our SQL query has returned $$3 \times 2 $$ tuples.
-The result-set of a cartesian product will always be of deterministic length $$M \times N$$ where $$M$$ and $$N$$ represent the respective lengths of the two relations.
+The result-set of a cartesian product will always be of length $$M \times N$$, where $$M$$ and $$N$$ represent the respective lengths of the two relations.
 
 ## INNER JOIN
 
@@ -127,7 +127,7 @@ In this case we have returned just the one tuple. But `INNER JOIN` can return an
 ### Relational Algebra
 
 $$
-(R_1 \bowtie \R_2) ) \cup 
+(R_1 \bowtie \R_2) ) \cup ((R_1 - \pi_{R_1.\alpha}\sigma_{\alpha = \beta} (R_1 \times R_2)) \times {(\omega,...,\omega)})
 $$
 
 
