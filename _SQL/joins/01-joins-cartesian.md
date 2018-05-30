@@ -153,6 +153,29 @@ So it is more or less accurate to state that a Left Join is the union between an
 
 ### SQL
 
+As such, we could write our SQL like this to return the product of a left join:
+
+```sql
+SELECT
+	*
+FROM R 
+INNER JOIN S
+ON R.alpha = S.beta
+UNION ALL
+SELECT
+	*
+FROM R.alpha AS X
+CROSS JOIN (SELECT NULL AS omega) AS o
+WHERE NOT EXISTS 
+(	SELECT 1 
+	FROM R 
+	INNER JOIN S
+	ON R.alpha = S.beta  
+	WHERE X.alpha = R.alpha);
+```
+
+But with some syntactic sugar, we need only write:
+
 ```sql
 SELECT 
  *
@@ -161,27 +184,17 @@ LEFT JOIN S
 ON R.alpha = S.beta
 ```
 
-This is similar to an `INNER JOIN` but relaxes the condition that the joining fields must _always_ match.
+### Output
 
-In addition to returning matching tuples, it returns tuples from the left table that don't match to anything in the right table.
-
-The result set will have the same number of tuples as the left table.
-
-|LettersAE|LettersCD|
-|---|---|
-|A|NULL|
-|B|NULL|
-|C|C|
-
-
-$$
-\leftouterjoin
-\sigma_{(\alpha = \beta)|| \beta = NULL} (R_1\times R_2) = 
+$$ 
 \begin{array}{|c|c|}
 \hline
 \alpha & \beta \\ \hline 
-A & NULL \\ \hline
-B
+A & NULL \\
+B & NULL \\
+C & C \\
+C & C \\
+\hline
 \end{array} 
 $$
 
