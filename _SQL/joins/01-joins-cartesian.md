@@ -161,12 +161,14 @@ WITH cteInner AS (
 	INNER JOIN S
 	ON R.alpha = S.beta
 	)
-,	cteAntiJoin AS (
+, cteAntiJoin AS (
 	SELECT
 		*
 	FROM R.alpha
 	WHERE NOT EXISTS (
-		SELECT 1 FROM cteInner 
+		SELECT 
+			1 
+		FROM cteInner 
 		WHERE R.alpha = alpha)
 	)
 SELECT
