@@ -3,23 +3,48 @@ title: "Joins: Semi"
 permalink: /SQL/joins/semi/
 excerpt: "A look at the various semi joins in SQL by Adrian Ng"
 toc: true
+mathjax: true
 ---
 
-## SEMI-JOINS
+## INTRO
 
 These lack the _syntactic sugar_ of the cartesian joins.
-But funnily enough I find that the syntax of semi-joins tends to more natural human language.
+I also find that the syntax of semi-joins tends to more natural human language.
 
-Another big upside is that they are **faster** than cartesian joins.
+Another big upside is that they are **faster** than cartesian joins because in SQL they avoid the need to compute the cartesian product, which is an expensive operation.
 
-There are just two types of semi-joins that I am interested in.
+## Relations
 
-### LEFT SEMI JOIN
+$$
+R = 
+\begin{array}{|c|}
+\alpha
+\hline
+\text{Red} \\
+\text{Blue} \\
+\text{Yellow} \\ \hline
+\end{array}
+\qquad
+S =
+\begin{array}{|c|}
+\beta
+\hline
+\text{Green} \\
+\text{Black} \\
+\text{Blue} \\ \hline
+\end{array}
+$$
 
-Use case:
+
+## LEFT SEMI JOIN
+
+### Use Case
+
 * Values in your joining field exist in both tables.
 * You _only_ want to return columns from the left table.
 * Speed is a concern (when isn't it?)
+
+### SQL
 
 ```sql
 SELECT
