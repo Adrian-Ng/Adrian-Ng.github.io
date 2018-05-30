@@ -16,6 +16,15 @@ ALTER TABLE dbo.Songs
 ADD year int;
 ```
 
+### Alter Column
+
+Let's change the datatype of a column.
+
+```sql
+ALTER TABLE dbo.Songs
+ALTER COLUMN Name varchar(255);
+```
+
 ### Drop Column
 
 Let's remove a column from a table.
