@@ -142,14 +142,12 @@ $$
 \hline
 \sigma_{\alpha = \beta}(R \times S) & \text{inner join} \\
 ((R_1 - \Pi_{r_1,...,r_n}(\sigma_{\alpha = \beta} (R \times S))) & \text{left anti semi join} \\
-S_{NULL} & \text{Singleton tuple with NULL for each attribute in } S \\
+S_{NULL} & n\text{-tuple. NULL for each attribute in } S \\
 \hline
 \end{array}
 $$
 
-So it is more or less accurate to state that a Left Join is the union between an inner join and a left anti semi join.
-
-
+So it is more or less accurate to state that a Left Join is the union between an __inner join__ and a __left anti semi join__.
 
 ### SQL
 
