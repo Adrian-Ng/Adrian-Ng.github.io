@@ -29,7 +29,7 @@ C\\ \hline
 \end{array}
 \qquad
 S =
-\begin{array}{|c|c|c|c|}
+\begin{array}{|c|}
 \hline
 \beta \\ \hline
 C\\ 
