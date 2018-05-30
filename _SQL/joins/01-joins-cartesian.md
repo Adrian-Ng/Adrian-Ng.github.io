@@ -156,11 +156,16 @@ So it is more or less accurate to state that a Left Join is the union between an
 As such, we could write our SQL like this to return the product of a left join:
 
 ```sql
+WITH cteInner AS (
+	SELECT
+		*
+	FROM R 
+	INNER JOIN S
+	ON R.alpha = S.beta
+	)
 SELECT
 	*
-FROM R 
-INNER JOIN S
-ON R.alpha = S.beta
+FROM cteInner
 UNION ALL
 SELECT
 	*
@@ -168,10 +173,8 @@ FROM R.alpha AS X
 CROSS JOIN (SELECT NULL AS omega) AS o
 WHERE NOT EXISTS 
 (	SELECT 1 
-	FROM R 
-	INNER JOIN S
-	ON R.alpha = S.beta  
-	WHERE X.alpha = R.alpha);
+	FROM cteInner  
+	WHERE X.alpha = alpha);
 ```
 
 But with some syntactic sugar, we need only write:
