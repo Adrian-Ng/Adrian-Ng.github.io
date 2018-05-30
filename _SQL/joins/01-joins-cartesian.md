@@ -49,7 +49,7 @@ That is, we compute all possible __combinations__ of tuples.
 We can mathematically represent the cartesian product of two relations as follows:
 
 $$
-\sigma (R \times S)
+R \times S
 $$ 
 
 Where $$\times$$ represents the cartesian product.
@@ -69,7 +69,7 @@ Note that unlike `INNER JOIN`, we aren't matching on anything.
 ### Output
 
 $$
-\sigma (R\times S) = 
+R\times S = 
 \begin{array}{|c|c|}
 \hline
 \alpha & \beta \\ \hline
