@@ -161,18 +161,22 @@ WITH cteInner AS (
 	INNER JOIN S
 	ON R.alpha = S.beta
 	)
+,	cteAntiJoin AS (
+	SELECT
+		*
+	FROM R.alpha
+	WHERE NOT EXISTS (
+		SELECT 1 FROM cteInner 
+		WHERE R.alpha = alpha)
+	)
 SELECT
 	*
 FROM cteInner
 UNION ALL
 SELECT
 	*
-FROM R.alpha AS X
-CROSS JOIN (SELECT NULL AS omega) AS o
-WHERE NOT EXISTS 
-(	SELECT 1 
-	FROM cteInner  
-	WHERE X.alpha = alpha);
+FROM cteAntiJoin
+CROSS JOIN (SELECT NULL AS omega);
 ```
 
 But with some syntactic sugar, we need only write:
