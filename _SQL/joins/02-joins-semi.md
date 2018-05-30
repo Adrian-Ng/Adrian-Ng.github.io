@@ -18,7 +18,8 @@ Another big upside is that they are **faster** than cartesian joins because in S
 $$
 R = 
 \begin{array}{|c|}
-\alpha
+\hline
+\alpha \\
 \hline
 \text{Red} \\
 \text{Blue} \\
@@ -27,7 +28,8 @@ R =
 \qquad
 S =
 \begin{array}{|c|}
-\beta
+\hline
+\beta \\
 \hline
 \text{Green} \\
 \text{Black} \\
