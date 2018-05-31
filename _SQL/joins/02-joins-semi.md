@@ -38,12 +38,12 @@ S =
 $$
 
 
-## LEFT SEMI JOIN
+## SEMI JOIN
 
 ### Use Case
 
 * Values in your joining field exist in both tables.
-* You _only_ want to return columns from the left table.
+* You _only_ want to return columns from $$R$$.
 * Speed is a concern (when isn't it?)
 
 ### SQL
@@ -51,11 +51,23 @@ $$
 ```sql
 SELECT
 	*
-FROM [leftTable] AS left
-WHERE EXISTS (SELECT 1 FROM [rightTable] WHERE left.ID = ID)
+FROM R
+WHERE EXISTS (SELECT 1 FROM S WHERE R.alpha = beta)
 ```
 
-### LEFT ANTI SEMI JOIN
+### OUTPUT
+
+$$
+\begin{array}{|c|}
+\hline
+\alpha \\ 
+\hline
+\text{blue} \\
+\hline
+\end{array}
+$$
+
+## ANTI JOIN
 
 Use case is same as the above except you're returning rows where values in your joining field _don't match_.
 
