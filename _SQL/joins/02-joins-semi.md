@@ -13,6 +13,12 @@ I also find that the syntax of semi-joins tends to more natural human language.
 
 Another big upside is that they are **faster** than cartesian joins because in SQL they avoid the need to compute the cartesian product, which is an expensive operation.
 
+## Relational Algebra
+
+Just a quick note on the algebra for this section. Sometimes you will come across notation for semi join and anti join expressed in terms of the cartesian product. 
+Ignore these. 
+The way we perform these joins in SQL will not compute anything resembling a cartesian product at all!  
+
 ## Relations
 
 $$
@@ -39,6 +45,14 @@ $$
 
 
 ## SEMI JOIN
+
+### Relational Algebra
+
+R &#8905; S =
+
+$$
+{t:t\inR \and \exists s\in S() }
+$$
 
 ### Use Case
 
