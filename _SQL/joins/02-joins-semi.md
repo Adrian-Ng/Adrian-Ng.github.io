@@ -46,17 +46,9 @@ $$
 
 ## SEMI JOIN
 
-### Relational Algebra
+In a semi join, we simply check the yes/no response to whether any given tuple in $$R$$ matches to a record in $$S$$.
 
-R &#8905; S = $${t:t\in R \land \exists s\in S(\text{Fun}()) }$$
-
-The 
-
-### Use Case
-
-* Values in your joining field exist in both tables.
-* You _only_ want to return columns from $$R$$.
-* Speed is a concern (when isn't it?)
+Unlike a cartesian join, we only return data from $$R$$.  
 
 ### SQL
 
@@ -66,6 +58,7 @@ SELECT
 FROM R
 WHERE EXISTS (SELECT 1 FROM S WHERE R.alpha = beta)
 ```
+
 
 ### OUTPUT
 
@@ -79,9 +72,14 @@ $$
 \end{array}
 $$
 
+### Use Case
+
+* You _only_ want to return columns from $$R$$.
+* Data from $$R$$ must match to data in $$S$$
+
 ## ANTI JOIN
 
-Use case is same as the above except you're returning rows where values in your joining field _don't match_.
+Use case is same as the semi join except you wish to return the disjoint set.
 
 ```sql
 SELECT
