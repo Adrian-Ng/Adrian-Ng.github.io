@@ -48,11 +48,9 @@ $$
 
 ### Relational Algebra
 
-R &#8905; S =
+R &#8905; S = $${t:t\in R \land \exists s\in S(\text{Fun}()) }$$
 
-$$
-{t:t\inR \and \exists s\in S() }
-$$
+The 
 
 ### Use Case
 
