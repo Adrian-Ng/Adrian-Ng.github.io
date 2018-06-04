@@ -84,9 +84,10 @@ Use case is same as the semi join except you wish to return the disjoint set.
 ```sql
 SELECT
 	*
-FROM [leftTable] AS left
-WHERE NOT EXISTS (SELECT 1 FROM [rightTable] WHERE left.ID = ID)
+FROM R
+WHERE NOT EXISTS (SELECT 1 FROM S WHERE R.alpha = beta)
 ```
+
 
 ### OUTPUT
 
