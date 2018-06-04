@@ -88,3 +88,16 @@ FROM [leftTable] AS left
 WHERE NOT EXISTS (SELECT 1 FROM [rightTable] WHERE left.ID = ID)
 ```
 
+### OUTPUT
+
+$$
+\begin{array}{|c|}
+\hline
+\alpha \\ 
+\hline
+\text{Red} \\
+\text{Yellow} \\
+\hline
+\end{array}
+$$
+
