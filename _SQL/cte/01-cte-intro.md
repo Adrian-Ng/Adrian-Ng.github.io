@@ -60,7 +60,7 @@ WITH cte1 AS (
 	<initial subquery>
 	)
 ,    cte2 AS (
-	SELECT * FROM cte2
+	SELECT * FROM cte1
 	)
 SELECT * FROM cte2 
 ```
