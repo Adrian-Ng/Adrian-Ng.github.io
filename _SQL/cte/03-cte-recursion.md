@@ -1,6 +1,6 @@
 ---
 title: "CTEs: Recursion"
-permalink: /SQL/cte/recursion/
+permalink: /SQL/cte/Recursion/
 excerpt: "Recursive CTEs in SQL"
 toc: true
 classes: wide
