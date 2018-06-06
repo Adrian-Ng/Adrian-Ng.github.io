@@ -23,7 +23,7 @@ That is if we write, `ROW_NUMBER() OVER (PARTITION BY Email ORDER BY Email) AS r
 $$
 \begin{array}{|c|c|}
 \hline
-\text{Email} & \text{rn}
+\text{Email} & \text{rn} \\
 \hline
 \text{fakeUser@FakeDomain.com} & 1 \\
 \text{anotherFake@alsofake.com} & 1 \\
@@ -31,7 +31,6 @@ $$
 \text{notanemail@notReal.com} & 1 \\
 \hline
 \end{array}
-
 $$
 
 
