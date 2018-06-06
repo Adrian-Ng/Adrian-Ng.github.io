@@ -74,12 +74,12 @@ SQL:
        url: /SQL/cte/intro/
      - title: "Deduping"
        url: /SQL/cte/dedupe/
-     #- title: "Segmentation"
-      # url:     
-   - title: Advanced Stuff
-     children:
      - title: "Recursion"
-       url: /SQL/Advanced/Recursion/
+       url: /SQL/cte/recursion/    
+   - title: Misc Stuff
+     children:
+     #- title: "Recursion"
+      # url: /SQL/Advanced/Recursion/
      - title: "Openquery... and XML"
        url: /SQL/Advanced/openquery-xml/
    - title: PostgreSQL
