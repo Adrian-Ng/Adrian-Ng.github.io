@@ -2,7 +2,7 @@
 title: "CTEs: Recursion"
 permalink: /SQL/cte/recursion/
 excerpt: "Recursive CTEs in SQL"
-#toc: true
+toc: true
 classes: wide
 mathjax :true
 ---
