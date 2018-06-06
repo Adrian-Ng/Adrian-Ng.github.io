@@ -12,8 +12,8 @@ main:
      url: http://adrian.ng/java/Basics/Intro/
    - title: "MATLAB"
      url: http://adrian.ng/matlab/Basics/Intro/
-   - title: "Python"
-     url: http://adrian.ng/python/Basics/Intro/
+#   - title: "Python"
+ #    url: http://adrian.ng/python/Basics/Intro/
 # SQL links
 SQL:
 #   - title: T-SQL Basics
@@ -68,6 +68,14 @@ SQL:
 #       url: /SQL/aggregation/having/
 #     - title: "Cube"
 #       url: /SQL/aggregation/cube/
+   - title: CTEs
+     children:
+     - title: "Intro"
+       url: /SQL/cte/intro/
+     - title: "Deduping"
+       url: /SQL/cte/dedupe/
+     #- title: "Segmentation"
+      # url:     
    - title: Advanced Stuff
      children:
      - title: "Recursion"
