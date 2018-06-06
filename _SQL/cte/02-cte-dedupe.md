@@ -38,9 +38,9 @@ $$
 \end{array}
 $$
 
-This means we can delete any row where `RN > 1` 
-However, function that cannot be used in `WHERE` or `HAVING` clauses.
-Therefore we use a CTE:
+This means we can delete any row where `RN > 1`. 
+However, we cannot use `ROW_NUMBER()` in `WHERE` or `HAVING` clauses.
+Therefore we use a CTE. _Et voila_.
 
 ```sql
 WITH cteDedupe AS (
