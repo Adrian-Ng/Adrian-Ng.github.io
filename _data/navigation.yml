@@ -75,7 +75,7 @@ SQL:
      - title: "Deduping"
        url: /SQL/cte/dedupe/
      - title: "Recursion"
-       url: /SQL/cte/recursion/
+       url: /SQL/cte/Recursion/
    - title: Misc Stuff
      children:
       #- title: "Recursion"
