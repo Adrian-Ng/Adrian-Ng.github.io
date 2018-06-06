@@ -69,11 +69,18 @@ DECLARE @XMLStr varchar(max);
 SELECT @XMLStr = (
 		SELECT 
 		accountNo AS a 
-		FROM #accountNo AS [t] 
+		FROM #accountNo AS t	 
 		FOR XML AUTO);
 ```
-Our datatype is `varchar` (instead of `XML`) because we are using dynamic SQL.
-But on the remote server, we will need an `XML` datatype because we will need to use `XML` methods to read the data using SQL DML.
+Our datatype is `varchar` (instead of `XML`) because we will be using dynamic SQL.
+But on the remote server, we will use a variable of `XML` datatype so that we can simply use XML methods to read the string.
+
+First there is the `nodes()` method:
+
+```xml
+nodes (XQuery) as Table(Column)
+```
+
 So we read the `XML` like this:
 
 ```sql
@@ -81,7 +88,7 @@ DECLARE @xml xml;
 SET @xml = @XMLStr;
 SELECT
 	Tbl.Col.value('@a','int') AS accountNo
-FROM @xml.nodes('//t')Tbl(Col)
+FROM @xml.nodes('//t') AS Tbl(Col)
 ```
 
 Next, we use  __dynamic SQL__ to pass the contents of  `@XMLStr` to the `OPENQUERY`.
