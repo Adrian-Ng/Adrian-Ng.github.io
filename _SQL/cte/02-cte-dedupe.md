@@ -3,12 +3,41 @@ title: "CTEs: Deduping"
 permalink: /SQL/cte/dedupe/
 excerpt: "Using Common Table Elements to remove duplicates in SQL by Adrian Ng"
 toc: False
+mathjax: True
 ---
 
-## ROW NUMBER
+## Dedupe
+
+Sometimes we don't want to have reptitions of certain values across multiple tuples in our dataset.
+For instance, we might not want to see an email address repeated more than once and simply using `DISTINCT` is not an option. 
+
+In this case, I will invariably use a CTE to remove the offending repetitions.
+
+### Row Number
+
+This solution will use `int ROW_NUMBER()`, which returns an integer than increments (from 1, by 1) as it traverses the dataset.
+It is also a _windowed_ function such that we can partition our dataset along identical values if we so wish.
+
+That is if we write, `ROW_NUMBER() OVER (PARTITION BY Email ORDER BY Email) AS rn` then the we would get something like:
+
+$$
+\begin{array}{|c|c|}
+\hline
+\text{Email} & \text{rn}
+\hline
+\text{fakeUser@FakeDomain.com} & 1 \\
+\text{anotherFake@alsofake.com} & 1 \\
+\text{anotherFake@alsofake.com} & 2 \\
+\text{notanemail@notReal.com} & 1 \\
+\hline
+\end{array}
+
+$$
 
 
-This involves using `ROW_NUMBER()`.
+
+
+
 This function that cannot be used in `WHERE` or `HAVING` clauses.
 
 
