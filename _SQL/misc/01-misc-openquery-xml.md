@@ -1,6 +1,6 @@
 ---
 title: "SQL Advanced: Openqueries... and XML"
-permalink: /SQL/Advanced/openquery-xml/
+permalink: /SQL/misc/openquery-xml/
 excerpt: "When XML can come to the rescue and make Openqueries even more fun in SQL"
 #toc: true
 classes: wide
