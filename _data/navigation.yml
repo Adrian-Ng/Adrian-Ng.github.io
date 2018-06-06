@@ -78,10 +78,10 @@ SQL:
        url: /SQL/cte/recursion/    
    - title: Misc Stuff
      children:
-     #- title: "Recursion"
+      #- title: "Recursion"
       # url: /SQL/Advanced/Recursion/
      - title: "Openquery... and XML"
-       url: /SQL/Advanced/openquery-xml/
+        url: /SQL/Advanced/openquery-xml/
    - title: PostgreSQL
      children:
      - title: "Music DB"
