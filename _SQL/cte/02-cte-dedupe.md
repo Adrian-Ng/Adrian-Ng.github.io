@@ -19,12 +19,18 @@ In this case, I will invariably use a CTE to remove the offending repetitions.
 This solution will use `int ROW_NUMBER()`, which returns an integer than increments (from 1, by 1) as it traverses the dataset.
 It is also a _windowed_ function such that we can partition our dataset along identical values if we so wish.
 
-Suppose we write the following in our `SELECT`: 
+### Subquery
+
+Suppose we include `ROW_NUMBER()` like so: 
 
 ```sql
-ROW_NUMBER() OVER (PARTITION BY Email ORDER BY Email) AS rn
+SELECT
+	Email
+,	ROW_NUMBER() OVER (PARTITION BY Email ORDER BY Email) AS rn
+FROM dbo.Account;
 ```
-We will get something like:
+
+### Subquery Output
 
 $$
 \begin{array}{|c|c|}
@@ -39,15 +45,16 @@ $$
 \end{array}
 $$
 
+### CTE 
+
 This means we can delete any row where `RN > 1`. 
 However, we cannot use `ROW_NUMBER()` in `WHERE` or `HAVING` clauses.
-Therefore we use a CTE. _Et voila_.
+Therefore we use a CTE.
 
 ```sql
 WITH cteDedupe AS (
 	SELECT
-		Email
-	,	ROW_NUMER() OVER (PARTITION BY Email ORDER BY NEWID()) AS rn
+		ROW_NUMER() OVER (PARTITION BY Email ORDER BY Email) AS rn
 	FROM dbo.Account
 	)
 DELETE cteDedupe 
