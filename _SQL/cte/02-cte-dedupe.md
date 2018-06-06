@@ -18,7 +18,12 @@ In this case, I will invariably use a CTE to remove the offending repetitions.
 This solution will use `int ROW_NUMBER()`, which returns an integer than increments (from 1, by 1) as it traverses the dataset.
 It is also a _windowed_ function such that we can partition our dataset along identical values if we so wish.
 
-That is if we write, `ROW_NUMBER() OVER (PARTITION BY Email ORDER BY Email) AS rn` then the we would get something like:
+Suppose we write the following in our `SELECT`: 
+
+```sql
+ROW_NUMBER() OVER (PARTITION BY Email ORDER BY Email) AS rn
+```
+We will get something like:
 
 $$
 \begin{array}{|c|c|}
@@ -33,13 +38,9 @@ $$
 \end{array}
 $$
 
-
-
-
-
-This function that cannot be used in `WHERE` or `HAVING` clauses.
-
-
+This means we can delete any row where `RN > 1` 
+However, function that cannot be used in `WHERE` or `HAVING` clauses.
+Therefore we use a CTE:
 
 ```sql
 WITH cteDedupe AS (
