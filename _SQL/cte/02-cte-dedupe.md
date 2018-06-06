@@ -1,11 +1,17 @@
 ---
 title: "CTEs: Deduping"
-permalink: /SQL/cte-dedupe/
+permalink: /SQL/cte/dedupe/
 excerpt: "Using Common Table Elements to remove duplicates in SQL by Adrian Ng"
-toc: true
+toc: False
 ---
 
-## Example 1
+## ROW NUMBER
+
+
+This involves using `ROW_NUMBER()`.
+This function that cannot be used in `WHERE` or `HAVING` clauses.
+
+
 
 ```sql
 WITH cteDedupe AS (
