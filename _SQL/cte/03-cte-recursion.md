@@ -4,7 +4,7 @@ permalink: /SQL/cte/recursion/
 excerpt: "Recursive CTEs in SQL"
 toc: true
 classes: wide
-mathjax :true
+mathjax: True
 ---
 
 Recursion is possible in SQL via the use of a type of subquery known as a Common Table Element (CTE).
