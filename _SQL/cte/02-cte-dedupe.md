@@ -3,6 +3,7 @@ title: "CTEs: Deduping"
 permalink: /SQL/cte/dedupe/
 excerpt: "Using Common Table Elements to remove duplicates in SQL by Adrian Ng"
 toc: False
+classes: wide
 mathjax: True
 ---
 
