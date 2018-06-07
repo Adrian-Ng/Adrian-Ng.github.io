@@ -18,10 +18,10 @@ This makes for some very fast set-based filtering.
 Openqueries (OQ) make pulling data from a remote server really fast by delegating processing duties to the remote server.
 That is the `OPENQUERY` is executed remotely such that any transformation, filter, or what-have-you is performed _only_ onl the remote server..
 
-If you query a table on a remote server without normally, the entire table is sent across _before_ any processing is performed. 
+If you query a table on a remote server normally, the entire table is sent across _before_ any processing is performed. 
 In other words, cross-server queries take much less time with `OPENQUERY`!
 
-### with Where Clause
+### Filtering using WHERE
 
 For example, I would query my remote server in this way:
 
