@@ -68,7 +68,7 @@ SQL:
 #       url: /SQL/aggregation/having/
 #     - title: "Cube"
 #       url: /SQL/aggregation/cube/
-   - title: CTEs
+   - title: Common Table Elements
      children:
      - title: "Intro"
        url: /SQL/cte/intro/
