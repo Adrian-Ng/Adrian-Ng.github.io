@@ -13,6 +13,7 @@ I also find that the syntax of semi-joins tends to more natural human language.
 
 Another big upside is that they are **faster** than cartesian joins because in SQL they avoid the need to compute the cartesian product, which is an expensive operation.
 
+
 ## Relational Algebra
 
 Just a quick note on the algebra for this section. Sometimes you will come across notation for semi join and anti join expressed in terms of the cartesian product. 
@@ -84,7 +85,28 @@ Use case is same as the semi join except you wish to return the disjoint set.
 ```sql
 SELECT
 	*
-FROM [leftTable] AS left
-WHERE NOT EXISTS (SELECT 1 FROM [rightTable] WHERE left.ID = ID)
+FROM R
+WHERE NOT EXISTS (SELECT 1 FROM S WHERE R.alpha = beta)
 ```
+
+
+### OUTPUT
+
+$$
+\begin{array}{|c|}
+\hline
+\alpha \\ 
+\hline
+\text{Red} \\
+\text{Yellow} \\
+\hline
+\end{array}
+$$
+
+## DML
+
+The examples on this page only look at these joins when used with `SELECT`.
+But of course, you can use them with other DML operations. 
+However, I would advise on being _extra careful_ when running `UPDATE` or `DELETE` against the ouput of a semi or anti join.
+
 

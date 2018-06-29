@@ -1,6 +1,6 @@
 ---
 title: "SQL Advanced: Openqueries... and XML"
-permalink: /SQL/Advanced/openquery-xml/
+permalink: /SQL/misc/openquery-xml/
 excerpt: "When XML can come to the rescue and make Openqueries even more fun in SQL"
 #toc: true
 classes: wide
@@ -18,10 +18,10 @@ This makes for some very fast set-based filtering.
 Openqueries (OQ) make pulling data from a remote server really fast by delegating processing duties to the remote server.
 That is the `OPENQUERY` is executed remotely such that any transformation, filter, or what-have-you is performed _only_ onl the remote server..
 
-If you query a table on a remote server without normally, the entire table is sent across _before_ any processing is performed. 
+If you query a table on a remote server normally, the entire table is sent across _before_ any processing is performed. 
 In other words, cross-server queries take much less time with `OPENQUERY`!
 
-### with Where Clause
+### Filtering using WHERE
 
 For example, I would query my remote server in this way:
 
@@ -69,11 +69,18 @@ DECLARE @XMLStr varchar(max);
 SELECT @XMLStr = (
 		SELECT 
 		accountNo AS a 
-		FROM #accountNo AS [t] 
+		FROM #accountNo AS t	 
 		FOR XML AUTO);
 ```
-Our datatype is `varchar` (instead of `XML`) because we are using dynamic SQL.
-But on the remote server, we will need an `XML` datatype because we will need to use `XML` methods to read the data using SQL DML.
+Our datatype is `varchar` (instead of `XML`) because we will be using dynamic SQL.
+But on the remote server, we will use a variable of `XML` datatype so that we can simply use XML methods to read the string.
+
+First there is the `nodes()` method:
+
+```xml
+nodes (XQuery) as Table(Column)
+```
+
 So we read the `XML` like this:
 
 ```sql
@@ -81,7 +88,7 @@ DECLARE @xml xml;
 SET @xml = @XMLStr;
 SELECT
 	Tbl.Col.value('@a','int') AS accountNo
-FROM @xml.nodes('//t')Tbl(Col)
+FROM @xml.nodes('//t') AS Tbl(Col)
 ```
 
 Next, we use  __dynamic SQL__ to pass the contents of  `@XMLStr` to the `OPENQUERY`.

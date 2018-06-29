@@ -12,8 +12,8 @@ main:
      url: http://adrian.ng/java/Basics/Intro/
    - title: "MATLAB"
      url: http://adrian.ng/matlab/Basics/Intro/
-   - title: "Python"
-     url: http://adrian.ng/python/Basics/Intro/
+#   - title: "Python"
+ #    url: http://adrian.ng/python/Basics/Intro/
 # SQL links
 SQL:
 #   - title: T-SQL Basics
@@ -68,12 +68,18 @@ SQL:
 #       url: /SQL/aggregation/having/
 #     - title: "Cube"
 #       url: /SQL/aggregation/cube/
-   - title: Advanced Stuff
+   - title: CTEs
      children:
+     - title: "Intro"
+       url: /SQL/cte/intro/
+     - title: "Deduping"
+       url: /SQL/cte/dedupe/
      - title: "Recursion"
-       url: /SQL/Advanced/Recursion/
+       url: /SQL/cte/Recursion/
+   - title: Misc Stuff
+     children:
      - title: "Openquery... and XML"
-       url: /SQL/Advanced/openquery-xml/
+       url: /SQL/misc/openquery-xml/
    - title: PostgreSQL
      children:
      - title: "Music DB"

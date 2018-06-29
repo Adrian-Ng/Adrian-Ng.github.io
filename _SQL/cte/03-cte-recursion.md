@@ -1,9 +1,10 @@
 ---
-title: "SQL Advanced: Recursion"
-permalink: /SQL/Advanced/Recursion/
-excerpt: "Recursion in SQL"
-#toc: true
+title: "CTEs: Recursion"
+permalink: /SQL/cte/Recursion/
+excerpt: "Recursive CTEs in SQL"
+toc: true
 classes: wide
+mathjax: true
 ---
 
 Recursion is possible in SQL via the use of a type of subquery known as a Common Table Element (CTE).
@@ -42,23 +43,36 @@ Now, let's write a SQL query that can separate this string to a column of values
 First we write the transformation for our anchor members `output` and `remainder`.
 These anchor transformations define what happens in our recursion on the first iteration.
 
+### SQL
+
 ```sql
 SELECT
 	SUBSTRING(@str,0,CHARINDEX(',',@str,1)) AS output
 ,	SUBSTRING(@str,CHARINDEX(',',@str,1) + 1, LEN(@str)) AS remainder
 ```
 
-|output|remainder|
-|---|---|
-|Eggs|Milk,Juice,Bread|
+### Output
+
+
+$$ 
+\begin{array}{|c|c|}
+\hline 
+\text{output} & \text{remainder} \\
+\hline
+\text{eggs} & \text{Milk,Juice,Bread} \\
+\hline
+\end{array}
+$$
 
 We've split our string into two parts: `output` and `remainder`. 
-We recurse through the latter on subsequent iterations.
+Now we recurse through the latter on subsequent iterations.
 
 ## Recursion
 
 The transformations for the recursive members are identical to the transformations for the anchor members.
 But now we invoke `cteRecursion` and include a stopping condition, which stops the recursion when `remainder` contains no more commas.
+
+### SQL
 
 ```sql
 WITH cteRecursion AS (
@@ -77,10 +91,21 @@ FROM cteRecursion;
 
 ```
 
-|output|
-|---|
-|Eggs|
-|Milk|
-|Juice|
-|Bread|
+### Final Output
+
+So after some number of iterations, we return the following:
+
+$$
+\begin{array}{|c|}
+\hline
+\text{output} \\
+\hline
+\text{Eggs} \\
+\text{Milk} \\
+\text{Juice} \\
+\text{Bread} \\
+\hline
+\end{array}
+$$
+
 
