@@ -12,4 +12,22 @@ toc: true
 
 ## Intro
 
-## etcy
+Follow along with the SQL examples you see here with my music Database.
+This is a database that attempts to mimic how data would be stored for something like a _Spotify_ clone.
+
+### Database Diagram
+
+![image-center](/SQL/musicDB/DatabaseDiagram.jpg){: .align-center}
+
+## CREATE SCHEMA
+
+```sql
+CREATE SCHEMA music;
+```
+
+
+## DROP TABLES
+
+```sql
+
+```
