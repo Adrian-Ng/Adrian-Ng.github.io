@@ -1,93 +1,91 @@
-	--DROP TABLES IF EXIST
-	DROP SCHEMA IF EXISTS mus CASCADE;				
-			
-	--CREATE SCHEMA
-	CREATE SCHEMA mus;
-	
+	-- CREATE SCHEMA
+	IF SCHEMA_ID('music') IS NULL
+	CREATE SCHEMA music;
+
 	--CREATE TABLES	
 	-- ACCOUNT
-	CREATE TABLE mus.Account
-	(	AccountID 	serial PRIMARY KEY
-	, 	Email 		varchar(100) NOT NULL
+	CREATE TABLE [music].[Account]
+	(	[AccountID] int IDENTITY(1,1) PRIMARY KEY
+	, 	[Email]		varchar(100) NOT NULL
 		);
 		
 	-- ARTIST
-	CREATE TABLE mus.Artist
-	(	ArtistID	serial PRIMARY KEY
+	CREATE TABLE [music].[Artist]
+	(	ArtistID	int IDENTITY(1,1) PRIMARY KEY
 	,	Name		varchar(100)
 	,	Country		varchar(100)
 	,	AccountID	int NULL
-	,	FOREIGN KEY (AccountID) REFERENCES mus.Account(AccountID)
+	,	FOREIGN KEY (AccountID) REFERENCES [music].[Account](AccountID)
 		);
 	
 	--USER
-	CREATE TABLE mus.User
-	(	UserID		serial PRIMARY KEY
+	CREATE TABLE [music].[User]
+	(	UserID		int IDENTITY(1,1) PRIMARY KEY
 	,	Name		varchar(100)
 	,	Country		varchar(100)
 	,	AccountID	int NULL
-	,	FOREIGN KEY (AccountID) REFERENCES mus.Account(AccountID)
+	,	FOREIGN KEY (AccountID) REFERENCES [music].[Account](AccountID)
 		);
 
 	--FOLLOWS
-	CREATE TABLE mus.Follows
+	CREATE TABLE [music].Follows
 	(	UserID		int
 	,	ArtistID	int
 	,	PRIMARY KEY(UserID, ArtistID)
-	,	FOREIGN KEY (UserID) REFERENCES mus.User (UserID)
-	,	FOREIGN KEY (ArtistID) REFERENCES mus.Artist (ArtistID)
+	,	FOREIGN KEY (UserID) REFERENCES [music].[User] (UserID)
+	,	FOREIGN KEY (ArtistID) REFERENCES [music].Artist (ArtistID)
 		);
 		
 	--SONG
-	CREATE TABLE mus.Song
-	(	SongID		serial PRIMARY KEY
+	CREATE TABLE [music].Song
+	(	SongID		int IDENTITY(1,1) PRIMARY KEY
 	,	Name		varchar(100)
 	,	Duration	int
 		);
 		
 	--PERFORMSONSONG
-	CREATE TABLE mus.PerformsOnSong 
+	CREATE TABLE [music].PerformsOnSong 
 	(	SongID		int 
 	,	ArtistID	int 
 	,	PRIMARY KEY	(SongID, ArtistID)
-	,	FOREIGN KEY (SongID) REFERENCES mus.Song (SongID)
-	,	FOREIGN KEY (ArtistID) REFERENCES mus.Artist (ArtistID)
+	,	FOREIGN KEY (SongID) REFERENCES [music].Song (SongID)
+	,	FOREIGN KEY (ArtistID) REFERENCES [music].Artist (ArtistID)
 		);
 		
 	--ALBUM
-	CREATE TABLE mus.Album
-	(	AlbumID		serial PRIMARY KEY
+	CREATE TABLE [music].Album
+	(	AlbumID		int IDENTITY(1,1) PRIMARY KEY
 	,	Title		varchar(100)
 	,	MainArtist	int NULL
-	,	FOREIGN KEY (MainArtist) REFERENCES mus.Artist (ArtistID)
+	,	FOREIGN KEY (MainArtist) REFERENCES [music].Artist (ArtistID)
 		);
 		
 	--ALBUMTRACK
-	CREATE TABLE mus.AlbumTrack
+	CREATE TABLE [music].AlbumTrack
 	(	AlbumID		int 
 	,	TrackNo		int
 	,	SongID		int
 	,	PRIMARY KEY (AlbumID, TrackNo)
-	,	FOREIGN KEY (AlbumID) REFERENCES mus.Album (AlbumID)
-	,	FOREIGN KEY (SongID) REFERENCES mus.Song (SongID)
+	,	FOREIGN KEY (AlbumID) REFERENCES [music].Album (AlbumID)
+	,	FOREIGN KEY (SongID) REFERENCES [music].Song (SongID)
 		);
 	
 	--Playlist
-	CREATE TABLE mus.Playlist
-	(	PlaylistID	serial PRIMARY KEY
+	CREATE TABLE [music].Playlist
+	(	PlaylistID	int IDENTITY(1,1) PRIMARY KEY
 	,	Title		varchar(100)
 	,	UserID		int NOT NULL
-	,	FOREIGN KEY (UserID) REFERENCES mus.User(UserID)
+	,	FOREIGN KEY (UserID) REFERENCES [music].[User](UserID)
 		);
 		
 	--PLAYLISTTRACK
-	CREATE TABLE  mus.PlaylistTrack
+	CREATE TABLE  [music].[PlaylistTrack]
 	(	PlaylistID	int
 	,	TrackNo		int
 	,	SongID		int
 	,	PRIMARY KEY (PlaylistID, TrackNo)
-	,	FOREIGN KEY (PlaylistID) REFERENCES mus.Playlist (PlaylistID)
-	,	FOREIGN KEY (SongID) REFERENCES mus.Song (SongID)
+	,	FOREIGN KEY (PlaylistID) REFERENCES [music].[Playlist] (PlaylistID)
+	,	FOREIGN KEY (SongID) REFERENCES [music].[Song] (SongID)
 		);
 	
 	

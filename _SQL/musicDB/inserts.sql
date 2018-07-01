@@ -1,5 +1,5 @@
 	--POPULATE ACCOUNTS
-	INSERT INTO mus.Account
+	INSERT INTO [music].Account
 	(	email)
 	VALUES
 	('sfreeman0@etsy.com'),
@@ -102,8 +102,10 @@
 	('rjohnston2p@discovery.com'),
 	('jgutierrez2q@tinypic.com'),
 	('rgutierrez2r@desdev.cn');
+	GO
 	--POPULATE
-	INSERT INTO mus.Artist
+
+	INSERT INTO music.Artist
 	(	Name
 	,	Country
 	,	AccountID)
@@ -210,7 +212,7 @@
 	('Forsaken Counselor','France',NULL);
 
 	--USER
-	INSERT INTO mus.user
+	INSERT INTO [music].[user]
 	(	Name
 	,	Country
 	,	AccountID)
@@ -317,18 +319,18 @@
 	('Jessica Grant','Germany',100);
 	
 	--FOLLOWS
-	INSERT INTO mus.Follows
+	INSERT INTO [music].Follows
 	SELECT
+		TOP 200
 		ArtistID
 	,	UserID
-	FROM		mus.Artist
-	CROSS JOIN	mus.User
-	ORDER BY 	RANDOM()
-	LIMIT		200;
+	FROM		[music].Artist
+	CROSS JOIN	[music].[User]
+	ORDER BY 	NEWID();
 	
 	--SONG
 	
-	INSERT INTO mus.Song
+	INSERT INTO [music].Song
 	(	Name
 	,	Duration	)
 	VALUES
@@ -540,15 +542,14 @@
 		SELECT
 			SongID
 		,	ArtistID
-		FROM		mus.Song AS s
-		CROSS JOIN 	mus.Artist AS a
-		ORDER BY RANDOM ()
+		FROM		[music].Song AS s
+		CROSS JOIN 	[music].Artist AS a
 		)
 	,	ctePartition AS (
 		-- ADD A FILTERING ATTRIBUTE RN SUCH THAT EACH VALUE CORRESPONDS TO A SINGLE SET OF SONGS
 		SELECT
 			*
-		,	ROW_NUMBER() OVER (PARTITION BY SongID ORDER BY RANDOM()) AS RN
+		,	ROW_NUMBER() OVER (PARTITION BY SongID ORDER BY NEWID()) AS RN
 		FROM 	cteRandomPairs
 			)
 	,	cteMainArtist AS (
@@ -563,13 +564,13 @@
 		-- FILTER SO THAT WE PICK FROM THE SECOND RANDOM SET OF SONGS. 
 		-- THESE 40 SONGS CAN BE OUR "FEATURING ARTISTS"
 		SELECT
+			TOP 40
 			SongID
 		,	ArtistID
 		FROM		ctePartition
 		WHERE RN = 2
-		LIMIT 40
 			)
-		INSERT INTO mus.PerformsOnSong
+		INSERT INTO [music].PerformsOnSong
 		SELECT
 			*
 		FROM	cteMainArtist
@@ -579,7 +580,7 @@
 		FROM	cteFeaturingArtist;
 		
 	--ALBUM
-	INSERT INTO mus.Album
+	INSERT INTO [music].Album
 	(	Title
 	,	MainArtist	)
 	VALUES
@@ -635,7 +636,7 @@
 	('The Boop-A-Doo',72);
 	
 	--ALBUMS WITHOUT MAIN ARTIST
-	INSERT INTO mus.Album
+	INSERT INTO [music].Album
 	(	Title	)
 	VALUES
 	('Now that''s what I call music 100'),
@@ -647,16 +648,16 @@
 		SELECT 
 			al.AlbumID
 		,	pos.*
-		,	ROW_NUMBER() OVER (PARTITION BY AlbumID, SongID ORDER BY RANDOM()) AS RN
-		FROM		mus.Album AS al
-		INNER JOIN	mus.PerformsOnSong AS pos
+		,	ROW_NUMBER() OVER (PARTITION BY AlbumID, SongID ORDER BY NEWID()) AS RN
+		FROM		[music].Album AS al
+		INNER JOIN	[music].PerformsOnSong AS pos
 		ON			al.MainArtist = pos.ArtistID
 		AND 		al.MainArtist IS NOT NULL
 			)
-	INSERT INTO mus.AlbumTrack
+	INSERT INTO [music].AlbumTrack
 	SELECT
 		AlbumID
-	,	RANK() OVER (PARTITION BY AlbumID ORDER BY RANDOM()) AS TrackNo
+	,	RANK() OVER (PARTITION BY AlbumID ORDER BY NEWID()) AS TrackNo
 	,	SongID
 	FROM	cteAlbumArtistSong
 	WHERE	RN = 1;
@@ -664,32 +665,31 @@
 	--SONGS THAT APPEAR ON ALBUMS WITHOUT MAIN ARTIST
 	
 	WITH cteSelectRandomSongs AS (
-		SELECT
-			AlbumID
-		,	SongID
-		,	ROW_NUMBER() OVER (PARTITION BY AlbumID, SongID ORDER BY RANDOM()) AS RN
-		FROM 		mus.Song AS s
-		CROSS JOIN 	mus.Album AS a
-		WHERE 		a.MainArtist IS NULL
-		ORDER BY RANDOM()
+			SELECT
+				AlbumID
+			,	SongID
+			,	ROW_NUMBER() OVER (PARTITION BY AlbumID, SongID ORDER BY NEWID()) AS RN
+			FROM 		[music].Song AS s
+			CROSS JOIN 	[music].Album AS a
+			WHERE 		a.MainArtist IS NULL
 		)
 	,	cteLimit AS (
-	SELECT
-		AlbumID
-	,	RANK() OVER (PARTITION BY AlbumID ORDER BY RANDOM()) AS TrackNo
-	,	SongID		
-	FROM	cteSelectRandomSongs
+			SELECT
+				AlbumID
+			,	RANK() OVER (PARTITION BY AlbumID ORDER BY NEWID()) AS TrackNo
+			,	SongID		
+			FROM	cteSelectRandomSongs
 		)
-	INSERT INTO mus.AlbumTrack
+	INSERT INTO [music].AlbumTrack
 	SELECT
 		AlbumID
 	,	TrackNo
 	,	SongID		
 	FROM ctelimit
-	WHERE TrackNo < RANDOM() * 15 + 5;
+	WHERE TrackNo < RAND() * 15 + 5;
 	
 	--PLAYLIST
-	INSERT INTO mus.Playlist
+	INSERT INTO [music].Playlist
 	(	Title
 	,	UserID)
 	VALUES
@@ -711,17 +711,16 @@
 		SELECT
 			PlaylistID
 		,	SongID
-		,	ROW_NUMBER() OVER (PARTITION BY PlaylistID ORDER BY RANDOM()) AS RN
-		FROM		mus.Playlist AS p
-		CROSS JOIN	mus.Song AS s		
-		ORDER BY RANDOM()
+		,	ROW_NUMBER() OVER (PARTITION BY PlaylistID ORDER BY NEWID()) AS RN
+		FROM		[music].Playlist AS p
+		CROSS JOIN	[music].Song AS s		
 		)
-	INSERT INTO mus.PlaylistTrack
+	INSERT INTO [music].PlaylistTrack
 	SELECT
 		PlaylistID
-	,	RANK() OVER (PARTITION BY PlaylistID ORDER BY RANDOM()) AS TrackNo
+	,	RANK() OVER (PARTITION BY PlaylistID ORDER BY NEWID()) AS TrackNo
 	,	SongID
 	FROM	cteRandomPairs
 	WHERE 	RN > 1
-	AND 	RN < RANDOM() * 50 + 5;
-	
+	AND 	RN < RAND() * 50 + 5;
+
