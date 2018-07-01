@@ -17,7 +17,7 @@ This is a database that attempts to mimic how data would be stored for something
 
 ### Database Diagram
 
-![image-center](/SQL/musicDB/DatabaseDiagram.jpg){: .align-center}
+![image-center](/SQL/musicDB/DatabaseDiagram.png){: .align-center}
 
 ## CREATE SCHEMA
 
