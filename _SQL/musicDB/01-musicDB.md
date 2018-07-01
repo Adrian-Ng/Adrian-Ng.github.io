@@ -29,5 +29,15 @@ CREATE SCHEMA music;
 ## DROP TABLES
 
 ```sql
-
+	DROP TABLE 
+		music.[PlaylistTrack]
+	,	music.Playlist		
+	,	music.PerformsOnSong	
+	,	music.Follows
+	,	music.[User]		
+	,	music.AlbumTrack		
+	,	music.Album		
+	,	music.Song		 
+	,	music.[Artist]		
+	,	music.[Account];	
 ```
