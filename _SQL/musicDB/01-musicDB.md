@@ -8,7 +8,7 @@ toc: true
 ## DOWNLOAD
 
 * [createdb.sql](/SQL/musicDB/createdb.sql)
-* [inserts.sql](/SQL/musicDB/inserts.sql)0
+* [inserts.sql](/SQL/musicDB/inserts.sql)
 
 ## Intro
 
