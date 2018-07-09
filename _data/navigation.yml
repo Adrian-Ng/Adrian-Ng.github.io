@@ -80,10 +80,11 @@ SQL:
      children:
      - title: "Openquery... and XML"
        url: /SQL/misc/openquery-xml/
-   - title: PostgreSQL
-     children:
-     - title: "Music DB"
-       url: /SQL/musicDB/
+   - title: Music DB
+     url: /SQL/musicDB/
+#     children:
+ #    - title: "Music DB"
+  #     url: /SQL/musicDB/
 
 # R links
 R Language:
