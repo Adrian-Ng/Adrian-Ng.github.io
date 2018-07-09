@@ -1,5 +1,5 @@
 ---
-"Aggregation: Functions"
+title: "Aggregation: Group By"
 permalink: /SQL/aggregation/groupby/
 excerpt: "Aggregating with the group by clause by Adrian Ng"
 toc: false
