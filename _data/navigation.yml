@@ -58,10 +58,9 @@ SQL:
        url: /SQL/joins/cartesian/
      - title: "Semi Joins"
        url: /SQL/joins/semi/
-
    - title: Aggregation
      children:
-    - title: "functions"
+     - title: "functions"
        url: /SQL/aggregation/functions/
 #     - title: "Group By"
 #       url: /SQL/aggregation/groupby/
