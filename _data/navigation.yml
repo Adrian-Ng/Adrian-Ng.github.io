@@ -58,14 +58,17 @@ SQL:
        url: /SQL/joins/cartesian/
      - title: "Semi Joins"
        url: /SQL/joins/semi/
-#   - title: Aggregation
-#     children:
-#    - title: "functions"
-#       url: /SQL/aggregation/functions/
+
+   - title: Aggregation
+     children:
+    - title: "functions"
+       url: /SQL/aggregation/functions/
 #     - title: "Group By"
 #       url: /SQL/aggregation/groupby/
 #     - title: "Having"
 #       url: /SQL/aggregation/having/
+#     - title: "Over"
+        url: /SQL/aggregation/over/
 #     - title: "Cube"
 #       url: /SQL/aggregation/cube/
    - title: Common Table Elements
@@ -82,9 +85,6 @@ SQL:
        url: /SQL/misc/openquery-xml/
    - title: Music DB
      url: /SQL/musicDB/
-#     children:
- #    - title: "Music DB"
-  #     url: /SQL/musicDB/
 
 # R links
 R Language:
