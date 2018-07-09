@@ -64,12 +64,12 @@ SQL:
        url: /SQL/aggregation/functions/
      - title: "Group By"
        url: /SQL/aggregation/groupby/
-#     - title: "Having"
-#       url: /SQL/aggregation/having/
-#     - title: "Over"
-#        url: /SQL/aggregation/over/
-#     - title: "Cube"
-#       url: /SQL/aggregation/cube/
+     - title: "Over"
+        url: /SQL/aggregation/over/
+     - title: "Having"
+       url: /SQL/aggregation/having/
+     - title: "Cubes"
+       url: /SQL/aggregation/cubes/
    - title: Common Table Elements
      children:
      - title: "Intro"
