@@ -62,8 +62,8 @@ SQL:
      children:
      - title: "Functions"
        url: /SQL/aggregation/functions/
-#     - title: "Group By"
-#       url: /SQL/aggregation/groupby/
+     - title: "Group By"
+       url: /SQL/aggregation/groupby/
 #     - title: "Having"
 #       url: /SQL/aggregation/having/
 #     - title: "Over"
