@@ -1,5 +1,5 @@
 ---
-title: "PostgreSQL: Music DB"
+title: "Music Database"
 permalink: /SQL/musicDB/
 excerpt: "Creating a Music DB in PostgreSQL"
 toc: true
@@ -9,6 +9,9 @@ toc: true
 
 * [createdb.sql](/SQL/musicDB/createdb.sql)
 * [inserts.sql](/SQL/musicDB/inserts.sql)
+
+Note to self: move these files to a github repository.
+{: .notice--info} class.
 
 ## Intro
 
@@ -21,12 +24,20 @@ This is a database that attempts to mimic how data would be stored for something
 
 ## CREATE SCHEMA
 
+Before you run the create table statements, you will need to create the named schema _music_. 
+This is named schema is just some good housekeeping that helps organise our tables.
+
+If you already have this named schema in use in your database then you can skip this step! But you might want to consider creating a new schema instead.
+{: .notice--warning} class
+
 ```sql
 CREATE SCHEMA music;
 ```
 
-
 ## DROP TABLES
+
+If you wish to remove these tables from your database then you can run the below statement.
+The foreign key constraints dictate that these tables must be dropped in a specfic order.
 
 ```sql
 	DROP TABLE 
@@ -41,3 +52,4 @@ CREATE SCHEMA music;
 	,	music.[Artist]		
 	,	music.[Account];	
 ```
+
