@@ -15,14 +15,17 @@ Note to self: move these files to a github repository... but only if you have ti
 
 ## Intro
 
-Follow along with the SQL examples you see here with my music Database.
+Follow along with the SQL examples you see on this site with my music Database.
 This is a database that attempts to mimic how data would be stored for something like a _Spotify_ clone.
 
 ### Database Diagram
 
 ![image-center](/SQL/musicDB/DatabaseDiagram.png){: .align-center}
 
-## CREATE SCHEMA
+## Readme
+
+
+### CREATE SCHEMA
 
 Before you run the create table statements, you will need to create the named schema _music_. 
 This is named schema is just some good housekeeping that helps organise our tables.
@@ -33,8 +36,15 @@ If you already have this named schema in use in your database then you can skip 
 ```sql
 CREATE SCHEMA music;
 ```
+### CREATE TABLE statements
 
-## DROP TABLES
+Next run the statements in `createdb.sql`.
+
+### INSERT statements
+
+Then run the statements in `inserts.sql`
+
+### DROP TABLES
 
 If you wish to remove these tables from your database then you can run the below statement.
 The foreign key constraints dictate that these tables must be dropped in a specfic order.
