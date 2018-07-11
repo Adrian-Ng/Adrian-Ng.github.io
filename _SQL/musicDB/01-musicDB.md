@@ -27,7 +27,7 @@ This is a database that attempts to mimic how data would be stored for something
 Before you run the create table statements, you will need to create the named schema _music_. 
 This is named schema is just some good housekeeping that helps organise our tables.
 
-If you already have this named schema in use in your database then you can skip this step! But you might want to consider creating a new schema instead.
+If you already have this named schema in use in your database then you can skip this step! But you might want to consider using a different named schema instead!
 {: .notice--warning}
 
 ```sql
