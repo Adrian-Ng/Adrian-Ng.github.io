@@ -10,7 +10,7 @@ toc: true
 * [createdb.sql](/SQL/musicDB/createdb.sql)
 * [inserts.sql](/SQL/musicDB/inserts.sql)
 
-Note to self: move these files to a github repository.
+Note to self: move these files to a github repository... but only if you have time :)
 {: .notice--info}
 
 ## Intro
