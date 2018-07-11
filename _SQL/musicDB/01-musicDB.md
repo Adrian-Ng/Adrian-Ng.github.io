@@ -51,15 +51,15 @@ The foreign key constraints dictate that these tables must be dropped in a specf
 
 ```sql
 	DROP TABLE 
-		music.[PlaylistTrack]
+		music.PlaylistTrack
 	,	music.Playlist		
 	,	music.PerformsOnSong	
 	,	music.Follows
-	,	music.[User]		
+	,	music.Users	
 	,	music.AlbumTrack		
 	,	music.Album		
 	,	music.Song		 
-	,	music.[Artist]		
-	,	music.[Account];	
+	,	music.Artist
+	,	music.Account;	
 ```
 
