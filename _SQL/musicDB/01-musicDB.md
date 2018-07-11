@@ -11,7 +11,7 @@ toc: true
 * [inserts.sql](/SQL/musicDB/inserts.sql)
 
 Note to self: move these files to a github repository.
-{: .notice--info} class.
+{: .notice--info}
 
 ## Intro
 
@@ -28,7 +28,7 @@ Before you run the create table statements, you will need to create the named sc
 This is named schema is just some good housekeeping that helps organise our tables.
 
 If you already have this named schema in use in your database then you can skip this step! But you might want to consider creating a new schema instead.
-{: .notice--warning} class
+{: .notice--warning}
 
 ```sql
 CREATE SCHEMA music;
