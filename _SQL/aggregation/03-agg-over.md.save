@@ -1,0 +1,46 @@
+---
+title: "Aggregation: Over Clause"
+permalink: /SQL/aggregation/over/
+excerpt: "Aggregating with the Over Clause by Adrian Ng"
+toc: false
+---
+
+Where do our users come from? How do we express the aggregation as a percentage?
+
+Let's start with a query that returns the absolute figures:
+
+```sql
+SELECT
+	Country
+,	COUNT(*) AS Cnt
+FROM	music.Users
+GROUP BY
+	Country;
+```
+
+To express this as a percentage, we need to divide by the overall user total and multiply by 100.0..
+
+But how do we compute the total if we have a field in the `GROUP BY`?
+
+This is where `OVER()` comes in, which allows us to aggregate _over_ a window.
+Here, our window is the subset of tuples returned in the above query.
+
+Now, we 
+
+
+Note to self: have you sufficiently explained what a window is?
+It allows one to aggregate outside the scope of the `GROUP BY`.
+{: .notice--info} class.
+
+
+
+
+```sql
+SELECT
+	Country
+,	COUNT(*) AS Cnt
+,	COUNT(*)*100.0/SUM(COUNT(*)) OVER() AS Pcnt
+FROM	music.Users;
+GROUP BY
+	Country;
+```

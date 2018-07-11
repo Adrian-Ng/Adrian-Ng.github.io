@@ -12,14 +12,14 @@ Let's get a distinct list of countries in our database. We can do this in two wa
 ### Example 1
 
 ```sql
-SELECT DISTINCT COUNTRY FROM music.[Users];
+SELECT DISTINCT COUNTRY FROM music.Users;
 ```
 
 ### Example 2
 ```sql
 SELECT
 	COUNTRY
-FROM music.[Users]
+FROM music.Users
 GROUP BY
 	COUNTRY;
 ```
