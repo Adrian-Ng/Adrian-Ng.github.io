@@ -19,7 +19,7 @@
 		);
 	
 	--USER
-	CREATE TABLE [music].[User]
+	CREATE TABLE [music].[Users]
 	(	UserID		int IDENTITY(1,1) PRIMARY KEY
 	,	Name		varchar(100)
 	,	Country		varchar(100)
@@ -32,8 +32,8 @@
 	(	UserID		int
 	,	ArtistID	int
 	,	PRIMARY KEY(UserID, ArtistID)
-	,	FOREIGN KEY (UserID) REFERENCES [music].[User] (UserID)
-	,	FOREIGN KEY (ArtistID) REFERENCES [music].Artist (ArtistID)
+	,	FOREIGN KEY (UserID) REFERENCES [music].[Users] (UserID)
+	,	FOREIGN KEY (ArtistID) REFERENCES [music].[Artist] (ArtistID)
 		);
 		
 	--SONG
@@ -48,8 +48,8 @@
 	(	SongID		int 
 	,	ArtistID	int 
 	,	PRIMARY KEY	(SongID, ArtistID)
-	,	FOREIGN KEY (SongID) REFERENCES [music].Song (SongID)
-	,	FOREIGN KEY (ArtistID) REFERENCES [music].Artist (ArtistID)
+	,	FOREIGN KEY (SongID) REFERENCES [music].[Song] (SongID)
+	,	FOREIGN KEY (ArtistID) REFERENCES [music].[Artist] (ArtistID)
 		);
 		
 	--ALBUM
@@ -57,7 +57,7 @@
 	(	AlbumID		int IDENTITY(1,1) PRIMARY KEY
 	,	Title		varchar(100)
 	,	MainArtist	int NULL
-	,	FOREIGN KEY (MainArtist) REFERENCES [music].Artist (ArtistID)
+	,	FOREIGN KEY (MainArtist) REFERENCES [music].[Artist] (ArtistID)
 		);
 		
 	--ALBUMTRACK
@@ -66,8 +66,8 @@
 	,	TrackNo		int
 	,	SongID		int
 	,	PRIMARY KEY (AlbumID, TrackNo)
-	,	FOREIGN KEY (AlbumID) REFERENCES [music].Album (AlbumID)
-	,	FOREIGN KEY (SongID) REFERENCES [music].Song (SongID)
+	,	FOREIGN KEY (AlbumID) REFERENCES [music].[Album] (AlbumID)
+	,	FOREIGN KEY (SongID) REFERENCES [music].[Song] (SongID)
 		);
 	
 	--Playlist
@@ -75,7 +75,7 @@
 	(	PlaylistID	int IDENTITY(1,1) PRIMARY KEY
 	,	Title		varchar(100)
 	,	UserID		int NOT NULL
-	,	FOREIGN KEY (UserID) REFERENCES [music].[User](UserID)
+	,	FOREIGN KEY (UserID) REFERENCES [music].[Users](UserID)
 		);
 		
 	--PLAYLISTTRACK

@@ -212,7 +212,7 @@
 	('Forsaken Counselor','France',NULL);
 
 	--USER
-	INSERT INTO [music].[user]
+	INSERT INTO [music].[users]
 	(	Name
 	,	Country
 	,	AccountID)
@@ -325,7 +325,7 @@
 		ArtistID
 	,	UserID
 	FROM		[music].Artist
-	CROSS JOIN	[music].[User]
+	CROSS JOIN	[music].[Users]
 	ORDER BY 	NEWID();
 	
 	--SONG
