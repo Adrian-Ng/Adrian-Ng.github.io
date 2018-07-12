@@ -20,10 +20,10 @@ GROUP BY
 ```
 
 To compute the percentage, we need to divide each value of Cnt by the total number of users in the table.
-The total is the sum of every value in Cnt.
-That is: SUM(COUNT(*)).
+The total is the sum of every value in `Cnt`.
+That is: `SUM(COUNT(*))`.
 
-But we have grouped our data by Country.
+But we have grouped our data by `Country`.
 
 We can use something called the __Over Clause__ to perform an aggregation _over_ a window.
 In this case the window is the entire result set returned by the above query. 
