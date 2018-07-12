@@ -17,6 +17,7 @@ FROM music.Users
 GROUP BY
 	Country;
 ```
+
 To compute the percentage, we need to divide each value of `Cnt` by the total number of users in the table.
 The total is the sum of every value in `Cnt`.
 That is: `SUM(COUNT(*))`.
