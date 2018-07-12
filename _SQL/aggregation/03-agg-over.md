@@ -5,7 +5,8 @@ excerpt: "Aggregating with the Over Clause by Adrian Ng"
 toc: false
 ---
 
-Where do our users come from? How do we express the aggregation as a percentage?
+Where do our users come from? 
+How do we express the aggregation as a percentage?
 
 First, let's write a query that returns the actual figures.
 
@@ -18,9 +19,9 @@ GROUP BY
 	Country;
 ```
 
-To compute the percentage, we need to divide each value of `Cnt` by the total number of users in the table.
-The total is the sum of every value in `Cnt`.
-That is: `SUM(COUNT(*))`.
+To compute the percentage, we need to divide each value of Cnt by the total number of users in the table.
+The total is the sum of every value in Cnt.
+That is: SUM(COUNT(*)).
 
 But we have grouped our data by Country.
 
@@ -37,11 +38,6 @@ FROM	music.Users
 GROUP BY
 	Country;
 ```
-
-
-
-
-
 
 ```sql
 SELECT
