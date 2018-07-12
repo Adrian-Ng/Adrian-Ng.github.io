@@ -2,12 +2,14 @@
 title: "Aggregation: Over Clause"
 permalink: /SQL/aggregation/over/
 excerpt: "Aggregating with the Over Clause by Adrian Ng"
-toc: false
+toc: true
 mathjax: true
 ---
 
 Where do our users come from? 
 How do we express the aggregation as a percentage?
+
+## Returning the Count
 
 ### SQL 1
 
@@ -22,6 +24,26 @@ GROUP BY
 	Country;
 ```
 
+### Output 1
+
+$$
+\begin{array}{|c|c|}
+\hline
+\text{Country} & \text{Cnt} \\ 
+\hline
+\text{United States} & 26 \\
+\hline
+\text{France} & 9 \\
+\hline
+\text{Russia} & 7 \\
+\hline
+\text{Poland} & 4 \\
+\hline
+\cdots & \cdots \\
+\hline
+\end{array}
+$$
+
 To compute the percentage, we need to divide each value of Cnt by the total number of users in the table.
 The total is the sum of every value in `Cnt`.
 That is: `SUM(COUNT(*))`.
@@ -35,6 +57,8 @@ That is: `SUM(COUNT(*)) OVER()`
 In this case the window is the entire result set returned by the above query. 
 In other words, our windowing overrides the partitioning dictated by the `GROUP BY`.
 As a result, we can return the total number of users in the table.
+
+## Computing the Total
 
 ### SQL 2
 
@@ -51,22 +75,27 @@ GROUP BY
 ### Output 2
 
 $$
-\begin{array}{|c|c|}
+\begin{array}{|c|c|c|}
 \hline
 \text{Country} & \text{Cnt} & \text{Total} \\ 
 \hline
-\text{United States} & 26 & 38 \\
+\text{United States} & 26 & 100 \\
 \hline
-\text{France} & 9 & 38 \\
+\text{France} & 9 & 100 \\
 \hline
-\text{Russia} & 7 & 38 \\
+\text{Russia} & 7 & 100 \\
 \hline
-\text{Poland} & 4 & 38 \\
+\text{Poland} & 4 & 100 \\
 \hline
 \cdots & \cdots & \cdots \\
 \hline
 \end{array}
 $$
+Note: `Cnt` in the output table does not sum to 100 as I'm not showing every row.
+{: .notice--info}
+
+
+## Expressing the Percentage
 
 ### SQL 3
 
@@ -79,3 +108,5 @@ FROM	music.Users;
 GROUP BY
 	Country;
 ```
+
+### Output 3
