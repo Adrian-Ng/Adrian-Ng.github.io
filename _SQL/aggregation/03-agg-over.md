@@ -53,15 +53,18 @@ GROUP BY
 $$
 \begin{array}{|c|c|}
 \hline
-\text{Country} && \text{Cnt} && \text{Total} \\ 
+\text{Country} & \text{Cnt} & \text{Total} \\ 
 \hline
-\text{United States} && 26 && 38 \\
+\text{United States} & 26 & 38 \\
 \hline
-\text{France} && 9 && 38 \\
+\text{France} & 9 & 38 \\
 \hline
-\text{Russia} && 7 && 38 \\
+\text{Russia} & 7 & 38 \\
 \hline
-\text{Poland} && 4 && 38 \\
+\text{Poland} & 4 & 38 \\
+\hline
+\cdots & \cdots & \cdots \\
+\hline
 \end{array}
 $$
 
