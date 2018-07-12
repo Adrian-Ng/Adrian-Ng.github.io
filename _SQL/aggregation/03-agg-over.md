@@ -114,11 +114,9 @@ GROUP BY
 ```
 
 Note: when multiplying or dividing an integer by another integer, our result will also be an integer.
-If we expect a non-integer result, we can an integer to a float by rewriting it as a decimal.
+If we expect a non-integer result, we can cast an `int` to `float` by rewriting the integer as a decimal.
 This is known as __implicit conversion__.
-Try the following expressions:
-`SELECT 1/2`
-`SELECT 1/2.0`
+What is the difference between these two expressions: `SELECT 1/2` and `SELECT 1/2.0`?
 {: .notice--info}
 
 
@@ -136,9 +134,13 @@ $$
 \hline
 \text{Russia} & 7 & 100 & 7.000000000000 \\
 \hline
-\text{Poland} & 4 & 100 4.000000000000 \\
+\text{Poland} & 4 & 100 & 4.000000000000 \\
 \hline
 \cdots & \cdots & \cdots & \cdots \\
 \hline
 \end{array}
 $$
+
+
+Voila! We have computed the percentage distribution of an aggregation in SQL using a single query.
+We could have used a subquery to return the total, but that would have been verbose.
