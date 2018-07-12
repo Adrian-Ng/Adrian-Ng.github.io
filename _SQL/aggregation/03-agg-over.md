@@ -11,7 +11,7 @@ How do we express the aggregation as a percentage?
 
 ## Returning the Count
 
-### SQL 1
+### SQL 
 
 First, let's write a query that returns the actual figures.
 
@@ -24,7 +24,7 @@ GROUP BY
 	Country;
 ```
 
-### Output 1
+### Output 
 
 $$
 \begin{array}{|c|c|}
@@ -44,23 +44,26 @@ $$
 \end{array}
 $$
 
-To compute the percentage, we need to divide each value of Cnt by the total number of users in the table.
-The total is the sum of every value in `Cnt`.
-That is: `SUM(COUNT(*))`.
-
-But we have grouped our data by `Country`.
-
-We can use something called the __Over Clause__ to perform an aggregation _over_ a window.
-
-That is: `SUM(COUNT(*)) OVER()`
-
-In this case the window is the entire result set returned by the above query. 
-In other words, our windowing overrides the partitioning dictated by the `GROUP BY`.
-As a result, we can return the total number of users in the table.
-
 ## Computing the Total
 
-### SQL 2
+To compute the percentage, we first need to get the total number of users in `music.Users`.
+We can augment that above query such that the total is the sum of every value in `Cnt`.
+That is: `SUM(COUNT(*))`.
+
+But we have grouped our data by `Country`. If we include this expression in our query, we will get an error:
+
+`Cannot perform an aggregate function on an expression containing an aggregate or a subquery.`
+.
+To get around this issue, we use something called the __Over Clause__.
+This allows us to define the result set as a _window_. 
+So instead of performing an aggregation on an expression, we are instead performing an aggregation on each row within the window.
+
+Now we write: `SUM(COUNT(*)) OVER()`
+
+In this case the window is the entire result set returned by the above query. 
+As a result, we can sum `Cnt`.
+
+### SQL
 
 ```sql
 SELECT
@@ -72,7 +75,7 @@ GROUP BY
 	Country;
 ```
 
-### Output 2
+### Output
 
 $$
 \begin{array}{|c|c|c|}
@@ -100,7 +103,7 @@ Note: `Cnt` in the output table does not sum to 100 as I'm not displaying every 
 
 Now we can simply write an expression that divides `Cnt` by `Total` and multiplies by 100.0 to get the percentage.
 
-### SQL 3
+### SQL
 
 ```sql
 SELECT
@@ -121,7 +124,7 @@ What is the difference between these two expressions: `SELECT 1/2` and `SELECT 1
 
 
 
-### Output 3
+### Output
 
 $$
 \begin{array}{|c|c|c|c|}
