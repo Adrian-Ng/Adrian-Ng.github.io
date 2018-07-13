@@ -53,14 +53,15 @@ That is: `SUM(COUNT(*))`.
 But we have grouped our data by `Country`. If we include this expression in our query, we will get an error:
 
 `Cannot perform an aggregate function on an expression containing an aggregate or a subquery.`
-.
+
 To get around this issue, we use something called the __Over Clause__.
 This allows us to define the result set as a _window_. 
-So instead of performing an aggregation on an expression, we are instead performing an aggregation on each row within the window.
+So instead of aggregating on an expression, we aggregate on the result set via a window.
 
 Now we write: `SUM(COUNT(*)) OVER()`
 
-In this case the window is the entire result set returned by the above query. 
+In this case the window is the entire result set returned by the above query.
+This is because have not specified any _partitioning_. 
 As a result, we can sum `Cnt`.
 
 ### SQL
@@ -119,10 +120,8 @@ GROUP BY
 Note: when multiplying or dividing an integer by another integer, our result will also be an integer.
 If we expect a non-integer result, we can cast an `int` to `float` by rewriting the integer as a decimal.
 This is known as __implicit conversion__.
-What is the difference between these two expressions: `SELECT 1/2` and `SELECT 1/2.0`?
+To illustrate this, compare these two expressions: `SELECT 1/2` and `SELECT 1/2.0`.
 {: .notice--info}
-
-
 
 ### Output
 
