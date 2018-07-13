@@ -147,3 +147,19 @@ $$
 
 Voila! We have computed the percentage distribution of an aggregation in SQL using a single query.
 We could have used a subquery to return the total, but that would have been verbose.
+
+## Subquery Example
+
+```sql
+WITH cteTotal AS (
+	SELECT
+		COUNT(*) AS Total
+	FROM 	music.Users;
+	)
+SELECT
+	Country
+,	COUNT(*)*100.0/(SELECT Total FROM cteTotal)
+FROM	music.Users
+GROUP BY 
+	Country;
+```
