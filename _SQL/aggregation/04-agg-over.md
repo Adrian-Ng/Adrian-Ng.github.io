@@ -49,13 +49,9 @@ $$
 \text{Country} & \text{Cnt} \\ 
 \hline
 \text{United States} & 26 \\
-\hline
 \text{France} & 9 \\
-\hline
 \text{Russia} & 7 \\
-\hline
 \text{Poland} & 4 \\
-\hline
 \cdots & \cdots \\
 \hline
 \end{array}
@@ -72,14 +68,15 @@ If we include this expression in our query, we will get an error:
 `Cannot perform an aggregate function on an expression containing an aggregate or a subquery.`
 
 That is, we cannot use an aggregate function on another aggregate function. 
-Why? It kind of boils dwon to a _sequencing_ issue. 
+Why? It kind of boils down to a matter of sequencing. 
 
 To rephrase the problem, we want to sum all the values of `Cnt` in the output above.
-Therefore, We need to explicitly tell SQL that we need to use `SUM()` _only_ once the above result set has been computed.
+That is, we need to invoke `SUM()` after `COUNT(*)` has given us its result set.
+Therefore, we need to explicitly tell SQL to use `SUM()` _only_ once the above result set has been computed.
 
 We can do this with `OVER()`.
-This allows us to define the result set as a _window_. 
-So instead of aggregating on an aggregate, we aggregate on the _result set_ via a window which interposes itself between the two aggregations.
+This allows us to define the intial result set from the first aggregation as a _window_. 
+So instead of aggregating on an aggregate, we aggregate on the _result set_ via a window which interposes itself between the two aggregation steps.
 
 Now we write: `SUM(COUNT(*)) OVER()`
 
@@ -109,13 +106,9 @@ $$
 \text{Country} & \text{Cnt} & \text{Total} \\ 
 \hline
 \text{United States} & 26 & 100 \\
-\hline
 \text{France} & 9 & 100 \\
-\hline
 \text{Russia} & 7 & 100 \\
-\hline
 \text{Poland} & 4 & 100 \\
-\hline
 \cdots & \cdots & \cdots \\
 \hline
 \end{array}
@@ -158,13 +151,9 @@ $$
 \text{Country} & \text{Cnt} & \text{Total} & \text{Pcnt }\\ 
 \hline
 \text{United States} & 26 & 100 & 26.000000000000\\
-\hline
 \text{France} & 9 & 100 & 9.000000000000 \\
-\hline
 \text{Russia} & 7 & 100 & 7.000000000000 \\
-\hline
 \text{Poland} & 4 & 100 & 4.000000000000 \\
-\hline
 \cdots & \cdots & \cdots & \cdots \\
 \hline
 \end{array}
