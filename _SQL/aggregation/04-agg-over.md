@@ -6,8 +6,23 @@ toc: true
 mathjax: true
 ---
 
-Where do our users come from? 
-How do we express the aggregation as a percentage?
+## Intro to Over
+
+On previous pages we looked at the utilisation of a single aggregation function in a `SELECT` statement.
+Suppose we'd like to wrap an aggregation function around another aggregation function like so: `SELECT SUM(COUNT(*))`.
+In SQL, this is unfortunately __forbidden__. 
+
+We _could_ instead rely on subqueries (CTEs in particular) to get around this limitation.
+
+However, there are some instances where we need not result to such verbosity.
+We now introduce the `OVER()` clause, which makes such expressions possible in a single statement.
+
+## Questions
+
+First, let's assume we need to answer the following questions:
+
+* Where do our users come from? 
+* How do we express the aggregation as a percentage?
 
 ## Returning the Count
 
@@ -21,7 +36,9 @@ SELECT
 ,	COUNT(*) AS Cnt
 FROM music.Users
 GROUP BY
-	Country;
+	Country
+ORDER BY 
+	COUNT(*) DESC;
 ```
 
 ### Output 
@@ -50,19 +67,25 @@ To compute the percentage, we first need to get the total number of users in `mu
 We can augment that above query such that the total is the sum of every value in `Cnt`.
 That is: `SUM(COUNT(*))`.
 
-But we have grouped our data by `Country`. If we include this expression in our query, we will get an error:
+If we include this expression in our query, we will get an error:
 
 `Cannot perform an aggregate function on an expression containing an aggregate or a subquery.`
 
-To get around this issue, we use something called the __Over Clause__.
+That is, we cannot use an aggregate function on another aggregate function. 
+Why? It kind of boils dwon to a _sequencing_ issue. 
+
+To rephrase the problem, we want to sum all the values of `Cnt` in the output above.
+Therefore, We need to explicitly tell SQL that we need to use `SUM()` _only_ once the above result set has been computed.
+
+We can do this with `OVER()`.
 This allows us to define the result set as a _window_. 
-So instead of aggregating on an expression, we aggregate on the result set via a window.
+So instead of aggregating on an aggregate, we aggregate on the _result set_ via a window which interposes itself between the two aggregations.
 
 Now we write: `SUM(COUNT(*)) OVER()`
 
 In this case the window is the entire result set returned by the above query.
 This is because have not specified any _partitioning_. 
-As a result, we can sum `Cnt`.
+We are summming all values of `Cnt`.
 
 ### SQL
 
@@ -73,7 +96,9 @@ SELECT
 ,	SUM(COUNT(*)) OVER() AS Total
 FROM	music.Users
 GROUP BY
-	Country;
+	Country
+ORDER BY 
+	COUNT(*) DESC;
 ```
 
 ### Output
@@ -114,7 +139,9 @@ SELECT
 ,	COUNT(*)*100.0/SUM(COUNT(*)) OVER() AS Pcnt
 FROM	music.Users;
 GROUP BY
-	Country;
+	Country
+ORDER BY
+	COUNT(*) DESC;
 ```
 
 Note: when multiplying or dividing an integer by another integer, our result will also be an integer.
@@ -160,5 +187,6 @@ SELECT
 ,	COUNT(*)*100.0/(SELECT Total FROM cteTotal)
 FROM	music.Users
 GROUP BY 
-	Country;
+	Country
+ORDER BY COUNT(*) DESC;
 ```
