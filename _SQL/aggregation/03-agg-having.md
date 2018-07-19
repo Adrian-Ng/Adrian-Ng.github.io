@@ -92,8 +92,10 @@ We could now ask:
 
 ### SQL
 
-We can replace `AlbumID` with `AlbumTitle` if we join to `music.Album`.
-This table is _normalized_ which is important to note as we will be using `INNER JOIN`.
+For the first question, we simpply add `COUNT(*)` to the `SELECT`.
+The last two questions can be answered if we join to `music.Album`.
+
+This table is _normalized_ which is important because we will be using `INNER JOIN`.
 Therefore we don't need to worry about the __cartesian product__ returning more rows than we started with!
 
 ```sql
@@ -141,7 +143,7 @@ $$
 \end{array}
 $$
 
-
-
-
+Now we know the album titles, main artist and song count.
+These albums lack a main artist, which means they are compilation albums.
+By sheer coincidence, they each have 15 songs.
 
