@@ -1,6 +1,6 @@
 ---
 title: "Aggregation: Having Clause"
-url: /SQL/aggregation/having/
+permalink: /SQL/aggregation/having/
 excerpt: "Aggregating with the Having Clause by Adrian Ng"
 toc: true
 mathjax: true
