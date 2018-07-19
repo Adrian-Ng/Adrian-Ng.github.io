@@ -18,6 +18,9 @@ We could use it to answer questions like:
 * Which albums in our database have more than 10 songs?
 * Which email addresses appear more than once in our table?
 
+## Example
+
+Let's try to answer the first question.
 
 ### music.AlbumTrack
 
@@ -48,7 +51,7 @@ Each repetition represents a another song on that album.
 
 In the below code, we aggregate by the number of songs on each album and return _only_ those albums featuring greater than 10 songs.
 
-### SQL
+### SQL Having
 
 
 ```sql
@@ -73,5 +76,72 @@ $$
 \hline
 \end{array}
 $$
+
+Odd that we only have just three albums in the database with more than 10 songs!
+
+This is what happens when you use semi-randomly generated dummy data.
+{: .notice--info}
+
+## Further analysis
+
+We could now ask:
+
+* How many songs do each of these albums have?
+* What are the actual names of these albums?
+* Who are the main artists for these albums?
+
+### SQL
+
+We can replace `AlbumID` with `AlbumTitle` if we join to `music.Album`.
+This table is _normalized_ which is important to note as we will be using `INNER JOIN`.
+Therefore we don't need to worry about the __cartesian product__ returning more rows than we started with!
+
+```sql
+SELECT
+	music.Album.AlbumId
+,	title
+,	MainArtist
+,	COUNT(*) AS SongCount
+FROM	music.AlbumTrack
+INNER JOIN	music.Album
+ON music.AlbumTrack.AlbumID = music.Album.AlbumID
+GROUP BY 
+	music.Album.AlbumId
+,	title
+,	MainArtist
+HAVING COUNT(*) > 10;
+```
+
+
+
+### Output
+
+
+$$
+\begin{array}{|c|c|c|c|}
+\hline
+\text{AlbumID} & \text{Title} & \text{MainArtist} & \text{SongCount} \\ 
+\hline	
+		51 
+	& 	\text{Now that's what I call music}
+	& 	\text{NULL} 
+	& 	15 
+	\\	
+		52
+	&	\text{Music for tobogganing} 
+	& 	\text{NULL} 
+	& 	15 
+	\\	
+		53
+	&	\text{Best of}
+ 	& 	\text{NULL} 
+ 	&	15 
+ 	\\
+\hline
+\end{array}
+$$
+
+
+
 
 
