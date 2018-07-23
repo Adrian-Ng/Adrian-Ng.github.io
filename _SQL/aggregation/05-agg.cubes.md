@@ -187,3 +187,7 @@ IF @@ROWCOUNT = 0
 BREAK
 END
 ```
+You may notice that this is not a set-based solution.
+This is because of the scalar-valued function.
+A table-valued function would make for neater syntax.
+{: .notice--info}
