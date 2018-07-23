@@ -99,7 +99,7 @@ WITH CUBE;
 
 ## Simulating dob
 
-On this page we simulate `dob` by sampling from the __Normal Distribution__ $$\Phi ~ N(\mu,\sigma)$$.
+On this page we simulate `dob` by sampling from the __Normal Distribution__ $$\phi \sim N(\mu,\sigma)$$.
 
 Therefore I am making the following assumptions:
 * Age has a normal distribution
