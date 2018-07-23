@@ -20,11 +20,11 @@ For instance:
 
 ```sql
 SELECT
-	MONTH(dob) 	AS BirthMonth
+	YEAR(dob) 	AS BirthYear
 ,	COUNT(*) 	AS Cnt
 FROM 	music.Users
 GROUP BY 
-	MONTH(dob);
+	YEAR(dob);
 ```
 
 As you can see, we are looking at _generalised_ view of our customers.
@@ -46,7 +46,7 @@ GROUP BY
 
 Conversely, a __roll up__ is when we move from a _granular view_ to a more _generalised_ view.
 
-In SQL, we can move to a generalised view be adding `WITH ROLLUP`.
+In SQL, we can do this by adding `WITH ROLLUP`.
 
 ```sql
 SELECT
@@ -62,21 +62,22 @@ GROUP BY
 WITH ROLLUP;
 ```
 
-In this way, we can automatically compute the following aggregates:
+In this way, we can automatically perform the aggregation with each of these combinations of fields in the `GROUP BY`.:
 
 *	BirthYear, BirthMonth, BirthDay
 *	BirthYear, BirthMonth
 *	BirthYear
 
-Notice how the fields in the `GROUP BY` are organised in a hierarchical fashion. At the end of each iteration, the lowest field in the hierachy is removed from the `GROUP BY` and the aggregation is computed again.
+That is, instead of writing three different SQL statements, we need only write _one_.
+
+Notice how these fields are organised in a hierarchical fashion. 
+At the end of each iteration, the lowest field in the hierachy is removed from the `GROUP BY` and the aggregation is computed again.
 
 ## Cubes
 
-The hierachical system that `ROLLUP` uses is great - if there is a hierarchy to your categorical fields.
+But what if you want to compute your aggregates along all possible subset of _permutations_ of fields contained in `GROUP BY`?
 
-But what if you want to compute your aggregates along all possible subset of _permutations_ of fields contained in `GROUP BY`.
-
-That is we would like to see not only the above combinations, but in addition:
+We would like to see not only the above combinations, but in addition:
 
 *	BirthYear, BirthDay
 *	BirthMonth
