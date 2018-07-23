@@ -73,14 +73,29 @@ Notice how the fields in the `GROUP BY` are organised in a hierarchical fashion.
 
 The hierachical system that `ROLLUP` uses is great - if there is a hierarchy to your categorical fields.
 
-But what if you want to compute your aggregates along all possible _permutations_ of fields contained in `GROUP BY`.
+But what if you want to compute your aggregates along all possible subset of _permutations_ of fields contained in `GROUP BY`.
 
-That is we wanna see not only the above combinations, but also:
+That is we would like to see not only the above combinations, but in addition:
 
 *	BirthYear, BirthDay
 *	BirthMonth
 *	BirthDay
 
+In this case, we use the `WITH CUBE` modifier instead.
+
+```sql
+SELECT
+	YEAR(dob) 	AS BirthYear
+,	MONTH(dob) 	AS BirthMonth
+,	DAY(dob)	AS BirthDay
+,	COUNT(*)	AS Cnt
+FROM 	music.Users
+GROUP BY
+	YEAR(dob)
+,	MONTH(dob)
+,	DAY(dob)
+WITH CUBE;
+```
 
 ## Simulating dob
 
