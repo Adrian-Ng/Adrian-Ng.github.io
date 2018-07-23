@@ -109,9 +109,9 @@ Therefore I am making the following assumptions:
 
 ### Function
 
-I use this scalar-valued function taken from:
+I use this scalar-valued function taken from [here](http://www.sqlservercentral.com/articles/SQL+Uniform+Random+Numbers/91103/).
 
-http://www.sqlservercentral.com/articles/SQL+Uniform+Random+Numbers/91103/
+
 
 ```sql
 CREATE FUNCTION stats.Normal
