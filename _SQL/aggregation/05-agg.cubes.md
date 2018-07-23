@@ -3,6 +3,7 @@ title: "Aggregation: Data Cubes"
 permalink: /SQL/aggregation/cubes/
 excerpt: "Aggregating with Cubes by Adrian Ng"
 toc: true
+classes: wide
 mathjax: true
 ---
 
