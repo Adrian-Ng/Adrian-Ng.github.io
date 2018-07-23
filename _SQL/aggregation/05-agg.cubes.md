@@ -9,7 +9,7 @@ mathjax: true
 
 ## Intro
 
-Note: to follow along with the examples on this page using the musicDB, you will also need to scroll down to the appendix and follow the steps there.
+Note: to follow along with the examples on this page using the musicDB, you will also need to scroll down to [simulating dob](/SQL/aggregation/cubes/#simulating-dob) and following the steps there.
 {: .notice--info}
 
 ### Drill Down
