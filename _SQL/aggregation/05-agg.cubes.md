@@ -99,7 +99,7 @@ WITH CUBE;
 
 ## Simulating dob
 
-On this page we simulate `dob` by sampling from the _Normal Distribution_.
+On this page we simulate `dob` by sampling from the __Normal Distribution__ $$\Phi ~ N(\mu,\sigma)$$.
 
 Therefore I am making the following assumptions:
 * Age has a normal distribution
@@ -109,7 +109,7 @@ Therefore I am making the following assumptions:
 
 ### Function
 
-I use this scalar-valued function taken from [here](http://www.sqlservercentral.com/articles/SQL+Uniform+Random+Numbers/91103/).
+To sample from the Normal Distribution, I use this scalar-valued function taken from [here](http://www.sqlservercentral.com/articles/SQL+Uniform+Random+Numbers/91103/).
 
 
 
