@@ -101,15 +101,13 @@ WITH CUBE;
 
 On this page we simulate `dob` by sampling from the __Normal Distribution__ $$\phi \sim N(\mu,\sigma)$$.
 
-Therefore I am making the following (non-scientific) assumptions:
-* Age has a normal distribution
-	* $$\mu = 25$$
-	* $$\sigma = 5$$
-
+Where:
+* $$\mu = 25$$
+* $$\sigma = 5$$
 
 ### Function
 
-To sample from the Normal Distribution, I use this scalar-valued function taken from [here](http://www.sqlservercentral.com/articles/SQL+Uniform+Random+Numbers/91103/).
+To sample from the Normal Distribution, we use a scalar-valued function taken from [here](http://www.sqlservercentral.com/articles/SQL+Uniform+Random+Numbers/91103/).
 
 ```sql
 CREATE FUNCTION stats.Normal
@@ -127,37 +125,62 @@ To invoke it:
 ```sql 
 SELECT stats.Normal(25,5,RAND(),RAND())
 ```
-
-... where `RAND()` samples from the __standard uniform distribution__ $$U(0,1)$$
+where `RAND()` samples from the __standard uniform distribution__ $$U(0,1)$$
 
 ### ALTER music.Users
 
-Let's write some DDL to add `dob` to `music.Users`.
+Our function `stats.Normal` is designed to sample a person's age at random. In a real database, we would not record someone's age but instead their date of birth.
+
+So let's write some DDL to add `dob` to `music.Users`.
 
 ```sql
 ALTER TABLE music.Users
 ADD dob date;
 ```
 
+Assuming the function returns our users _present_ age, then we can use `DATEADD()` to accurately estimate their age.
+
+```sql
+dob = DATEADD(Dd,stats.Normal(25,5, RAND(),RAND())*-356.25,GETDATE())
+``` 
+
 ### UPDATE music.Users 
 
 Let's update each row in `music.Users` with a random birth date using our new function `stats.Normal`.
 
+Now because the function is neither a table-valued or windowed type, we need to invoke it once for each row in the table.
 
+Otherwise, we will return the same `age` for each row.
 
+Try the following to see for yourself:
+
+```sql
+SELECT 
+	stats.Normal(25,5, RAND(),RAND()) AS age
+FROM music.Users
+```
+
+The solution is to iterate through a `WHILE` loop.
+At each iteration, we select a random singleton tuple and invoke `stats.Normal`. 
+This is done in entirely in a subquery.
+The superquery is an `UPDATE` statement in which `age` is expressed as `dob`.
+
+The while loop ends after the first iteration where `@@ROWCOUNT = 0`. 
+That is, when we have run out of rows to update. 
 
 ```sql
 WHILE (1=1)
 BEGIN
 	WITH cteSelection AS (
 		SELECT TOP 1 
-			*
+			dob
+		,	stats.Normal(25,5, RAND(),RAND()) AS age
 		FROM music.Users
 		WHERE dob IS NULL
 		ORDER BY NEWID()
 		)
 	UPDATE cteSelection
-	SET		dob = DATEADD(Dd,stats.Normal(25,5, RAND(),RAND())*-356.25,GETDATE())
+	SET		dob = DATEADD(Dd,age*-356.25,GETDATE())
 IF @@ROWCOUNT = 0
 BREAK
 END
