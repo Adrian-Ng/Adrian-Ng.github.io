@@ -101,17 +101,15 @@ WITH CUBE;
 
 On this page we simulate `dob` by sampling from the __Normal Distribution__ $$\phi \sim N(\mu,\sigma)$$.
 
-Therefore I am making the following assumptions:
+Therefore I am making the following (non-scientific) assumptions:
 * Age has a normal distribution
-* ... with a mean of 25
-* ... and a standard deviation of 5
+	* $$\mu = 25$$
+	* $$\sigma = 5$$
 
 
 ### Function
 
 To sample from the Normal Distribution, I use this scalar-valued function taken from [here](http://www.sqlservercentral.com/articles/SQL+Uniform+Random+Numbers/91103/).
-
-
 
 ```sql
 CREATE FUNCTION stats.Normal
@@ -125,8 +123,16 @@ END
 
 ```
 
+To invoke it:
+```sql 
+SELECT stats.Normal(25,5,RAND(),RAND())
+```
+
+... where `RAND()` samples from the __standard uniform distribution__ $$U(0,1)$$
 
 ### ALTER music.Users
+
+Let's write some DDL to add `dob` to `music.Users`.
 
 ```sql
 ALTER TABLE music.Users
@@ -134,6 +140,10 @@ ADD dob date;
 ```
 
 ### UPDATE music.Users 
+
+Let's update each row in `music.Users` with a random birth date using our new function `stats.Normal`.
+
+
 
 
 ```sql
