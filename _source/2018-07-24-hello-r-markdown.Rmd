@@ -1,0 +1,23 @@
+---
+layout: post
+title:  "Welcome, R Markdown!"
+date:   2018-07-24 21:13:40 +0100
+categories: r jekyll
+---
+
+This post was written using R Markdown. I followed instructions [here](https://selbydavid.com/2017/06/16/rmarkdown-jekyll/)
+
+This means I can generate plots:
+
+```{r plot}
+plot(iris$Petal.Width, iris$Petal.Length,
+     col = as.numeric(iris$Species) + 1,
+     xlab = 'Petal Width', ylab = 'Petal Length',
+     main = "Fisher's iris data")
+```
+
+And nicely-formatted tables:
+
+```{r table, results = 'asis'}
+knitr::kable(head(iris))
+```
