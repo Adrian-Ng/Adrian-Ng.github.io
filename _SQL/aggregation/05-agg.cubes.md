@@ -7,6 +7,10 @@ classes: wide
 mathjax: true
 ---
 
+$$
+\pgfmathdeclarefunction{gauss}{2}{%\pgfmathparse{1/(#2*sqrt(2*pi))*exp(-((x-#1)^2)/(2*#2^2))}%
+$$
+
 ## Intro
 
 Note: to follow along with the examples on this page using the musicDB, you will also need to scroll down to [simulating dob](/SQL/aggregation/cubes/#simulating-dob) and following the steps there.

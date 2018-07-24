@@ -57,7 +57,7 @@ SQL:
      - title: "Having"
        url: /SQL/aggregation/having/
      - title: "Over"
-       url: /SQL/aggregation/over/       
+       url: /SQL/aggregation/over/
      - title: "Cubes"
        url: /SQL/aggregation/cubes/
    - title: Common Table Elements
