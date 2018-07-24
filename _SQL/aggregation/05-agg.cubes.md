@@ -12,6 +12,7 @@ mathjax: true
 Note: to follow along with the examples on this page using the musicDB, you will also need to scroll down to [simulating dob](/SQL/aggregation/cubes/#simulating-dob) and following the steps there.
 {: .notice--info}
 
+
 ### Drill Down
 
 So far, we've looked at some simple aggregations involving a single categorical field.
