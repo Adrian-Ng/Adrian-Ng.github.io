@@ -1,8 +1,4 @@
 Package: placeholder
 Title: Does not matter.
 Version: 0.0.1
-<<<<<<< HEAD
-Imports: servr, rmarkdown
-=======
 Imports: servr, rmarkdown, plotly
->>>>>>> abc206cca25981e379ab425ea2f279678f107dce
