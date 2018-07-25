@@ -1,0 +1,137 @@
+# main links
+main:
+#  - title: "Quick-Start Guide"
+ #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+#   - title: "About"
+ #    url: /about/	
+   - title: "SQL"
+     url: http://adrian.ng/SQL/ddl/intro/
+   - title: "R Language"
+     url: http://adrian.ng/R/imp-knn/
+   - title: "Java"
+     url: http://adrian.ng/java/Basics/Intro/
+   - title: "MATLAB"
+     url: http://adrian.ng/matlab/Basics/Intro/
+#   - title: "Python"
+ #    url: http://adrian.ng/python/Basics/Intro/
+# SQL links
+SQL:
+   - title: Data Definition Language
+     children:
+     - title: "Intro"
+       url: /SQL/ddl/intro/
+     - title: "Create"
+       url: /SQL/ddl/create/
+     - title: "Alter"
+       url: /SQL/ddl/alter/
+     - title: "Drop"
+       url: /SQL/ddl/drop/
+     - title: "Truncate"
+       url: /SQL/ddl/truncate/
+   - title: Data Manipulation Language
+     children:
+     - title: "Intro"
+       url: /SQL/dml/intro/
+     - title: "Select"
+       url: /SQL/dml/select/
+     - title: "Insert"
+       url: /SQL/dml/insert/
+     - title: "Select Into"
+       url: /SQL/dml/selectinto/
+     - title: "Update"
+       url: /SQL/dml/update/
+     - title: "Delete"
+       url: /SQL/dml/delete/
+   - title: Joins
+     children:
+     - title: "Cartesian Joins"
+       url: /SQL/joins/cartesian/
+     - title: "Semi Joins"
+       url: /SQL/joins/semi/
+   - title: Aggregation
+     children:
+     - title: "Functions"
+       url: /SQL/aggregation/functions/
+     - title: "Group By"
+       url: /SQL/aggregation/groupby/
+     - title: "Having"
+       url: /SQL/aggregation/having/
+     - title: "Over"
+       url: /SQL/aggregation/over/
+     - title: "Cubes"
+       url: /SQL/aggregation/cubes/
+   - title: Common Table Elements
+     children:
+     - title: "Intro"
+       url: /SQL/cte/intro/
+     - title: "Deduping"
+       url: /SQL/cte/dedupe/
+     - title: "Recursion"
+       url: /SQL/cte/Recursion/
+   - title: Misc Stuff
+     children:
+     - title: "Openquery... and XML"
+       url: /SQL/misc/openquery-xml/
+   - title: Music DB
+     url: /SQL/musicDB/
+# R links
+R Language:
+   - title: Implementation    
+     children:
+     - title: "k Nearest Neighbours"
+       url: /R/imp-knn/
+     - title: "Discriminant Analysis"
+       url: /R/imp-da/
+     - title: "Kernel Ridge Regression"
+       url: /R/imp-krr/
+     - title: "Regression Neural Network"
+       url: /R/imp-rnn/
+     - title: "Decision Stumps"
+       url: /R/imp-ds/
+     - title: "Hierachical Clustering"
+       url: /R/imp-hc/
+
+# Java links
+Java:
+   - title: Basics
+     children:
+     - title: "Intro"
+       url: /java/Basics/Intro/
+   - title: PageRank
+     children:
+     - title: "UrlExtractor"
+       url: /java/PageRank/UrlExtractor/
+     - title: "ArticleIndexer"
+       url: /java/PageRank/ArticleIndexer/
+     - title: "PageRank"
+       url: /java/PageRank/PageRank/
+   - title: Hadoop
+     children:
+     - title: "Intro"
+       url: /java/Hadoop/Intro/  
+   - title: Value at Risk
+     children:
+     - title: "Intro"
+       url: /java/VaR/Intro/
+
+# MATLAB links
+MATLAB:
+   - title: Basics
+     children: 
+     - title: "Intro"
+       url: /matlab/Basics/Intro/
+   - title: Hidden Markov Models
+     children:
+     - title: "alpha"
+       url: /matlab/hmm/alpha/
+     - title: "beta"
+       url: /matlab/hmm/beta/
+     - title: "gamma"
+       url: /matlab/hmm/gamma/
+
+# Python links
+Python:
+    - title: Basics
+      children:
+      - title: "Intro"
+        url: /python/Basics/Intro/
