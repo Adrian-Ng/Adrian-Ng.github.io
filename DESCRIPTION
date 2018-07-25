@@ -1,4 +1,4 @@
 Package: placeholder
 Title: Does not matter.
 Version: 0.0.1
-Imports: servr, rmarkdown, plotly
+Imports: servr, rmarkdown, plotly. webshot

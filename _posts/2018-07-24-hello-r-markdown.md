@@ -52,30 +52,71 @@ library(plotly)
 
 
 {% highlight text %}
+<<<<<<< HEAD
 ## Error in library(plotly): there is no package called 'plotly'
+=======
+## Loading required package: ggplot2
+>>>>>>> 5178a5b810514b46a7544da2e8b28e6347cfe864
 {% endhighlight %}
 
 
 
+<<<<<<< HEAD
 {% highlight r %}
 p <- ggplot(data = diamonds, aes(x = cut, fill = clarity)) +
             geom_bar(position = "dodge")
+=======
+{% highlight text %}
+## 
+## Attaching package: 'plotly'
 {% endhighlight %}
 
 
 
 {% highlight text %}
+## The following object is masked from 'package:ggplot2':
+## 
+##     last_plot
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## The following object is masked from 'package:stats':
+## 
+##     filter
+>>>>>>> 5178a5b810514b46a7544da2e8b28e6347cfe864
+{% endhighlight %}
+
+
+
+{% highlight text %}
+<<<<<<< HEAD
 ## Error in ggplot(data = diamonds, aes(x = cut, fill = clarity)): could not find function "ggplot"
+=======
+## The following object is masked from 'package:graphics':
+## 
+##     layout
+>>>>>>> 5178a5b810514b46a7544da2e8b28e6347cfe864
 {% endhighlight %}
 
 
 
 {% highlight r %}
+<<<<<<< HEAD
+=======
+p <- ggplot(data = diamonds, aes(x = cut, fill = clarity)) +
+            geom_bar(position = "dodge")
+>>>>>>> 5178a5b810514b46a7544da2e8b28e6347cfe864
 ggplotly(p)
 {% endhighlight %}
 
 
 
 {% highlight text %}
+<<<<<<< HEAD
 ## Error in ggplotly(p): could not find function "ggplotly"
+=======
+## Error in loadNamespace(name): there is no package called 'webshot'
+>>>>>>> 5178a5b810514b46a7544da2e8b28e6347cfe864
 {% endhighlight %}
