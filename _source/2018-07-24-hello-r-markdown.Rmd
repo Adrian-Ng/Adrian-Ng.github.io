@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "Welcome, R Markdown!"
-date:   2018-07-24 21:34:40 +0100
+date:   2018-07-25 21:34:40 +0100
 categories: r jekyll
 ---
 
