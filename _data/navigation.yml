@@ -76,21 +76,54 @@ SQL:
      url: /SQL/musicDB/
 # R links
 R Language:
-   - title: Implementation    
+   - title: "k Nearest Neighbours"   
      children:
-     - title: "k Nearest Neighbours"
-       url: /R/imp-knn/
-     - title: "Discriminant Analysis"
-       url: /R/imp-da/
-     - title: "Kernel Ridge Regression"
-       url: /R/imp-krr/
-     - title: "Regression Neural Network"
-       url: /R/imp-rnn/
-     - title: "Decision Stumps"
-       url: /R/imp-ds/
-     - title: "Hierachical Clustering"
-       url: /R/imp-hc/
-
+     - title: "Theory"
+       url: /R/knn/theory/
+     - title: "Implementation"
+       url: /R/knn/implementation/
+     - title: "Analysis"
+       url: /R/knn/analysis/ 
+   - title: "Discriminant Analysis"
+     children:
+     - title: "Theory"
+       url: /R/da/theory/
+     - title: "Implementation"
+       url: /R/da/implementation/
+     - title: "Analysis"
+       url: /R/da/analysis/ 
+   - title: "Kernel Ridge Regression"
+     children:
+     - title: "Theory"
+       url: /R/krr/theory/
+     - title: "Implementation"
+       url: /R/krr/implementation/
+     - title: "Analysis"
+       url: /R/krr/analysis/ 
+   - title: "Regression Neural Network"
+     children:
+     - title: "Theory"
+       url: /R/rnn/theory/
+     - title: "Implementation"
+       url: /R/rnn/implementation/
+     - title: "Analysis"
+       url: /R/rnn/analysis/ 
+   - title: "Decision Stumps"
+     children:
+     - title: "Theory"
+       url: /R/ds/theory/
+     - title: "Implementation"
+       url: /R/ds/implementation/
+     - title: "Analysis"
+       url: /R/ds/analysis/ 
+   - title: "Hierachical Clustering"
+     children:
+     - title: "Theory"
+       url: /R/hc/theory/
+     - title: "Implementation"
+       url: /R/hc/implementation/
+     - title: "Analysis"
+       url: /R/hc/analysis/ 
 # Java links
 Java:
    - title: Basics
