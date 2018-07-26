@@ -47,18 +47,13 @@ compute the Euclidean Distance between the test object and every training object
 The Euclidean Distance between $$(0,3)$$ and the test object is computed like so:
 
 $$
-\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
-\norm{\biggl 
+\lVert 
 \begin{pmatrix} 0 \\ 3 \end{pmatrix} 
 - 
 \begin{pmatrix} 1 \\ 2 \end{pmatrix} 
-\biggr}
+\rVert 
 =
-\norm{
-\biggl
-\begin{pmatrix} -1 \\ 1 \end{pmatrix} 
-\biggr
-}
+\lVert \begin{pmatrix} -1 \\ 1 \end{pmatrix} \rVert
 =
 \sqrt{-1^2 + 1^2} = 1.414
 $$
