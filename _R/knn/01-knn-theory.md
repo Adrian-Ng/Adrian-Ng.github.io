@@ -80,6 +80,9 @@ $$
 $$
 
 To make our prediction, we take the label of the object with the smallest Eudlidean Distance. This is $$(2,2)$$, which has the label $$+1$$.
+That is, we predict our test object will have the label $$+1$$.
+
+
 
 
 
