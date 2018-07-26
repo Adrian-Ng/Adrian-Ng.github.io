@@ -75,10 +75,11 @@ $$
 (-1,1) 	& -1 & 2.236\\
 (-1,-1)	& -1 & 3.506\\
 (0,1)	& -1 & 1.414\\
-\cdots & \cdots \\
 \hline
 \end{array}
 $$
+
+To make our prediction, we take the label of the object with the smallest Eudlidean Distance. This is $$(2,2)$$, which has the label $$+1$$.
 
 
 
