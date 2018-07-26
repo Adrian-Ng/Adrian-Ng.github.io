@@ -17,7 +17,7 @@ $$(x_1,y_1),(x_2,y_2),...,(x_n,y_n)$$
 We need to predict the _label_ for a test object $$(x,y)$$.
 
 The algorithm will
-1. Search for the _nearest_ training object to the test object $$x$$
+1. Search for the _nearest_ training object to the test object $$(x,y)$$
 2. Take the label of the nearest training object as the prediction for the label of the test object.
 
 
@@ -30,13 +30,15 @@ The label space could be something like $$\{-1,+1\}$$ or $$\{\times,\bigtriangle
 
 ## Euclidean Distance
 
-In this example our label space is $$\{-1,+1\}$$
+In this example our label space is $$\{-1,+1\}$$.
 Our training set consists of the following training objects:
 
 Positive Objects:
 	$$(0,3), (2,2), (3,3)$$
+
 Negative Objects:
 	$$(-1,1), (-1,-1), (0,1)$$
+
 Test Object: 
 	$$(1,2)$$
 
