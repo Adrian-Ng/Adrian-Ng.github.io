@@ -24,5 +24,5 @@ The algorithm will
 
 When our label space contains only two distinct values, this is __binary classification__.
 
-The label space could be something like $${-1,+1}$$ or $${\cross,\bigtriangleup}$$
+The label space could be something like $${-1,+1}$$ or $${\times,\bigtriangleup}$$
 
