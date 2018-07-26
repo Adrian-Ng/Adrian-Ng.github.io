@@ -44,21 +44,25 @@ Test Object:
 TWe will use __Euclidean Distance__ as our distance measure. We need to
 compute the Euclidean Distance between the test object and every training object.
 
+To do this, we subtract vectors and compute the Euclidean norm (or L)
+
 The Euclidean Distance between $$(0,3)$$ and the test object is computed like so:
 
 $$
-\lVert 
+\left\Vert 
 \begin{pmatrix} 0 \\ 3 \end{pmatrix} 
 - 
 \begin{pmatrix} 1 \\ 2 \end{pmatrix} 
-\rVert 
+\right\Vert 
 =
-\lVert \begin{pmatrix} -1 \\ 1 \end{pmatrix} \rVert
+\leftVert 
+\begin{pmatrix} -1 \\ 1 \end{pmatrix} 
+\rightVert
 =
 \sqrt{-1^2 + 1^2} = 1.414
 $$
 
-
+Eventually, we have the Euclidean distance for all training objects:
 
 $$
 \begin{array}{|c|c|}
