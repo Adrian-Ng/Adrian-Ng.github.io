@@ -78,8 +78,8 @@ SQL:
 R Language:
    - title: "k Nearest Neighbours"   
      children:
-     - title: "Theory"
-       url: /R/knn/theory/
+     - title: "k = 1"
+       url: /R/knn/kequals1/
      - title: "Implementation"
        url: /R/knn/implementation/
      - title: "Analysis"

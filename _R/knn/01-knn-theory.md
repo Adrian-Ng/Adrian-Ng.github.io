@@ -1,6 +1,6 @@
 ---
-title: "k Nearest Neighbours: Theory"
-permalink: /R/knn/theory/
+title: "k Nearest Neighbours: k = 1"
+permalink: /R/knn/kequals1/
 toc: true
 classes: wide
 mathjax: true
@@ -41,7 +41,7 @@ Test Object:
 	$$(1,2)$$
 
 
-TWe will use __Euclidean Distance__ as our distance measure. We need to
+We will use __Euclidean Distance__ as our distance measure. We need to
 compute the Euclidean Distance between the test object and every training object.
 
 To do this, we subtract vectors and compute the Euclidean norm (e.g. $$\sqrt{a^2 + b^2}$$)
@@ -62,7 +62,7 @@ $$
 \sqrt{-1^2 + 1^2} = 1.414
 $$
 
-Eventually, we have the Euclidean distance for all training objects:
+Eventually, we have the Euclidean Distance for all training objects:
 
 $$
 \begin{array}{|c|c|}
@@ -79,8 +79,10 @@ $$
 \end{array}
 $$
 
-To make our prediction, we take the label of the object with the smallest Eudlidean Distance. This is $$(2,2)$$, which has the label $$+1$$.
-That is, we predict our test object will have the label $$+1$$.
+No we make our prediction. We take the label of the object with the smallest Eudlidean Distance. This is $$(2,2)$$, which has the label $$+1$$.
+
+
+
 
 
 
