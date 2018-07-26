@@ -38,7 +38,7 @@ Positive Objects:
 Negative Objects:
 	$$(-1,1), (-1,-1), (0,1)$$
 Test Object: 
-	$$(1,2)
+	$$(1,2)$$
 
 
 TWe will use __Euclidean Distance__ as our distance measure. We need to
