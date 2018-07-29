@@ -81,8 +81,7 @@ $$
 \end{array}
 $$
 
-No we make our prediction. We take the label of the object with the smallest Eudlidean Distance. This is $$(2,2)$$, which has the label $$+1$$.
-
+Now we make our prediction. We take the label of the object with the smallest Euclidean Distance. This is $$(2,2)$$, which has the label $$+1$$.
 
 
 
