@@ -81,7 +81,7 @@ R Language:
      - title: "k = 1"
        url: /R/knn/kequals1/
      - title: "Implementation"
-       url: /R/knn/implementation/
+       url: /R/knn/imp/
      - title: "Analysis"
        url: /R/knn/analysis/ 
    - title: "Discriminant Analysis"
