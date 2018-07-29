@@ -5,5 +5,11 @@ toc: true
 mathjax: true
 ---
 
-Download my k-Nearest Neighbours implementation [here](github.com/Adrian-Ng/Machine-Learning/tree/master/Nearest-Neighbours).
+## Download
+
+[Github](github.com/Adrian-Ng/Machine-Learning/tree/master/Nearest-Neighbours).
+
+Note to self: perhaps combine all implementations into a single R package.
+{: .notice--info}
+
 
