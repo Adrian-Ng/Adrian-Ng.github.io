@@ -56,7 +56,7 @@ System.out.printf("Total close: %s\n", totalClose);
 All we are doing here is totalling every closing price.
 
 In `map`, we simply specify what data we want to reduce.
-In this case, we use the `getClose()` method to return a singleton of `BigDecimal`.
+In this case, we use the `getClose()` method to emit a singleton of `BigDecimal`.
 
 In `reduce` we aggregate. 
 And in this instance, we're adding.
@@ -90,7 +90,7 @@ Now in the `map` operation we have two values:
 * a closing price
 * unity
 
-When these get passed to `reduce`, they are simply added to a running total and running count.
+When we emit from `map` to `reduce`, they are simply added to a running total and running count.
 
 #### Stream.reduce
 
