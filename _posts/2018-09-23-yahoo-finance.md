@@ -3,7 +3,6 @@ layout: single
 title: Fun with Yahoo Finance API
 excerpt: "Google Finance is dead. Let's try something different!"
 categories: java
-toc: true
 classes: wide
 ---
 
@@ -40,7 +39,7 @@ To look at, say, the closing price on each day, we'll have to traverse the `List
 for(HistoricalQuote historicalQuote : historyGoogle)
                 System.out.println(historicalQuote.getClose());
 ```
-Looking at the [documentation](https://financequotes-api.com/javadoc/yahoofinance/YahooFinance.html) we can see that this method (and others like it) returns a `BigDecimal`.
+Looking at the [documentation](https://financequotes-api.com/javadoc/yahoofinance/YahooFinance.html), we can see that this method (and others like it) returns a `BigDecimal`.
 
 ### Stream()
 
