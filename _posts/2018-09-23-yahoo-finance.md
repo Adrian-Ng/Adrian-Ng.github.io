@@ -9,7 +9,7 @@ classes: wide
 ## Google Finance API No More!
 
 As of March 2018, something [happened](https://www.marketbeat.com/press-room/google-finance-changes-and-alternatives/) to Google Finance - it got taken to the __chopping board__ and is now a miserable husk of its former self!
-Long gone are the days where one could simply hook into the API and download a fat, juicy csv-file of historical stock price data, _with_ options.
+Long gone are the days where one could simply hook into the API and download a fat, juicy csv-file of historical stock price data... or a sensible JSON of option prices.
 
 Thankfully, there are many alternatives out there.
 
