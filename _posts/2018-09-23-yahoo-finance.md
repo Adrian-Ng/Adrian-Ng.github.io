@@ -103,6 +103,10 @@ But now, the _accumulator_ now has two parameters: `(a,b)`.
 Where `a` is a two-element array which contains the running _total_ and _count_ in the first and second elements respectively.
 Likewise, `b` is a two element array, but it contains the next two elements to add to `a`.
 
+## Yahoo!
+
+And so we have it - a quick introduction to YahooFinanceAPI and a quick spin with Java 8 streams! Yeah! MapReduce!
+
 ## References
 
 1. [YahooFinanceAPI](https://financequotes-api.com)
