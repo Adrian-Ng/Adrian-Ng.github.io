@@ -9,14 +9,14 @@ classes: wide
 
 ## Google Finance API No More!
 
-As of March 2018, something [happened](https://www.marketbeat.com/press-room/google-finance-changes-and-alternatives/) to Google Finance - it got taken to the chopping board and is now a miserable husk of its former self!
-Long gone are the days where one could simply hook into the API and download a fat, juicy csv-file of historical stock price data.
+As of March 2018, something [happened](https://www.marketbeat.com/press-room/google-finance-changes-and-alternatives/) to Google Finance - it got taken to the __chopping board__ and is now a miserable husk of its former self!
+Long gone are the days where one could simply hook into the API and download a fat, juicy csv-file of historical stock price data, _with_ options.
 
 Thankfully, there are many alternatives out there.
 
-## Yahoo! Finance
+## YahooFinanceAPI
 
-Since I've been accessing the API through Java, I'm taking a look at this _unofficial_ [YahooFinanceAPI](https://financequotes-api.com) library.
+Since I've been accessing the API through Java, I'm taking a look at this _unofficial_ [library](https://financequotes-api.com).
 
 
 ### Getting Historical Data
@@ -55,37 +55,45 @@ BigDecimal totalClose = historyGoogle
 System.out.printf("Total close: %s\n", totalClose);
 ```            
 All we are doing here is totalling every closing price.
+
 In `map`, we simply specify what data we want to reduce.
 In this case, we use the `getClose()` method to return a singleton of `BigDecimal`.
 
-In `reduce` we are simply performing an aggregation, just like in any other reduce.
-Here, we're adding.
-`Reduce` takes two arguments: 
+In `reduce` we aggregate. 
+And in this instance, we're adding.
+
+Our `reduce` operation takes [two arguments](https://docs.oracle.com/javase/tutorial/collections/streams/reduction.html#reduce): 
 * Identity
 * Accumulator
 
-The former is both the initial value of the sum and the default value in case the mapping returns a null-value at any point in the stream.
+The former is both the initial value of the sum _and_ the default value in case the mapping returns a null-value at any point in the stream.
 That is, _zero_.
 
-The latter is the part that adds the `BigDecimal` element to the partial sum.
+The latter is the part that adds the `BigDecimal` element to the running total of closing prices.
 
-### Average Closing Price
+### Averaging Closing Price
 
+To calculate any average, we need both a _total_ and a _count_.
+We will again use `stream()` and return both these values.
 
 ```java
 BigDecimal[] totalWithCount = historyGoogle.stream()
 	.map(HistoricalQuote -> new BigDecimal[]{HistoricalQuote.getClose(), BigDecimal.ONE})
-	// a[] = partial sum array
-    // b[] = to be added array
 	.reduce(    new BigDecimal[]{BigDecimal.ZERO, BigDecimal.ZERO},         // identity
-                (a,b) -> new BigDecimal[]{a[0].add(b[0]), a[1].add(b[1])});   // accumulator             
+                (a,b) -> new BigDecimal[]{a[0].add(b[0]), a[1].add(b[1])}); // accumulator            
 BigDecimal mean = totalWithCount[0].divide(totalWithCount[1], RoundingMode.HALF_UP);
 System.out.println(mean);
 ```
 
-To calculate any average, we need both a _total_ and a _count_.
-Therefore, in this example we map two values: a singleton closing price and unity.
-When these get passed to `reduce`, they are simply added to the partial sums of _total_ and _count_.
+#### Stream.map
+
+Now in the `map` operation we have two values: 
+* a closing price
+* unity
+
+When these get passed to `reduce`, they are simply added to a running total and running count.
+
+#### Stream.reduce
 
 As before, `reduce` takes both _identity_ and _accumulator_ arguments.
 But now, `map` is sending a pair of values.
