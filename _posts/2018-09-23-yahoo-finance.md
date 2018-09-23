@@ -21,7 +21,7 @@ Since I've been accessing the API through Java, I'm taking a look at this _unoff
 ### Getting Historical Data
 
 You can construct a `Stock` object such that it contains 5 years historical data.
-Then use the `getHistory()` method to return a collection of 'HistoricalQuote' elements.
+Then use the `getHistory()` method to return a collection of `HistoricalQuote` elements.
 
 ```java
 Calendar from = Calendar.getInstance();
