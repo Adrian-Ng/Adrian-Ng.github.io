@@ -1,7 +1,10 @@
 ---
 layout: single
 title: Fun with Yahoo Finance API
+excerpt: "Google Finance is dead. Let's try something different!"
 categories: java
+toc: true
+classes: wide
 ---
 
 ## Google Finance API No More!
@@ -11,15 +14,15 @@ Long gone are the days where one could simply hook into the API and download a f
 
 Thankfully, there are many alternatives out there.
 
-## Yahoo Finance!
+## Yahoo! Finance
 
-Since I've been accessing the API through Java, I'm taking a look at the [YahooFinanceAPI](https://financequotes-api.com) library.
+Since I've been accessing the API through Java, I'm taking a look at this _unofficial_ [YahooFinanceAPI](https://financequotes-api.com) library.
 
 
 ### Getting Historical Data
 
 You can construct a `Stock` object such that it contains 5 years historical data.
-Then use the `getHistory()` method to return a collection of 'HistoricalQuote' classes.
+Then use the `getHistory()` method to return a collection of 'HistoricalQuote' elements.
 
 ```java
 Calendar from = Calendar.getInstance();
@@ -41,8 +44,7 @@ Looking at the [documentation](https://financequotes-api.com/javadoc/yahoofinanc
 
 ### Stream()
 
-If you want, you can use `stream()` instead of iterating through the collection.
-
+If you want, you can `stream()` instead of iterating through the collection.
 
 ```java
 BigDecimal totalClose = historyGoogle
