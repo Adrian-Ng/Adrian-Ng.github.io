@@ -1,7 +1,10 @@
 ---
 layout: single
 title: Fun with Yahoo Finance API
-excerpt: "Google Finance is dead. Let's try something different!"
+excerpt: "As of March 2018, something happened to Google Finance - it got taken to the chopping board and is now a miserable husk of its former self!
+Long gone are the days where one could simply hook into the API and download a fat, juicy csv-file of historical stock price data... or a sensible JSON of option prices.
+
+Thankfully, there are many alternatives out there."
 categories: java
 classes: wide
 ---
