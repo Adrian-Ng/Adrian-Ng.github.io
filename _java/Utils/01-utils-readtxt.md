@@ -1,12 +1,12 @@
 ---
-title: "Java: readTxt"
+title: "Java: readTxt()"
 permalink: "/java/utils/readtxt/"
 excerpt: "A method for reading text files line-by-line. Returns String[]. Text qualifiers and delimiters ignored."
 toc: false
 classes: wide
 ---
 
-A method for reading text files line-by-line. Returns `String[]`. Text qualifiers and delimiters ignored.
+A __method__ for reading text files line-by-line. Returns `String[]`. Text qualifiers and delimiters ignored.
 
 ```java
 public static String[] readTxt(String filename) throws FileNotFoundException {
