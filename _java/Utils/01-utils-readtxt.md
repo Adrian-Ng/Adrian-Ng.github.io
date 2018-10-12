@@ -6,7 +6,7 @@ toc: false
 classes: wide
 ---
 
-A method for reading text files line-by-line. Returns String[]. Text qualifiers and delimiters ignored.
+A method for reading text files line-by-line. Returns `String[]`. Text qualifiers and delimiters ignored.
 
 ```java
 public static String[] readTxt(String filename) throws FileNotFoundException {
