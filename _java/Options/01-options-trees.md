@@ -32,7 +32,7 @@ $$
 \place{.3}{4.4}{\dline{3.6}{7.6}}
 
 %
-%\place{-1}{12.5}{\frac01}
+\place{.3}{4.4}{\frac01}
 
 %
 \hskip18em\Rule{0em}{14em}{1.5em}
