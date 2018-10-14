@@ -28,8 +28,8 @@ $$
 %\place{0}{12}{\bullet}
 
 %
-\place{.3}{4.4}{\uline{3.6}{7.6}}
-\place{.3}{4.4}{\dline{7.6}{3.6}}
+\place{1}{3}{\uline{3}{1}}
+\place{1}{0}{\dline{3}{1}}
 
 %
 \place{.3}{4.4}{\frac01}
