@@ -28,7 +28,7 @@ $$
 %\place{0}{12}{\bullet}
 
 %
-\place{1}{5}{\uline{3}{1}}
+\place{1}{5.5}{\uline{3}{1}}
 \place{1}{4}{\dline{3}{1}}
 
 %
