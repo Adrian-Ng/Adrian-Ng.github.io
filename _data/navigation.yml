@@ -134,21 +134,25 @@ Java:
      children:
      - title: "readTxt"
        url: /java/utils/readtxt/ 
-   - title: PageRank
+   - title: Options Pricing
      children:
-     - title: "UrlExtractor"
-       url: /java/PageRank/UrlExtractor/
-     - title: "ArticleIndexer"
-       url: /java/PageRank/ArticleIndexer/
-     - title: "PageRank"
-       url: /java/PageRank/PageRank/
-   - title: Hadoop
-     children:
-     - title: "Intro"
-       url: /java/Hadoop/Intro/  
-   - title: Value at Risk
-     children:
-     - title: "Intro"
+     - title: Binomial Trees
+       url: /java/options/trees
+#  - title: PageRank
+#    children:
+#     - title: "UrlExtractor"
+#       url: /java/PageRank/UrlExtractor/
+#     - title: "ArticleIndexer"
+#       url: /java/PageRank/ArticleIndexer/
+#     - title: "PageRank"
+#       url: /java/PageRank/PageRank/
+#   - title: Hadoop
+#     children:
+#     - title: "Intro"
+#       url: /java/Hadoop/Intro/  
+#   - title: Value at Risk
+#     children:
+#     - title: "Intro"
        url: /java/VaR/Intro/
 
 # MATLAB links
