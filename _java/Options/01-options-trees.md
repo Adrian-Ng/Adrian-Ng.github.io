@@ -25,13 +25,14 @@ $$
 %
 \hskip 1em
 %
-\place{0}{12}{\bullet}
+%\place{0}{12}{\bullet}
 
 %
+\place{.3}{4.4}{\uline{3.6}{7.6}}
 \place{.3}{4.4}{\dline{3.6}{7.6}}
 
 %
-\place{-1}{12.5}{\frac01}
+%\place{-1}{12.5}{\frac01}
 
 %
 \hskip18em\Rule{0em}{14em}{1.5em}
