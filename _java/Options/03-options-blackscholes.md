@@ -49,7 +49,7 @@ So
 $$
 d_1,d_2 \rightarrow +\infty\\
 N(d_1),N(d,2)\rightarrow 1\\
-N(-d_1),N(-d_2) \right arrow 0\\
+N(-d_1),N(-d_2) \rightarrow 0\\
 $$
 
 Therefore:
@@ -72,7 +72,7 @@ So
 $$
 d_1,d_2 \rightarrow -\infty\\
 N(d_1),N(d,2)\rightarrow 0\\
-N(-d_1),N(-d_2) \right arrow 1\\
+N(-d_1),N(-d_2) \rightarrow 1\\
 $$
 
 Therefore:
