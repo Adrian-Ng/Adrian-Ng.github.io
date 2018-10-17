@@ -39,4 +39,45 @@ $$
 
 Therefore $$\ln{\frac{S}{X}}$$ becomes important to the behaviour of $$d_1$$ and $$d_2$$.
 
-If $$S \rightarrow \infty$$ then $$\ln{\frac{S}{X}}$$ is positive
+
+#### $$S \rightarrow +\infty$$
+
+If $$S \rightarrow +\infty$$ then $$\ln{\frac{S}{X}}$$ is positive.
+
+So
+
+$$
+d_1,d_2 \rightarrow +\infty\\
+N(d_1),N(d,2)\rightarrow 1\\
+N(-d_1),N(-d_2) \right arrow 0\\
+$$
+
+Therefore:
+
+$$
+c\rightarrow S-X\\
+p\rightarrow 0\\
+$$ 
+
+If $$S$$ is big, the call will be executed with high probability and becomes similar to a forward!
+Likewise, the Put will not likely be executed.
+
+
+#### $$S \rightarrow -\infty$$
+
+If $$S \rightarrow -\infty$$ then $$\ln{\frac{S}{X}}$$ is negative.
+
+So
+
+$$
+d_1,d_2 \rightarrow -\infty\\
+N(d_1),N(d,2)\rightarrow 0\\
+N(-d_1),N(-d_2) \right arrow 1\\
+$$
+
+Therefore:
+
+$$
+c\rightarrow 0\\
+p\rightarrow X-S\\
+$$ 
