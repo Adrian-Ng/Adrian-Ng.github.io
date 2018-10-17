@@ -31,10 +31,12 @@ $$
 
 #### Near Maturity
 
-As $$t \rightarrow T$$, the terms
+As we approach maturity, $$t \rightarrow T$$, the following terms tend to 0.
 
 $$
-\left(r\pm \frac{\sigma^2}{2} \right)
+\left(r\pm \frac{\sigma^2}{2} \right) \rightarrow 0
 $$
 
-As time $$t$$ approaches maturity $$T$$
+Therefore $$ln\frac{S}{X}$$ becomes important to the behaviour of $$d_1$$ and $$d_2$$.
+
+If $$S \rightarrow \infty$$ then $$\ln{\frac{S}{X}}$$ is positive
