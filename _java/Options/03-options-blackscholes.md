@@ -25,7 +25,7 @@ $$
 Where
 
 $$
-d_1=\frac{\ln{(\left\frac{S}{X}\right)}+(r + \frac{\sigma^2}{2})(T-t)}{\sigma\sqrt{T-t}}\\
+d_1=\frac{\ln{\left(\frac{S}{X}\right)}+(r + \frac{\sigma^2}{2})(T-t)}{\sigma\sqrt{T-t}}\\
 d_2=\frac{\ln(\frac{S}{X})+(r - \frac{\sigma^2}{2})(T-t)}{\sigma\sqrt{T-t}} = d_1-\sigma{T-t}\\
 $$
 
