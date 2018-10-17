@@ -5,3 +5,4 @@ excerpt: "Pricing European and Asian options via diffusion or Monte Carlo method
 toc: true
 mathjax: true
 ---
+
