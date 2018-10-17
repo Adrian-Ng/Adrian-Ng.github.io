@@ -25,8 +25,8 @@ $$
 Where
 
 $$
-d_1=\frac{ln(\frac{S}{X})+(r + \frac{\sigma^2}{2})(T-t)}{\sigma\sqrt{T-t}}\\
-d_2=\frac{ln(\frac{S}{X})+(r - \frac{\sigma^2}{2})(T-t)}{\sigma\sqrt{T-t}} = d_1-\sigma{T-t}\\
+d_1=\frac{\ln{(\left\frac{S}{X}\right)}+(r + \frac{\sigma^2}{2})(T-t)}{\sigma\sqrt{T-t}}\\
+d_2=\frac{\ln(\frac{S}{X})+(r - \frac{\sigma^2}{2})(T-t)}{\sigma\sqrt{T-t}} = d_1-\sigma{T-t}\\
 $$
 
 #### Near Maturity
@@ -37,6 +37,6 @@ $$
 \left(r\pm \frac{\sigma^2}{2} \right) \rightarrow 0
 $$
 
-Therefore $$ln\frac{S}{X}$$ becomes important to the behaviour of $$d_1$$ and $$d_2$$.
+Therefore $$\ln{\frac{S}{X}}$$ becomes important to the behaviour of $$d_1$$ and $$d_2$$.
 
 If $$S \rightarrow \infty$$ then $$\ln{\frac{S}{X}}$$ is positive
