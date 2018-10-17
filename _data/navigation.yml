@@ -137,7 +137,13 @@ Java:
    - title: Options Pricing
      children:
      - title: Binomial Trees
-       url: /java/options/trees
+       url: /java/options/trees/
+     children:
+     - title: Monte Carlo
+       url: /java/options/montecarlo/  
+     children:
+     - title: Black Scholes
+       url: /java/options/blackscholes/  
 #  - title: PageRank
 #    children:
 #     - title: "UrlExtractor"
