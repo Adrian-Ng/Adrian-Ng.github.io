@@ -29,7 +29,7 @@ d_1=\frac{\ln{\left(\frac{S}{X}\right)}+(r + \frac{\sigma^2}{2})(T-t)}{\sigma\sq
 d_2=frac{\ln{\left(\frac{S}{X}\right)}+(r - \frac{\sigma^2}{2})(T-t)}{\sigma\sqrt{T-t}} = d_1-\sigma\sqrt{T-t}\\
 $$
 
-#### Near Maturity
+### Nearing Maturity
 
 As we approach maturity, $$t \rightarrow T$$, the following terms tend to 0.
 
@@ -40,9 +40,7 @@ $$
 Therefore $$\ln{\frac{S}{X}}$$ becomes important to the behaviour of $$d_1$$ and $$d_2$$.
 
 
-#### $$S \rightarrow +\infty$$
-
-If $$S \rightarrow +\infty$$ then $$\ln{\frac{S}{X}}$$ is positive.
+#### If $$S \rightarrow +\infty$$ then $$\ln{\frac{S}{X}}$$ is positive.
 
 So
 
@@ -63,9 +61,7 @@ If $$S$$ is big, the call will be executed with high probability and becomes sim
 Likewise, the Put will not likely be executed.
 
 
-#### $$S \rightarrow -\infty$$
-
-If $$S \rightarrow -\infty$$ then $$\ln{\frac{S}{X}}$$ is negative.
+#### If $$S \rightarrow -\infty$$ then $$\ln{\frac{S}{X}}$$ is negative.
 
 So
 
