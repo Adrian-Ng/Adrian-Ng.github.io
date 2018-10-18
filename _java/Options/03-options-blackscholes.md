@@ -18,7 +18,7 @@ $$
 According the Black-Scholes formula, the values of call and put with the strike price $$X$$ maturing at time $$T$$ are given by:
 
 $$
-c(S,t)=SN(d_1)-Xe^{r(T-t)}N(d_2)\\
+c(S,t)=SN(d_1)-Xe^{r(T-t)}N(d_2)\\\\
 p(S,t)=Xe^{-r(T-t)}N(-d_2)-SN(-d_1)\\
 $$
 
