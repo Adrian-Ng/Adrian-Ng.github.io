@@ -32,6 +32,10 @@ $$
 
 ## Java
 
+### Download
+
+[Github](https://github.com/Adrian-Ng/OptionPricer)
+
 ### BlackScholes.java
 
 ```java
@@ -51,6 +55,8 @@ timehorizon    = hashMap.get("timehorizon");
 ```
 
 #### d1 & d2
+
+Also at the constructor, we calculate $$d_1$$ and $$d_2$$.
 
 ```java
 d1 	= (Math.log(stock / strike) 
