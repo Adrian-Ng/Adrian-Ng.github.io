@@ -32,9 +32,15 @@ $$
 
 ## Java
 
-### Implementation
+### BlackScholes.java
 
-`BlackScholes.java` is a concrete class implementing `PricingType.java`, an interface.
+```java
+public class BlackScholes implements PricingType
+```
+
+`BlackScholes` is a concrete class implementing `PricingType`, an interface, which defines two abstract methods `getCall()` and `getPut()`.
+
+
 
 #### d1 & d2
 
