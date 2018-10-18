@@ -22,28 +22,16 @@ c(S,t)=SN(d_1)-Xe^{r(T-t)}N(d_2)\\
 p(S,t)=Xe^{-r(T-t)}N(-d_2)-SN(-d_1)\\
 $$
 
-Where
+Where $$N$$ is the _distribution function_ of $$\phi(0,1)$$ and
 
 $$
 d_1=\frac{\ln{\left(\frac{S}{X}\right)}+(r + \frac{\sigma^2}{2})(T-t)}{\sigma\sqrt{T-t}}\\
 d_2=\frac{\ln{\left(\frac{S}{X}\right)}+(r - \frac{\sigma^2}{2})(T-t)}{\sigma\sqrt{T-t}} = d_1-\sigma\sqrt{T-t}\\
 $$
 
-and $$N$$ is the __distribution__ function of $$\phi(0,1)$$
 
-###
 
 ## Java
-
-### input.txt
-
-Let's suppose the following inputs:
-
-stock,115
-strike,80
-volatility,0.48
-interest,0.07
-timehorizon,0.5
 
 ### Implementation
 
@@ -80,6 +68,21 @@ public double getPut() {
     - stock * distribution.cumulativeProbability(-d1);
     }
 ```
+
+### input.txt
+
+Let's suppose the following inputs:
+
+stock,115
+
+strike,80
+
+volatility,0.48
+
+interest,0.07
+
+timehorizon,0.5
+
 
 ### Output
 
