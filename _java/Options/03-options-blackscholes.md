@@ -97,7 +97,7 @@ Black Scholes
 As we approach maturity, $$t \rightarrow T$$, the following terms tend to 0.
 
 $$
-T-t \rightarrow 0\\
+\left(T-t\right) \rightarrow 0\\
 \left(r\pm \frac{\sigma^2}{2} \right) \rightarrow 0
 $$
 
