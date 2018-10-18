@@ -7,7 +7,7 @@ mathjax: true
 ---
 
 
-### Black Scholes differential equation
+## Black Scholes differential equation
 
 $$
 \frac{\partial f}{\partial t} + rS\cdot \frac{\partial f}{\partial S}+\frac{1}{2}\sigma^2 S^2\cdot\frac{\partial^2 f}{\partial S^2} = rf
@@ -29,11 +29,56 @@ d_1=\frac{\ln{\left(\frac{S}{X}\right)}+(r + \frac{\sigma^2}{2})(T-t)}{\sigma\sq
 d_2=\frac{\ln{\left(\frac{S}{X}\right)}+(r - \frac{\sigma^2}{2})(T-t)}{\sigma\sqrt{T-t}} = d_1-\sigma\sqrt{T-t}\\
 $$
 
+## Java
+
+### Implementation
+
+In the Java implementation, we simply assume $$t=0$$.
+
+#### d1 & d2
+
+```java
+d1 	= (Math.log(stock / strike) 
+	+ (interest + (Math.pow(volatility, 2) / 2)) 
+	* maturity)
+	/ (volatility * Math.sqrt(maturity));
+
+d2 	= d1 - (volatility * Math.sqrt(maturity));
+```
+
+#### getCall()
+
+```java
+public double getCall() {
+    return      (stock * distribution.cumulativeProbability(d1))
+            -   (strike * Math.exp(-interest * maturity)
+            *   distribution.cumulativeProbability(d2));
+    }
+```
+
+#### getPut()
+```java
+public double getPut() {
+    return  strike * Math.exp(-interest * maturity)
+    * distribution.cumulativeProbability(-d2)
+    - stock * distribution.cumulativeProbability(-d1);
+    }
+```
+
+
+### Input
+
+### Output
+
+
+## Appendix
+
 ### Nearing Maturity
 
 As we approach maturity, $$t \rightarrow T$$, the following terms tend to 0.
 
 $$
+T-t \rightarrow 0\\
 \left(r\pm \frac{\sigma^2}{2} \right) \rightarrow 0
 $$
 
@@ -42,7 +87,7 @@ Therefore $$\ln{\frac{S}{X}}$$ becomes important to the behaviour of $$d_1$$ and
 
 #### If $$S \rightarrow +\infty$$ then $$\ln{\frac{S}{X}}$$ is positive.
 
-So
+When positive,
 
 $$
 d_1,d_2 \rightarrow +\infty\\
@@ -50,7 +95,7 @@ N(d_1),N(d,2)\rightarrow 1\\
 N(-d_1),N(-d_2) \rightarrow 0\\
 $$
 
-Therefore:
+So at maturity, the value of the options is:
 
 $$
 c\rightarrow S-X\\
@@ -63,7 +108,7 @@ Likewise, the Put will not likely be executed.
 
 #### If $$S \rightarrow -\infty$$ then $$\ln{\frac{S}{X}}$$ is negative.
 
-So
+When negative,
 
 $$
 d_1,d_2 \rightarrow -\infty\\
@@ -71,9 +116,11 @@ N(d_1),N(d,2)\rightarrow 0\\
 N(-d_1),N(-d_2) \rightarrow 1\\
 $$
 
-Therefore:
+So at maturity, the value of the options is:
 
 $$
 c\rightarrow 0\\
 p\rightarrow X-S\\
 $$ 
+
+## References
