@@ -29,21 +29,37 @@ d_1=\frac{\ln{\left(\frac{S}{X}\right)}+(r + \frac{\sigma^2}{2})(T-t)}{\sigma\sq
 d_2=\frac{\ln{\left(\frac{S}{X}\right)}+(r - \frac{\sigma^2}{2})(T-t)}{\sigma\sqrt{T-t}} = d_1-\sigma\sqrt{T-t}\\
 $$
 
+and $$N$$ is the __distribution__ function of $$\phi(0,1)$$
+
+###
+
 ## Java
+
+### input.txt
+
+Let's suppose the following inputs:
+
+stock,115
+strike,80
+volatility,0.48
+interest,0.07
+timehorizon,0.5
 
 ### Implementation
 
 In the Java implementation, we simply assume $$t=0$$.
+So the timehorizon $$T-t$$ is the maturity $$T$$. 
+
 
 #### d1 & d2
 
 ```java
 d1 	= (Math.log(stock / strike) 
 	+ (interest + (Math.pow(volatility, 2) / 2)) 
-	* maturity)
-	/ (volatility * Math.sqrt(maturity));
+	* timehorizon)
+	/ (volatility * Math.sqrt(timehorizon));
 
-d2 	= d1 - (volatility * Math.sqrt(maturity));
+d2 	= d1 - (volatility * Math.sqrt(timehorizon));
 ```
 
 #### getCall()
@@ -51,7 +67,7 @@ d2 	= d1 - (volatility * Math.sqrt(maturity));
 ```java
 public double getCall() {
     return      (stock * distribution.cumulativeProbability(d1))
-            -   (strike * Math.exp(-interest * maturity)
+            -   (strike * Math.exp(-interest * timehorizon)
             *   distribution.cumulativeProbability(d2));
     }
 ```
@@ -59,17 +75,17 @@ public double getCall() {
 #### getPut()
 ```java
 public double getPut() {
-    return  strike * Math.exp(-interest * maturity)
+    return  strike * Math.exp(-interest * timehorizon)
     * distribution.cumulativeProbability(-d2)
     - stock * distribution.cumulativeProbability(-d1);
     }
 ```
 
-
-### Input
-
 ### Output
 
+Black Scholes
+	Call:39.63234093141300
+	Put:1.88077423201832
 
 ## Appendix
 
