@@ -30,14 +30,11 @@ d_2=\frac{\ln{\left(\frac{S}{X}\right)}+(r - \frac{\sigma^2}{2})(T-t)}{\sigma\sq
 $$
 
 
-
 ## Java
 
 ### Implementation
 
-In the Java implementation, we simply assume $$t=0$$.
-So the timehorizon $$T-t$$ is the maturity $$T$$. 
-
+`BlackScholes.java` is a concrete class implementing `PricingType.java`, an interface.
 
 #### d1 & d2
 
@@ -70,6 +67,9 @@ public double getPut() {
 ```
 
 ### input.txt
+
+In the Java implementation, we simply assume $$t=0$$.
+So the timehorizon $$T-t$$ is the maturity $$T$$. 
 
 Let's suppose the following inputs:
 
