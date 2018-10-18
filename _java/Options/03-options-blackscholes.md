@@ -22,7 +22,9 @@ c(S,t)=SN(d_1)-Xe^{r(T-t)}N(d_2)\\\\
 p(S,t)=Xe^{-r(T-t)}N(-d_2)-SN(-d_1)\\
 $$
 
-Where $$N$$ is the _distribution function_ of $$\phi(0,1)$$ and
+Where $$N$$ is the _distribution function_ of $$\phi(0,1)$$,
+
+and:
 
 $$
 d_1=\frac{\ln{\left(\frac{S}{X}\right)}+(r + \frac{\sigma^2}{2})(T-t)}{\sigma\sqrt{T-t}}\\
@@ -41,10 +43,10 @@ $$
 ```java
 public class BlackScholes implements PricingType
 ```
+`PricingType`, is an interface that defines two abstract methods `getCall()` and `getPut()`.
+In `BlackScholes`, we implement these methods.
 
-`BlackScholes` is a concrete class implementing `PricingType`, an interface, which defines two abstract methods `getCall()` and `getPut()`.
-
-Our input variables are stored in a collection `HashMap<String, Double>`. So at the constructor we initialize a number of instance variables.
+Our input variables are stored in a collection `HashMap<String, Double>`. At the constructor we initialize a number of instance variables.
 
 ```java
 stock          = hashMap.get("stock");
@@ -91,18 +93,25 @@ public double getPut() {
 In the Java implementation, we simply assume $$t=0$$.
 So the timehorizon $$T-t$$ is the maturity $$T$$. 
 
-Let's suppose the following inputs:
+Let's suppose the following:
 
+$$
+S = 115\\
+X = 80\\
+\sigma = 0.48\\
+r = 0.07\\
+T-t = 0.5\\
+$$
+
+So in `input.txt`, we have
+
+```
 stock,115
-
 strike,80
-
 volatility,0.48
-
 interest,0.07
-
 timehorizon,0.5
-
+```
 
 ### Output
 
