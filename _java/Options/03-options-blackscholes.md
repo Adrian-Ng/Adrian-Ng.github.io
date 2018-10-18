@@ -40,7 +40,15 @@ public class BlackScholes implements PricingType
 
 `BlackScholes` is a concrete class implementing `PricingType`, an interface, which defines two abstract methods `getCall()` and `getPut()`.
 
+Our input variables are stored in a collection `HashMap<String, Double>`. So at the constructor we initialize a number of instance variables.
 
+```java
+stock          = hashMap.get("stock");
+strike         = hashMap.get("strike");
+volatility     = hashMap.get("volatility");
+interest       = hashMap.get("interest");
+timehorizon    = hashMap.get("timehorizon");
+```
 
 #### d1 & d2
 
