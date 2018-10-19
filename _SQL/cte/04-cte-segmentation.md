@@ -3,7 +3,6 @@ title: "CTEs: Segmentation"
 permalink: /SQL/cte/Segmentation/
 excerpt: "Segmenting a set in SQL"
 toc: true
-classes: wide
 mathjax: true
 ---
 
