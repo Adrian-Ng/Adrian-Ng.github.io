@@ -15,8 +15,11 @@ In this example, we generate two test splits of 20% each and a 60% validation se
 
 ### SQL
 
-`NTILE(5)` allows us to split our data set into 5 groups.
-We use `NEWID()` to randomize the sampling on each transaction.
+We're making use of two functions.
+
+`NTILE(5)` is a windowed function which allows us to split our data set into 5 groups.
+
+`NEWID()` is used to randomize the sampling on each transaction.
 
 Then in the main body of the query we use a case statement to reduce the 5 groups to our final splits.
 
@@ -38,6 +41,8 @@ SELECT
 INTO #split
 FROM cteSplit;
 ```
+Warming: `NEWID()` produces a different result at each transaction¬
+{: .notice--warning}
 
 ### Percentage Distribution
 
