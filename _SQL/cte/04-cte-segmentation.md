@@ -41,7 +41,7 @@ SELECT
 INTO #split
 FROM cteSplit;
 ```
-Warming: `NEWID()` produces a different result at each transaction¬
+Warming: `NEWID()` produces a different result at each transaction!
 {: .notice--warning}
 
 ### Percentage Distribution
