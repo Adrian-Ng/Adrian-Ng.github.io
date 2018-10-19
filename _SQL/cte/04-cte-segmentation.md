@@ -54,7 +54,7 @@ SELECT
 	Split
 ,	COUNT(*)*100.0/SUM(COUNT(*)) OVER() AS Pcnt
 FROM #split
-GROUP BY Split
+GROUP BY Split;
 ```	
 
 ### Output
