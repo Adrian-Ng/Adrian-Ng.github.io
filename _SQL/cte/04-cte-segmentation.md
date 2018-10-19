@@ -8,7 +8,7 @@ mathjax: true
 
 ## Business "reasons"
 
-Suppose for _business reasons_ we need to segment a dataset into a random segments to perform an A/B test.
+Suppose for _business reasons_ we need to segment a dataset into buckets of different sizes to perform an A/B test.
 
 In this example, we generate two test splits of 20% each and a 60% validation set.
 The validation set is where we would apply whichever logic won in the A/B test
