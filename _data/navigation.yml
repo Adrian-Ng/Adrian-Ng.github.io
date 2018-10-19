@@ -68,6 +68,8 @@ SQL:
        url: /SQL/cte/dedupe/
      - title: "Recursion"
        url: /SQL/cte/Recursion/
+     - title: "Segmentation"
+       url: /SQL/cte/Segmentation/
    - title: Misc Stuff
      children:
      - title: "Openquery... and XML"

@@ -1,0 +1,71 @@
+---
+title: "CTEs: Segmentation"
+permalink: /SQL/cte/Segmentation/
+excerpt: "Segmenting a set in SQL"
+toc: true
+classes: wide
+mathjax: true
+---
+
+## Business "reasons"
+
+Suppose for _business reasons_ we need to segment a dataset into a random A/B split.
+
+In this example, we generate two test splits of 20% each and a 60% validation set.
+
+
+### SQL
+
+`NTILE(5)` allows us to split our data set into 5 groups.
+We use `NEWID()` to randomize the sampling on each transaction.
+
+Then in the main body of the query we use a case statement to reduce the 5 groups to our final splits.
+
+
+```sql
+WITH cteSplit AS (
+	SELECT
+		Email
+	,	NTILE(5) OVER (ORDER BY NEWID()) AS RN
+	FROM music.account
+	)
+SELECT
+	Email
+,	CASE WHEN RN = 1 THEN 'Split A'
+		 WHEN RN = 2 THEN 'Split B'
+		 ELSE 'Validation'
+		 END AS Split
+INTO #split
+FROM cteSplit;
+```
+
+### Percentage Distribution
+
+We can check the percentage distribution like so:
+
+
+```sql
+SELECT
+	Split
+,	COUNT(*)*100.0/SUM(COUNT(*)) OVER() AS Pcnt
+FROM #split
+GROUP BY Split
+```	
+
+### Output
+
+$$
+\begin{array}{|c|c|}
+\hline
+\text{Split} & \text{Pcnt} & \text{Total} & \text{Pcnt }\\ 
+\hline
+\text{Split A} & 20.000000000000\\
+\text{Split B} & 20.000000000000 \\
+\text{Validation} & 60.000000000000 \\
+\cdots & \cdots \\
+\hline
+\end{array}
+$$
+
+
+
