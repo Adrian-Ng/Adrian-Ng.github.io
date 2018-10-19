@@ -30,10 +30,11 @@ WITH cteSplit AS (
 	)
 SELECT
 	Email
-,	CASE WHEN RN = 1 THEN 'Split A'
-		 WHEN RN = 2 THEN 'Split B'
-		 ELSE 'Validation'
-		 END AS Split
+,	CASE 
+		WHEN RN = 1 THEN 'Split A'
+		WHEN RN = 2 THEN 'Split B'
+		ELSE 'Validation'
+	END AS Split
 INTO #split
 FROM cteSplit;
 ```
