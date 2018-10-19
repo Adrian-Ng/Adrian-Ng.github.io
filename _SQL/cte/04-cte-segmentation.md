@@ -56,12 +56,11 @@ GROUP BY Split
 $$
 \begin{array}{|c|c|}
 \hline
-\text{Split} & \text{Pcnt} & \text{Total} & \text{Pcnt }\\ 
+\text{Split} & \text{Pcnt }\\ 
 \hline
 \text{Split A} & 20.000000000000\\
 \text{Split B} & 20.000000000000 \\
 \text{Validation} & 60.000000000000 \\
-\cdots & \cdots \\
 \hline
 \end{array}
 $$
