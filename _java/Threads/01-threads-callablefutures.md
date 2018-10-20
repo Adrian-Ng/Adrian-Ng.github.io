@@ -2,11 +2,12 @@
 title: "Threads: Callable Future"
 permalink: /java/threads/callablefutures/
 excerpt: "Multithreading using Callable Futures"
-toc: true
+toc: false
 mathjax: true
+classes: wide
 ---
 
-##Notes
+## Notes
 
 This is how I did it, and this what worked for me.
 
