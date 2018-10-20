@@ -132,6 +132,10 @@ Java:
      children:
      - title: "Intro"
        url: /java/Basics/Intro/
+   - title: Multithreading    
+     children:
+     - title: "Callable Futures"
+       url: /java/threads/callablefutures/
    - title: Utils
      children:
      - title: "readTxt"
