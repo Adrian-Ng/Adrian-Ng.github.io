@@ -10,7 +10,7 @@ header:
 ---
 
 Here we explore three ways of computing option prices.
-Where possible, we explore Asian and American payoff in addition to European.
+Where possible, we explore the Asian and American payoffs in addition to the European.
 
 
 [Binomial Trees](/java/options/trees/){: .btn .btn--warning .btn--x-large}
