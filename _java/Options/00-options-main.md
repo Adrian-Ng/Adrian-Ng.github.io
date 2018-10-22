@@ -7,9 +7,9 @@ mathjax: true
 ---
 
 
-[Binomial Trees](/java/options/trees/){: .btn .btn--primary .btn--x-large}
-[Monte Carlo](/java/options/montecarlo/){: .btn .btn--primary .btn--x-large}
-[Black Scholes](/java/options/blackscholes/){: .btn .btn--primary .btn--x-large}
+[Binomial Trees](/java/options/trees/){: .btn .btn--warning .btn--x-large}
+[Monte Carlo](/java/options/montecarlo/){: .btn .btn--danger .btn--x-large}
+[Black Scholes](/java/options/blackscholes/){: .btn .btn--info .btn--x-large}
 
 
 ## Download
