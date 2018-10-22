@@ -20,4 +20,4 @@ Where possible, we explore the Asian and American payoffs in addition to the Eur
 
 ## Download
 
-[Github](https://github.com/Adrian-Ng/OptionPricer)
+[Github](https://github.com/Adrian-Ng/OptionPricer){: .btn .btn--success .btn--large}
