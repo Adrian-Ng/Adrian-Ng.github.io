@@ -6,7 +6,6 @@ toc: true
 mathjax: true
 ---
 
-
 ## Black Scholes differential equation
 
 $$

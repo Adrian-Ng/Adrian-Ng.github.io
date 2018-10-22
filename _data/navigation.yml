@@ -142,6 +142,7 @@ Java:
        url: /java/utils/readtxt/ 
        
    - title: Options Pricing
+     url: /java/options/main/
      children:
      - title: Binomial Trees
        url: /java/options/trees/
