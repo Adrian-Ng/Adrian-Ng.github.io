@@ -4,9 +4,10 @@ permalink: /java/options/
 excerpt: "Options Pricing: Three Java Implementations"
 toc: true
 mathjax: true
-layout: splash
 ---
 
+
+[Binomial Trees](/java/options/trees/){: .btn .btn--primary .btn--x-large}
 
 
 ## Download
