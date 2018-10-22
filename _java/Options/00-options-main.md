@@ -2,12 +2,14 @@
 title: "Options Pricing: Three Java Implementations"
 permalink: /java/options/
 excerpt: "Options Pricing: Three Java Implementations"
-toc: true
+classes: wide
 mathjax: true
 ---
 
 
 [Binomial Trees](/java/options/trees/){: .btn .btn--primary .btn--x-large}
+[Monte Carlo](/java/options/montecarlo/){: .btn .btn--primary .btn--x-large}
+[Black Scholes](/java/options/blackscholes/){: .btn .btn--primary .btn--x-large}
 
 
 ## Download
