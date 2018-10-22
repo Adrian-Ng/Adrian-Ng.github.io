@@ -4,6 +4,9 @@ permalink: /java/options/
 excerpt: "Options Pricing: Three Java Implementations"
 classes: wide
 mathjax: true
+header:
+  image: /assets/images/merapi.jpg
+  caption: "Photo credit: Mt Merapi, Java - Adrian Ng 2015"
 ---
 
 
