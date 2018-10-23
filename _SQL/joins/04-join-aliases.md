@@ -45,7 +45,7 @@ These alias also provide me the convenience of not being verbose with table refe
 
 ### You don't have to alias if you don't want to
 
-Aliasing is not necessary. If you want to, (or if you feel it reads better), you can avoid aliasing altogether and be explicit with your references like so:
+Aliasing is not necessary. If you want to, you can avoid aliasing altogether and be explicit with your references like so:
 
 ```sql
 SELECT
@@ -61,7 +61,7 @@ INNER JOIN	music.Song
 ON AlbumTrack.SongID = Song.SongID
 ```
 
-You may feel that this is more readble. Afterall, there are situations where it is possible to encode the meaning of something such that it becomes too complicated to understand (see below).
+You may feel that this is more readble. Afterall, there are situations where it is possible for aliases to make things more complicated instead.
 
 ### Don't do it this way
 
@@ -84,8 +84,12 @@ ON trk.AlbumID = alb.AlbumID
 INNER JOIN	Song 		AS c
 ON trk.SongID = sng.SongID;
 ```
+The idea here is that we can be consistent across all our queries with our aliasing.
+That way, we always know that the first table is `a`, followed by `b` and so on.
 
-By aliasing our tables in this manner, we imply that the ordering of our tables is important and immutable.
+This implies that the ordering by which we alias our tables is important and immutable by human hand.
+But it clearly isnt.
+
 
 
 
