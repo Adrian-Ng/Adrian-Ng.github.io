@@ -48,6 +48,8 @@ SQL:
        url: /SQL/joins/cartesian/
      - title: "Semi Joins"
        url: /SQL/joins/semi/
+     - title: "Aliasing"
+       url: /SQL/joins/aliases/
    - title: Aggregation
      children:
      - title: "Functions"
