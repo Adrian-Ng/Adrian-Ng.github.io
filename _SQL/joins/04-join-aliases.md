@@ -6,8 +6,9 @@ toc: true
 mathjax: true
 ---
 
-When you alias a table, you give it a little nickname that you can use for reference (within the scope of the query).
-This can be handy for denoting which table your fields come from, for instance. And it is definitely useful for implementing `JOINS`.
+When you alias a table, you give it a _little nickname_ that you can reference from within the query.
+
+For instance, this can be handy for denoting which table your fields come from. And it is definitely useful for `JOIN` predicates.
 
 ```sql
 SELECT
@@ -23,10 +24,8 @@ INNER JOIN	Song 		AS sng
 ON trk.SongID = sng.SongID;
 ```
 
-In the above example, we can see a few __Table Aliases__ such as:
-```sql
-INNER JOIN	Album AS alb
-```
+In the above example, we can see a few __Table Aliases__ such as `trk`, `alb`, and `sng`.
+
 This allows me to refer to the `Album` relation by using only the `alb` prefix.
 
 In the `SELECT`, it is immediately clear what fields I'm using and where they come from.
@@ -36,35 +35,57 @@ In the `JOIN` predicate, it saves me from using a verbose two-part naming conven
 ON AlbumTrack.AlbumId = Album.AlbumID
 ```
 
-
-
 ## But you can be explicit if you want
 
-Aliasing is not necessary. If you want to, or if you feel it reads better, you can avoid aliasing altogether and be explicit with your references like so:
+Aliasing is not necessary. If you want to, (or if you feel it reads better), you can avoid aliasing altogether and be explicit with your references like so:
 
 ```sql
 SELECT
-			music.AlbumTrack.AlbumID
-		,	music.Album.Title AS AlbumTitle
-		,	music.AlbumTrack.SongID
-		,	music.AlbumTrack.TrackNo
-		,	music.Song.Name AS SongTitle
-		FROM	music.AlbumTrack
-		INNER JOIN	music.Album
-		ON music.AlbumTrack.AlbumID = music.Album.AlbumID
-		INNER JOIN	music.Song
-		ON music.AlbumTrack.SongID = music.Song.SongID
+	AlbumTrack.AlbumID
+,	Album.Title AS AlbumTitle
+,	AlbumTrack.SongID
+,	AlbumTrack.TrackNo
+,	Song.Name AS SongTitle
+FROM	AlbumTrack
+INNER JOIN	Album
+ON AlbumTrack.AlbumID = Album.AlbumID
+INNER JOIN	music.Song
+ON AlbumTrack.SongID = Song.SongID
 ```
 
-You may feel that this is more readble. Afterall, there are situations where it is possible to encode the meaning of something such that it becomes too complicated to understand.
+You may feel that this is more readble. Afterall, there are situations where it is possible to encode the meaning of something such that it becomes too complicated to understand (see below).
+
+## Don't do it this way
+
+I had a colleague once suggest I do this.
+
+Note: do not do this. It makes no sense whatsoever!
+{: .notice--danger}
+
+Let's take the original query and change all the aliases to _letters of the alphabet_.
+
+```sql
+	a.AlbumID
+,	b.Title AS AlbumTitle 
+,	a.SongID
+,	a.TrackNo
+,	c.Name AS SongTitle
+FROM		AlbumTrack 	AS a
+INNER JOIN	Album 		AS b
+ON trk.AlbumID = alb.AlbumID
+INNER JOIN	Song 		AS c
+ON trk.SongID = sng.SongID;
+```
+
+By aliasing our tables in this manner, we imply that the ordering of our tables is important and immutable.
 
 
-## Too complex
 
-A colleague once suggested I do this.
+But look at the `SELECT` and try to discern which tables the fields belong to. `b.Title`, for instance is 
 
-Note: do not do this. It is dumb.
-
+Inner Joins are both _commutative__ and __associative__ - the order in which you write or group them does not matter in terms of the end result.
+While the join order could have an  However, the _query optimizer_ will figure that out for you.
+{: .notice--warning}
 
 
 
