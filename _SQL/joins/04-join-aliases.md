@@ -24,18 +24,16 @@ INNER JOIN	Song 		AS sng
 ON trk.SongID = sng.SongID;
 ```
 
-In the above example, we can see a few __Table Aliases__ such as `trk`, `alb`, and `sng`.
+In the above example, we can see a few __Table Aliases__, these being `trk`, `alb`, and `sng`.
 
-This allows me to refer to the `Album` relation by using only the `alb` prefix.
+Now if i want to reference the `Album` relation, I can simply use the alias `alb`.
 
-In the `SELECT`, it is immediately clear what fields I'm using and where they come from.
-In the `JOIN` predicate, it saves me from using a verbose two-part naming convention like so:
+Notice how in the `SELECT`, it is immediately clear what fields I'm using and which relations they come from.
+And in the `JOIN` predicate, it saves me from using a verbose two-part naming convention.
 
-```sql
-ON AlbumTrack.AlbumId = Album.AlbumID
-```
+But if you want to alias, see below.
 
-## But you can be explicit if you want
+## You don't have to alias if you don't want to
 
 Aliasing is not necessary. If you want to, (or if you feel it reads better), you can avoid aliasing altogether and be explicit with your references like so:
 
