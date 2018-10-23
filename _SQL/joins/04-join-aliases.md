@@ -6,10 +6,6 @@ toc: true
 mathjax: true
 ---
 
-When you alias a table, you give it a _little nickname_ that you can reference from within the query.
-
-For instance, this can be handy for denoting which table your fields come from. And it is definitely useful for `JOIN` predicates.
-
 ```sql
 SELECT
 	trk.AlbumID
@@ -24,16 +20,31 @@ INNER JOIN	Song 		AS sng
 ON trk.SongID = sng.SongID;
 ```
 
+
+`AS` after a _column_ or _table_ denotes an alias. 
+
+When you _alias_ a table, you give it a _little nickname_ that you can reference from within the query. 
+
+For instance, this can be handy for denoting which table your fields come from. And it is definitely useful for `JOIN` predicates.
+
+
+
+## Column Aliases
+
+
+
+
+## Table Aliases
+
 In the above example, we can see a few __Table Aliases__, these being `trk`, `alb`, and `sng`.
 
 Now if i want to reference the `Album` relation, I can simply use the alias `alb`.
 
 Notice how in the `SELECT`, it is immediately clear what fields I'm using and which relations they come from.
-And in the `JOIN` predicate, it saves me from using a verbose two-part naming convention.
 
-But if you want to alias, see below.
+And in the `JOIN` predicate, it saves me from using a verbose table reference (which would also be valid).
 
-## You don't have to alias if you don't want to
+### You don't have to alias if you don't want to
 
 Aliasing is not necessary. If you want to, (or if you feel it reads better), you can avoid aliasing altogether and be explicit with your references like so:
 
@@ -53,7 +64,7 @@ ON AlbumTrack.SongID = Song.SongID
 
 You may feel that this is more readble. Afterall, there are situations where it is possible to encode the meaning of something such that it becomes too complicated to understand (see below).
 
-## Don't do it this way
+### Don't do it this way
 
 I had a colleague once suggest I do this.
 
