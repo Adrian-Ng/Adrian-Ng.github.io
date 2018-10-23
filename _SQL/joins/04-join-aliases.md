@@ -6,6 +6,8 @@ toc: true
 mathjax: true
 ---
 
+`AS` after a _column_ or _table_ denotes an alias. 
+
 ```sql
 SELECT
 	trk.AlbumID
@@ -20,17 +22,19 @@ INNER JOIN	Song 		AS sng
 ON trk.SongID = sng.SongID;
 ```
 
-
-`AS` after a _column_ or _table_ denotes an alias. 
-
 When you _alias_ a table, you give it a _little nickname_ that you can reference from within the query. 
 
 For instance, this can be handy for denoting which table your fields come from. And it is definitely useful for `JOIN` predicates.
 
-
-
 ## Column Aliases
 
+In the above example, we rename `alb.Title` to `AlbumTitle`.
+
+In Relational Algebra, this is a _rename_.
+
+$$
+\rho_{AlbumTitle/Title}(Album)
+$$
 
 
 
