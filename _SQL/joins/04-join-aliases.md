@@ -6,7 +6,7 @@ toc: true
 mathjax: true
 ---
 
-`AS` after a _column_ or _table_ denotes an alias. 
+`AS` after a _column_ or _table_ precedes an __alias__. 
 
 ```sql
 SELECT
@@ -22,10 +22,6 @@ INNER JOIN	Song 		AS sng
 ON trk.SongID = sng.SongID;
 ```
 
-When you _alias_ a table, you give it a _little nickname_ that you can reference from within the query. 
-
-For instance, this can be handy for denoting which table your fields come from. And it is definitely useful for `JOIN` predicates.
-
 ## Column Aliases
 
 In the above example, we rename `alb.Title` to `AlbumTitle`.
@@ -37,16 +33,15 @@ $$
 $$
 
 
-
 ## Table Aliases
 
 In the above example, we can see a few __Table Aliases__, these being `trk`, `alb`, and `sng`.
 
-Now if i want to reference the `Album` relation, I can simply use the alias `alb`.
+Now if i want to reference the `Album` relation, I can simply use the alias `alb` (and pray that _Intellisense_ is working).
 
-Notice how in the `SELECT`, it is immediately clear what fields I'm using and which relations they come from.
+Notice how in the `SELECT`, it is immediately clear what fields I'm using and which relations they come from. This is simply because I've chosen sensibly named aliases.
 
-And in the `JOIN` predicate, it saves me from using a verbose table reference (which would also be valid).
+These alias also provide me the convenience of not being verbose with table references. This mainly comes into play in the `JOIN` predicates.
 
 ### You don't have to alias if you don't want to
 
