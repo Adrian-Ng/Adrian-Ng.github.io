@@ -65,9 +65,9 @@ You may feel that this is more readble. Afterall, there are situations where it 
 
 ### Don't do it this way
 
-I had a colleague once suggest I do this.
+I had a manager once suggest I adopt this manner of aliasing.
 
-Note: do not do this. It makes no sense whatsoever!
+Note: I would suggest you not do this as it makes no sense whatsoever!
 {: .notice--danger}
 
 Let's take the original query and change all the aliases to _letters of the alphabet_.
