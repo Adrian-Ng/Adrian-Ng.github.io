@@ -80,22 +80,61 @@ Let's take the original query and change all the aliases to _letters of the alph
 ,	c.Name AS SongTitle
 FROM		AlbumTrack 	AS a
 INNER JOIN	Album 		AS b
-ON trk.AlbumID = alb.AlbumID
+ON a.AlbumID = b.AlbumID
 INNER JOIN	Song 		AS c
-ON trk.SongID = sng.SongID;
+ON a.SongID = c.SongID;
 ```
-The idea here is that we can be consistent across all our queries with our aliasing.
+The idea here is that we can be consistent across all our queries with our table aliases.
 That way, we always know that the first table is `a`, followed by `b` and so on.
 
-This implies that the ordering by which we alias our tables is important and immutable by human hand.
-But it clearly isnt.
+Furthermore, one obvious benefit from encoding via alphabet is the inherent cardinality of The Alphabet.
+That is, The Alphabet is an ordered sequence and this implies therefore that the ordering by which we alias our tables is important.
+
+But it isn't. 
+
+Consider this `INNER JOIN`.
+
+```sql
+FROM		AlbumTrack 	AS a
+INNER JOIN	Album 		AS b
+ON a.AlbumID = b.AlbumID
+```
+
+It could be written as below and produce the same result.
+
+```sql
+FROM		Album 		AS a
+INNER JOIN	Album Track	AS b
+ON a.AlbumID = b.AlbumID
+```
+
+Additionally, order of the groupings of multiple joins does not matter. 
+
+```sql
+FROM		AlbumTrack 	AS a
+INNER JOIN	Album 		AS b
+ON a.AlbumID = b.AlbumID
+INNER JOIN	Song 		AS c
+ON a.SongID = c.SongID;
+```
+
+The above is equivalent to:
+
+```sql
+FROM		AlbumTrack 	AS a
+INNER JOIN	Song 		AS b
+ON a.SongID = b.SongID
+INNER JOIN	Album 		AS c
+ON a.AlbumID = c.AlbumID;
+```
 
 
+Having established that order does not matter, now look at the `SELECT` and try to discern which tables the fields belong to. 
+Despite our consistency in having the second table always  aliased as `b`, I don't actually know what that table really is!
+That is, it is not immediately clear that `b.Title` is a projection of `Album`. But it's more obvious that `alb.Title` is a projection of `Album`.
 
-
-But look at the `SELECT` and try to discern which tables the fields belong to. `b.Title`, for instance is 
-
-Inner Joins are both _commutative__ and __associative__ - the order in which you write or group them does not matter in terms of the end result.
+Inner Joins are both __commutative__ and __associative__ - the order in which you write or group them does not matter in terms of the end result.
+Outer joins are _not_ commutative.
 While the join order could have an  However, the _query optimizer_ will figure that out for you.
 {: .notice--warning}
 
