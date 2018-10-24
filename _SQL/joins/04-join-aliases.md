@@ -32,6 +32,9 @@ $$
 \rho_{AlbumTitle/Title}(Album)
 $$
 
+Note how it is still obvious that `alb.Title` is a projection of `Album`.
+{: .notice--warning}
+
 
 ## Table Aliases
 
@@ -41,7 +44,7 @@ Now if i want to reference the `Album` relation, I can simply use the alias `alb
 
 Notice how in the `SELECT`, it is immediately clear what fields I'm using and which relations they come from. This is simply because I've chosen sensibly named aliases.
 
-These alias also provide me the convenience of not being verbose with table references. This mainly comes into play in the `JOIN` predicates.
+These alias also provide me the convenience of not having tobe verbose with table references. This mainly comes into play in the `JOIN` predicates.
 
 ### You don't have to alias if you don't want to
 
@@ -61,14 +64,13 @@ INNER JOIN	music.Song
 ON AlbumTrack.SongID = Song.SongID
 ```
 
-You may feel that this is more readble. Afterall, there are situations where it is possible for aliases to make things more complicated instead.
+You may feel that this is more readable. 
 
-### Don't do it this way
+And certainly there are situations where it is possible for aliases to make things more complicated instead...
 
-I had a manager once suggest I adopt this manner of aliasing.
+### Alphabetical Aliasing
 
-Note: I would suggest you not do this as it makes no sense whatsoever!
-{: .notice--danger}
+I had a manager once suggest I adopt this manner of aliasing. But I am not sure that it makes any sense.
 
 Let's take the original query and change all the aliases to _letters of the alphabet_.
 
@@ -85,12 +87,12 @@ INNER JOIN	Song 		AS c
 ON a.SongID = c.SongID;
 ```
 The idea here is that we can be consistent across all our queries with our table aliases.
-That way, we always know that the first table is `a`, followed by `b` and so on.
+That way, we always know that the first table is `a`, followed by `b` and so on...
 
-Furthermore, one obvious benefit from encoding via alphabet is the inherent cardinality of The Alphabet.
+One potential benefit from encoding via alphabet is that it allows us to make use of cardinality of The Alphabet.
 That is, The Alphabet is an ordered sequence and this implies therefore that the ordering by which we alias our tables is important.
 
-But it isn't. 
+I disagree that it is important enough to sacrifice the readability of aliases, which is the whole point.
 
 Consider this `INNER JOIN`.
 
@@ -108,7 +110,7 @@ INNER JOIN	Album Track	AS b
 ON a.AlbumID = b.AlbumID
 ```
 
-Additionally, order of the groupings of multiple joins does not matter. 
+Additionally, order of the groupings of multiple joins does not matter:
 
 ```sql
 FROM		AlbumTrack 	AS a
@@ -129,9 +131,13 @@ ON a.AlbumID = c.AlbumID;
 ```
 
 
-Having established that order does not matter, now look at the `SELECT` and try to discern which tables the fields belong to. 
+Now let's consider readability.
+Look at the `SELECT` and try to discern which tables the fields belong to. 
 Despite our consistency in having the second table always  aliased as `b`, I don't actually know what that table really is!
-That is, it is not immediately clear that `b.Title` is a projection of `Album`. But it's more obvious that `alb.Title` is a projection of `Album`.
+That is, it is not immediately clear that `b.Title` is a projection of `Album`. 
+In order to know this, I would have to remember that `Album` is the second table.
+Of course, I would not know this and it would defeat the purpose of having an alias.
+
 
 Inner Joins are both __commutative__ and __associative__ - the order in which you write or group them does not matter in terms of the end result.
 Outer joins are _not_ commutative.
