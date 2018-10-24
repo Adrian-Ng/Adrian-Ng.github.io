@@ -131,6 +131,11 @@ INNER JOIN	Album 		AS c
 ON a.AlbumID = c.AlbumID;
 ```
 
+Inner Joins are both __commutative__ and __associative__ - the order in which you write or group them does not matter in terms of the end result.
+In terms of the execution plan, there may be some optimal ordering. However, the _query optimizer_ will figure that out for you.
+{: .notice--warning}
+
+
 ### Readability
 Let's focus on this part:
 ```sql
@@ -143,16 +148,10 @@ Let's focus on this part:
 
 Try to discern which tables the fields belong to.
 
-Despite our consistency in having the second table always aliased as `b`, I don't actually know what that table really is!
-It is not immediately clear that `b.Title` is a projection of `Album`. 
-In order to know this, I would have to remember that `Album` is the second table.
-Of course, I would not know this and it would defeat the purpose of having an alias.
+Despite our consistency in having the second table always aliased as `b`, I don't know what table `b` refers to.
+Apparently `b.Title` is a projection of `Album`, but I would have to peruse the code to find that out.
 
 
-Inner Joins are both __commutative__ and __associative__ - the order in which you write or group them does not matter in terms of the end result.
-Outer joins are _not_ commutative.
-While the join order could have an  However, the _query optimizer_ will figure that out for you.
-{: .notice--warning}
 
 
 
