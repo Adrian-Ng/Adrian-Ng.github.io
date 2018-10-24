@@ -22,19 +22,7 @@ INNER JOIN	Song 		AS sng
 ON trk.SongID = sng.SongID;
 ```
 
-## Column Aliases
 
-In the above example, we rename `alb.Title` to `AlbumTitle`.
-
-
-Note how it is still obvious that `alb.Title` is a projection of `Album`, thanks to the alias.
-{: .notice--warning}
-
-In Relational Algebra, this is a _rename_.
-
-$$
-\rho_{AlbumTitle/Title}(Album)
-$$
 ## Table Aliases
 
 In the above example, we can see a few __Table Aliases__, these being `trk`, `alb`, and `sng`.
@@ -43,7 +31,7 @@ Now if i want to reference the `Album` relation, I can simply use the alias `alb
 
 Notice how in the `SELECT`, it is immediately clear what fields I'm using and which relations they come from. This is simply because I've chosen sensibly named aliases.
 
-These alias also provide me the convenience of not having tobe verbose with table references. This mainly comes into play in the `JOIN` predicates.
+I've chosen to use short aliases. So my table references are not as verbose. This mainly comes into play in the `JOIN` predicates.
 
 ### You don’t have to alias if you don’t want to
 
@@ -74,6 +62,7 @@ I had a manager once suggest I adopt this manner of aliasing. But I am not sure 
 Let's take the original query and change all the aliases to _letters of the alphabet_.
 
 ```sql
+SELECT
 	a.AlbumID
 ,	b.Title AS AlbumTitle 
 ,	a.SongID
@@ -150,3 +139,22 @@ Try to discern which tables the fields belong to.
 
 Despite our consistency in having the second table always aliased as `b`, I don't know what table `b` refers to.
 Apparently `b.Title` is a projection of `Album`, but I would have to peruse the code to find that out.
+
+## Column Aliases
+
+```sql
+SELECT
+	b.Title AS AlbumTitle
+... 
+```
+In the above example, we rename `alb.Title` to `AlbumTitle`.
+
+
+Note how it is still obvious that `alb.Title` is a projection of `Album`, thanks to the alias.
+{: .notice--warning}
+
+In Relational Algebra, this is a _rename_.
+
+$$
+\rho_{AlbumTitle/Title}(Album)
+$$
