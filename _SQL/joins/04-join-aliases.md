@@ -95,7 +95,7 @@ I disagree that it is important enough to sacrifice the readability of aliases, 
 
 ### Join Order
 
-Consider this `INNER JOIN`.
+An `INNER JOIN` is __commutative__.
 
 ```sql
 FROM		AlbumTrack 	AS a
@@ -103,7 +103,7 @@ INNER JOIN	Album 		AS b
 ON a.AlbumID = b.AlbumID
 ```
 
-It could be written as below and produce the same result.
+The above could be written as below and produce the same result.
 
 ```sql
 FROM		Album 		AS a
@@ -111,7 +111,8 @@ INNER JOIN	Album Track	AS b
 ON a.AlbumID = b.AlbumID
 ```
 
-Additionally, order of the groupings of multiple joins does not matter:
+An `INNER JOIN` is __associative__.
+The order of the groupings of multiple joins does not matter:
 
 ```sql
 FROM		AlbumTrack 	AS a
@@ -131,7 +132,6 @@ INNER JOIN	Album 		AS c
 ON a.AlbumID = c.AlbumID;
 ```
 
-Inner Joins are both __commutative__ and __associative__ - the order in which you write or group them does not matter in terms of the end result.
 In terms of the execution plan, there may be some optimal ordering. However, the _query optimizer_ will figure that out for you.
 {: .notice--warning}
 
@@ -150,11 +150,3 @@ Try to discern which tables the fields belong to.
 
 Despite our consistency in having the second table always aliased as `b`, I don't know what table `b` refers to.
 Apparently `b.Title` is a projection of `Album`, but I would have to peruse the code to find that out.
-
-
-
-
-
-
-
-
