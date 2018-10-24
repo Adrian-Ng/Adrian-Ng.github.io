@@ -26,16 +26,15 @@ ON trk.SongID = sng.SongID;
 
 In the above example, we rename `alb.Title` to `AlbumTitle`.
 
+
+Note how it is still obvious that `alb.Title` is a projection of `Album`, thanks to the alias.
+{: .notice--warning}
+
 In Relational Algebra, this is a _rename_.
 
 $$
 \rho_{AlbumTitle/Title}(Album)
 $$
-
-Note how it is still obvious that `alb.Title` is a projection of `Album`.
-{: .notice--warning}
-
-
 ## Table Aliases
 
 In the above example, we can see a few __Table Aliases__, these being `trk`, `alb`, and `sng`.
@@ -46,7 +45,7 @@ Notice how in the `SELECT`, it is immediately clear what fields I'm using and wh
 
 These alias also provide me the convenience of not having tobe verbose with table references. This mainly comes into play in the `JOIN` predicates.
 
-### You don't have to alias if you don't want to
+### You don’t have to alias if you don’t want to
 
 Aliasing is not necessary. If you want to, you can avoid aliasing altogether and be explicit with your references like so:
 
@@ -68,7 +67,7 @@ You may feel that this is more readable.
 
 And certainly there are situations where it is possible for aliases to make things more complicated instead...
 
-### Alphabetical Aliasing
+## Alphabetical Table Aliases
 
 I had a manager once suggest I adopt this manner of aliasing. But I am not sure that it makes any sense.
 
@@ -93,6 +92,8 @@ One potential benefit from encoding via alphabet is that it allows us to make us
 That is, The Alphabet is an ordered sequence and this implies therefore that the ordering by which we alias our tables is important.
 
 I disagree that it is important enough to sacrifice the readability of aliases, which is the whole point.
+
+### Join Order
 
 Consider this `INNER JOIN`.
 
@@ -130,8 +131,7 @@ INNER JOIN	Album 		AS c
 ON a.AlbumID = c.AlbumID;
 ```
 
-
-Now let's consider readability.
+### Readability
 Look at the `SELECT` and try to discern which tables the fields belong to. 
 Despite our consistency in having the second table always  aliased as `b`, I don't actually know what that table really is!
 That is, it is not immediately clear that `b.Title` is a projection of `Album`. 
