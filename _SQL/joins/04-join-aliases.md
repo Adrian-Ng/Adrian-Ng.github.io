@@ -132,9 +132,19 @@ ON a.AlbumID = c.AlbumID;
 ```
 
 ### Readability
-Look at the `SELECT` and try to discern which tables the fields belong to. 
-Despite our consistency in having the second table always  aliased as `b`, I don't actually know what that table really is!
-That is, it is not immediately clear that `b.Title` is a projection of `Album`. 
+Let's focus on this part:
+```sql
+	a.AlbumID
+,	b.Title AS AlbumTitle 
+,	a.SongID
+,	a.TrackNo
+,	c.Name AS SongTitle
+```
+
+Try to discern which tables the fields belong to.
+
+Despite our consistency in having the second table always aliased as `b`, I don't actually know what that table really is!
+It is not immediately clear that `b.Title` is a projection of `Album`. 
 In order to know this, I would have to remember that `Album` is the second table.
 Of course, I would not know this and it would defeat the purpose of having an alias.
 
