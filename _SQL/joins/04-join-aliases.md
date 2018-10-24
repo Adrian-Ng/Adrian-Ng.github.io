@@ -67,7 +67,7 @@ You may feel that this is more readable.
 
 And certainly there are situations where it is possible for aliases to make things more complicated instead...
 
-## Alphabetical Table Aliases
+## Alphabetical Table Aliases = BAD
 
 I had a manager once suggest I adopt this manner of aliasing. But I am not sure that it makes any sense.
 
