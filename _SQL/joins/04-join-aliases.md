@@ -74,13 +74,35 @@ ON a.AlbumID = b.AlbumID
 INNER JOIN	Song 		AS c
 ON a.SongID = c.SongID;
 ```
-The idea here is that we can be consistent across all our queries with our table aliases.
-That way, we always know that the first table is `a`, followed by `b` and so on...
+### Why alphabet?
 
-One potential benefit from encoding via alphabet is that it allows us to make use of cardinality of The Alphabet.
-That is, The Alphabet is an ordered sequence and this implies therefore that the ordering by which we alias our tables is important.
+One idea here is that we can be consistent across all our queries with our table aliases.
+That way, we always know that the first table is `a`, followed by `b` and so on. 
 
-With multiple `INNER JOIN`s, the order is __not__ important because they are commutative and associative.
+The obvious benefit is that it allows us to make use of __Cardinality of The Alphabet__.
+That is, The Alphabet is an ordered sequence and if the ordering of our tables is important then we might want to represent that importance via our aliases.
+
+But aliases are just _syntactic sugar_. 
+As I mentioned above, you don't even need to have aliases. 
+The point of an alias is to improve readability.
+
+### Readability
+Let's focus on this part:
+```sql
+SELECT
+	a.AlbumID
+,	b.Title AS AlbumTitle 
+,	a.SongID
+,	a.TrackNo
+,	c.Name AS SongTitle
+```
+
+Try to discern which tables the fields belong to.
+
+Despite our consistency in having the second table always aliased as `b`, we don't know what table `b` refers to.
+Apparently `b.Title` is a projection of `Album`, but I would have to peruse the code to find that out.
+
+The ordering of our tables is not important when it comes to the `INNER JOIN`.
 
 ### Join Order
 
@@ -125,20 +147,7 @@ In terms of the execution plan, there may be some optimal ordering. However, the
 {: .notice--warning}
 
 
-### Readability
-Let's focus on this part:
-```sql
-	a.AlbumID
-,	b.Title AS AlbumTitle 
-,	a.SongID
-,	a.TrackNo
-,	c.Name AS SongTitle
-```
 
-Try to discern which tables the fields belong to.
-
-Despite our consistency in having the second table always aliased as `b`, I don't know what table `b` refers to.
-Apparently `b.Title` is a projection of `Album`, but I would have to peruse the code to find that out.
 
 ## Column Aliases
 
