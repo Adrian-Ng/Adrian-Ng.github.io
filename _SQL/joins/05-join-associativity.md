@@ -34,6 +34,7 @@ Similarly, the below are equivalent
 ```sql
 (A INNER JOIN B) INNER JOIN C
 A INNER JOIN (B INNER JOIN C)
+A INNER JOIN B INNER JOIN C
 ```
 
 
