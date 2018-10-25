@@ -121,38 +121,38 @@ The ordering of our tables is not important when it comes to the `INNER JOIN`.
 An `INNER JOIN` is __commutative__.
 
 ```sql
-FROM		AlbumTrack 	AS a
-INNER JOIN	Album 		AS b
-ON a.AlbumID = b.AlbumID
+FROM		AlbumTrack 	AS trk
+INNER JOIN	Album 		AS alb
+ON trk.AlbumID = alb.AlbumID
 ```
 
 The above could be written as below and produce the same result.
 
 ```sql
-FROM		Album 		AS a
-INNER JOIN	Album Track	AS b
-ON a.AlbumID = b.AlbumID
+FROM		Album 		AS alb
+INNER JOIN	AlbumTrack	AS trk
+ON alb.AlbumID = trk.AlbumID
 ```
 
 An `INNER JOIN` is __associative__.
 The order of the groupings of multiple joins does not matter:
 
 ```sql
-FROM		AlbumTrack 	AS a
-INNER JOIN	Album 		AS b
-ON a.AlbumID = b.AlbumID
-INNER JOIN	Song 		AS c
-ON a.SongID = c.SongID;
+FROM		AlbumTrack 	AS trk
+INNER JOIN	Album 		AS alb
+ON trk.AlbumID = alb.AlbumID
+INNER JOIN	Song 		AS sng
+ON trk.SongID = sng.SongID;
 ```
 
 The above is equivalent to:
 
 ```sql
-FROM		AlbumTrack 	AS a
-INNER JOIN	Song 		AS b
-ON a.SongID = b.SongID
-INNER JOIN	Album 		AS c
-ON a.AlbumID = c.AlbumID;
+FROM		AlbumTrack 	AS trk
+INNER JOIN	Song 		AS sng
+ON trk.SongID = sng.SongID
+INNER JOIN	Album 		AS alb
+ON trk.AlbumID = alb.AlbumID;
 ```
 
 In terms of the execution plan, there may be some optimal ordering. However, the _query optimizer_ will figure that out for you.
@@ -170,11 +170,9 @@ SELECT
 ```
 In the above example, we rename `alb.Title` to `AlbumTitle`.
 
-
 Note how it is still obvious that `alb.Title` is a projection of `Album`, thanks to the alias.
-{: .notice--warning}
 
-In Relational Algebra, this is a _rename_.
+In Relational Algebra, this is simple a _rename_.
 
 $$
 \rho_{AlbumTitle/Title}(Album)
