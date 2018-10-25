@@ -27,12 +27,29 @@ $$
 $$
 
 
-## Inner Join
+## SQL
 
-Similarly, the below are equivalent
+### Inner Join
 
 ```sql
-A INNER JOIN B
-B INNER JOIN A
+A INNER JOIN B = B INNER JOIN A
 ```
 
+### Left/Right Join
+
+Left/Right joins are not commutative.
+
+That is 
+```sql
+A LEFT JOIN B <> B LEFT JOIN A
+```
+But:
+
+```sql
+A LEFT JOIN B = B RIGHT JOIN A
+```
+
+
+## References
+http://blog.ylett.com/2011/09/non-associativity-of-sql-table-joins.html
+http://www.sql-tutorial.ru/en/book_explicit_join_operations/page4.html

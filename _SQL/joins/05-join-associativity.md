@@ -27,7 +27,7 @@ $$
 $$
 
 
-## SQL Joins
+## Associative SQL Joins
 
 SQL Joins are associative when they are of the same type
 
