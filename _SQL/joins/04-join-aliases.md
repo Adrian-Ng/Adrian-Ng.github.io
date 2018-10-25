@@ -80,7 +80,7 @@ That way, we always know that the first table is `a`, followed by `b` and so on.
 One potential benefit from encoding via alphabet is that it allows us to make use of cardinality of The Alphabet.
 That is, The Alphabet is an ordered sequence and this implies therefore that the ordering by which we alias our tables is important.
 
-I disagree that it is important enough to sacrifice the readability of aliases, which is the whole point.
+With multiple `INNER JOIN`s, the order is __not__ important because they are commutative and associative.
 
 ### Join Order
 
