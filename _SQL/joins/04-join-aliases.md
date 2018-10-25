@@ -35,7 +35,7 @@ I've chosen to use short aliases. So my table references are not as verbose. Thi
 
 ### You don’t have to alias if you don’t want to
 
-Aliasing is not necessary. If you want to, you can avoid aliasing altogether and be explicit with your references like so:
+Aliasing is not necessary (except in self-joins!). If you want to, you can avoid aliasing altogether and be explicit with your references like so:
 
 ```sql
 SELECT
@@ -99,15 +99,20 @@ SELECT
 
 Try to discern which tables the fields belong to.
 
-Obviously, `a.AlbumID` comes from `a`. But what table is that?
-Likewise, `b.Title` comes from `b`. But what table is that?
+Obviously, `a.AlbumID` comes from `a`. 
+Likewise, `b.Title` comes from `b`. 
+But what tables are these?
 
-In order for the alias to have any __meaning__, I need to peruse the query in its entirely.
+In order for the alias to have any __meaning__, we need to peruse the query in its entirely.
+That is, these aliases provide no benefit in _readability_.
 
+### Join Order
+
+However, let's say we are happy to live with this concession.
+The 
 
 The ordering of our tables is not important when it comes to the `INNER JOIN`.
 
-### Join Order
 
 An `INNER JOIN` is __commutative__.
 
