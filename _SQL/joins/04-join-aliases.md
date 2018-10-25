@@ -104,12 +104,13 @@ Likewise, `b.Title` comes from `b`.
 But what tables are these?
 
 In order for the alias to have any __meaning__, we need to peruse the query in its entirely.
-That is, these aliases provide no benefit in _readability_.
+And we will need to do this _every time_. There is no way that we will be able to remember what `a` or `b` or `c` is.
+Ultimately, these aliases provide no benefit in _readability_.
 
 ### Join Order
 
 However, let's say we are happy to live with this concession.
-The 
+We still have the benefit of the 
 
 The ordering of our tables is not important when it comes to the `INNER JOIN`.
 
