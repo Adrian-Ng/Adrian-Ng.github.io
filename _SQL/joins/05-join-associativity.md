@@ -6,18 +6,34 @@ toc: true
 mathjax: true
 ---
 
-# Associativity
+When an operation is __associative__, the _grouping_ of elements does not matter.
 
-With the associative property, the order of operation does not matter.
+Addition and multiplication are both associative. You can add brackets or remove brackets. The result is always the same.
 
 ## Addition
 
 $$
-1 + 2 + 3 = 3 + 2 + 1
+(1 + 2) + 3 = 6\\
+3 + (2 + 1) = 6\\
+3 + 2 + 1 = 6
 $$
 
 ## Multiplication
 
 $$
-1 \times 2 \times 3 = 3 \times 2 \times 1
+(3 \times 2) \times 1 = 6\\
+3 \times (2 \times 1) = 6\\
+3 \times 2 \times 1 = 6
 $$
+
+
+## Inner Join
+
+Similarly, the below are equivalent
+
+```sql
+(A INNER JOIN B) INNER JOIN C
+A INNER JOIN (B INNER JOIN C)
+```
+
+
