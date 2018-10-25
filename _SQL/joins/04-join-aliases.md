@@ -77,14 +77,14 @@ ON a.SongID = c.SongID;
 ### Why alphabet?
 
 One idea here is that we can be consistent across all our queries with our table aliases.
-That way, we always know that the first table is `a`, followed by `b` and so on. 
+That way, we always know that the first table is `a`, followed by `b` and so on... 
 
 The obvious benefit is that it allows us to make use of __Cardinality of The Alphabet__.
 That is, The Alphabet is an ordered sequence and if the ordering of our tables is important then we might want to represent that importance via our aliases.
 
 But aliases are just _syntactic sugar_. 
 As I mentioned above, you don't even need to have aliases. 
-The point of an alias is to improve readability.
+The point of an alias is to __improve readability__.
 
 ### Readability
 Let's focus on this part:
@@ -99,8 +99,11 @@ SELECT
 
 Try to discern which tables the fields belong to.
 
-Despite our consistency in having the second table always aliased as `b`, we don't know what table `b` refers to.
-Apparently `b.Title` is a projection of `Album`, but I would have to peruse the code to find that out.
+Obviously, `a.AlbumID` comes from `a`. But what table is that?
+Likewise, `b.Title` comes from `b`. But what table is that?
+
+In order for the alias to have any __meaning__, I need to peruse the query in its entirely.
+
 
 The ordering of our tables is not important when it comes to the `INNER JOIN`.
 
