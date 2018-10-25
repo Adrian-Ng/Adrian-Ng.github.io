@@ -27,14 +27,21 @@ $$
 $$
 
 
-## Inner Join
+## SQL Joins
 
-Similarly, the below are equivalent
+SQL Joins are associative when they are of the same type
+
+### Inner Join Only
 
 ```sql
-(A INNER JOIN B) INNER JOIN C
-A INNER JOIN (B INNER JOIN C)
-A INNER JOIN B INNER JOIN C
+(A INNER JOIN B) INNER JOIN C = A INNER JOIN (B INNER JOIN C) = A INNER JOIN B INNER JOIN C
 ```
+### Left Join Only
+
+```sql
+(A LEFT JOIN B) LEFT JOIN C = A LEFT JOIN (B LEFT JOIN C) = A LEFT JOIN B LEFT JOIN C
+```
+
+
 
 
