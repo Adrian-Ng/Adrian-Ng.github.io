@@ -110,7 +110,10 @@ Ultimately, these aliases provide no benefit in _readability_.
 ### Join Order
 
 However, let's say we are happy to live with this concession.
-We still have the benefit of the 
+We still have the benefit of the -
+
+Note to self - don't worry about finishing the above sentence.
+{: .notice--warning}
 
 The ordering of our tables is not important when it comes to the `INNER JOIN`.
 
@@ -162,7 +165,7 @@ In terms of the execution plan, there may be some optimal ordering. However, the
 
 ```sql
 SELECT
-	b.Title AS AlbumTitle
+	alb.Title AS AlbumTitle
 ... 
 ```
 In the above example, we rename `alb.Title` to `AlbumTitle`.
