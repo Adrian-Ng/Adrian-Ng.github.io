@@ -6,12 +6,12 @@ main:
  #    url: /about/	
    - title: "SQL"
      url: http://adrian.ng/SQL/ddl/intro/
-   - title: "R Language"
-     url: http://adrian.ng/R/imp-knn/
+   #- title: "R Language"
+   #  url: http://adrian.ng/R/imp-knn/
    - title: "Java"
      url: http://adrian.ng/java/Basics/Intro/
-   - title: "MATLAB"
-     url: http://adrian.ng/matlab/Basics/Intro/
+   #- title: "MATLAB"
+    # url: http://adrian.ng/matlab/Basics/Intro/
 #   - title: "Python"
  #    url: http://adrian.ng/python/Basics/Intro/
 # SQL links
