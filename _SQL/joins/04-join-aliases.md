@@ -1,7 +1,7 @@
 ---
 title: "Joins: Aliases"
 permalink: /SQL/joins/aliases/
-excerpt: "Aliasing is important. How to not do them"
+excerpt: "Aliasing is nice-to-have. But some consideration must be given to them."
 toc: true
 mathjax: true
 ---
