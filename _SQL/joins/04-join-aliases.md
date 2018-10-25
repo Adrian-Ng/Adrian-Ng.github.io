@@ -104,7 +104,7 @@ Likewise, `b.Title` comes from `b`.
 But what tables are these?
 
 In order for the alias to have any __meaning__, we need to peruse the query in its entirely.
-And we will need to do this _every time_. There is no way that we will be able to remember what `a` or `b` or `c` is.
+And we will need to do this _every time_ because we won't remember!
 Ultimately, these aliases provide no benefit in _readability_.
 
 ### Join Order
