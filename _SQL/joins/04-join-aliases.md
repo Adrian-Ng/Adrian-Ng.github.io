@@ -79,12 +79,14 @@ ON a.SongID = c.SongID;
 One idea here is that we can be consistent across all our queries with our table aliases.
 That way, we always know that the first table is `a`, followed by `b` and so on... 
 
-The obvious benefit is that it allows us to make use of __Cardinality of The Alphabet__.
-That is, The Alphabet is an ordered sequence and if the ordering of our tables is important then we might want to represent that importance via our aliases.
+Indeed, the alphabet is an ordered sequence and if the ordering of our tables is important then we _might_ want to represent that importance via our aliases.
 
 But aliases are just _syntactic sugar_. 
 As I mentioned above, you don't even need to have aliases. 
 The point of an alias is to __improve readability__.
+
+Aliases are not there to convey the structure of the code. 
+Let the code speak for itself.
 
 ### Readability
 Let's focus on this part:
@@ -109,14 +111,8 @@ Ultimately, these aliases provide no benefit in _readability_.
 
 ### Join Order
 
-However, let's say we are happy to live with this concession.
-We still have the benefit of the -
-
-Note to self - don't worry about finishing the above sentence.
-{: .notice--warning}
-
-The ordering of our tables is not important when it comes to the `INNER JOIN`.
-
+Furthermore, the ordering of our tables is not important when it comes to the `INNER JOIN`.
+And when the 
 
 An `INNER JOIN` is __commutative__.
 
