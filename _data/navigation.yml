@@ -50,6 +50,10 @@ SQL:
        url: /SQL/joins/semi/
      - title: "Aliasing"
        url: /SQL/joins/aliases/
+     - title: "Associativity"
+       url: /SQL/joins/associativity/
+     - title: "Commutativity"
+       url: /SQL/joins/commutativity/       
    - title: Aggregation
      children:
      - title: "Functions"
