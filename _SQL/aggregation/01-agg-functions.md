@@ -5,22 +5,8 @@ excerpt: "Aggregation functions by Adrian Ng"
 toc: false
 ---
 
-
-## Intro
-
-Let's take look at some aggregation functions!
-
-Such as these...
-
-* COUNT()
-* SUM()
-
-
 ## COUNT
 
-
-
-### *
 
 How many accounts do we have in music.Account?
 
@@ -30,8 +16,6 @@ SELECT
 	COUNT(*)
 FROM music.Account;
 ```
-
-### Distinct
 
 How many countries do our users come from?
 
@@ -52,13 +36,12 @@ SELECT
 FROM music.Song;
 ```
 
-
-
-
-Do you recall the distinction between `SELECT *` and `SELECT 1`?
+Recall the distinction between `SELECT *` and `SELECT 1`
 
 In the former, we return values from every column in the table. 
-In the latter, we express 1 in a single column for every row in the result set.
+In the latter, we map 1 to every tuple in the result set.
 
-We can use both these functions to 
+Furthermore, when we map 1 and reduce using either `SUM(1)` or `COUNT(1)`, we find the two expressions are equivalent.
+
+In fact, `SUM(1)`, `COUNT(1)`, and `COUNT(*)` will return equivalent results - i.e. the number of tuples in each projection.
 

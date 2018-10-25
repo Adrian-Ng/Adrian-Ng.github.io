@@ -25,3 +25,5 @@ u = e^{\sigma\sqrt{\Delta t}}\\
 d = e^{-\sigma\sqrt{\Delta t}} = \frac{1}{u}\\
 $$
 
+We iterate through every step until maturity. At which point we will have evaluated every stock price in the tree within our time horizon.
+
