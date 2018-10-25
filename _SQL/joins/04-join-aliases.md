@@ -57,9 +57,9 @@ And certainly there are situations where it is possible for aliases to make thin
 
 ## Alphabetical Table Aliases = BAD
 
-I had a manager once suggest I adopt this manner of aliasing. But I am not sure that it makes any sense.
-
 Let's take the original query and change all the aliases to _letters of the alphabet_.
+
+We often find ourselves doing this. It's quick and easy and requires no planning. But in terms of readability, it has no benefit. And down the road you may be making things harder for yourself.
 
 ```sql
 SELECT
