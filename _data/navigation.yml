@@ -56,7 +56,7 @@ SQL:
        url: /SQL/joins/commutativity/       
    - title: Aggregation
      children:
-     - title: "Functions"
+     - title: "Sum & Count"
        url: /SQL/aggregation/functions/
      - title: "Group By"
        url: /SQL/aggregation/groupby/

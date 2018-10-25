@@ -25,5 +25,19 @@ u = e^{\sigma\sqrt{\Delta t}}\\
 d = e^{-\sigma\sqrt{\Delta t}} = \frac{1}{u}\\
 $$
 
-We iterate through every step until maturity. At which point we will have evaluated every stock price in the tree within our time horizon.
+We iterate through every step until maturity $$t = T$$. 
+At this point we will have evaluated every stock price in the tree within our time horizon.
+
+### Option Prices
+
+Now we iterate backwards through the tree towards.
+At each stock price we compute an option price using risk-neutral valuation.
+
+$$
+f = e^{r\Delta t}(pf_u+(1-p)f_d)
+$$
+
+
+
+
 
