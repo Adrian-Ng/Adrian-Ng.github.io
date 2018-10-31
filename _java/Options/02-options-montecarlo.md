@@ -6,9 +6,23 @@ toc: true
 mathjax: true
 ---
 
-The behaviour of the price of a market asset can be described by the Generalisedd Wiener process.
+
+The behaviour of the price of a stock price can be described by the Generalisedd Wiener process.
 
 $$
-x(t + \Delta t) = x(t) a\Delta t + b\epsilon \sqrt{dt}
+x(t + \Delta t) = x(t) + \mu\Delta t + \sigma dz
 $$
+
+Where $$dz$$ is the __Wiener Process__.
+
+## Wiener Process
+
+Let's start by constructing a _random walk_.
+
+Suppose we have $$N$$ variables  which are independent
+
+{% include figure image_path="/assets/images/random walk.png" alt="this is a placeholder image" caption="This is a figure caption." %}
+
+
+
 
