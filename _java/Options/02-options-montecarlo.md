@@ -6,3 +6,9 @@ toc: true
 mathjax: true
 ---
 
+The behaviour of the price of a market asset can be described by the Generalisedd Wiener process.
+
+$$
+x(t + \Delta t) = x(t) a\Delta t + b\epsilon \sqrt{dt}
+$$
+

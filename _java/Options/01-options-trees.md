@@ -12,7 +12,7 @@ mathjax: true
 
 [Github](https://github.com/Adrian-Ng/OptionPricer)
 
-### Stock Prices
+## Stock Prices
 
 Suppose $$S_0=50$$ is the initial stock price.
 
@@ -28,7 +28,11 @@ $$
 We iterate through every step until maturity $$t = T$$. 
 At this point we will have evaluated every stock price in the tree within our time horizon.
 
-### Option Prices
+## Option Prices
+
+### At Maturity
+
+### Before Maturity
 
 Now we iterate backwards through the tree towards.
 At each stock price we compute an option price using risk-neutral valuation.
