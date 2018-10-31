@@ -21,7 +21,7 @@ Let's start by constructing a _random walk_.
 
 Suppose we have $$N$$ variables  which are independent and can take values of plus or minus 1 with equal probability of 0.5.
 
-Let this variable be $$\epsilon_t \plusminus 1, text{with probability 0.5}$$
+Let this variable be $$\epsilon_t \pm 1, text{with probability 0.5}$$
 
 Each $$\epsilon_t$$ describes the up or down direction of the walk at each step.
 
