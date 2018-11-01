@@ -21,16 +21,14 @@ Where $$dz$$ is the __Wiener Process__.
 
 Let's start by constructing a _random walk_.
 
-
-{% include figure image_path="/assets/images/montecarlo/random walk.png" alt="Random Walk" caption="Hand-drawn random walk with $$\pm 1$$ steps" %}
-
-Let $$Z_t$$ describe our position after $$t$$ steps. 
+{% include figure image_path="/assets/images/montecarlo/random walk.png" alt="Random Walk" caption="Hand-drawn random walk with step-size of approx $$\pm 1$$" %}
+Starting at $$t=0%%, let $$Z_t$$ describe our position after a random walk consisting of $$T$$ steps. 
 
 $$
-Z_t = \epsilon_1 + \epsilon_2 +,...,+ \epsilon_t
+Z_t = \epsilon_1 + \epsilon_2 +,...,+ \epsilon_T
 $$
 
-We start at $$t = 0$$.
+$$Z_t$$ is a random process such that my position at time $$t$$ is a random process.
 
 ### Step Size
 
@@ -58,8 +56,20 @@ double epsilon = random.nextGaussian();
 ```
 ### Scaling
 
+Our Random Walk lasts for the time horizon T. 
+But we need our steps to be as small as possible. 
+So divide this duration into a grid of equal sizes.
+
+We pick some large value $$N$$, and calculate the time interval $$\Delta t$$.
+
+$$
+\Delta t = \frac{T}{N}
+$$
+
 
 {% include figure image_path="/assets/images/montecarlo/scaling.png" %}
+
+
 
 
 ```java
