@@ -38,14 +38,14 @@ At each step we move up or down. The size of each step is random.
 
 We define epsilon as a random variable sampled from the standard gaussian (mean 0, standard devition 1)
 
-$$\epsilon_i \approx \phi(0,1)$$.
+$$\epsilon_i ~ \phi(0,1)$$.
 
 Thus each $$\epsilon_t$$ describes the up or down direction of the walk at each step.
 
 ### Standard Gaussian in Java
 
 We will use the `java.util.Random` library. When instantiated, this class will generate a stream of pseudorandom numbers using a seed, which is set by the constructor `Random()`.
-According to the (Java doc)[https://docs.oracle.com/javase/7/docs/api/java/util/Random.html], this seed is unlikely to collide with any previous seed.
+According to the [Java doc](https://docs.oracle.com/javase/7/docs/api/java/util/Random.html), this seed is unlikely to collide with any previous seed.
 
 ```java
 Random random = new Random();
