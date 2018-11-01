@@ -38,7 +38,7 @@ At each step we move up or down. The size of each step is random.
 
 We define epsilon as a random variable sampled from the standard gaussian (mean 0, standard devition 1)
 
-$$\epsilon_i ~ \phi(0,1)$$.
+$$\epsilon_i \sim \phi(0,1)$$.
 
 Thus each $$\epsilon_t$$ describes the up or down direction of the walk at each step.
 
