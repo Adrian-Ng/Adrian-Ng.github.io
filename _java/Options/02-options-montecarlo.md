@@ -22,7 +22,7 @@ Where $$dz$$ is the __Wiener Process__.
 Let's start by constructing a _random walk_.
 
 
-{% include figure image_path="/assets/images/random walk.png" alt="this is a placeholder image" caption="Random Walk" %}
+{% include figure image_path="/assets/images/montecarlo/random walk.png" alt="Random Walk" caption="Hand-drawn random walk with $$\pm 1$$ steps" %}
 
 Let $$Z_t$$ describe our position after $$t$$ steps. 
 
@@ -42,7 +42,7 @@ $$\epsilon_i \sim \phi(0,1)$$.
 
 Thus each $$\epsilon_t$$ describes the up or down direction of the walk at each step.
 
-### Standard Gaussian in Java
+### Sampling the Gaussian in Java
 
 We will use the `java.util.Random` library. When instantiated, this class will generate a stream of pseudorandom numbers using a seed, which is set by the constructor `Random()`.
 According to the [Java doc](https://docs.oracle.com/javase/7/docs/api/java/util/Random.html), this seed is unlikely to collide with any previous seed.
@@ -51,11 +51,15 @@ According to the [Java doc](https://docs.oracle.com/javase/7/docs/api/java/util/
 Random random = new Random();
 ```
 
-We want to sample from the _Gaussian distribution_. So we use the method `nextGaussian()` to return the next pseudorandom sample from this distribution.
+We want to sample from the _Gaussian distribution_. We use the method `nextGaussian()` to return the next pseudorandom sample from the Gaussian distribution.
 
 ```java
 double epsilon = random.nextGaussian();
 ```
+### Scaling
+
+
+{% include figure image_path="/assets/images/montecarlo/scaling.png" %}
 
 
 ```java
