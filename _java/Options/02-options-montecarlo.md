@@ -32,15 +32,31 @@ $$
 
 We start at $$t = 0$$.
 
-### Epsilon
+### Step Size
 
-Epsilon is defined as
+At each step we move up or down. The size of each step is random.
 
-$$\epsilon_i \pm$$ with probability $$0.5$$.
+We define epsilon as a random variable sampled from the standard gaussian (mean 0, standard devition 1)
+
+$$\epsilon_i \approx \phi(0,1)$$.
+
+Thus each $$\epsilon_t$$ describes the up or down direction of the walk at each step.
+
+### double sampleStepSize(double dt){}
+
+In Java we can write a method that, when invoked, returns a sample from this distribution.
+
+We will use the `java.util.Random' library.`
+
+```java
+    public double sampleStepSize(double dt) {
+        // sample from random Gaussian of mean 0 and sd 1
+        Random epsilon = new Random();
+        // return a step. value dz, size dt.
+        double dz = epsilon.nextGaussian()*Math.sqrt(dt);
+        return dz;
+    }
+```
 
 
-
-Suppose we have $$N$$ variables which are independent and can take values of plus or minus 1 with equal probability of 0.5.
-
-Each $$\epsilon_t$$ describes the up or down direction of the walk at each step.
 
