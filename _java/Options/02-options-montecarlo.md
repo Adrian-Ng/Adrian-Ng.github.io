@@ -15,15 +15,17 @@ With Monte Carlo, we simple generate __large__ number of stock prices and calcul
 
 ## Formula
 
-The behaviour of the price of a stock price can be described by the Generalised Wiener process.
+To describe the Generalised Wiener process, we write the following recursive formula:
 
 $$
 x(t + \Delta t) = x(t) + \mu\Delta t + \sigma dz
 $$
 
-Where $$dz$$ is the __Wiener Process__.
+Where $$dz$$ is the basic __Wiener Process__.
 
-## Wiener Process
+
+
+## Basic Wiener Process
 
 The __Wiener Process__ is a particular type of _Markov Process_ with mean change 0 and variance rate of 1 per year.
 
