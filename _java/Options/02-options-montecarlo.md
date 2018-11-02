@@ -6,6 +6,14 @@ toc: true
 mathjax: true
 ---
 
+The Monte Carlo method is a way of simulating a distribution by way of randomly generating a whole bunch of numbers.
+
+Stock prices can be described as a _random walk_. That is, a stock price is the linear combination of a number of infinitessimally small changes otherwise known as the __Wiener Process__. Each change is randomly sampled from some parametric distribution. Our predicted stock price is where ever we end up at the end of the random walk.
+
+With Monte Carlo, we simple generate __large__ number of stock prices and calculate the pay-off for each of them. We average these pay-offs to obtain our predicted option price.
+
+
+## Formula
 
 The behaviour of the price of a stock price can be described by the Generalised Wiener process.
 
