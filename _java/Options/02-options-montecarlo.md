@@ -10,19 +10,24 @@ The Monte Carlo method is a way of simulating a distribution by way of randomly 
 
 Stock prices can be described as a _random walk_. That is, a stock price is the linear combination of a number of infinitessimally small changes otherwise known as the __Wiener Process__. Each change is randomly sampled from some parametric distribution. Our predicted stock price is where ever we end up at the end of the random walk.
 
-With Monte Carlo, we simple generate __large__ number of stock prices and calculate the pay-off for each of them. We average these pay-offs to obtain our predicted option price.
+With Monte Carlo, we simply generate __large__ number of stock prices and calculate the pay-off for each of them. We average these pay-offs to obtain our predicted option price.
 
 
 ## Formula
 
-To describe the Generalised Wiener process, we write the following recursive formula:
+We use the Generalised Wiener process to generate a random walk. The following recursive formula describes this process:
 
 $$
 x(t + \Delta t) = x(t) + \mu\Delta t + \sigma dz
 $$
 
-Where $$dz$$ is the basic __Wiener Process__.
+Where:
+* $$dz$$ is the basic __Wiener Process__.
+* $$\Delta t$$ is a time step of some very small duration
+* $$x_t$$ is the stock price at the current time step
+* $$x_{t + \Delta t}$$ is the stock price at the next time step
 
+At $$t=0$$, $$x(0)$$ would be our initial stock price.
 
 
 ## Basic Wiener Process
