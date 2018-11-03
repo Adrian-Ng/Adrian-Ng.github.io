@@ -49,6 +49,7 @@ Any two values of $$\Delta z$$ taken from different time slices, $$\Delta t$$ ar
 Let's start by constructing a _random walk_.
 
 {% include figure image_path="/assets/images/montecarlo/random walk.png" alt="Random Walk" caption="Hand-drawn random walk with step-size of approx $$\pm 1$$" %}
+
 Starting at $$t=0$$, let $$Z_t$$ describe our position after a random walk consisting of $$T$$ steps. 
 
 $$
