@@ -60,16 +60,15 @@ $$
 
 That is our final position can be calculated as the linear combination of every step in the walk.
 
-### Step Size
-
-
-This is governed by the random variable $$\epsilon$$.
+### Epsilon
 
 We define epsilon as a random variable sampled from the standard gaussian (mean 0, standard devition 1).
 
 $$\epsilon_i \sim \phi(0,1)$$.
 
-Thus each $$\epsilon_t$$ describes the up or down direction of the walk at each step.
+This means that the value of epsilon is going to be somewhere between -1 and +1. And average, this value is going to be 0.
+
+If we get a positive value, then our step goes up (and down if negative).
 
 ### Sampling the Gaussian in Java
 
