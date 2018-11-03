@@ -52,10 +52,10 @@ A further simplification is that each value of $$\Delta z$$ is limited to $$\pm 
 
 {% include figure image_path="/assets/images/montecarlo/random walk.png" alt="Random Walk" caption="Hand-drawn random walk with step-size of approx $$\pm 1$$" %}
 
-Starting at $$t=0$$, let $$Z_t$$ describe our position after a random walk consisting of $$T$$ steps. 
+Staring at $$z(0)$$ until $$z(T)$$, we can describe our position at the end of the walk by
 
 $$
-z_t = \epsilon_1 + \epsilon_2 +,...,+ \epsilon_T
+z(T) - z(0) = \sum_{i=1}^N \epsilon_i \sqrt{\Delta t}
 $$
 
 
