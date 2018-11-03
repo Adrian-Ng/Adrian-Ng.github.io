@@ -42,11 +42,13 @@ $$
 
 where $$\epsilon_i \sim \phi(0,1)$$ - epsilon takes the standard Gaussian distribution. 
 
-Any two values of $$\Delta z$$ taken from different time slices, $$\Delta t$$ are independent.
+Any two values of $$\Delta z$$ taken from different time slices, $$\Delta t$$, are independent.
 
 ### Random Walk
 
-Let's start by constructing a _random walk_.
+Consider the below illustration. We a see a simple random walk with approximately $$N=6$$ intervals of $$\Delta t$$.
+
+A further simplification is that each value of $$\Delta z$$ is limited to $$\pm 1$$
 
 {% include figure image_path="/assets/images/montecarlo/random walk.png" alt="Random Walk" caption="Hand-drawn random walk with step-size of approx $$\pm 1$$" %}
 
