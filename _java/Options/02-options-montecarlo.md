@@ -34,14 +34,15 @@ At $$t=0$$, $$x(0)$$ is our initial stock price.
 
 The __Wiener Process__ is a particular type of _Markov probabilistic Process_ with mean change 0 and variance rate of 1 per year.
 
-Which is to say we sample randomly from the standard Gaussian distribution and multiply by the square root of time.
-
+Which is to say we sample randomly from the standard Gaussian distribution and multiply by the square root of time.  
 
 $$
-\Delta z = \epsilon \epsilon \sqrt{\Delta t}
+\Delta z = \epsilon \sqrt{\Delta t}
 $$
 
+where $$\epsilon_i \sim \phi(0,1)$$ - epsilon takes the standard Gaussian distribution. 
 
+Any two values of $$\Delta z$$ taken from different time slices, $$\Delta t$$ are independent.
 
 ### Random Walk
 
