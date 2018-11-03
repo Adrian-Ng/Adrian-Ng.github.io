@@ -6,9 +6,10 @@ toc: true
 mathjax: true
 ---
 
-The Monte Carlo method is a way of simulating a distribution by way of randomly generating a whole bunch of numbers.
+The Monte Carlo method is a way of simulating a distribution by way of randomly generating a whole bunch of numbers. 
+In __Central Limit Theorem__, the distribution of the sum of a large number of small contributions is approximately Gaussian.
 
-Stock prices can be described as a _random walk_. That is, a stock price is the linear combination of a number of infinitessimally small changes otherwise known as the __Wiener Process__. Each change is randomly sampled from some parametric distribution. Our predicted stock price is where ever we end up at the end of the random walk.
+Stock prices can be described as a _random walk_. That is, a stock price is the linear combination of a number of infinitessimally small changes otherwise known as the __Wiener Process__. Each change is randomly sampled from sthe standard Gaussian distribution. Our predicted stock price is where ever we end up at the end of the random walk.
 
 With Monte Carlo, we simply generate __large__ number of stock prices and calculate the pay-off for each of them. We average these pay-offs to obtain our predicted option price.
 
@@ -70,9 +71,9 @@ This means that the value of epsilon is going to be somewhere between -1 and +1.
 
 If we get a positive value, then our step goes up (and down if negative).
 
-### Sampling the Gaussian in Java
+How do we generate epsilon in Java?
 
-We use the `java.util.Random` class. When instantiated, this class will generate a stream of pseudorandom numbers using a seed, which is set by the constructor `Random()`.
+We use the `java.util.Random` class. When instantiated, this class will generate an iterable collection of pseudorandom numbers. This collection is governed by a seed, which is set by the constructor `Random()`.
 According to the [Java doc](https://docs.oracle.com/javase/7/docs/api/java/util/Random.html), this seed is unlikely to collide with any previous seed.
 
 ```java
@@ -83,17 +84,19 @@ We want to sample from the _Gaussian distribution_ so we use the method `nextGau
 ```java
 double epsilon = random.nextGaussian();
 ```
+
 ### Scaling
 
-Our Random Walk lasts for the time horizon $$T - 0$$. 
-But we need our steps to be as small as possible. 
-So divide this duration into a grid of infintessimally small intervals.
-
-We pick some large value $$N$$, and calculate the time interval $$\Delta t$$.
+Our Random Walk has the duration $$T - 0$$. 
+But we would like our steps $$\Delta t$$ to be as small as possible. 
+The result is a really fine random walk.
 
 $$
 \Delta t = \frac{T}{N}
 $$
+
+We therefore want $$N$$ to be as large as possible.
+
 
 {% include figure image_path="/assets/images/montecarlo/scaling.png" %}
 
