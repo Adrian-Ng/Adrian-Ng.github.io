@@ -58,6 +58,7 @@ $$
 z(T) - z(0) = \sum_{i=1}^N \epsilon_i \sqrt{\Delta t}
 $$
 
+As you can see, all that really matters is where we are at the end. That position can be calculated as the linear combination of every step in the walk.
 
 ### Step Size
 
