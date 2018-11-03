@@ -27,13 +27,19 @@ Where:
 * $$x_t$$ is the stock price at the current time step
 * $$x_{t + \Delta t}$$ is the stock price at the next time step
 
-At $$t=0$$, $$x(0)$$ would be our initial stock price.
+At $$t=0$$, $$x(0)$$ is our initial stock price.
 
 
 ## Basic Wiener Process
 
-The __Wiener Process__ is a particular type of _Markov Process_ with mean change 0 and variance rate of 1 per year.
+The __Wiener Process__ is a particular type of _Markov probabilistic Process_ with mean change 0 and variance rate of 1 per year.
 
+Which is to say we sample randomly from the standard Gaussian distribution and multiply by the square root of time.
+
+
+$$
+\Delta z = \epsilon \epsilon \sqrt{\Delta t}
+$$
 
 
 
