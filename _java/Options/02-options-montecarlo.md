@@ -91,19 +91,19 @@ Our Random Walk has the duration $$T - 0$$.
 But we would like our steps $$\Delta t$$ to be as small as possible. 
 The result is a really fine random walk.
 
+
 $$
 \Delta t = \frac{T}{N}
 $$
 
 We therefore want $$N$$ to be as large as possible.
 
-
 {% include figure image_path="/assets/images/montecarlo/scaling.png" %}
 
+Suppose we want to simulate the change in a stock price over the next year, $$T=1$$.
+It would make sense to divide this time horizon by $$N=365$$ such that each timeslice $$\Delta t$$ represents one day.
 
-
-
-
+## Basic Weiner Process in Java
 
 ```java
     public double sampleStepSize(double dt) {        
