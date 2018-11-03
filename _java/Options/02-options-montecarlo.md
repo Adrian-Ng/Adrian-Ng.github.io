@@ -40,29 +40,30 @@ $$
 \Delta z = \epsilon \sqrt{\Delta t}
 $$
 
-where $$\epsilon_i \sim \phi(0,1)$$ - epsilon takes the standard Gaussian distribution. 
+where $$\epsilon_i$$ is our random sample. 
 
-Any two values of $$\Delta z$$ taken from different time slices, $$\Delta t$$, are independent.
+Values of $$\Delta z$$ at different time slices, $$\Delta t$$, are independent.
 
 ### Random Walk
 
 Consider the below illustration. We a see a simple random walk with approximately $$N=6$$ intervals of $$\Delta t$$.
 
-A further simplification is that each value of $$\Delta z$$ is limited to $$\pm 1$$
+As you can see, at each step we move up or down. 
 
-{% include figure image_path="/assets/images/montecarlo/random walk.png" alt="Random Walk" caption="Hand-drawn random walk with step-size of approx $$\pm 1$$" %}
+{% include figure image_path="/assets/images/montecarlo/random walk.png" alt="Random Walk" caption="Hand-drawn random walk" %}
 
-Staring at $$z(0)$$ until $$z(T)$$, we can describe our position at the end of the walk by
+At $$t=T$$, we can describe our position at the end of the walk by:
 
 $$
 z(T) - z(0) = \sum_{i=1}^N \epsilon_i \sqrt{\Delta t}
 $$
 
-As you can see, all that really matters is where we are at the end. That position can be calculated as the linear combination of every step in the walk.
+That is our final position can be calculated as the linear combination of every step in the walk.
 
 ### Step Size
 
-At each step we move up or down. The change $$\Delta \$$ at each step is
+
+This is governed by the random variable $$\epsilon$$.
 
 We define epsilon as a random variable sampled from the standard gaussian (mean 0, standard devition 1).
 
