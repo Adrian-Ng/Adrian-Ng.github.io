@@ -118,8 +118,6 @@ Translating all this to a method is rather simple:
     }
 ```
 
-
-
 ### Random Walk
 
 `MonteCarlo` is an abstract class, which means it can contain abstract methods.
@@ -129,27 +127,27 @@ Translating all this to a method is rather simple:
 #### European
 
 ```java
-    public double simulateRandomWalk(int N, double S0, double dt, double interest, double sigma) {
-        double St = S0;
-        for (int t = 1; t < N; t++) {
-            double dz = basicWeinerProcess(dt);
-            St = St + (interest * St * dt) + (sigma * St * dz);
-        }
-        return St;
+public double simulateRandomWalk(int N, double S0, double dt, double interest, double sigma) {
+	double St = S0;
+    for (int t = 1; t < N; t++) {
+		double dz = basicWeinerProcess(dt);
+        St = St + (interest * St * dt) + (sigma * St * dz);
     }
+    return St;
+}
 ```
 
 #### Asian
 
 ```java
-    public double simulateRandomWalk(int N, double S0, double dt, double interest, double sigma) {
-        double St = S0;
-        double partialTotal = S0;
-        for (int t = 1; t < N; t++) {
-            double dz = basicWeinerProcess(dt);
-            St = St + (interest * St * dt) + (sigma * St * dz);
-            partialTotal += St;
-        }
-        return partialTotal/N;
+public double simulateRandomWalk(int N, double S0, double dt, double interest, double sigma) {
+	double St = S0;
+    double partialTotal = S0;
+    for (int t = 1; t < N; t++) {
+    	double dz = basicWeinerProcess(dt);
+        St = St + (interest * St * dt) + (sigma * St * dz);
+        partialTotal += St;
+    }
+    return partialTotal/N;
     }
 ```
