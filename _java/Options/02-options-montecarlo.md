@@ -91,7 +91,6 @@ Our Random Walk has the duration $$T - 0$$.
 But we would like our steps $$\Delta t$$ to be as small as possible. 
 The result is a really fine random walk.
 
-
 $$
 \Delta t = \frac{T}{N}
 $$
@@ -119,32 +118,38 @@ Translating all this to a method is rather simple:
     }
 ```
 
+
+
 ### Random Walk
+
+`MonteCarlo` is an abstract class, which means it can contain abstract methods.
+
+`simulateRandomWalk` is an abstract method that has two implmentations of payoff: Asian and European.
 
 #### European
 
 ```java
-public double simuluatePath(int N, double S0, double dt, double r, double sigma) {
-    double St = S0;
-    for (int t = 1; t < N; t++) {
-    	double dz = basicWeinerProcess(dt);
-        St = St + (r * St * dt) + (sigma * St * dz);
+    public double simulateRandomWalk(int N, double S0, double dt, double interest, double sigma) {
+        double St = S0;
+        for (int t = 1; t < N; t++) {
+            double dz = basicWeinerProcess(dt);
+            St = St + (interest * St * dt) + (sigma * St * dz);
         }
-    return St;
-}
+        return St;
+    }
 ```
 
 #### Asian
 
 ```java
-public double simuluatePath(int N, double S0, double dt, double r, double sigma) {
-	double St = S0;
-    double partialTotal = S0;
-    for (int t = 1; t < N; t++) {
-    	double dz = basicWeinerProcess(dt);
-        St = St + (r * St * dt) + (sigma * St * dz);
-        partialTotal += St;
+    public double simulateRandomWalk(int N, double S0, double dt, double interest, double sigma) {
+        double St = S0;
+        double partialTotal = S0;
+        for (int t = 1; t < N; t++) {
+            double dz = basicWeinerProcess(dt);
+            St = St + (interest * St * dt) + (sigma * St * dz);
+            partialTotal += St;
         }
-    return partialTotal/N;
-}
+        return partialTotal/N;
+    }
 ```
