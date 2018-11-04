@@ -125,32 +125,26 @@ Translating all this to a method is rather simple:
 
 ```java
 public double simuluatePath(int N, double S0, double dt, double r, double sigma) {
-        // allocate memory to grid
-        double[] grid = new double[N];
-        grid[0] = S0;
-        for (int i = 1; i < N; i++){
-            double dz = basicWeinerProcess(dt);
-            grid[i] = grid[i-1] + (r*grid[i-1]*dt)+(sigma*grid[i-1]*dz);
+    double St = S0;
+    for (int t = 1; t < N; t++) {
+    	double dz = basicWeinerProcess(dt);
+        St = St + (r * St * dt) + (sigma * St * dz);
         }
-        return grid[N-1];
-    }
+    return St;
+}
 ```
 
 #### Asian
 
 ```java
 public double simuluatePath(int N, double S0, double dt, double r, double sigma) {
-        // allocate memory to grid
-        double[] grid = new double[N];
-        grid[0] = S0;
-        for (int i = 1; i < N; i++){
-            double dz = basicWeinerProcess(dt);
-            grid[i] = grid[i-1] + (r*grid[i-1]*dt)+(sigma*grid[i-1]*dz);
+	double St = S0;
+    double partialTotal = S0;
+    for (int t = 1; t < N; t++) {
+    	double dz = basicWeinerProcess(dt);
+        St = St + (r * St * dt) + (sigma * St * dz);
+        partialTotal += St;
         }
-        //Because this is Asian option, we compute average price throughout the lifetime
-        double Savg = 0.0;
-        for (int i = 0; i < N; i++)
-            Savg += grid[i];
-        return Savg/N;
-    }
+    return partialTotal/N;
+}
 ```
