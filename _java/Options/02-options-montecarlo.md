@@ -125,7 +125,7 @@ Translating all this to a method is rather simple:
 `simulateRandomWalk` is an abstract method that returns two different results.
 This is because we are interested in computing both Asian and European payoffs.
 
-#### European
+#### ... for European payoff
 
 A European payoff is defined as follows for calls and puts respectively:
 
@@ -148,7 +148,7 @@ public double simulateRandomWalk
 }
 ```
 
-#### simulateRandomWalk(...) for Asian payoff
+#### ...for Asian payoff
 
 In computing the payoff for Asian options, we use the average stock price over the entire time horizon instead of the stock price at maturity.
 
