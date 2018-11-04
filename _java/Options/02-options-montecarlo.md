@@ -120,7 +120,7 @@ Translating all this to a method is rather simple:
 
 ### Random Walk
 
-`MonteCarlo` is an abstract class, which means it can contain abstract methods.
+`MonteCarlo` is an _abstract class_, which means it can contain _abstract methods_.
 
 `simulateRandomWalk` is an abstract method that returns two different results.
 This is because we are interested in computing both Asian and European payoffs.
