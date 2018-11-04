@@ -103,10 +103,14 @@ We therefore want $$N$$ to be as large as possible.
 Suppose we want to simulate the change in a stock price over the next year, $$T=1$$.
 It would make sense to divide this time horizon by $$N=365$$ such that each timeslice $$\Delta t$$ represents one day.
 
-## Basic Weiner Process in Java
+## Java
+
+## Basic Weiner Process
+
+Translating all this to a method is rather simple:
 
 ```java
-    public double sampleStepSize(double dt) {        
+    public double basicWeinerProcess(double dt) {        
         Random epsilon = new Random();
         // sample from random Gaussian of mean 0 and sd 1        
         double dz = epsilon.nextGaussian()*Math.sqrt(dt);
@@ -115,5 +119,38 @@ It would make sense to divide this time horizon by $$N=365$$ such that each time
     }
 ```
 
+### Random Walk
 
+#### European
 
+```java
+public double simuluatePath(int N, double S0, double dt, double r, double sigma) {
+        // allocate memory to grid
+        double[] grid = new double[N];
+        grid[0] = S0;
+        for (int i = 1; i < N; i++){
+            double dz = basicWeinerProcess(dt);
+            grid[i] = grid[i-1] + (r*grid[i-1]*dt)+(sigma*grid[i-1]*dz);
+        }
+        return grid[N-1];
+    }
+```
+
+#### Asian
+
+```java
+public double simuluatePath(int N, double S0, double dt, double r, double sigma) {
+        // allocate memory to grid
+        double[] grid = new double[N];
+        grid[0] = S0;
+        for (int i = 1; i < N; i++){
+            double dz = basicWeinerProcess(dt);
+            grid[i] = grid[i-1] + (r*grid[i-1]*dt)+(sigma*grid[i-1]*dz);
+        }
+        //Because this is Asian option, we compute average price throughout the lifetime
+        double Savg = 0.0;
+        for (int i = 0; i < N; i++)
+            Savg += grid[i];
+        return Savg/N;
+    }
+```
