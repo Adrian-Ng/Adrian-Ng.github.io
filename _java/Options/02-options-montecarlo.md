@@ -138,7 +138,7 @@ As such, at the end of our random walk, we need only return the stock price at m
 
 ```java
 public double simulateRandomWalk
-		(int N, double S0, double dt, double interest, double sigma) {
+	(int N, double S0, double dt, double interest, double sigma) {
 	double St = S0;
     for (int t = 1; t < N; t++) {
 		double dz = basicWeinerProcess(dt);
@@ -157,11 +157,13 @@ f_{call} = max(S_{avg} - X, 0)\\
 f_{put} = max(X - S_{avg}, 0)
 $$
 
-The code is similar to the above case except we keep a partial total of stock prices in the `while` loop. At the end of the loop, we take this total and divided by the number of steps. In doing so, we return the average stock price.
+The implementation is similar to the above case except we keep a _partial total_ of stock prices in the `while` loop. 
+
+At the end of the loop, we take this total and divided by the number of steps. In doing so, we return the average stock price.
 
 ```java
 public double simulateRandomWalk
-		(int N, double S0, double dt, double interest, double sigma) {
+	(int N, double S0, double dt, double interest, double sigma) {
 	double St = S0;
     double partialTotal = S0;
     for (int t = 1; t < N; t++) {
