@@ -148,7 +148,7 @@ public double simulateRandomWalk
 }
 ```
 
-#### Asian
+#### simulateRandomWalk(...) for Asian payoff
 
 In computing the payoff for Asian options, we use the average stock price over the entire time horizon instead of the stock price at maturity.
 
@@ -156,6 +156,8 @@ $$
 f_{call} = max(S_{avg} - X, 0)\\
 f_{put} = max(X - S_{avg}, 0)
 $$
+
+The code is similar to the above case except we keep a partial total of stock prices in the `while` loop. At the end of the loop, we take this total and divided by the number of steps. In doing so, we return the average stock price.
 
 ```java
 public double simulateRandomWalk
