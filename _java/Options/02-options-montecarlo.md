@@ -127,7 +127,8 @@ Translating all this to a method is rather simple:
 #### European
 
 ```java
-public double simulateRandomWalk(int N, double S0, double dt, double interest, double sigma) {
+public double simulateRandomWalk
+		(int N, double S0, double dt, double interest, double sigma) {
 	double St = S0;
     for (int t = 1; t < N; t++) {
 		double dz = basicWeinerProcess(dt);
@@ -140,7 +141,8 @@ public double simulateRandomWalk(int N, double S0, double dt, double interest, d
 #### Asian
 
 ```java
-public double simulateRandomWalk(int N, double S0, double dt, double interest, double sigma) {
+public double simulateRandomWalk
+		(int N, double S0, double dt, double interest, double sigma) {
 	double St = S0;
     double partialTotal = S0;
     for (int t = 1; t < N; t++) {
@@ -149,5 +151,5 @@ public double simulateRandomWalk(int N, double S0, double dt, double interest, d
         partialTotal += St;
     }
     return partialTotal/N;
-    }
+}
 ```
