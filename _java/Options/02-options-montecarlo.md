@@ -105,7 +105,7 @@ It would make sense to divide this time horizon by $$N=365$$ such that each time
 
 ## Java
 
-## Basic Weiner Process
+### Basic Weiner Process
 
 Translating all this to a method is rather simple:
 
