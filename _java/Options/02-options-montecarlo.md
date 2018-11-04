@@ -131,7 +131,7 @@ A European payoff is defined as follows for calls and puts respectively:
 
 $$
 f_{call} = max(S_T - X, 0)\\
-f_{call} = max(X - S_T, 0)
+f_{put} = max(X - S_T, 0)
 $$
 
 As such, at the end of our random walk, we need only return the stock price at maturity, $$t=T$$.
