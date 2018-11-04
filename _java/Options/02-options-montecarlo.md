@@ -130,8 +130,8 @@ This is because we are interested in computing both Asian and European payoffs.
 A European payoff is defined as follows for calls and puts respectively:
 
 $$
-c = max(S_T - X, 0)\\
-p = max(X - S_T, 0)
+f_{call} = max(S_T - X, 0)\\
+f_{call} = max(X - S_T, 0)
 $$
 
 As such, at the end of our random walk, we need only return the stock price at maturity, $$t=T$$.
@@ -153,8 +153,8 @@ public double simulateRandomWalk
 In computing the payoff for Asian options, we use the average stock price over the entire time horizon instead of the stock price at maturity.
 
 $$
-c = max(S_{avg} - X, 0)\\
-p = max(X - S_{avg}, 0)
+f_{call} = max(S_{avg} - X, 0)\\
+f_{put} = max(X - S_{avg}, 0)
 $$
 
 ```java
