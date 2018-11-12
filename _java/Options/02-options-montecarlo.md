@@ -9,9 +9,9 @@ mathjax: true
 The Monte Carlo method is a way of simulating a distribution by way of randomly generating a whole bunch of numbers. 
 In [__Central Limit Theorem__](https://en.wikipedia.org/wiki/Central_limit_theorem), the distribution of the sum of a large number of small contributions is approximately Gaussian.
 
-Stock prices can be described as a _random walk_. That is, a stock price is the linear combination of a number of infinitessimally small changes otherwise known as the __Wiener Process__. Each change is randomly sampled from sthe standard Gaussian distribution. Our predicted stock price is whereever we end up at the end of the random walk.
+Stock prices can be described as a _random walk_. That is, a stock price is the linear combination of a number of infinitessimally small changes otherwise known as the __Wiener Process__. Each change is randomly sampled from the standard Gaussian distribution $$\phi(0,1)$$. Our predicted stock price is where ever we end up at the end of the random walk.
 
-With Monte Carlo, we simply generate a __large__ number of stock prices and calculate the pay-off for each of them. We average these pay-offs to obtain our predicted option price.
+With Monte Carlo, we simply predict a __large__ number of stock prices and calculate the pay-off for prediction. Then we average these pay-offs and apply discounting to obtain our predicted option price.
 
 
 ## Formula
