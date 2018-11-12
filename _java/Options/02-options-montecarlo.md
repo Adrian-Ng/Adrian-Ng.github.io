@@ -54,13 +54,13 @@ As you can see, at each step we move up or down.
 
 {% include figure image_path="/assets/images/montecarlo/random walk.png" alt="Random Walk" caption="Hand-drawn random walk" %}
 
-At $$t=T$$, we can describe our position at the end of the walk by:
+At the end of the walk $$t=T$$, we can describe the position of random variable $$z$$ as:
 
 $$
 z(T) - z(0) = \sum_{i=1}^N \epsilon_i \sqrt{\Delta t}
 $$
 
-That is our final position can be calculated as the linear combination of every step in the walk.
+Our final position is calculated as the linear combination of every step in the walk.
 
 ### Epsilon
 
@@ -68,7 +68,7 @@ We define epsilon as a random variable sampled from the standard gaussian (mean 
 
 $$\epsilon_i \sim \phi(0,1)$$.
 
-This means that the value of epsilon is going to be somewhere between -1 and +1. And average, this value is going to be 0.
+This means that the value of epsilon is going to be somewhere between -1 and +1. On average, this value is going to be $$\approx 0$$.
 
 If we get a positive value, then our step goes up (and down if negative).
 
