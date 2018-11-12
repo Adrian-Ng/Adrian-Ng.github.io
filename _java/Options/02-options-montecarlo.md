@@ -29,7 +29,7 @@ Where:
 * $$x_{t + \Delta t}$$ is the stock price at the next time step
 
 Note: $$x(0)$$ is our initial stock price.
-{: .notice--info} class.
+{: .notice--info}
 
 
 ## Basic Wiener Process
