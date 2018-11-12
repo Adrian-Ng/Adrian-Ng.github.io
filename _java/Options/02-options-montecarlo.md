@@ -7,7 +7,7 @@ mathjax: true
 ---
 
 The Monte Carlo method is a way of simulating a distribution by way of randomly generating a whole bunch of numbers. 
-In __Central Limit Theorem__, the distribution of the sum of a large number of small contributions is approximately Gaussian.
+In [__Central Limit Theorem__](https://en.wikipedia.org/wiki/Central_limit_theorem), the distribution of the sum of a large number of small contributions is approximately Gaussian.
 
 Stock prices can be described as a _random walk_. That is, a stock price is the linear combination of a number of infinitessimally small changes otherwise known as the __Wiener Process__. Each change is randomly sampled from sthe standard Gaussian distribution. Our predicted stock price is whereever we end up at the end of the random walk.
 
