@@ -34,9 +34,9 @@ Note: $$x(0)$$ is our initial stock price.
 
 ## Basic Wiener Process
 
-The __Wiener Process__ is a particular type of _Markov Process_ with mean change 0 and variance rate of 1 per year.
+The __Wiener Process__ is a particular type of _Markov Process_ with mean change 0 and variance rate of 1 per year. 
 
-Which is to say we sample randomly from the standard Gaussian distribution and multiply by the square root of time.  
+We sample randomly from the standard Gaussian distribution and multiply by $$\sqrt{T}$$.  
 
 $$
 \Delta z = \epsilon \sqrt{\Delta t}
