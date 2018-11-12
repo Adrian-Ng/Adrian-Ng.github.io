@@ -54,7 +54,7 @@ As you can see, at each step we move up or down.
 
 {% include figure image_path="/assets/images/montecarlo/random walk.png" alt="Random Walk" caption="Hand-drawn random walk" %}
 
-At the end of the walk $$t=T$$, we can describe the position of random variable $$z$$ as:
+At the end of the walk ($$t=T$$), we can describe the position of random variable $$z$$ as:
 
 $$
 z(T) - z(0) = \sum_{i=1}^N \epsilon_i \sqrt{\Delta t}
@@ -64,13 +64,15 @@ Our final position is calculated as the linear combination of every step in the 
 
 ### Epsilon
 
-We define epsilon as a random variable sampled from the standard gaussian (mean 0, standard devition 1).
+We define epsilon as a __random variable__ $$\epsilon_i$$ sampled from the standard gaussian (mean 0, standard devition 1).
 
 $$\epsilon_i \sim \phi(0,1)$$.
 
 This means that the value of epsilon is going to be somewhere between -1 and +1. On average, this value is going to be $$\approx 0$$.
 
-If we get a positive value, then our step goes up (and down if negative).
+The sign of our value dictates the up/down direction of our step.
+
+### Sampling in Java
 
 How do we generate epsilon in Java?
 
