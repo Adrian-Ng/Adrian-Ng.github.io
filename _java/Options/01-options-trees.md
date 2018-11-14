@@ -19,7 +19,7 @@ This is a simplistic model. But it captures our uncertainty.
 
 Now let's consider a three-month call option with a strike price $$X = 21$$.
 
-{% include figure image_path="/assets/images/binomial/simpleoptionrice.png" %}
+{% include figure image_path="/assets/images/binomial/simpleoptionprice.png" %}
 
 
 ## Java
