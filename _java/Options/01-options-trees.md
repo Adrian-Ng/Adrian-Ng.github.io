@@ -44,6 +44,14 @@ $$22\Delta -1 = 18\Delta$$
 
 $$\Delta = 0.25$$
 
+With this value of Delta, we have effectively elimnated risk from our portfolio as no matter what happens, the value of my portfolio will remain the same.
+
+So the value of the portfolio in three months is
+
+$$22 \times 0.25 - 1 = 18 \times 0.25 = 4.5$$
+
+
+
 $$
 \Delta = \frac{f_u - f_d}{S_0 u- S_0 d}
 $$
