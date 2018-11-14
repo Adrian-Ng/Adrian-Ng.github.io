@@ -72,21 +72,6 @@ This means that the value of epsilon is going to be somewhere between -1 and +1.
 
 The sign of our value dictates the up/down direction of our step.
 
-### Sampling in Java
-
-How do we generate epsilon in Java?
-
-We use the `java.util.Random` class. When instantiated, this class will generate an iterable collection of pseudorandom numbers. This collection is governed by a seed, which is set by the constructor `Random()`.
-According to the [Java doc](https://docs.oracle.com/javase/7/docs/api/java/util/Random.html), this seed is unlikely to collide with any previous seed.
-
-```java
-Random random = new Random();
-```
-We want to sample from the _Gaussian distribution_ so we use the method `nextGaussian()` to return the next pseudorandom sample from the Gaussian distribution.
-
-```java
-double epsilon = random.nextGaussian();
-```
 
 ### Scaling
 
@@ -106,6 +91,22 @@ Suppose we want to simulate the change in a stock price over the next year, $$T=
 It would make sense to divide this time horizon by $$N=365$$ such that each timeslice $$\Delta t$$ represents one day.
 
 ## Java
+
+### Sampling in Java
+
+How do we generate epsilon in Java?
+
+We use the `java.util.Random` class. When instantiated, this class will generate an iterable collection of pseudorandom numbers. This collection is governed by a seed, which is set by the constructor `Random()`.
+According to the [Java doc](https://docs.oracle.com/javase/7/docs/api/java/util/Random.html), this seed is unlikely to collide with any previous seed.
+
+```java
+Random random = new Random();
+```
+We want to sample from the _Gaussian distribution_ so we use the method `nextGaussian()` to return the next pseudorandom sample from the Gaussian distribution.
+
+```java
+double epsilon = random.nextGaussian();
+```
 
 ### Basic Weiner Process
 

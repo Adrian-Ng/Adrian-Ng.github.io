@@ -6,6 +6,17 @@ toc: true
 mathjax: true
 ---
 
+A stock price can move up and down. 
+But we don't know which direction it's going to go. 
+This is the problem with pricing options.
+
+Consider the following simplistic model
+
+{% include figure image_path="/assets/images/binomial/simplestockprice.png" %}
+
+
+
+
 ## Java
 
 ### Download

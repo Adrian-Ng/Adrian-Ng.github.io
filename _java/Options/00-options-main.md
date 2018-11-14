@@ -9,7 +9,6 @@ header:
   caption: "Photo credit: Mt Merapi, Java - Adrian Ng 2015"
 ---
 
-# OptionPricer
 This project looks at three ways of computing Option Prices.
 
 [Binomial Trees](/java/options/trees/){: .btn .btn--warning .btn--x-large}
