@@ -38,7 +38,11 @@ Where $$\Delta$$ is the number of shares of this stock in your portfolio.
 
 ## Risk Neutral World
 
+What value of $$\Delta$$ should I use?
 
+$$22\Delta -1 = 18\Delta$$
+
+$$\Delta = 0.25$$
 
 $$
 \Delta = \frac{f_u - f_d}{S_0 u- S_0 d}
