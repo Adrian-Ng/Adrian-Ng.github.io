@@ -82,6 +82,13 @@ $$
 
 ## Generalisation
 
+Consider some derivate, such as a call or put.
+It expires at time $$T$$ and is dependent on a stock $$S_t$$.
+
+The price can go up from $$S_0 \rightarrow S_0\cdot u$$.
+
+Or down from $$S_0 \rightarrow S_0 \cdot d$$
+
 $$
 \Delta = \frac{f_u - f_d}{S_0 u- S_0 d}
 $$
@@ -96,7 +103,7 @@ $$
 
 ### Download
 
-[Github](https://github.com/Adrian-Ng/OptionPricer)
+[Github](https://github.com/Adrian-Ng/OptionPricer){: .btn .btn--success .btn--large}
 
 ## Stock Prices
 
