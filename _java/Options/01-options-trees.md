@@ -27,17 +27,21 @@ Now let's consider a three-month call option with a strike price $$X = 21$$.
 
 {% include figure image_path="/assets/images/binomial/simpleoptionprice.png" %}
 
-At maturity, the value of the option will either be $1 or $0. But what will the value of my portfolio be?
+At maturity, the value of the option will either be $1 or $0. But what will the value of my portfolio $$V$$ be?
 
 
 If $$S_T = 22$$ then my portfolio is valued at $$V = 22\Delta -1$$. 
+
 But if $$S_T = 18$$ then $$V = 18\Delta$$.  
 
+Where $$\Delta$$ is the number of shares of this stock in your portfolio.
 
 ## Risk Neutral World
 
+
+
 $$
-\Delta = \frac{f_u - f_d}{S_0 u0 S_0 d}
+\Delta = \frac{f_u - f_d}{S_0 u- S_0 d}
 $$
 
 ## Generalisation
