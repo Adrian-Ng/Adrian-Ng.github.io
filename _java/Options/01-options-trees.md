@@ -44,19 +44,25 @@ $$22\Delta -1 = 18\Delta$$
 
 $$\Delta = 0.25$$
 
-With this value of Delta, we have effectively elimnated risk from our portfolio as no matter what happens, the value of my portfolio will remain the same.
+With this value of Delta, we have effectively elimnated risk from our portfolio as no matter whether the stock price goes up or down, the value of my portfolio will remain the same.
 
-So the value of the portfolio in three months is
+So the value of the portfolio in three months is:
 
 $$22 \times 0.25 - 1 = 18 \times 0.25 = 4.5$$
 
+When we apply discounting, the value of the portfolio is now
 
+$$
+PV = 4.5e^{-0.12\times0.25}=4.3670
+$$
+
+Assuming an in interest rate of 12% at continuous compounding.
+
+## Generalisation
 
 $$
 \Delta = \frac{f_u - f_d}{S_0 u- S_0 d}
 $$
-
-## Generalisation
 
 $$
 f = e^{r\Delta t}(pf_u+(1-p)f_d)
