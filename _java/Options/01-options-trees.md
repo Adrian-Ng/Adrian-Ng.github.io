@@ -38,7 +38,9 @@ Where $$\Delta$$ is the number of shares of this stock in your portfolio.
 
 ## Risk Neutral World
 
-What value of $$\Delta$$ should I use?
+### Picking Delta
+
+What number of shares should my portfolio have?
 
 $$22\Delta -1 = 18\Delta$$
 
@@ -46,17 +48,37 @@ $$\Delta = 0.25$$
 
 With this value of Delta, we have effectively elimnated risk from our portfolio as no matter whether the stock price goes up or down, the value of my portfolio will remain the same.
 
+### Portfolio Valuation at Maturity
+
 So the value of the portfolio in three months is:
 
 $$22 \times 0.25 - 1 = 18 \times 0.25 = 4.5$$
 
-When we apply discounting, the value of the portfolio is now
+### Portfolio Valuation at t = 0
+
+When we apply discounting, the value of the portfolio is now:
 
 $$
 PV = 4.5e^{-0.12\times0.25}=4.3670
 $$
 
-Assuming an in interest rate of 12% at continuous compounding.
+Assuming an interest rate of 12% at continuous compounding.
+
+### Option Pricing
+
+Since:
+
+* $$S_0 = 20$$
+* $$\Delta = 0.25$$
+* $$PV = 4.3670$$
+
+$$PV = S_0\Delta - f$$
+
+$$
+\therefore
+f = 20\times 0.25 - 4.3670 = 0.6330
+$$
+
 
 ## Generalisation
 
