@@ -10,6 +10,26 @@ mathjax: true
 
 [Github](https://github.com/Adrian-Ng/OptionPricer){: .btn .btn--success .btn--large}
 
+
+
+
+## Building a Tree of Stock Prices
+
+Suppose we have some initial stock price $$S_0$$. 
+This stock price will either go up or down.
+
+In this model, these up/down movements are defined as:
+
+$$
+u = e^{\sigma\sqrt{\Delta t}}\\
+d = e^{-\sigma\sqrt{\Delta t}} = \frac{1}{u}\\
+$$
+
+where $$\sigma$$ is the volatility and $$\Delta t$$ is the time step.
+
+We build our tree iteratively. To get the stock price at the next time step we compute both $$S_0 \cdot u$$ and $$S_0 \cdot d$$.
+
+
 ## Intro
 
 A stock price can move up and down. 
@@ -22,6 +42,9 @@ Consider the following:
 
 Presently a share is worth $20, but in three-months it could be either $22 or $18.
 This is a simplistic model. But it captures our uncertainty.
+
+
+
 
 Now let's consider a three-month call option with a strike price $$X = 21$$.
 
@@ -82,28 +105,29 @@ $$
 
 ## Generalisation
 
-Consider some derivate, such as a call or put.
-It expires at time $$T$$ and is dependent on a stock $$S_t$$.
+Consider some derivative, such as a _call_ or _put_, which expires at time $$T$$ and is dependent on a stock $$S_t$$.
 
-The price can go up from $$S_0 \rightarrow S_0\cdot u$$.
+The stock price can go up from $$S_0 \rightarrow S_0\cdot u$$.
 
 Or down from $$S_0 \rightarrow S_0 \cdot d$$
+
+Likewise if the derivative initially costs $$f$$ it can go to $$f_u$$ or $$f_d$$. These 
+
+We can choose delta such that the portfolio is riskless:
 
 $$
 \Delta = \frac{f_u - f_d}{S_0 u- S_0 d}
 $$
+
+The financial meaning of this is that it is sensitive to change in derivative price with respect to share price.
+
+
 
 $$
 f = e^{r\Delta t}(pf_u+(1-p)f_d)
 $$
 
 
-
-## Java
-
-### Download
-
-[Github](https://github.com/Adrian-Ng/OptionPricer){: .btn .btn--success .btn--large}
 
 ## Stock Prices
 
@@ -113,10 +137,7 @@ On the next step, prices will increase via $$S_0\cdot u$$ and decrease via $$S_0
 
 Where:
 
-$$
-u = e^{\sigma\sqrt{\Delta t}}\\
-d = e^{-\sigma\sqrt{\Delta t}} = \frac{1}{u}\\
-$$
+
 
 We iterate through every step until maturity $$t = T$$. 
 At this point we will have evaluated every stock price in the tree within our time horizon.
