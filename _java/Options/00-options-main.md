@@ -29,11 +29,13 @@ This project looks at three ways of computing Option Prices.
 The main class is `OptionPricer.java`, which reads `pricingtypes.txt`.
 This file contains the following strings:
 
-* American Binomial Tree
-* Asian Monte Carlo
-* European Binomial Tree
-* European Monte Carlo
-* Black Scholes
+```
+American Binomial Tree
+Asian Monte Carlo
+European Binomial Tree
+European Monte Carlo
+Black Scholes
+```
 
 ### Body
 
