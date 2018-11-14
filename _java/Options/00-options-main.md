@@ -24,6 +24,8 @@ This project looks at three ways of computing Option Prices.
 
 ## Main Class
 
+### Input
+
 The main class is `OptionPricer.java`, which reads `pricingtypes.txt`.
 This file contains the following strings:
 
@@ -32,6 +34,26 @@ This file contains the following strings:
 * European Binomial Tree
 * European Monte Carlo
 * Black Scholes
+
+### Body
+
+```java
+public class OptionPricer extends Utils {
+
+    public static void main(String[] args) {
+        String[] Name = readTxt("pricingtypes.txt");
+        PricingFactory factory = new PricingFactory();
+        for (String str : Name) {
+            PricingType pricing = factory.getPricingType(str);
+
+            double call = pricing.getCall();
+            double put = pricing.getPut();
+
+            System.out.printf("%s\n\tCall:%.14f\n\tPut:%.14f\n", str, call, put);
+        }
+    }
+}
+```
 
 ## Interface
 
