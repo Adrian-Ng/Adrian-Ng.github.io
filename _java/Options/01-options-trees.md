@@ -10,11 +10,16 @@ A stock price can move up and down.
 But we don't know which direction it's going to go. 
 This is the problem with pricing options.
 
-Consider the following simplistic model
+Consider the following:
 
 {% include figure image_path="/assets/images/binomial/simplestockprice.png" %}
 
+Presently a share is worth $20, but in three-months it could be either $22 or $18.
+This is a simplistic model. But it captures our uncertainty.
 
+Now let's consider a three-month call option with a strike price $$X = 21$$.
+
+{% include figure image_path="/assets/images/binomial/simpleoptionrice.png" %}
 
 
 ## Java
