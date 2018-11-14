@@ -37,13 +37,13 @@ Doing this for every timestep, we build our tree iteratively until $$t = T$$.
 private double[][] stockPrices(double S0, double u, double d, int T) {
     double[][] stockPrice = new double[T][T];
     stockPrice[0][0] = S0;
-    // compute increase by u on the extreme side only
-    for (int i = 1; i < T; i++)
-        stockPrice[0][i] = stockPrice[0][i-1] * u;
-    // compute all subsequent decrease by d
-    for (int j = 1; j < T; j++)
-        for(int i = 1; i< T; i++)
-            stockPrice[j][i] = stockPrice[j-1][i-1] * d;
+    for (int i = 1; i < T; i++) {
+        // compute increase by u on the extreme side only
+        stockPrice[0][i] = stockPrice[0][i - 1] * u;
+        for (int j = 1; j < T; j++)
+            // compute all decrease by d
+            stockPrice[j][i] = stockPrice[j - 1][i - 1] * d;
+    }
     return stockPrice;
 }
 ```
