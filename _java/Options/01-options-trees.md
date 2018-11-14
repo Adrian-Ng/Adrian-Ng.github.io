@@ -21,6 +21,21 @@ Now let's consider a three-month call option with a strike price $$X = 21$$.
 
 {% include figure image_path="/assets/images/binomial/simpleoptionprice.png" %}
 
+At maturity, the value of the option will either be $1 or $0. But what will the value of the option be now?
+
+## Risk Neutral World
+
+$$
+\Delta = \frac{f_u - f_d}{S_0 u0 S_0 d}
+$$
+
+## Generalisation
+
+$$
+f = e^{r\Delta t}(pf_u+(1-p)f_d)
+$$
+
+
 
 ## Java
 
@@ -52,8 +67,4 @@ At this point we will have evaluated every stock price in the tree within our ti
 
 Now we iterate backwards through the tree towards.
 At each stock price we compute an option price using risk-neutral valuation.
-
-$$
-f = e^{r\Delta t}(pf_u+(1-p)f_d)
-$$
 
