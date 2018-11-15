@@ -185,15 +185,15 @@ private double computeCall(double[][] stockPrice, double strike, double interest
 
 ### Implementing Put Pricing
 
-As the implmentation for a European Put differs from the American Put, we define an abstract method in `TreeAbstract.java`.
+As the implmentation for a European Put differs from the American Put, we place an abstract method in `TreeAbstract.java`.
 
 $$
 abstract public double computePut(double[][] stockPrice, double strike, double interest, double p, double dt, int T);
 $$
 
-#### European
+Then we let the concrete implementation of this method be defined in the concrete classes `TreeEuropean.java` and `TreeAmerican.java`.
 
-
+#### TreeEuropean.java
 
 ```java
 @Override
