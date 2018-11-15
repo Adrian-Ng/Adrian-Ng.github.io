@@ -25,8 +25,6 @@ $$\Delta t = 1/12 = 0.8333$$
 
 The above stock price will either go up or down.
 
-{% include figure image_path="/assets/images/binomial/simplestockprice.png" %}
-
 In this model, these up/down movements are defined as:
 
 $$
@@ -103,8 +101,6 @@ This method will return a matrix of stock prices of size $$T \times T$$
 ## Building a Tree of Option Prices
 
 We now construct a second matrix of option prices.
-
-{% include figure image_path="/assets/images/binomial/simpleoptionprice.png" %}
 
 ### Computing Payoff
 
@@ -308,7 +304,7 @@ public interface PricingType {
 
 }
 ```
-This means that `OptionPricer.java` remains boilerplate such that the code to return a call or put is the same no matter whether we are using a _binomial tree_, _monte carlo simulation_, or _Black Scholes_.
+This allows `OptionPricer.java` to remain boilerplate. Now the code to return a call or put is the same no matter the underlying pricing method being used.
 
 In `TreeAbstract.java`, we define the body of the above methods:
 
