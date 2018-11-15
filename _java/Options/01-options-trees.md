@@ -173,6 +173,8 @@ $$
 
 Either way, we take the option price at the root of the tree, $$f_{t=0}$$.
 
+Below are the option trees as fully developed for each type of derivative.
+
 #### European & American Call
 
 $$
