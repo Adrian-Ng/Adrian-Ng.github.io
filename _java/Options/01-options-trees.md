@@ -47,6 +47,13 @@ To get the stock price at the next time step we compute both $$S_0 \cdot u$$ and
 Doing this for every timestep, we build our tree iteratively until $$t = T$$.
 
 $$
+\begin{array}{|c|c|c|c|}
+\hline
+115 & 125.4074 & 136.7569 & 149.1334  \\
+& 105.455 & 115 & 125.4075 \\
+& & 96.7022 & 105.455 \\
+& & & 88.6759
+\end{array}
 
 $$
 
