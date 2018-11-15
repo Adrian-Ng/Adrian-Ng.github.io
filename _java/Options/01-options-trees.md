@@ -148,8 +148,7 @@ $$
 \end{array}
 $$
 
-
-Then we look at all stock prices prior to maturity $$t < T$$ and use the following formulas to iteratively compute option prices.
+Next we look at all stock prices prior to maturity $$t < T$$ and use the following formulas to iteratively compute option prices.
 
 $$
 f = e^{r\Delta t}(pf_u+(1-p)f_d)
@@ -161,6 +160,65 @@ $$
 f = MAX(e^{r\Delta t}(pf_u+(1-p)f_d), X - S_t)
 $$
 
+### Implementation
+
+#### Call
+
+```java
+private double computeCall(double[][] stockPrice, double strike, double interest, double p, double dt, int T) {
+    double[][] optionPrice = new double[T][T];
+    for(int hori = T-1; hori >= 0; hori--)
+        for(int vert = hori; vert >= 0; vert--){
+            // compute option prices at maturity
+            if (hori == T -1)
+                optionPrice[vert][hori] = Math.max(stockPrice[vert][hori]-strike,   0.0);
+            // compute option prices prior to maturity
+            else
+                optionPrice[vert][hori] = Math.exp(-interest*dt)*((p*optionPrice[vert][hori+1])+(1-p)*optionPrice[vert+1][hori+1]);
+        }
+    return optionPrice[0][0];
+}
+```
+
+#### European Put
+
+```java
+@Override
+public double computePut(double[][] stockPrice, double strike, double interest, double p, double dt, int T) {
+    double[][] optionPrice = new double[T][T];
+    for(int hori = T-1; hori >= 0; hori--)
+        for(int vert = hori; vert >= 0; vert--){
+            // compute option prices at maturity
+            if (hori == T -1)
+                optionPrice[vert][hori] = Math.max(strike-stockPrice[vert][hori],0.0);
+                // compute option prices prior to maturity
+            else
+                optionPrice[vert][hori] = Math.exp(-interest*dt)*((p*optionPrice[vert][hori+1])+(1-p)*optionPrice[vert+1][hori+1]);
+        }
+     return optionPrice[0][0];
+}
+```
+
+#### American Put
+
+```java
+@Override
+public double computePut(double[][] stockPrice, double strike, double interest, double p, double dt, int T) {
+    double[][] optionPrice = new double[T][T];
+    for(int hori = T-1; hori >= 0; hori--)
+        for(int vert = hori; vert >= 0; vert--){
+            // compute option prices at maturity
+            if (hori == T -1)
+                optionPrice[vert][hori] = Math.max(strike-stockPrice[vert][hori],0.0);
+            // compute option prices prior to maturity
+            else
+                optionPrice[vert][hori] = Math.max(
+                                                Math.exp(-interest*dt)*((p*optionPrice[vert][hori+1])+(1-p)*optionPrice[vert+1][hori+1])
+                                            ,   strike-stockPrice[vert][hori]);
+        }
+    return optionPrice[0][0];
+}
+```
 
 
 ## Intro
