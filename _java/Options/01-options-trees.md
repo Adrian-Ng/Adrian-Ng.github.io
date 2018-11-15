@@ -161,9 +161,11 @@ $$
 f = MAX(e^{r\Delta t}(pf_u+(1-p)f_d), X - S_t)
 $$
 
-### Implementation
+### Implementing Call Pricing
 
-#### Call
+As the implementation of pricing a European Call the same as that for an American Put, we need only write one implementation.
+
+Therefore we write the following method in `TreeAbstract.java`.
 
 ```java
 private double computeCall(double[][] stockPrice, double strike, double interest, double p, double dt, int T) {
@@ -181,7 +183,17 @@ private double computeCall(double[][] stockPrice, double strike, double interest
 }
 ```
 
-#### European Put
+### Implementing Put Pricing
+
+As the implmentation for a European Put differs from the American Put, we define an abstract method in `TreeAbstract.java`.
+
+$$
+abstract public double computePut(double[][] stockPrice, double strike, double interest, double p, double dt, int T);
+$$
+
+#### European
+
+
 
 ```java
 @Override
@@ -200,8 +212,7 @@ public double computePut(double[][] stockPrice, double strike, double interest, 
 }
 ```
 
-#### American Put
-
+#### American 
 ```java
 @Override
 public double computePut(double[][] stockPrice, double strike, double interest, double p, double dt, int T) {
