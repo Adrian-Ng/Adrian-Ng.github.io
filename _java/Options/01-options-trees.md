@@ -156,7 +156,7 @@ $$
 where:
 
 $$
-p = \fra{e^{r\Delta t} - d}{u-d}
+p = \frac{e^{r\Delta t} - d}{u-d}
 $$
 
 which in this example gives us:
