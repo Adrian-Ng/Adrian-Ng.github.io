@@ -15,12 +15,6 @@ classes: wide
 
 Consider an option with the strike price $$X = 120$$ maturing in $$T = 3$$ months on a stock worth $$S = 115$$ having volatility $$\sigma = 30%$$ and interest rate $$r = 15%$$.
 
-### Time Step
-
-We shall use a three-step bionimal model, with each time step representing one month.
-
-$$\Delta t = 1/12 = 0.8333$$
-
 ### u & d
 
 The above stock price will either go up or down.
@@ -34,14 +28,20 @@ $$
 
 where $$\sigma$$ is the volatility and $$\Delta t$$ is the time step.
 
+### Time Step
+
+We shall use a three-step bionimal model, with each time step representing one month.
+
+$$\Delta t = 1/12 = 0.8333$$
+
+## Building a Tree of Stock Prices
+
 Applying our parameters, we get:
 
 $$
 u = e^{0.3\sqrt{0.08333}} = 1.0905\\
 d = 1/1.0905 = 0.9170\\
 $$
-
-## Building a Tree of Stock Prices
 
 To get the stock price at the next time step we compute both $$S_0 \cdot u$$ and $$S_0 \cdot d$$. 
 
