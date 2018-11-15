@@ -114,10 +114,25 @@ $$
 \hline
 \text{Call} & \text{Put} \\
 \hline 
-max(S_T - X,0) & max(X - S_T, 0) \\
+MAX(S_T - X,0) & MAX(X - S_T, 0) \\
 \hline
 \end{array}
 $$
+
+If the option is a Call, we get the 
+
+$$
+\begin{array}{|c|c|c|c|}
+\hline
+? & ? & ? & 29.1334  \\
+ & ? & ? & 5.4075 \\
+ &  & ? & 0 \\
+ &  &  & 0 \\
+\hline
+\end{array}
+$$
+
+
 
 Then we look at all stock prices prior to maturity $$t < T$$ and use the following formulas to iteratively compute option prices.
 
@@ -125,10 +140,10 @@ $$
 f = e^{r\Delta t}(pf_u+(1-p)f_d)
 $$
 
-But note that for _American Puts_, we must consider __early exercise__. 
+But note that for _American Puts_, we must consider __early exercise__:
 
 $$
-f = max(e^{r\Delta t}(pf_u+(1-p)f_d), X - S_t)
+f = MAX(e^{r\Delta t}(pf_u+(1-p)f_d), X - S_t)
 $$
 
 
