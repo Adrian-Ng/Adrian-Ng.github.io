@@ -4,6 +4,7 @@ permalink: /java/options/trees/
 excerpt: "Pricing European and American options using Binomial Trees"
 toc: true
 mathjax: true
+classes: wide
 ---
 
 ## Download
