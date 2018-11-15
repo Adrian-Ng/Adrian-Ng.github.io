@@ -107,16 +107,28 @@ We now construct a second matrix of option prices.
 
 ### Computing Payoff
 
-In the first step, look at the stock prices at maturity
+In the first step, look at the stock prices at maturity and compute the _Pay-Off_.
 
 $$
-\begin{array}{|c|c|c|}
+\begin{array}{|c|c|}
 \hline
-\text{} & \text{Call} & \text{Put} \\
+\text{Call} & \text{Put} \\
 \hline 
-\text{European} & MAX(S_T - X,0) & MAX(X - S_T, 0) \\
-\text{American} & MAX(S_T - X,0) & MAX(X - S_T, 0) \\
+max(S_T - X,0) & max(X - S_T, 0) \\
+\hline
 \end{array}
+$$
+
+Then we look at all stock prices prior to maturity $$t < T$$ and use the following formulas to iteratively compute option prices.
+
+$$
+f = e^{r\Delta t}(pf_u+(1-p)f_d)
+$$
+
+But note that for _American Puts_, we must consider __early exercise__. 
+
+$$
+f = max(e^{r\Delta t}(pf_u+(1-p)f_d), X - S_t)
 $$
 
 
