@@ -176,6 +176,8 @@ $$
 \end{array}
 $$
 
+$$f = 6.8171$$
+
 #### European Put
 
 $$
@@ -188,6 +190,8 @@ $$
 \hline
 \end{array}
 $$
+
+$$f = 8.0051$$
 
 #### American Put
 
@@ -202,7 +206,7 @@ $$
 \end{array}
 $$
 
-
+$$f = 7.4003$$ 
 
 ### Implementing Call Pricing
 
@@ -234,7 +238,7 @@ As the implmentation for a European Put differs from the American Put, we place 
 abstract public double computePut(double[][] stockPrice, double strike, double interest, double p, double dt, int T);
 ```
 
-Then we let the concrete implementation of this method be defined in the concrete classes `TreeEuropean.java` and `TreeAmerican.java`.
+Then we let the concrete implementation of this method be defined in the concrete classes `TreeEuropean.java` and `TreeAmerican.java` which both extend the abstract class.
 
 #### TreeEuropean.java
 
@@ -254,7 +258,6 @@ public double computePut(double[][] stockPrice, double strike, double interest, 
      return optionPrice[0][0];
 }
 ```
-
 #### American 
 ```java
 @Override
@@ -275,4 +278,18 @@ public double computePut(double[][] stockPrice, double strike, double interest, 
 }
 ```
 
+### Interface
+
+`TreeAbstract.java` is an _abstract_ class implementing the _interface_ `PricingType.java` which is written as follows:
+
+```java
+public interface PricingType {
+
+    double getCall();
+    double getPut();
+
+}
+```
+In `TreeAbstract.java`, we define the body of the above methods.
+To return the 
 
