@@ -17,9 +17,7 @@ Consider an option with the strike price $$X = 120$$ maturing in $$T = 3$$ month
 
 ### u & d
 
-The above stock price will either go up or down.
-
-In this model, these up/down movements are defined as:
+The above stock price will either go up or down. In this model, these up/down movements are defined as:
 
 $$
 u = e^{\sigma\sqrt{\Delta t}}\\
@@ -153,6 +151,18 @@ Next we look at all stock prices prior to maturity $$t < T$$ and use the followi
 
 $$
 f = e^{r\Delta t}(pf_u+(1-p)f_d)
+$$
+
+where:
+
+$$
+p = \fra{e^{r\Delta t} - d}{u-d}
+$$
+
+which in this example gives us:
+
+$$
+p = \frac{1.0126-0.9170}{1.0905-0.9170} = 0.5509
 $$
 
 But note that for _American Puts_, we must consider __early exercise__ such that our option price is:
