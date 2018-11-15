@@ -149,6 +149,8 @@ $$
 \end{array}
 $$
 
+### Applying Discounting
+
 Next we look at all stock prices prior to maturity $$t < T$$ and use the following formulas to iteratively compute option prices.
 
 $$
@@ -160,6 +162,47 @@ But note that for _American Puts_, we must consider __early exercise__ such that
 $$
 f = MAX(e^{r\Delta t}(pf_u+(1-p)f_d), X - S_t)
 $$
+
+#### European & American Call
+
+$$
+\begin{array}{|c|c|c|c|}
+\hline
+6.8171 & 11.2264 & 18.2383 & 29.1334  \\
+ & 1.5993 & 2.9400 & 5.4075 \\
+ &  & 0 & 0 \\
+ &  &  & 0 \\
+\hline
+\end{array}
+$$
+
+#### European Put
+
+$$
+\begin{array}{|c|c|c|c|}
+\hline
+8.0051 & 2.8603 & 0 & 0  \\
+ & 14.5402 & 6.4490 & 0 \\
+ &  & 23.2890 & 14.5402 \\
+ &  &  & 31.3120 \\
+\hline
+\end{array}
+$$
+
+#### American Put
+
+$$
+\begin{array}{|c|c|c|c|}
+\hline
+7.4003 & 2.8603 & 0 & 0  \\
+ & 13.1767 & 6.4490 & 0 \\
+ &  & 21.7983 & 14.5402 \\
+ &  &  & 31.3120 \\
+\hline
+\end{array}
+$$
+
+
 
 ### Implementing Call Pricing
 
@@ -187,9 +230,9 @@ private double computeCall(double[][] stockPrice, double strike, double interest
 
 As the implmentation for a European Put differs from the American Put, we place an abstract method in `TreeAbstract.java`.
 
-$$
+```java
 abstract public double computePut(double[][] stockPrice, double strike, double interest, double p, double dt, int T);
-$$
+```
 
 Then we let the concrete implementation of this method be defined in the concrete classes `TreeEuropean.java` and `TreeAmerican.java`.
 
