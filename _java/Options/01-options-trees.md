@@ -51,7 +51,7 @@ S_0 \cdot u = 115 \times 1.0905 = 125.4074\\
 S_0 \cdot d = 115 \times 0.9170 = 105.455
 $$
 
-We can represent this tree using a matrix.
+We can represent this fledgling tree using a matrix.
 
 $$
 \begin{array}{|c|c|}
@@ -61,8 +61,6 @@ $$
 \hline
 \end{array}
 $$
-
-
 
 Doing this for every timestep, we build our tree iteratively until $$t = T$$.
 
@@ -77,9 +75,11 @@ $$
 \end{array}
 $$
 
+We have now $$n = T+1$$ predictions of $$S_T$$.
+
 ### Implementation
 
-We can populate a matrix of stock prices in Java using a two-dimensional array.
+We can populate this tree in Java using a two-dimensional array.
 
 ```java
 private double[][] stockPrices(double S0, double u, double d, int T) {
@@ -96,11 +96,7 @@ private double[][] stockPrices(double S0, double u, double d, int T) {
 }
 ```
 
-This will result in $$n = T$$ predictions of $$S_T$$. Now we can compute our option prices.
-
-
-
-
+This method will return a matrix of stock prices of size $$[T][T]$$
 
 ## Intro
 
