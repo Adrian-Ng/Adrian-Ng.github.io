@@ -10,13 +10,21 @@ mathjax: true
 
 [Github](https://github.com/Adrian-Ng/OptionPricer){: .btn .btn--success .btn--large}
 
+## Example
 
+### Parameters
 
+Consider an option with the strike price $$X = 120$$ maturing in $$T = 3$$ months on a stock worth $$S = 115$$ having volatility $$\sigma = 30%$$ and interest rate $$r = 15%$$.
 
-## Building a Tree of Stock Prices
+We shall use a three-step bionimal model, with each time step representing one month.
 
-Suppose we have some initial stock price $$S_0$$. 
-This stock price will either go up or down.
+$$\Delta t = 1/12 = 0.8333$$
+
+### Building a Tree of Stock Prices
+
+The above stock price will either go up or down.
+
+{% include figure image_path="/assets/images/binomial/simplestockprice.png" %}
 
 In this model, these up/down movements are defined as:
 
@@ -27,9 +35,21 @@ $$
 
 where $$\sigma$$ is the volatility and $$\Delta t$$ is the time step.
 
+Applying our parameters, we get
+
+$$
+u = e^{0.3\sqrt{0.08333}} = 1.0905\\
+d = 1/1.0905 = 0.9170\\
+$$
+
 To get the stock price at the next time step we compute both $$S_0 \cdot u$$ and $$S_0 \cdot d$$. 
 
 Doing this for every timestep, we build our tree iteratively until $$t = T$$.
+
+$$
+
+$$
+
 
 ### Implementation
 
@@ -47,6 +67,11 @@ private double[][] stockPrices(double S0, double u, double d, int T) {
     return stockPrice;
 }
 ```
+
+This will result in $$n = T$$ predictions of $$S_T$$. Now we can compute our option prices.
+
+
+
 
 
 ## Intro
