@@ -10,7 +10,7 @@ mathjax: true
 
 [Github](https://github.com/Adrian-Ng/OptionPricer){: .btn .btn--success .btn--large}
 
-## Example
+## Building a Tree of Stock Prices
 
 ### Parameters
 
@@ -20,7 +20,7 @@ We shall use a three-step bionimal model, with each time step representing one m
 
 $$\Delta t = 1/12 = 0.8333$$
 
-### Building a Tree of Stock Prices
+### Example
 
 The above stock price will either go up or down.
 
@@ -96,7 +96,29 @@ private double[][] stockPrices(double S0, double u, double d, int T) {
 }
 ```
 
-This method will return a matrix of stock prices of size $$[T][T]$$
+This method will return a matrix of stock prices of size $$T \times T$$
+
+
+## Building a Tree of Option Prices
+
+We now construct a second matrix of option prices.
+
+{% include figure image_path="/assets/images/binomial/simpleoptionprice.png" %}
+
+### Computing Payoff
+
+In the first step, look at the stock prices at maturity
+
+$$
+\begin{array}{|c|c|c|}
+\hline
+\text{} & \text{Call} & \text{Put} \\
+\hline 
+\text{European} & MAX(S_T - X,0) & MAX(X - S_T, 0) \\
+\text{American} & MAX(S_T - X,0) & MAX(X - S_T, 0) \\
+\end{array}
+$$
+
 
 ## Intro
 
