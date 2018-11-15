@@ -44,12 +44,23 @@ $$
 
 To get the stock price at the next time step we compute both $$S_0 \cdot u$$ and $$S_0 \cdot d$$. 
 
+$$
+\begin{array}{|c|c|c|c|}
+\hline
+115 & 125.4074 &  &   \\
+ & 105.455 &  &  \\
+ &  &  &  \\
+ &  &  &  \\
+\hline
+\end{array}
+$$
+
+
+
 Doing this for every timestep, we build our tree iteratively until $$t = T$$.
 
 $$
 \begin{array}{|c|c|c|c|}
-\hline
-t = 0 & t = 1 & t = 2 & t = 3
 \hline
 115 & 125.4074 & 136.7569 & 149.1334  \\
  & 105.455 & 115 & 125.4075 \\
@@ -59,19 +70,20 @@ t = 0 & t = 1 & t = 2 & t = 3
 \end{array}
 $$
 
-
 ### Implementation
+
+We can populate a matrix of stock prices in Java using a two-dimensional array.
 
 ```java
 private double[][] stockPrices(double S0, double u, double d, int T) {
     double[][] stockPrice = new double[T][T];
     stockPrice[0][0] = S0;
-    for (int i = 1; i < T; i++) {
+    for (int hori = 1; hori < T; hori++) {
         // compute increase by u on the extreme side only
-        stockPrice[0][i] = stockPrice[0][i - 1] * u;
-        for (int j = 1; j < T; j++)
+        stockPrice[0][hori] = stockPrice[0][hori - 1] * u;
+        for (int vert = 1; vert < T; vert++)
             // compute all decrease by d
-            stockPrice[j][i] = stockPrice[j - 1][i - 1] * d;
+            stockPrice[vert][hori] = stockPrice[vert - 1][hori - 1] * d;
     }
     return stockPrice;
 }
