@@ -6,11 +6,21 @@ toc: true
 mathjax: true
 ---
 
+## Download
+
+[Github](https://github.com/Adrian-Ng/OptionPricer){: .btn .btn--success .btn--large}
+
 ## Black Scholes differential equation
 
 $$
 \frac{\partial f}{\partial t} + rS\cdot \frac{\partial f}{\partial S}+\frac{1}{2}\sigma^2 S^2\cdot\frac{\partial^2 f}{\partial S^2} = rf
 $$
+
+where
+
+* $$S = \text{stock price}$$
+* $$f = \text{option price}$$
+* $$r = \text{interest}$$
 
 ### Pricing call and put with a given strike price X and maturity T
 
@@ -29,7 +39,6 @@ $$
 d_1=\frac{\ln{\left(\frac{S}{X}\right)}+(r + \frac{\sigma^2}{2})(T-t)}{\sigma\sqrt{T-t}}\\
 d_2=\frac{\ln{\left(\frac{S}{X}\right)}+(r - \frac{\sigma^2}{2})(T-t)}{\sigma\sqrt{T-t}} = d_1-\sigma\sqrt{T-t}\\
 $$
-
 
 ## Java
 
@@ -87,7 +96,7 @@ public double getPut() {
     }
 ```
 
-### input.txt
+### BlackScholes.txt
 
 In the Java implementation, we simply assume $$t=0$$.
 So the timehorizon $$T-t$$ is the maturity $$T$$. 
@@ -102,7 +111,7 @@ r = 0.07\\
 T-t = 0.5\\
 $$
 
-So in `input.txt`, we have
+So in `BlackScholes.txt`, we have
 
 ```
 stock,115
@@ -113,12 +122,12 @@ timehorizon,0.5
 ```
 
 ### Output
-
+```
 Black Scholes
 	Call:39.63234093141300
 	Put:1.88077423201832
-
-## Appendix
+```
+## The Black Scholes Formulas
 
 ### Nearing Maturity
 
