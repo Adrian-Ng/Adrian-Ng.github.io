@@ -47,7 +47,7 @@ To get the stock price at the next time step we compute both $$S_0 \cdot u$$ and
 That is:
 
 $$
-S_0 \cdot u = 115 \times 1.0905 = 125.4074
+S_0 \cdot u = 115 \times 1.0905 = 125.4074\\
 S_0 \cdot d = 115 \times 0.9170 = 105.455
 $$
 
