@@ -140,10 +140,10 @@ And the following if the option is a _Put_:
 $$
 \begin{array}{|c|c|c|c|}
 \hline
-? & ? & ? & 29.1334  \\
- & ? & ? & 5.4075 \\
- &  & ? & 0 \\
- &  &  & 0 \\
+? & ? & ? & 0  \\
+ & ? & ? & 0 \\
+ &  & ? & 14.5402 \\
+ &  &  & 31.3120 \\
 \hline
 \end{array}
 $$
