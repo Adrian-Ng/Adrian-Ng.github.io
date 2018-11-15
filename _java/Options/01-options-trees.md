@@ -44,13 +44,20 @@ $$
 
 To get the stock price at the next time step we compute both $$S_0 \cdot u$$ and $$S_0 \cdot d$$. 
 
+That is:
+
 $$
-\begin{array}{|c|c|c|c|}
+S_0 \cdot u = 115 \times 1.0905 = 125.4074
+S_0 \cdot d = 115 \times 0.9170 = 105.455
+$$
+
+We can represent this tree using a matrix.
+
+$$
+\begin{array}{|c|c|}
 \hline
-115 & 125.4074 &  &   \\
- & 105.455 &  &  \\
- &  &  &  \\
- &  &  &  \\
+115 & 125.4074   \\
+& 105.455  \\
 \hline
 \end{array}
 $$
