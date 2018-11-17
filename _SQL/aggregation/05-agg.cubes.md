@@ -56,6 +56,7 @@ BirthYear   Cnt
 2003        1
 ```
 
+But what if we want more detail?
 We can __drill down__ to see things at a more _granular_ level by introducing more categorial fields to the `GROUP BY`.
 
 ```sql
@@ -69,6 +70,7 @@ GROUP BY
 	YEAR(dob)
 ,	MONTH(dob);
 ```
+Now we aggregate by __year__ and __month__. We can see that we have one user born in January 1989.
 
 ```
 BirthYear   BirthMonth  Cnt
