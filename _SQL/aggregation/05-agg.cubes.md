@@ -30,10 +30,37 @@ GROUP BY
 
 As you can see, we are looking at _generalised_ view of our customers.
 
+```
+BirthYear   Cnt
+----------- -----------
+1981        1
+1983        1
+1984        3
+1985        4
+1986        3
+1988        1
+1989        5
+1990        2
+1991        7
+1992        14
+1993        10
+1994        6
+1995        9
+1996        5
+1997        12
+1998        4
+1999        2
+2000        5
+2001        2
+2002        3
+2003        1
+```
+
 We can __drill down__ to see things at a more _granular_ level by introducing more categorial fields to the `GROUP BY`.
 
 ```sql
 SELECT
+	TOP 20
 	YEAR(dob) 	AS BirthYear
 ,	MONTH(dob) 	AS BirthMonth
 ,	COUNT(*)	AS Cnt
@@ -41,6 +68,31 @@ FROM 	music.Users
 GROUP BY
 	YEAR(dob)
 ,	MONTH(dob);
+```
+
+```
+BirthYear   BirthMonth  Cnt
+----------- ----------- -----------
+1989        1           1
+1992        1           3
+1993        1           3
+1995        1           1
+1996        1           1
+1997        1           2
+1999        1           1
+2002        1           1
+1985        2           1
+1991        2           1
+1992        2           3
+1993        2           1
+1994        2           1
+1995        2           2
+1997        2           1
+1991        3           1
+1992        3           2
+1993        3           1
+1994        3           1
+1995        3           1
 ```
 
 ### Roll Up
@@ -51,6 +103,7 @@ In SQL, we can do this by adding `WITH ROLLUP`.
 
 ```sql
 SELECT
+	TOP 20
 	YEAR(dob) 	AS BirthYear
 ,	MONTH(dob) 	AS BirthMonth
 ,	DAY(dob)	AS BirthDay
@@ -61,6 +114,31 @@ GROUP BY
 ,	MONTH(dob)
 ,	DAY(dob)
 WITH ROLLUP;
+```
+
+```
+BirthYear   BirthMonth  BirthDay    Cnt
+----------- ----------- ----------- -----------
+1981        6           16          1
+1981        6           NULL        1
+1981        NULL        NULL        1
+1983        10          9           1
+1983        10          NULL        1
+1983        NULL        NULL        1
+1984        8           12          1
+1984        8           31          1
+1984        8           NULL        2
+1984        9           22          1
+1984        9           NULL        1
+1984        NULL        NULL        3
+1985        2           27          1
+1985        2           NULL        1
+1985        4           12          1
+1985        4           NULL        1
+1985        6           13          1
+1985        6           NULL        1
+1985        8           15          1
+1985        8           NULL        1
 ```
 
 In this way, we can automatically perform the aggregation with each of these combinations of fields in the `GROUP BY`.:
@@ -88,6 +166,7 @@ In this case, we use the `WITH CUBE` modifier instead.
 
 ```sql
 SELECT
+	TOP 20
 	YEAR(dob) 	AS BirthYear
 ,	MONTH(dob) 	AS BirthMonth
 ,	DAY(dob)	AS BirthDay
@@ -98,6 +177,31 @@ GROUP BY
 ,	MONTH(dob)
 ,	DAY(dob)
 WITH CUBE;
+```
+
+```
+BirthYear   BirthMonth  BirthDay    Cnt
+----------- ----------- ----------- -----------
+1993        1           1           1
+NULL        1           1           1
+1994        4           1           1
+NULL        4           1           1
+2000        6           1           1
+NULL        6           1           1
+1992        8           1           1
+1995        8           1           1
+NULL        8           1           2
+NULL        NULL        1           5
+1993        5           2           1
+1995        5           2           1
+NULL        5           2           2
+1996        8           2           1
+NULL        8           2           1
+2002        9           2           1
+NULL        9           2           1
+2003        11          2           1
+NULL        11          2           1
+NULL        NULL        2           5
 ```
 
 ## Simulating dob
@@ -159,8 +263,25 @@ Try the following to see for yourself:
 
 ```sql
 SELECT 
+	TOP 10
 	stats.Normal(25,5, RAND(),RAND()) AS age
 FROM music.Users
+```
+As you can see, everyone is assigned the same random age!
+
+```
+age
+----------------------
+29.7755011301385
+29.7755011301385
+29.7755011301385
+29.7755011301385
+29.7755011301385
+29.7755011301385
+29.7755011301385
+29.7755011301385
+29.7755011301385
+29.7755011301385
 ```
 
 The solution is to iterate through a `WHILE` loop.
