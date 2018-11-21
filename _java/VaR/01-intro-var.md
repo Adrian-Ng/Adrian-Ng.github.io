@@ -6,28 +6,18 @@ toc: true
 mathjax: true
 ---
 
-### Background
+This project looks at three ways of computing estimating Value at Risk (VaR).
 
-In 2017 I write my Master's dissertation which was simply titled _Implementation of Value at Risk Measures in Java_.
+* [Historical Simulation](/java/var/historical/){: .btn .btn--warning .btn--x-large}
 
-That is, I wrote a program in Java which calculated _thing_ - a measurement. That measurement being Value at Risk.
-It was during this project that I really got my teeth into Java and immersed me in the world of finance.
+* [Monte Carlo Simulation](/java/var/montecarlo/){: .btn .btn--danger .btn--x-large}
 
-### What is Value at Risk?
+* [Analytical Method](/java/var/analytical/){: .btn .btn--info .btn--x-large}
 
-For a given a portfolio of investments there is an associated risk.
-However, there are many measures of risk, such as Greek letters) that simply describe different aspects of risk in a portfolio of derivatives.
-The goal of Value at Risk (VaR) is to provide an estimate of risk that summarises all aspects of risk into one figure.
+The results of each of these implmentations are compared using __Back Testing__.
 
-This one figure simply answers the question: _how bad could it get_?
-An answer is provided with respect to two parameters: the time horizon and confidence level.
-That is, we are $$x\%$$ sure that our portfolio will not lose more than a certain amount over the next $N$ days.
-That certain amount is our VaR estimate.
+* [Back Testing](/java/var/backtest/){: .btn .btn--info .btn--x-large}
 
-This estimate is widely used in industry.
-Take, for instance, an investment bank.
-People deposit their money into this bank and in turn, the bank invests this money in the stock market and earns money on the returns.
-An investment with high returns is highly risky.
-The bank needs to keep a certain amount of cash in reserve to mitigate this risk.
-The size of this reserve is proportional to the bank's exposure to risk, i.e. the VaR estimate.
+## Download
 
+[GitHub](https://github.com/Adrian-Ng/ValueAtRisk){: .btn .btn--success .btn--large}

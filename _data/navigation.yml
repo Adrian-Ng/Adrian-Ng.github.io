@@ -168,10 +168,15 @@ Java:
 #     children:
 #     - title: "Intro"
 #       url: /java/Hadoop/Intro/  
-#   - title: Value at Risk
-#     children:
-#     - title: "Intro"
-#       url: /java/VaR/Intro/
+   - title: Value at Risk
+     url: /java/VaR/Intro/
+     children:
+     - title: "Historical Simulation"
+       url: /java/var/historical/
+     - title: "Monte Carlo Simulation"
+       url: /java/var/montecarlo/
+       - title: "Analytical Method"
+       url: /java/var/analytical/
 
 # MATLAB links
 MATLAB:
