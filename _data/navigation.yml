@@ -175,7 +175,7 @@ Java:
        url: /java/var/historical/
      - title: "Monte Carlo Simulation"
        url: /java/var/montecarlo/
-       - title: "Analytical Method"
+     - title: "Analytical Method"
        url: /java/var/analytical/
 
 # MATLAB links
