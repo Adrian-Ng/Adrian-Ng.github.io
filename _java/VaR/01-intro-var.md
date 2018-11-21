@@ -16,7 +16,7 @@ This project looks at three ways of computing estimating Value at Risk (VaR).
 
 The results of each of these implmentations are compared using __Back Testing__.
 
-* [Back Testing](/java/var/backtest/){: .btn .btn--info .btn--x-large}
+* [Back Testing](/java/var/backtest/){: .btn .btn--inverse .btn--x-large}
 
 ## Download
 
