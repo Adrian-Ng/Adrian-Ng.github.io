@@ -169,7 +169,7 @@ Java:
 #     - title: "Intro"
 #       url: /java/Hadoop/Intro/  
    - title: Value at Risk
-     url: /java/var/Intro/
+     url: /java/var/intro/
      children:
      - title: "Historical Simulation"
        url: /java/var/historical/
