@@ -1,8 +1,8 @@
 ---
-title: "VAR: Intro"
+title: "Value at Risk"
 permalink: /java/var/intro/
 excerpt: "An intro to VAR by Adrian Ng"
-toc: true
+toc: false
 mathjax: true
 ---
 
