@@ -9,7 +9,7 @@ mathjax: true
 This project looks at three ways of computing estimating Value at Risk (VaR) using Java.
 Some may take probabilistic assumptions and/or sample from simulated distributions.
 
-In all cases, we take the parameters of our approaches from real-world historical market data, from _Yahoo Finance__.
+In all cases, we take the parameters of our approaches from real-world historical market data, from _Yahoo Finance_.
 
 * [Historical Simulation](/java/var/historical/){: .btn .btn--warning .btn--x-large}
 
