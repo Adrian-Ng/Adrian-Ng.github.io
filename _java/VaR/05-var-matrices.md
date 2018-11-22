@@ -73,7 +73,7 @@ private double[][] getCovarianceMatrix(double[][] matrix) {
 
 ## Correlation Matrix
 
-{% include figure image_path="/assets/images/var/correlation.png" %}
+{% include figure image_path="/assets/images/var/correlation.svg" %}
 
 ```java
 public double[][] getCorrelationMatrix(double[][] matrix) {
