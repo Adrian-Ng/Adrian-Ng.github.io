@@ -34,9 +34,18 @@ where `countAsset` is the number of stock symbols in our portfolio and `size` is
 
 ## getCovarianceMatrix
 
-In calculating [variance](https://adrian.ng/java/var/volatility/#percentagechange)
+The method `getCovarianceMatrix()` returns an $$N \times N$$ matrix for a portfolio of $$N$$ stocks.
 
-The covariance matrix is simply the 
+The value of each element is computed as:
+
+$$
+\sigma^2_{x,n}={\frac{1}{m}}\sum_{i=1}^mx^2_{n-i},\quad \sigma^2_{y,n}={\frac{1}{m}}\sum_{i=1}^my^2_{n-i}
+$$
+
+
+
+
+
 
 
 ```java
@@ -51,6 +60,14 @@ private double[][] getCovarianceMatrix(double[][] matrix) {
     return covarianceMatrix;
 }
 ```
+
+$$
+\begin{bmatrix}
+	a_{2.694056173665337E-4} & a_{2.1361059045418314E-4} & a_{1.709980427330677E-4}\\
+	a_{2.1361059045418314E-4} & a_{2.669503258565737E-4} & a_{1.7039293114741037E-4}\\
+	a_{1.709980427330677E-4} & a_{1.7039293114741037E-4} & a_{2.6718851085657364E-4}
+\end{bmatrix}
+$$
 
 ## getCorrelationMatrix
 
