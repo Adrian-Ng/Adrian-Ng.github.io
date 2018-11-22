@@ -15,7 +15,9 @@ double[] percentageChanges = PercentageChange.getArray(stock.getHistory());
 
 ### Volatility factory
 
-Before we can return volatility, we instantiate
+Before we can return volatility, we must contstruct a `VolatilityFactory`.
+Then we invoke `getType` such that the appropriate concrete classes are instantiated.
+
 
 ```java
 VolatilityFactory volatilityFactory = new VolatilityFactory();

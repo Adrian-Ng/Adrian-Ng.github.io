@@ -10,15 +10,69 @@ classes: wide
 We calculate daily volatility as the _standard deviation_ of the __daily percentage change__ (= daily returns) of the stock price.
 Our implement implmentation for returning the daily percentage change is defined in the class [PercentageChange.java](https://adrian.ng/java/var/intro/#percentagechange)
 
+We explore a number of ways of estimating volatility:
+
+* Equal Weighted
+* Exponentially Weighted Moving Average
+* GARCH(1,1)
+
+Each have their of trade-offs, complexity being the main one.
+But nonetheless, they all return an estimate of volatility.
+
+Volatility is the square root of the variance.
+`VolatilityAbstract.java` defines the abstract method `getVariance()`
+
+We have three concrete classes that implement this method:
+
+* `VolatilityEW.java`
+* `VolatilityEWMA.java`
+* `VolatilityGARCH.java`
+
+
+## VolatilityFactory
+
+Before we can return volatility, we must construct a `VolatilityFactory`.
+This is a class that contains a method that allows us to instantiate the correct concrete class.
+
+```java
+public class VolatilityFactory {
+    
+    public VolatilityAbstract getType(String type) {
+        if (type == null)
+            return null;
+
+        if (type.equals("EW"))
+            return new VolatilityEW();
+
+        if (type.equals("EWMA"))
+            return new VolatilityEWMA();
+
+        if (type.equals("GARCH"))
+            return new VolatilityGARCH();
+
+        return null;
+    }
+}
+```
+
+So to return an estimate for volatility with equal weighting, we could write:
+
+```java        
+double volatility = new VolatilityFactory()
+        .getType("EW")
+        .getVolatility(returns1, returns2);
+```
+where `returns1` and `returns2` are vectors of percentage changes.
+
 ## Equal Weighted Variance
 
 The squared volatility (=variance) can be calculated using a simple weighted model:
 
 $$
-\sigma^2_n = \frac{1}{m}\sum_{i=1}^m u^2_{n-i}
+	\sigma^2_n = \frac{1}{m}\sum_{i=1}^m u^2_{n-i}
 $$
 
-This squares each percentage change and returns the average of all these elements.
+That is, we square each percentage change and return the average of all these elements.
 
 ```java
 public class VolatilityEW extends VolatilityAbstract {
@@ -32,6 +86,7 @@ public class VolatilityEW extends VolatilityAbstract {
     }
 ```
 
+
 ## Exponentially Weighted Moving Average
 
 In estimating daily volatilitym it makes sense to assume that more recent observations are more relevant than those in the past.
@@ -40,8 +95,8 @@ But the trade off is that we want to include as many observations in our calcula
 We consider a weighted model in which the weights decrease exponentially for older observations:
 
 $$
-\sigma^2_n = \lambda \sigma^2_{n-1} + (1-\lambda) u^2_{n-1}\\
-\text{where} \lambda = 0.94
+	\sigma^2_n = \lambda \sigma^2_{n-1} + (1-\lambda) u^2_{n-1}\\
+	\text{where } \lambda = 0.94
 $$
 
 Once again we iterate through our vector of squared percentage changes $$u^2$$, moving from oldest to newest observations.
@@ -68,29 +123,21 @@ public class VolatilityEWMA extends VolatilityAbstract {
 ```
 
 ## GARCH
+
+The Generalised Autogregressive Conditional Heteroskedastic process, GARCH(1,1), is an extension of _EWMA_ that introduces a weighted $$\gamma$$ long-term average variance $$V_L$$.
+
+$$
+\sigma_n^2 = \gamma V_L + \alpha u^2_{n-1} + \beta \sigma_{n-1}^2
+$$
+
+where the parameters $$\left{ \alpha, \beta, \gamma \right}$$ are parameters to be found via maximum likelihood estimation, using an algorithm such as _Levenberg-Marquardt_.
+
 ```java
 //TODO
 ```
 
-## VolatilityFactory
 
-```java
-public class VolatilityFactory {
-    
-    public VolatilityAbstract getType(String type) {
-        if (type == null)
-            return null;
 
-        if (type.equals("EW"))
-            return new VolatilityEW();
 
-        if (type.equals("EWMA"))
-            return new VolatilityEWMA();
 
-        if (type.equals("GARCH"))
-            return new VolatilityGARCH();
 
-        return null;
-    }
-}
-```
