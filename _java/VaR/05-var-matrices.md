@@ -32,7 +32,7 @@ double[][] matrix = double[countAsset][size];
 where `countAsset` is the number of stock symbols in our portfolio and `size` is the number of percentage changes in our data.
 
 
-## getCovarianceMatrix
+## Variance Covariance Matrix
 
 The method `getCovarianceMatrix()` returns an $$N \times N$$ matrix for a portfolio of $$N$$ stocks.
 
@@ -46,6 +46,17 @@ $$
 \end{bmatrix}
 $$
 
+The covariance matrix for a portfolio of _GOOG_, _MSFT_, and _AAPL_ stocks looks something like:
+
+$$
+\begin{bmatrix}
+	2.694056173665337E-4 & 2.1361059045418314E-4 & 1.709980427330677E-4\\
+	2.1361059045418314E-4 & 2.669503258565737E-4 & 1.7039293114741037E-4\\
+	1.709980427330677E-4 & 1.7039293114741037E-4 & 2.6718851085657364E-4
+\end{bmatrix}
+$$
+
+In our implementation, we simply step through each element of our matrix and invoke `getVariance()`.
 
 ```java
 private double[][] getCovarianceMatrix(double[][] matrix) {
@@ -60,17 +71,9 @@ private double[][] getCovarianceMatrix(double[][] matrix) {
 }
 ```
 
-The covariance matrix for a portfolio of _GOOG_, _MSFT_, and _AAPL_ stocks looks something like:
+## Correlation Matrix
 
-$$
-\begin{bmatrix}
-	2.694056173665337E-4 & 2.1361059045418314E-4 & 1.709980427330677E-4\\
-	2.1361059045418314E-4 & 2.669503258565737E-4 & 1.7039293114741037E-4\\
-	1.709980427330677E-4 & 1.7039293114741037E-4 & 2.6718851085657364E-4
-\end{bmatrix}
-$$
-
-## getCorrelationMatrix
+{% include figure image_path="/assets/images/var/correlation.png" %}
 
 ```java
 public double[][] getCorrelationMatrix(double[][] matrix) {
@@ -89,7 +92,7 @@ public double[][] getCorrelationMatrix(double[][] matrix) {
 }
 ```
 
-## getCholeskyDecomposition
+## Cholesky Decomposition
 
 ```java
 public double[][] getCholeskyDecomposition(double[][] matrix) {
