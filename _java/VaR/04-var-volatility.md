@@ -130,7 +130,7 @@ $$
 \sigma_n^2 = \gamma V_L + \alpha u^2_{n-1} + \beta \sigma_{n-1}^2
 $$
 
-where the parameters $$\left{ \alpha, \beta, \gamma \right}$$ are parameters to be found via maximum likelihood estimation, using an algorithm such as _Levenberg-Marquardt_.
+where the parameters $${ \alpha, \beta, \gamma }$$ are parameters to be found via maximum likelihood estimation, using an algorithm such as _Levenberg-Marquardt_.
 
 ```java
 //TODO
