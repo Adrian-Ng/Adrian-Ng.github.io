@@ -33,11 +33,11 @@ The results of each of these implmentations are compared using __Back Testing__.
 ### Utils
 
 
-### PercentageChange
+## PercentageChange
 
 In order to estimate VaR, we take the assumption that the __percentage changes__ between the stock prices on each day can be modelled on the __standard Gaussian Distribution__, $$\Phi(0,1)$$.
 
-#### getArrayList
+### getArrayList
 
 We pass a collection of `HistoricalQuote` to `getArrayList`, which returns a collection of `Double` in an `ArrayList`.
 
@@ -67,7 +67,7 @@ public static ArrayList<Double> getArrayList(List<HistoricalQuote> historicalQuo
 
 Because working with `BigDecimal` is computationally expensive (=slow), we cast each result to `double`.
 
-#### getArray
+### getArray
 
 ```java
 public static double[] getArray(List<HistoricalQuote> historicalQuotes) {
@@ -96,7 +96,7 @@ public abstract class RiskMeasure extends VaR {
 
 ### Volatility
 
-The only abstract method defined in this class is as follows:
+The only abstract method defined in `VolatilityAbstract.java` is as follows:
 
 ```java
 abstract public double getVariance(double[] xVector, double[] yVector);
@@ -106,9 +106,9 @@ All remaining methods are identical in implementation across the child classes.
 As such we define their bodies here. 
 These classes are:
 
-* getCorrelationMatrix(double[][] matrix)
-* getCovarianceMatrix(double[][] matrix)
-* getCholeskyDecompositionMatrix(double[][] matrix)
+* `getCorrelationMatrix(double[][] matrix)`
+* `getCovarianceMatrix(double[][] matrix)`
+* `getCholeskyDecompositionMatrix(double[][] matrix)`
 
 #### getCorrelationMatrix
 
