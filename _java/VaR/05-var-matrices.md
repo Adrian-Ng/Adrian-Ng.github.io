@@ -40,9 +40,9 @@ The value of each element is simply the variance between two vectors of percenta
 
 $$
 \begin{bmatrix}
-	a_{11} & a_{12} & a_{13}\\
-	a_{21} & a_{22} & a_{23}\\
-	a_{31} & a_{32} & a_{33}
+	\sigma^2_{GOOG,GOOG} & \sigma^2_{GOOG,MSFT} & \sigma^2_{GOOG,AAPL}\\
+	\sigma^2_{MSFT,GOOG} & \sigma^2_{MSFT,MSFT} & \sigma^2_{MSFT,AAPL}\\
+	\sigma^2_{AAPL,GOOG} & \sigma^2_{AAPL,MSF} & \sigma^2_{AAPL,AAPL}
 \end{bmatrix}
 $$
 
@@ -59,6 +59,8 @@ private double[][] getCovarianceMatrix(double[][] matrix) {
     return covarianceMatrix;
 }
 ```
+
+The covariance matrix for a portfolio of _GOOG_, _MSFT_, and _AAPL_ stocks looks something like:
 
 $$
 \begin{bmatrix}
