@@ -34,7 +34,20 @@ public class VolatilityEW extends VolatilityAbstract {
 
 ## Exponentially Weighted Moving Average
 
+In estimating daily volatilitym it makes sense to assume that more recent observations are more relevant than those in the past.
+But the trade off is that we want to include as many observations in our calculations as possible. Excluding older observations would go against that.
 
+We consider a weighted model in which the weights decrease exponentially for older observations:
+
+$$
+\sigma^2_n = \lambda \sigma^2_{n-1} + (1-\lambda) u^2_{n-1}\\
+\text{where} \lambda = 0.94
+$$
+
+Once again we iterate through our vector of squared percentage changes $$u^2$$, moving from oldest to newest observations.
+This is a recursive forumla. The next estimate for volatility $$\sigma_n$$ depends on the previous estimate $$\sigma_{n-1}$$.
+
+Our weighting is defined as $$\lambda = 0.94$$ which is what J.P. Morgan uses in their _RiskMetric_ platform.
 
 ```java
 public class VolatilityEWMA extends VolatilityAbstract {

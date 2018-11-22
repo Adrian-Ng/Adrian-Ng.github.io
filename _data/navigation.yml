@@ -138,14 +138,6 @@ Java:
      children:
      - title: "Intro"
        url: /java/Basics/Intro/
-   - title: Multithreading    
-     children:
-     - title: "Callable Futures"
-       url: /java/threads/callablefutures/
-   - title: Utils
-     children:
-     - title: "readTxt"
-       url: /java/utils/readtxt/ 
        
    - title: Options Pricing
      url: /java/options/
@@ -181,6 +173,15 @@ Java:
        url: /java/var/volatility/
      - title: "Constructing Matrices"
        url: /java/var/matrices/
+
+   - title: Multithreading    
+     children:
+     - title: "Callable Futures"
+       url: /java/threads/callablefutures/
+   - title: Utils
+     children:
+     - title: "readTxt"
+       url: /java/utils/readtxt/        
 
 # MATLAB links
 MATLAB:
