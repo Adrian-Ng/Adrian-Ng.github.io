@@ -177,6 +177,10 @@ Java:
        url: /java/var/historical/
      - title: "Monte Carlo Simulation"
        url: /java/var/montecarlo/
+     - title: "Volatility"
+       url: /java/var/volatility/
+     - title: "Matrices"
+       url: /java/var/matrices/
 
 # MATLAB links
 MATLAB:
