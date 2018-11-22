@@ -14,9 +14,8 @@ We calculate daily volatility as the __standard deviation__ of daily returns, wh
 The squared volatility (=variance) can be caluclated using a simple weighted model:
 
 $$
-\sigma^2_n = \frac{`}{m}\sum_{i=1}^m u^2_{n-i}
+\sigma^2_n = \frac{1}{m}\sum_{i=1}^m u^2_{n-i}
 $$
-
 
 
 ```java
