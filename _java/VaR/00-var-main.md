@@ -26,6 +26,24 @@ The results of each of these implmentations are compared using __Back Testing__.
 
 [GitHub](https://github.com/Adrian-Ng/ValueAtRisk){: .btn .btn--success .btn--large}
 
+## Background
+
+For a given a portfolio of investments there is an associated risk. 
+However,there are many measures of risk, such as Greek letters) that simply describe different aspects of risk in a portfolio of derivatives. 
+The goal of Value at Risk (VaR) is to provide an estimate of risk that summarises all aspects of risk into one figure.
+
+This one figure simply answers the question: how bad could it get? 
+An answer is provided with respect to two parameters: the __time horizon__ and __confidence level__. 
+That is, we are x% sure that our portfolio will not lose more than a certain amount over the next N days. 
+That certain amount is our VaR estimate.
+
+This estimate is widely used in industry. 
+Take, for instance, an investment bank. 
+People deposit their money into this bank and in turn, the bank invests this money in the stock market and earns money on the returns. 
+An investment with high returns is highly risky. 
+The bank needs to keep a certain amount of cash in reserve to mitigate this risk. 
+The size of this reserve is proportional to the bank’s exposure to risk, i.e. the VaR estimate.
+
 ## Project Structure
 
 ## Main Class
@@ -35,18 +53,22 @@ The results of each of these implmentations are compared using __Back Testing__.
 
 ## PercentageChange
 
-In order to estimate VaR, we take the assumption that the __percentage changes__ between the stock prices on each day can be modelled on the __standard Gaussian Distribution__, $$\Phi(0,1)$$.
-
-### getArrayList
-
-We pass a collection of `HistoricalQuote` to `getArrayList`, which returns a collection of `Double` in an `ArrayList`.
-
-In this method, we iterate through `HistoricalQuote` and invoke `getClose()`, which emits a `BigDecimal`.
-At each iteration, we take the previous and current `BigDecimal` and compute the percentage change, which is defined as follows:
+In order to estimate _variance_ and _volatilities_, we take the assumption that the __percentage changes__ between the stock prices on each day can be modelled on the __standard Gaussian Distribution__, $$\Phi(0,1)$$.
 
 $$
 \frac{S_{t-1}-S_{t}}{S_{t}}
 $$
+
+
+
+### getArrayList
+
+We pass a collection of `HistoricalQuote` to `getArrayList`, which returns a collection of `Double` in an `ArrayList`.
+That is, this is a collection of historical price data for a given stock.
+
+In this method, we iterate through `HistoricalQuote` and invoke `getClose()`, which returns the stock price at the market close in the form of a `BigDecimal` type.
+At each iteration, we take the previous and current `BigDecimal` and compute the percentage change.
+Because working with `BigDecimal` is computationally expensive (=slow), we cast each result to `double`.
 
 ```java
 public static ArrayList<Double> getArrayList(List<HistoricalQuote> historicalQuotes) {
@@ -65,7 +87,6 @@ public static ArrayList<Double> getArrayList(List<HistoricalQuote> historicalQuo
 }
 ```
 
-Because working with `BigDecimal` is computationally expensive (=slow), we cast each result to `double`.
 
 ### getArray
 
