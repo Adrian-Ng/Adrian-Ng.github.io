@@ -2,7 +2,7 @@
 title: "Analytical Approach"
 permalink: /java/var/analytical/
 excerpt: "Estimating Value at Risk via the Analytical Approach"
-toc: false
+toc: true
 mathjax: true
 classes: wide
 ---

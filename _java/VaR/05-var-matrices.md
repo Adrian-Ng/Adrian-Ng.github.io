@@ -2,7 +2,7 @@
 title: "Value at Risk: Matricies"
 permalink: /java/var/matrices/
 excerpt: "Building matricies in the application of Value at Risk"
-toc: false
+toc: true
 mathjax: true
 classes: wide
 ---
@@ -14,10 +14,45 @@ We define a number of methods for producing matrices in `VolatilityAbstract.java
 * `getCovarianceMatrix(double[][] matrix)`
 * `getCholeskyDecompositionMatrix(double[][] matrix)`
 
-These all depend on the interface `getVariance`  and `getVolatility` method.
-The latter simply being the square root of the output of `getVariance`.
 
-#### getCorrelationMatrix
+
+
+## Percentage Changes
+
+Suppose our portfolio contains multiple stocks, say _GOOG_, _MSFT_, and _AAPL_.
+
+We will need to compute a vector of historical percentage changes for each of these.
+We can combine each of these vectors to produce a matrix of price changes.
+
+In `HistoricalSimulation.java` and `MonteCarlo.java` we instantiate this matrix as a two dimensional array: 
+
+```java
+double[][] matrix = double[countAsset][size];
+```
+where `countAsset` is the number of stock symbols in our portfolio and `size` is the number of percentage changes in our data.
+
+
+## getCovarianceMatrix
+
+In calculating [variance](https://adrian.ng/java/var/volatility/#percentagechange)
+
+The covariance matrix is simply the 
+
+
+```java
+private double[][] getCovarianceMatrix(double[][] matrix) {
+    int numCol = matrix.length;
+    double[][] covarianceMatrix = new double[numCol][numCol];
+
+    for (int i = 0; i < numCol; i++) {
+        for (int j = 0; j < numCol; j++)
+            covarianceMatrix[i][j] = getVariance(matrix[i], matrix[j]);
+    }
+    return covarianceMatrix;
+}
+```
+
+## getCorrelationMatrix
 
 ```java
 public double[][] getCorrelationMatrix(double[][] matrix) {
@@ -36,22 +71,7 @@ public double[][] getCorrelationMatrix(double[][] matrix) {
 }
 ```
 
-#### getCovarianceMatrix
-
-```java
-private double[][] getCovarianceMatrix(double[][] matrix) {
-    int numCol = matrix.length;
-    double[][] covarianceMatrix = new double[numCol][numCol];
-
-    for (int i = 0; i < numCol; i++) {
-        for (int j = 0; j < numCol; j++)
-            covarianceMatrix[i][j] = getVariance(matrix[i], matrix[j]);
-    }
-    return covarianceMatrix;
-}
-```
-
-#### getCholeskyDecomposition
+## getCholeskyDecomposition
 
 ```java
 public double[][] getCholeskyDecomposition(double[][] matrix) {

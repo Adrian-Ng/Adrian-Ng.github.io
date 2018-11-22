@@ -2,7 +2,7 @@
 title: "Value at Risk: Variance & Volatility"
 permalink: /java/var/volatility/
 excerpt: "Computing volatility in the application of Value at Risk"
-toc: false
+toc: true
 mathjax: true
 classes: wide
 ---
@@ -136,7 +136,7 @@ public class VolatilityEWMA extends VolatilityAbstract {
 The Generalised Autogregressive Conditional Heteroskedastic process, GARCH(1,1), is an extension of _EWMA_ that introduces a weighted $$\gamma$$ long-term average variance $$V_L$$.
 
 $$
-\sigma_n^2 = \omega + \alpha u^2_{n-1} + \beta \sigma_{n-1}^2
+\sigma_n^2 = \omega + \alpha u^2_{n-1} + \beta \sigma_{n-1}^2\\
 \text{where } \omega = V_L
 $$
 
