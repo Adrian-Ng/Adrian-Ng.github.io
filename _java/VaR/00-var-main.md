@@ -32,9 +32,14 @@ The results of each of these implmentations are compared using __Back Testing__.
 
 ### Utils
 
+
 ### PercentageChange
 
+In order to estimate VaR, we make the statistical assumption that the __percentag changes__ between the stock prices on each day can be modelled on the __standard Gaussian Distribution__, $$\Phi(0,1)$$.
+
 #### getArrayList
+
+We pass a collection of `HistoricalQuote` 
 
 ```java
 public static ArrayList<Double> getArrayList(List<HistoricalQuote> historicalQuotes) {
