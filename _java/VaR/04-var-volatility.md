@@ -127,13 +127,31 @@ public class VolatilityEWMA extends VolatilityAbstract {
 The Generalised Autogregressive Conditional Heteroskedastic process, GARCH(1,1), is an extension of _EWMA_ that introduces a weighted $$\gamma$$ long-term average variance $$V_L$$.
 
 $$
-\sigma_n^2 = \gamma V_L + \alpha u^2_{n-1} + \beta \sigma_{n-1}^2
+\sigma_n^2 = \omega + \alpha u^2_{n-1} + \beta \sigma_{n-1}^2
+\text{where } \omega = V_L
 $$
 
-where the parameters $${ \alpha, \beta, \gamma }$$ are parameters to be found via maximum likelihood estimation, using an algorithm such as _Levenberg-Marquardt_.
+where the parameters $${ \alpha, \beta, \omega }$$ are parameters to be found via maximum likelihood estimation, using an algorithm such as _Levenberg-Marquardt_.
 
 ```java
-//TODO
+public class VolatilityGARCH extends VolatilityAbstract {
+    private static double alpha, beta, omega;
+    static{
+        alpha = 0.08339;
+        beta = 0.9101;
+        omega = 0.000001346;
+    }
+
+    @Override
+    public double getVariance(double[] xVector, double[] yVector) {
+        int elements = xVector.length;
+        double uSquared[] = new double [elements];
+        double sigmaSquared = uSquared[0];
+        for (int i = 1; i < uSquared.length;i++)
+            sigmaSquared = omega + (alpha*uSquared[i]) + (beta*sigmaSquared);
+        return sigmaSquared;
+    }
+}
 ```
 
 
