@@ -6,7 +6,7 @@ toc: false
 mathjax: true
 classes: wide
 header:
-  image: /assets/var/Normal.svg
+  image: /assets/var/Normal.png
 ---
 
 This project looks at three ways of computing estimating Value at Risk (VaR) using Java.
