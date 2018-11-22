@@ -35,16 +35,22 @@ The results of each of these implmentations are compared using __Back Testing__.
 
 ### PercentageChange
 
-In order to estimate VaR, we make the statistical assumption that the __percentag changes__ between the stock prices on each day can be modelled on the __standard Gaussian Distribution__, $$\Phi(0,1)$$.
+In order to estimate VaR, we take the assumption that the __percentage changes__ between the stock prices on each day can be modelled on the __standard Gaussian Distribution__, $$\Phi(0,1)$$.
 
 #### getArrayList
 
-We pass a collection of `HistoricalQuote` 
+We pass a collection of `HistoricalQuote` to `getArrayList`, which returns a collection of `Double` in an `ArrayList`.
+
+In this method, we iterate through `HistoricalQuote` and invoke `getClose()`, which emits a `BigDecimal`.
+At each iteration, we take the previous and current `BigDecimal` and compute the percentage change.
+
+$$
+/frac{S_{t-1}-S_{t}}{S_{t}}
+$$
 
 ```java
 public static ArrayList<Double> getArrayList(List<HistoricalQuote> historicalQuotes) {
     ArrayList<Double> percentageChange = new ArrayList<>();
-
     Iterator<HistoricalQuote> iterator = historicalQuotes.iterator();
     BigDecimal a = iterator.next().getClose();
     while (iterator.hasNext()){
