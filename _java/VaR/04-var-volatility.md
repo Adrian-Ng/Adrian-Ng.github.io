@@ -22,6 +22,15 @@ But nonetheless, they all return an estimate of volatility.
 Volatility is the square root of the variance.
 `VolatilityAbstract.java` defines the abstract method `getVariance()`
 
+The concrete method `getVolatility()` is defined as:
+
+```java
+public double getVolatility(double[] xVector, double[] yVector) {
+    double variance = getVariance(xVector, yVector);
+    return Math.sqrt(variance);
+}
+```
+
 We have three concrete classes that implement this method:
 
 * `VolatilityEW.java`
@@ -131,7 +140,7 @@ $$
 \text{where } \omega = V_L
 $$
 
-where the parameters $${ \alpha, \beta, \omega }$$ are parameters to be found via maximum likelihood estimation, using an algorithm such as _Levenberg-Marquardt_.
+where the parameters $${ \alpha, \beta, \omega }$$ are to be found via _maximum-likelihood estimation_, using an optimisation algorithm such as _Levenberg-Marquardt_.
 
 ```java
 public class VolatilityGARCH extends VolatilityAbstract {
