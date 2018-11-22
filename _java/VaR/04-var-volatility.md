@@ -7,16 +7,18 @@ mathjax: true
 classes: wide
 ---
 
-We calculate daily volatility as the __standard deviation__ of daily returns, which we implement in [PercentageChange.java](https://adrian.ng/java/var/intro/#percentagechange)
+We calculate daily volatility as the _standard deviation_ of the __daily percentage change__ (= daily returns) of the stock price.
+Our implement implmentation for returning the daily percentage change is defined in the class [PercentageChange.java](https://adrian.ng/java/var/intro/#percentagechange)
 
 ## Equal Weighted Variance
 
-The squared volatility (=variance) can be caluclated using a simple weighted model:
+The squared volatility (=variance) can be calculated using a simple weighted model:
 
 $$
 \sigma^2_n = \frac{1}{m}\sum_{i=1}^m u^2_{n-i}
 $$
 
+This squares each percentage change and returns the average of all these elements.
 
 ```java
 public class VolatilityEW extends VolatilityAbstract {
@@ -26,7 +28,7 @@ public class VolatilityEW extends VolatilityAbstract {
         int elements = xVector.length;
         for (int i = 0; i < elements; i++)
             sum += (xVector[i] * yVector[i]);
-        return sum /(elements - 1);
+        return sum /elements;
     }
 ```
 
