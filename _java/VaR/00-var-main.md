@@ -45,7 +45,7 @@ In this method, we iterate through `HistoricalQuote` and invoke `getClose()`, wh
 At each iteration, we take the previous and current `BigDecimal` and compute the percentage change, which is defined as follows:
 
 $$
-/frac{S_{t-1}-S_{t}}{S_{t}}
+\frac{S_{t-1}-S_{t}}{S_{t}}
 $$
 
 ```java
