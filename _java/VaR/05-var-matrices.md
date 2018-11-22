@@ -73,7 +73,23 @@ private double[][] getCovarianceMatrix(double[][] matrix) {
 
 ## Correlation Matrix
 
+In the below figure we illustrate the correlation of two stocks, $$X$$ and $$$Y$$.
+Moving from left to right, we see examples of:
+
+* full positive correlation
+* independence
+* full negative correlation
+
 {% include figure image_path="/assets/images/var/correlation.svg" %}
+
+Each length is the volatility of the historical percentage change of each stock.
+
+The correlation coefficient is calculated as:
+
+$$
+\rho = \frac{cov(\Delta\Pi_1,\Delta\Pi_2)}{std(\Delta\Pi_1)\cdot std(\Delta\Pi_2}
+$$
+
 
 ```java
 public double[][] getCorrelationMatrix(double[][] matrix) {
