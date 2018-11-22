@@ -1,5 +1,5 @@
 ---
-title: "Value at Risk: Variance and Volatility"
+title: "Value at Risk: Variance & Volatility"
 permalink: /java/var/volatility/
 excerpt: "Computing volatility in the application of Value at Risk"
 toc: false

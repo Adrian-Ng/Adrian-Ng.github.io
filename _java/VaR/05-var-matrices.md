@@ -30,8 +30,7 @@ public double[][] getCorrelationMatrix(double[][] matrix) {
             double sigmaX = getVolatility(matrix[i], matrix[i]);
             double sigmaY = getVolatility(matrix[j], matrix[j]);
             correlationMatrix[i][j] = covXY / (sigmaX * (sigmaY));
-        }
-        //System.out.printf("\t\tCorrelation Matrix:\n\t\t%s\n", Arrays.toString(correlationMatrix[i]));
+        }        
     }
     return correlationMatrix;
 }
@@ -47,7 +46,6 @@ private double[][] getCovarianceMatrix(double[][] matrix) {
     for (int i = 0; i < numCol; i++) {
         for (int j = 0; j < numCol; j++)
             covarianceMatrix[i][j] = getVariance(matrix[i], matrix[j]);
-        //System.out.printf("\t\tCovariance Matrix\t\t\n%s\n", Arrays.toString(covarianceMatrix[i]));
     }
     return covarianceMatrix;
 }
@@ -70,7 +68,6 @@ public double[][] getCholeskyDecomposition(double[][] matrix) {
                 choleskyMatrix[i][j] = Math.sqrt(covarianceMatrix[i][j] - sum);
             else
                 choleskyMatrix[i][j] = (covarianceMatrix[i][j] - sum) / choleskyMatrix[j][j];
-            //System.out.printf("\t\tCholesky Matrix\t\t\n%s\n",Arrays.toString(covarianceMatrix[i]));
         }
     return choleskyMatrix;
 }
