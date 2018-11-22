@@ -42,7 +42,7 @@ In order to estimate VaR, we take the assumption that the __percentage changes__
 We pass a collection of `HistoricalQuote` to `getArrayList`, which returns a collection of `Double` in an `ArrayList`.
 
 In this method, we iterate through `HistoricalQuote` and invoke `getClose()`, which emits a `BigDecimal`.
-At each iteration, we take the previous and current `BigDecimal` and compute the percentage change.
+At each iteration, we take the previous and current `BigDecimal` and compute the percentage change, which is defined as follows:
 
 $$
 /frac{S_{t-1}-S_{t}}{S_{t}}
@@ -64,6 +64,8 @@ public static ArrayList<Double> getArrayList(List<HistoricalQuote> historicalQuo
     return percentageChange;
 }
 ```
+
+Because working with `BigDecimal` is computationally expensive (=slow), we cast each result to `double`.
 
 #### getArray
 
