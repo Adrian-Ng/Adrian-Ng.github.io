@@ -29,17 +29,17 @@ The results of each of these implmentations are compared using __Back Testing__.
 ## Background
 
 For a given a portfolio of investments there is an associated risk. 
-However,there are many measures of risk, such as Greek letters) that simply describe different aspects of risk in a portfolio of derivatives. 
-The goal of Value at Risk (VaR) is to provide an estimate of risk that summarises all aspects of risk into one figure.
+However, there are many measures of risk (such as Greek letters) that simply describe different aspects of risk in a portfolio of derivatives. 
+The goal of Value at Risk (VaR) is to provide an estimate of risk that summarises all aspects of risk into a single figure.
 
-This one figure simply answers the question: how bad could it get? 
+This figure simply answers the question: how bad _could_ it get? 
 An answer is provided with respect to two parameters: the __time horizon__ and __confidence level__. 
-That is, we are x% sure that our portfolio will not lose more than a certain amount over the next N days. 
+That is, we are $$x%$$ sure that our portfolio will not lose more than a certain amount over the next %%N%% days. 
 That certain amount is our VaR estimate.
 
 This estimate is widely used in industry. 
-Take, for instance, an investment bank. 
-People deposit their money into this bank and in turn, the bank invests this money in the stock market and earns money on the returns. 
+Take for instance an investment bank. 
+People deposit their money into this bank and, in turn, the bank invests this money in the stock market and earns money on the returns. 
 An investment with high returns is highly risky. 
 The bank needs to keep a certain amount of cash in reserve to mitigate this risk. 
 The size of this reserve is proportional to the bank’s exposure to risk, i.e. the VaR estimate.
