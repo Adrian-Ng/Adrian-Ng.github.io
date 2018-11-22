@@ -4,6 +4,7 @@ permalink: /java/var/intro/
 excerpt: "An intro to VAR by Adrian Ng"
 toc: false
 mathjax: true
+classes: wide
 ---
 
 This project looks at three ways of computing estimating Value at Risk (VaR) using Java.
