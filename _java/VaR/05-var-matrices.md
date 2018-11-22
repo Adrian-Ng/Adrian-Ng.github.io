@@ -14,8 +14,7 @@ We define a number of methods for producing matrices in `VolatilityAbstract.java
 * `getCovarianceMatrix(double[][] matrix)`
 * `getCholeskyDecompositionMatrix(double[][] matrix)`
 
-
-
+All of these methods returns an $$N \times N$$ matrix for a portfolio of $$N$$ stocks.
 
 ## Percentage Changes
 
@@ -34,8 +33,6 @@ where `countAsset` is the number of stock symbols in our portfolio and `size` is
 
 ## Variance Covariance Matrix
 
-The method `getCovarianceMatrix()` returns an $$N \times N$$ matrix for a portfolio of $$N$$ stocks.
-
 The value of each element is simply the variance between two vectors of percentage changes.
 
 $$
@@ -46,15 +43,7 @@ $$
 \end{bmatrix}
 $$
 
-The covariance matrix for a portfolio of _GOOG_, _MSFT_, and _AAPL_ stocks looks something like:
 
-$$
-\begin{bmatrix}
-	2.694056173665337E-4 & 2.1361059045418314E-4 & 1.709980427330677E-4\\
-	2.1361059045418314E-4 & 2.669503258565737E-4 & 1.7039293114741037E-4\\
-	1.709980427330677E-4 & 1.7039293114741037E-4 & 2.6718851085657364E-4
-\end{bmatrix}
-$$
 
 In our implementation, we simply step through each element of our matrix and invoke `getVariance()`.
 
@@ -71,9 +60,24 @@ private double[][] getCovarianceMatrix(double[][] matrix) {
 }
 ```
 
+The covariance matrix for a portfolio of _GOOG_, _MSFT_, and _AAPL_ stocks looks something like:
+
+$$
+\begin{bmatrix}
+	2.694056173665337E-4 & 2.1361059045418314E-4 & 1.709980427330677E-4\\
+	2.1361059045418314E-4 & 2.669503258565737E-4 & 1.7039293114741037E-4\\
+	1.709980427330677E-4 & 1.7039293114741037E-4 & 2.6718851085657364E-4
+\end{bmatrix}
+$$
+
+
+Note that `getVariance()` is an abstract class and could be instantiated in a number of ways.
+The above output was computed from an _equal weighted_ variance estimate.
+{: .notice--info} class.
+
 ## Correlation Matrix
 
-In the below figure we illustrate the correlation of two stocks, $$X$$ and $$$Y$$.
+In the below figure we illustrate the correlation of two stocks, $$X$$ and $$Y$$.
 Moving from left to right, we see examples of:
 
 * full positive correlation
@@ -87,8 +91,11 @@ Each length is the volatility of the historical percentage change of each stock.
 The correlation coefficient is calculated as:
 
 $$
-\rho = \frac{cov(\Delta\Pi_1,\Delta\Pi_2)}{std(\Delta\Pi_1)\cdot std(\Delta\Pi_2}
+	\rho = \frac{cov(\Delta\Pi_1,\Delta\Pi_2)}{std(\Delta\Pi_1)\cdot std(\Delta\Pi_2)}
 $$
+
+
+In our implementation of `getCorrelationMatrix()`, we iterate through each matrix element and assign correlation by invoking both `getVariance()` and `getVolatility()` at each step.
 
 
 ```java
@@ -108,7 +115,22 @@ public double[][] getCorrelationMatrix(double[][] matrix) {
 }
 ```
 
+The correlation matrix for a portfolio of _GOOG_, _MSFT_, and _AAPL_ stocks looks something like:
+
+$$
+\begin{bmatrix}
+	1.0 & 0.7965338367423306 & 0.6373513737349931\\
+	0.7965338367423306 & 1.0 & 0.6380099568758332\\
+	0.6373513737349931 & 0.6380099568758332 & 1.0
+\end{bmatrix}
+$$
+
+The unit diagonal makes sense - any random variable is fully correlated with itself.
+
 ## Cholesky Decomposition
+
+The cholesky decomposition is simply a way of finding the _square root_ of a matrix.
+
 
 ```java
 public double[][] getCholeskyDecomposition(double[][] matrix) {
