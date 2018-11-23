@@ -35,8 +35,8 @@ In `Analytical.java`, we define our implementation of `getVar()` - a concrete ve
 ### Parameters
 
 VaR takes two parameters, _Confidence_ and _Time Horizon_.
-Suppose we take the confidence level $$c = 99%$$.
-This means we are $$99%$$ sure that we won't lose more than $$V$$, our estimate of Value at Risk, within our _Time Horizon_, which is usually one day.
+Suppose we take the confidence level $$c = 99\%$$.
+This means we are $$99\%$$ sure that we won't lose more than $$V$$, our estimate of Value at Risk, within our _Time Horizon_, which is usually one day.
 
 ```java
 double Confidence = Double.parseDouble(hashParam.get("Confidence"));
