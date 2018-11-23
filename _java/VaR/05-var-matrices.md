@@ -139,7 +139,7 @@ This is a simplificaiton as there is no direct way of doing this.
 Our approach is to take the Cholesky decomposition to approximate $$\Sigma$$. This gives us a lower triangular matrix $$L$$ in which all elements above the diagonal are zero. The product of $$L$$ with its transpose is $$\Sigma$$.
 
 $$
-\Sigma = LL'$$
+\Sigma = LL'
 $$
 
 Consider the following matrix $$A$$, which is symmetric and positive definite as an example:
