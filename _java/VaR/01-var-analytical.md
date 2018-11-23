@@ -10,12 +10,14 @@ classes: wide
 In the __Analytical Approach__ we have a direct formula for estimating VaR:
 
 $$
-\mathit{VaR} = -\alpha(1-c)(\Delta t)^{1/2}\sqrt{\sum_{j=1}^M\sum_{i=1}^M\Pi_i\Pi_j\Sigma_{ij}} \\
+\mathit{VaR} = -\alpha(1-c)(\Delta t)^{1/2}\sqrt{\sum_{j=1}^M\sum_{i=1}^M\Delta_i S_i\cdot\Delta_j S_j\Sigma_{ij}} \\
 $$
 
 where 
-* $a(1-c)$ is the inverse cumulative distribution function of the Gaussian distribution, which gives us the percentile $x_{(1-c)\%}$.
-* $\delta t$ is the time horizon
+* $$a(1-c)$$ is the inverse cumulative distribution function of the Gaussian distribution, which gives us the percentile $x_{(1-c)\%}$.
+* $$\delta t$$ is the time horizon
+* $$\Delta$$ is number of stocks of that asset
+* $$S$$ is the current price of that asset
 * $$M$$ is the number of portfolio assets
 
 
