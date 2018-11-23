@@ -21,10 +21,25 @@ where
 * $$M$$ is the number of portfolio assets
 
 
-We multiply these parameters by the covariance matrix.
+We multiply these parameters by the covariance matrix. This formula is applicable to the single-stock and multi-stock portfolio. 
 
-This is applicable to the single-stock and multi-stock portfolio. 
+## Java
 
+```java
+NormalDistribution distribution = new NormalDistribution(0, 1);
+double Confidence = Double.parseDouble(hashParam.get("Confidence"));
+double TimeHorizon = Math.sqrt(Integer.parseInt(hashParam.get("TimeHorizonDays")));
+double riskPercentile = -distribution.inverseCumulativeProbability(1 - Confidence);
+```
+
+Note: `NormalDistribution` is part of the [Apache Commons Math Library](http://commons.apache.org/proper/commons-math/)
+{: .notice--info}
+
+```java
+double[][] covarianceMatrix = new VolatilityFactory()
+        .getType(volatilityMeasure)
+        .getCovarianceMatrix(matrixPcntChanges);
+```
 
 ```java
 double sum = 0.0;
@@ -41,4 +56,4 @@ double VaR = Math.sqrt(TimeHorizon)
         * Math.sqrt(sum);
 return VaR;
 ```
-
+## Output
