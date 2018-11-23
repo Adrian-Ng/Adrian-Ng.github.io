@@ -10,7 +10,7 @@ classes: wide
 In the __Analytical Approach__ we have a direct formula for estimating VaR:
 
 $$
-\mathit{VaR} = -\alpha(1-c)(\Delta t)^{1/2}\sqrt{\sum_{j=1}^M\sum_{i=1}^M\Delta_i S_i\cdot\Delta_j S_j\Sigma_{ij}} \\
+	\mathit{VaR} = -\alpha(1-c)(\Delta t)^{1/2}\sqrt{\sum_{j=1}^M\sum_{i=1}^M\Delta_i S_i\cdot\Delta_j S_j\Sigma_{ij}} \\
 $$
 
 where 
@@ -48,9 +48,11 @@ We must parse to convert to numeric values.
 
 ### Normal Distribution
 
-Analytically, we look at this estimating VaR in terms of the standard Gaussian.
+Analytically, we look at estimating VaR in terms of the standard Gaussian. 
 
-
+$$
+	\alpha(1-c)
+$$
 
 ```java
 NormalDistribution distribution = new NormalDistribution(0, 1);
@@ -59,9 +61,18 @@ double riskPercentile = -distribution.inverseCumulativeProbability(1 - Confidenc
 Note: `NormalDistribution` is part of the [Apache Commons Math Library](http://commons.apache.org/proper/commons-math/)
 {: .notice--info}
 
+
+### Market Data
+
+In this block of code we retrieve:
+
+* a vector of current prices for all assets in our portfolio
+* Greek letter $$\Delta$$ - the number of shares of a stock in our portfolio
+* a [matrix of percentage changes](https://adrian.ng/java/var/matrices/#percentage-changes): `double[][] matrixPcntChanges`
+
 ```java
-Double[] currentPrices = new Double[countAsset];
-Double[] stockDelta = new Double[countAsset];
+double[] currentPrices = new double[countAsset];
+double[] stockDelta = new double[countAsset];
 
 double[][] matrixPcntChanges = new double[countAsset][size];
 try {
@@ -78,13 +89,17 @@ try {
     e.printStackTrace();
 }
 ```
-
+Next we retrieve a [covariance matrix](covariance matrix) using the above matrix.
+We use `String volatilityMeasure` to specify how we are [estimating variance](https://adrian.ng/java/var/volatility/#volatilityfactory).
 
 ```java
 double[][] covarianceMatrix = new VolatilityFactory()
         .getType(volatilityMeasure)
         .getCovarianceMatrix(matrixPcntChanges);
 ```
+## Estimating VaR
+
+Lastly, we compute the linear combination of the product of Deltas, prices and covariances.
 
 ```java
 double sum = 0.0;
@@ -95,6 +110,11 @@ for (int i = 0; i < countAsset; i++)
                 * currentPrices[i]
                 * currentPrices[j]
                 * covarianceMatrix[i][j];
+```
+
+Then we multiply the square root of the above with the timehorizon and riskPercentile.
+
+```java    
 double VaR = Math.sqrt(TimeHorizon)
         * riskPercentile
         * Math.sqrt(sum);
