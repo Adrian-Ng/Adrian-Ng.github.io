@@ -71,9 +71,9 @@ $$
 $$
 
 
-Note that `getVariance()` is an abstract class and could be instantiated in a number of ways.
+Note that `getVariance()` is an abstract class and could be instantiated in a [number of ways](https://adrian.ng/java/var/volatility/#volatilityfactory).
 The above output was computed from an _equal weighted_ variance estimate.
-{: .notice--info} class.
+{: .notice--info}
 
 ## Correlation Matrix
 
