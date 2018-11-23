@@ -84,7 +84,7 @@ Moving from left to right, we see examples of:
 * independence
 * full negative correlation
 
-{% include figure image_path="/assets/images/var/correlation.svg" %}
+{% include figure image_path="/assets/images/var/correlation.png" %}
 
 Each length is the volatility of the historical percentage change of each stock.
 
