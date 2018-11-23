@@ -81,3 +81,14 @@ double VaR = Math.sqrt(TimeHorizon)
 return VaR;
 ```
 ## Output
+
+Assuming we have a portfolio consisting of 100 shares in _GOOG_, 200 in _MSFT_, and 100 in _AAPL_, with 95% confidence level and a time horizon of 1 day:
+
+```
+Analytical EW
+	VaR: 3558.909656
+Analytical EWMA
+	VaR: 2555.420454
+```
+
+These results are computed using 5 years of historical data
