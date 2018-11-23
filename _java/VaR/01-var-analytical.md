@@ -23,7 +23,11 @@ where
 
 We multiply these parameters by the covariance matrix. This formula is applicable to the single-stock and multi-stock portfolio. 
 
-## Java
+## Analytical.java
+
+```java
+public class Analytical extends RiskMeasure
+```
 
 ```java
 NormalDistribution distribution = new NormalDistribution(0, 1);
@@ -31,9 +35,29 @@ double Confidence = Double.parseDouble(hashParam.get("Confidence"));
 double TimeHorizon = Math.sqrt(Integer.parseInt(hashParam.get("TimeHorizonDays")));
 double riskPercentile = -distribution.inverseCumulativeProbability(1 - Confidence);
 ```
-
 Note: `NormalDistribution` is part of the [Apache Commons Math Library](http://commons.apache.org/proper/commons-math/)
 {: .notice--info}
+
+```java
+Double[] currentPrices = new Double[countAsset];
+Double[] stockDelta = new Double[countAsset];
+
+double[][] matrixPcntChanges = new double[countAsset][size];
+try {
+    for (int i = 0; i < countAsset; i++) {
+        String sym = strSymbols[i];
+        Stock stock = stockHashMap.get(sym);
+        currentPrices[i] = stock.getQuote().getPreviousClose().doubleValue();
+        stockDelta[i] = new Double(hashStockDeltas.get(sym));
+        // get percentage changes of stock
+        double[] percentageChanges = PercentageChange.getArray(stock.getHistory());
+        matrixPcntChanges[i] = percentageChanges;
+    }
+} catch (Exception e) {
+    e.printStackTrace();
+}
+```
+
 
 ```java
 double[][] covarianceMatrix = new VolatilityFactory()
