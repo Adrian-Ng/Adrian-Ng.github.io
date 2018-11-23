@@ -177,12 +177,15 @@ $$
 	l_{31}l_{11} &  l_{31}l_{21}+l_{32}l_{22} & l_{31}^2+l_{32}^2+l_{33}^2
 \end{bmatrix}
 $$
-Then we obtain the following formulas for $L$:
-above the diagonal:
+
+Then we obtain the following formulas for $$L$$:
+
+_above the diagonal_
 $$
 	L_{ii} = \Bigg( a_{ii}-\sum_{k=1}^{i-1}L_{ik}^2\Bigg)^{1/2}
 $$
-and below the diagonal:					
+
+_below the diagonal_
 $$
 	L_{ji}=\frac{1}{L_{ii}}\Bigg(a_{ij}-\sum_{k=1}^{i-1}L_{ik}L_{jk}\Bigg)
 $$
