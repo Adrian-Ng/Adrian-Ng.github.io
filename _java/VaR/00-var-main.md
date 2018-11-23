@@ -58,7 +58,7 @@ The size of this reserve is proportional to the bank’s exposure to risk, i.e. 
 In order to estimate _variance_ and _volatilities_, we take the assumption that the __percentage changes__ between the stock prices on each day can be modelled on the __standard Gaussian Distribution__, $$\Phi(0,1)$$.
 
 $$
-u_i \frac{S_{i}-S_{i-1}}{S_{i-1}}
+u_i = \frac{S_{i}-S_{i-1}}{S_{i-1}}
 $$
 
 The class `PercentageChange.java` has two methods that return historical percentage changes (=returns) in the form of an `ArrayList<Double>` and `Double[]`. 
