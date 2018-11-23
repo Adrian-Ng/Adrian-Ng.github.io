@@ -129,7 +129,63 @@ The unit diagonal makes sense - any random variable is fully correlated with its
 
 ## Cholesky Decomposition
 
+In all our scalar volatility estimates, we have been computing volatility as the square root of variance.
+But what if we need to return a multivariate (i.e. a matrix) estimate of volatility?
+We do in fact need this when simulating multiple stock price changes in `MonteCarlo.java`.
+
 The cholesky decomposition is simply a way of finding the _square root_ of a matrix.
+This is a simplificaiton as there is no direct way of doing this.
+
+Our approach is to take the Cholesky decomposition to approximate $$\Sigma$$. This gives us a lower triangular matrix $$L$$ in which all elements above the diagonal are zero. The product of $$L$$ with its transpose is $$\Sigma$$.
+
+$$
+\Sigma = LL'$$
+$$
+
+Consider the following matrix $$A$$, which is symmetric and positive definite as an example:
+$$					
+A = 
+\begin{bmatrix}
+	a_{11} & a_{12} & a_{13}\\
+	a_{21} & a_{22} & a_{23}\\
+	a_{31} & a_{32} & a_{33}
+\end{bmatrix}
+$$
+We need to find $$L$$ such that $$A=LL^T$$. 
+Writing this out looks like:	
+$$				
+\begin{bmatrix}
+	a_{11} & a_{12} & a_{13}\\
+	a_{21} & a_{22} & a_{23}\\
+	a_{31} & a_{32} & a_{33}
+\end{bmatrix}
+=
+\begin{bmatrix}
+	l_{11} & 0 & 0\\
+	l_{21} & l_{22} & 0\\
+	l_{31} & l_{32} & l_{33}
+\end{bmatrix}
+\begin{bmatrix}
+	l_{11} & l_{21} & l_{31}\\
+	0 & l_{22} & l_{32}\\
+	0 & 0 & l_{33}
+\end{bmatrix}
+=
+\begin{bmatrix}
+	l_{11}^2 & l_{21}l_{11} & l_{31}l_{11}\\
+	l_{21}l_{11} & l_{21}^2 + l_{22}^2 & l_{31}l_{21}+l_{32}l_{22}\\
+	l_{31}l_{11} &  l_{31}l_{21}+l_{32}l_{22} & l_{31}^2+l_{32}^2+l_{33}^2
+\end{bmatrix}
+$$
+Then we obtain the following formulas for $L$:
+above the diagonal:
+$$
+	L_{ii} = \Bigg( a_{ii}-\sum_{k=1}^{i-1}L_{ik}^2\Bigg)^{1/2}
+$$
+and below the diagonal:					
+$$
+	L_{ji}=\frac{1}{L_{ii}}\Bigg(a_{ij}-\sum_{k=1}^{i-1}L_{ik}L_{jk}\Bigg)
+$$
 
 
 ```java
@@ -151,3 +207,5 @@ public double[][] getCholeskyDecomposition(double[][] matrix) {
     return choleskyMatrix;
 }
 ```
+
+
