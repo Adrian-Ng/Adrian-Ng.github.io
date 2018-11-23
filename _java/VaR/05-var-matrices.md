@@ -48,7 +48,7 @@ $$
 In our implementation, we simply step through each element of our matrix and invoke `getVariance()`.
 
 ```java
-private double[][] getCovarianceMatrix(double[][] matrix) {
+public double[][] getCovarianceMatrix(double[][] matrix) {
     int numCol = matrix.length;
     double[][] covarianceMatrix = new double[numCol][numCol];
 
