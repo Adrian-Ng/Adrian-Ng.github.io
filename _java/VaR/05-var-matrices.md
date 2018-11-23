@@ -43,8 +43,6 @@ $$
 \end{bmatrix}
 $$
 
-
-
 In our implementation, we simply step through each element of our matrix and invoke `getVariance()`.
 
 ```java
