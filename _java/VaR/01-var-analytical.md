@@ -14,7 +14,7 @@ $$
 $$
 
 where 
-* $$a(1-c)$$ is the inverse cumulative distribution function of the Gaussian distribution, which gives us the percentile $x_{(1-c)\%}$.
+* $$a(1-c)$$ is the inverse cumulative distribution function of the Gaussian distribution, which gives us the percentile $$x_{(1-c)\%}$$.
 * $$\delta t$$ is the time horizon
 * $$\Delta$$ is number of stocks of that asset
 * $$S$$ is the current price of that asset
