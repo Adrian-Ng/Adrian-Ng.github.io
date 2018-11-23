@@ -187,6 +187,7 @@ $$
 	L_{ji}=\frac{1}{L_{ii}}\Bigg(a_{ij}-\sum_{k=1}^{i-1}L_{ik}L_{jk}\Bigg)
 $$
 
+Our implementation is as follows:
 
 ```java
 public double[][] getCholeskyDecomposition(double[][] matrix) {
@@ -207,5 +208,15 @@ public double[][] getCholeskyDecomposition(double[][] matrix) {
     return choleskyMatrix;
 }
 ```
+
+The Cholesky decomposition for a portfolio of _GOOG_, _MSFT_, and _AAPL_ stocks looks something like:
+
+$$
+\begin{bmatrix}
+	0.016413580272644165 & 0.0 & 0.0\\
+	0.013014259345366536 & 0.0 & 0.0\\
+	0.013014259345366536 & 0.009878227550938149 & 0.0
+\end{bmatrix}
+$$
 
 
