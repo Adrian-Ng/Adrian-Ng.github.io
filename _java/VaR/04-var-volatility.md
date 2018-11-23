@@ -131,9 +131,9 @@ public class VolatilityEWMA extends VolatilityAbstract {
 }
 ```
 
-## GARCH
+## GARCH(1,1)
 
-The Generalised Autogregressive Conditional Heteroskedastic process, GARCH(1,1), is an extension of _EWMA_ that introduces a weighted $$\gamma$$ long-term average variance $$V_L$$.
+The Generalised Autoregressive Conditional Heteroskedastic process, GARCH(1,1), is an extension of _EWMA_ that introduces a weighted $$\gamma$$ long-term average variance $$V_L$$.
 
 $$
 \sigma_n^2 = \omega + \alpha u^2_{n-1} + \beta \sigma_{n-1}^2\\
