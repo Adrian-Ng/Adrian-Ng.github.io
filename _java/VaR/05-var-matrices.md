@@ -133,8 +133,8 @@ In all our scalar volatility estimates, we have been computing volatility as the
 But what if we need to return a multivariate (i.e. a matrix) estimate of volatility?
 We do in fact need this when simulating multiple stock price changes in `MonteCarlo.java`.
 
-The cholesky decomposition is simply a way of finding the _square root_ of a matrix.
-This is a simplificaiton as there is no direct way of doing this.
+We need a way of finding the _square root_ of a matrix $$\Sigma$$.
+But there is no direct way of doing this.
 
 Our approach is to take the Cholesky decomposition to approximate $$\Sigma$$. This gives us a lower triangular matrix $$L$$ in which all elements above the diagonal are zero. The product of $$L$$ with its transpose is $$\Sigma$$.
 
