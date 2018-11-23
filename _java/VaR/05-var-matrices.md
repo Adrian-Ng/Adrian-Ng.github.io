@@ -143,6 +143,7 @@ $$
 $$
 
 Consider the following matrix $$A$$, which is symmetric and positive definite as an example:
+
 $$					
 A = 
 \begin{bmatrix}
@@ -151,8 +152,10 @@ A =
 	a_{31} & a_{32} & a_{33}
 \end{bmatrix}
 $$
+
 We need to find $$L$$ such that $$A=LL^T$$. 
 Writing this out looks like:	
+
 $$				
 \begin{bmatrix}
 	a_{11} & a_{12} & a_{13}\\
@@ -181,11 +184,13 @@ $$
 Then we obtain the following formulas for $$L$$:
 
 _above the diagonal_
+
 $$
 	L_{ii} = \Bigg( a_{ii}-\sum_{k=1}^{i-1}L_{ik}^2\Bigg)^{1/2}
 $$
 
 _below the diagonal_
+
 $$
 	L_{ji}=\frac{1}{L_{ii}}\Bigg(a_{ij}-\sum_{k=1}^{i-1}L_{ik}L_{jk}\Bigg)
 $$
