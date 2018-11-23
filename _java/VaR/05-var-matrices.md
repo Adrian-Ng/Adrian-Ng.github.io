@@ -23,7 +23,7 @@ Suppose our portfolio contains multiple stocks, say _GOOG_, _MSFT_, and _AAPL_.
 We will need to compute a vector of historical percentage changes for each of these.
 We can combine each of these vectors to produce a matrix of price changes.
 
-In `HistoricalSimulation.java` and `MonteCarlo.java` we instantiate this matrix as a two dimensional array: 
+In `Analytical.java`, `HistoricalSimulation.java`, and `MonteCarlo.java` we instantiate this matrix as a two dimensional array: 
 
 ```java
 double[][] matrix = double[countAsset][size];

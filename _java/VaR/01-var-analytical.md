@@ -7,20 +7,14 @@ mathjax: true
 classes: wide
 ---
 
-### Percentage Changes
-
-```java
-double[] percentageChanges = PercentageChange.getArray(stock.getHistory());
-```
-
-### Volatility factory
-
-Before we can return volatility, we must construct a `VolatilityFactory`.
-Then we invoke `getType` such that the appropriate concrete classes are instantiated.
+In the __Analytical Approach__ we have a direct formula for estimating VaR:
 
 
-```java
-VolatilityFactory volatilityFactory = new VolatilityFactory();
-VolatilityAbstract volatility = volatilityFactory.getType(volatilityMeasure);
-double[][] correlationMatrix = volatility.getCorrelationMatrix(matrixPcntChanges);
-```
+$$
+\mathit{VaR} = -\alpha(1-c)(\Delta t)^{1/2}\sqrt{\sum_{j=1}^M\sum_{i=1}^M\Pi_i\Pi_j\sigma_i\sigma_j\rho_{ij}} 
+$$
+
+$$
+\mathit{VaR} = -\alpha(1-c)(\Delta t)^{1/2}\sqrt{\sum_{j=1}^M\sum_{i=1}^M\Pi_i\Pi_j\Sigma_{ij}} 
+$$
+
