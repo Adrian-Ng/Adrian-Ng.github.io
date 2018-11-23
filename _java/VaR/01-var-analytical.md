@@ -23,16 +23,37 @@ where
 
 We multiply these parameters by the covariance matrix. This formula is applicable to the single-stock and multi-stock portfolio. 
 
-## Analytical.java
+## getVar()
+
 
 ```java
 public class Analytical extends RiskMeasure
 ```
 
+In `Analytical.java`, we define our implementation of `getVar()` - a concrete version of the abstract method in `RiskMeasure.java`.
+
+### Parameters
+
+VaR takes two parameters, _Confidence_ and _Time Horizon_.
+Suppose we take the confidence level $$c = 99%$$.
+This means we are $$99%$$ sure that we won't lose more than $$V$$, our estimate of Value at Risk, within our _Time Horizon_, which is usually one day.
+
 ```java
-NormalDistribution distribution = new NormalDistribution(0, 1);
 double Confidence = Double.parseDouble(hashParam.get("Confidence"));
 double TimeHorizon = Math.sqrt(Integer.parseInt(hashParam.get("TimeHorizonDays")));
+```
+
+These parameters are stored in a static `HashMap<String,String>` instance, `hashParam`. 
+We must parse to convert to numeric values.
+
+### Normal Distribution
+
+Analytically, we look at this estimating VaR in terms of the standard Gaussian.
+
+
+
+```java
+NormalDistribution distribution = new NormalDistribution(0, 1);
 double riskPercentile = -distribution.inverseCumulativeProbability(1 - Confidence);
 ```
 Note: `NormalDistribution` is part of the [Apache Commons Math Library](http://commons.apache.org/proper/commons-math/)
@@ -74,7 +95,6 @@ for (int i = 0; i < countAsset; i++)
                 * currentPrices[i]
                 * currentPrices[j]
                 * covarianceMatrix[i][j];
-//Computer VaR
 double VaR = Math.sqrt(TimeHorizon)
         * riskPercentile
         * Math.sqrt(sum);
