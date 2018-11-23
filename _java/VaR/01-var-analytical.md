@@ -90,7 +90,7 @@ try {
 }
 ```
 Next we retrieve a [covariance matrix](covariance matrix) using the above matrix.
-We use `String volatilityMeasure` to specify how we are [estimating variance](https://adrian.ng/java/var/volatility/#volatilityfactory).
+We pass a string to `getType()` to specify how we are [estimating variance](https://adrian.ng/java/var/volatility/#volatilityfactory).
 
 ```java
 double[][] covarianceMatrix = new VolatilityFactory()
