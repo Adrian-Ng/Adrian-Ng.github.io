@@ -26,13 +26,16 @@ $$99\%$$ of 1000 samples is 990, so we take $$\Delta\Pi_{990}\sqrt{\Delta t}$$, 
 
 1. Value today's portfolio from $$S_{today}
 2. for each asset:
-  	a) Calculate daily returns $$\Delta S_i$$ from historical data
-	b) Apply all $$\Delta S_i$$ to $$S_{today}$$
+  a. Calculate daily returns $$\Delta S_i$$ from historical data
+  b. Apply all $$\Delta S_i$$ to $$S_{today}$$
 3. Value for $$\Pi^{tomorrow}$$
 4. $$\Delta\Pi = \Pi^{tomorrow} - \Pi^{today}$$
 5. Sort $$\Delta\Pi$$ ascending
 6. $$\mathit{VaR} \leftarrow \Delta\Pi_{99\%}\sqrt{\Delta t}$$
 
+## Implementation
+
+We instantiate an ArrayList
 
 ## Stream
 
