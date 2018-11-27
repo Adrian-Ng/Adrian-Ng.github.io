@@ -9,7 +9,7 @@ main:
    #- title: "R Language"
    #  url: http://adrian.ng/R/imp-knn/
    - title: "Java"
-     url: http://adrian.ng/java/Basics/Intro/
+     url: http://adrian.ng/java/landing/main/
    #- title: "MATLAB"
     # url: http://adrian.ng/matlab/Basics/Intro/
 #   - title: "Python"
@@ -133,12 +133,7 @@ R Language:
      - title: "Analysis"
        url: /R/hc/analysis/ 
 # Java links
-Java:
-   - title: Basics
-     children:
-     - title: "Intro"
-       url: /java/Basics/Intro/
-       
+Java:       
    - title: Options Pricing
      url: /java/options/
      children:

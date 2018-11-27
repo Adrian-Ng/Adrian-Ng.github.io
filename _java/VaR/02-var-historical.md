@@ -7,10 +7,9 @@ mathjax: true
 classes: wide
 ---
 
-Here make no probabilistic assumptions. 
-Instead, we use historical data for our market variables. 
+Here we make no probabilistic assumptions. 
 Our view is that what happened in the past is a guide to what will happen in the future.
-That is, tomorrow's price change will be sampled from the distribution of price changes in our historical data.
+Tomorrow's price change will be sampled from the distribution of price changes in our historical data.
 
 First we must value our portfolio using today's stock prices $$S_{today}$$.
 Next, we must calculate a vector of [percentage changes](https://adrian.ng/java/var/intro/#percentagechange).
@@ -25,7 +24,7 @@ $$99\%$$ of 1000 samples is 990, so we take $$\Delta\Pi_{990}\sqrt{\Delta t}$$, 
 ## Algorithm
 
 1. Value today's portfolio from $$S_{today}$$
-2. for each asset:\\
+2. for each asset:
    * Calculate daily returns $$\Delta S_i$$ from historical data
    * Apply all $$\Delta S_i$$ to $$S_{today}$$
 3. Value for $$\Pi^{tomorrow}$$
@@ -35,15 +34,23 @@ $$99\%$$ of 1000 samples is 990, so we take $$\Delta\Pi_{990}\sqrt{\Delta t}$$, 
 
 ## Implementation
 
-We instantiate an ArrayList
 
-## Stream
+
+## Sampling tomorrow's portfolio prices
 
 ```java
-ArrayList<Double> tomorrowPosition = percentageChanges
-        .stream()
-        .map(i -> (i + 1) * currentPrice * hashStockDeltas.get(sym))
-        .collect(Collectors.toCollection(ArrayList::new));
+try {
+    for (String sym : strSymbols) {
+        Stock stock = stockHashMap.get(sym);
+        int stockDeltas = hashStockDeltas.get(sym);
+        double currentPrice = stock.getQuote().getPreviousClose().doubleValue();
+        double[] percentageChanges = PercentageChange.getArray(stock.getHistory());
+        for(int i = 0; i < percentageChanges.length; i++)
+            tomorrowPortfolio[i] += (percentageChanges[i] + 1) * currentPrice * stockDeltas;
+    }
+} catch (Exception e) {
+    e.printStackTrace();
+}
 ```
 
 ## Estimating VaR
