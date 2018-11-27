@@ -12,6 +12,18 @@ header:
 
 ## Options Pricing
 
+This project looks at three ways of computing Option Prices.
+
+[Binomial Trees](/java/options/trees/){: .btn .btn--warning .btn--x-large}
+
+[Monte Carlo](/java/options/montecarlo/){: .btn .btn--danger .btn--x-large}
+
+[Black Scholes](/java/options/blackscholes/){: .btn .btn--info .btn--x-large}
+
+
+### Download
+
+[Github](https://github.com/Adrian-Ng/OptionPricer){: .btn .btn--success .btn--large}
 
 
 ## Value at Risk
