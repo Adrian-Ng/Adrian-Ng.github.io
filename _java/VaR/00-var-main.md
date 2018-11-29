@@ -81,9 +81,17 @@ public class VaR extends DataIngress {
 ## Data Ingress
 
 ### Variables
-
-
-
+```java
+public static String[] strSymbols;
+public static HashMap<String, String> hashParam;
+public static String[] riskMeasures;
+public static HashMap<String, Stock> stockHashMap;
+public static HashMap<String, Integer> hashStockDeltas = new HashMap<>();
+public static HashMap<String, Integer> hashOptionDeltas = new HashMap<>();
+public static double currentPortfolio;
+public static int countAsset;
+public static int size;
+```
 ### Methods
 
 * readParameters()
@@ -92,6 +100,21 @@ public class VaR extends DataIngress {
 * getSize()
 * valuePortfolio()
 * readTxt()
+
+### Static Block
+
+```java
+static {
+    strSymbols = readTxt("symbol.txt");
+    countAsset = strSymbols.length;
+    hashParam = readParameters();
+    riskMeasures = readTxt("RiskMeasures.txt");
+    stockHashMap = getStock();
+    readDeltas();
+    currentPortfolio = valuePortfolio();
+    size = getSize();
+}
+```
 
 ## PercentageChange
 
