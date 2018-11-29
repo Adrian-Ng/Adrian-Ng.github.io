@@ -7,6 +7,8 @@ mathjax: true
 classes: wide
 ---
 
+{% include figure image_path="/assets/images/var/Volatility.png" %}
+
 We calculate daily volatility as the _standard deviation_ of the __daily percentage change__ (= daily returns) of the stock price.
 Our implement implmentation for returning the daily percentage change is defined in the class [PercentageChange.java](https://adrian.ng/java/var/intro/#percentagechange)
 

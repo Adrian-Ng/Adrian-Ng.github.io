@@ -48,13 +48,13 @@ An investment with high returns is highly risky.
 The bank needs to keep a certain amount of cash in reserve to mitigate this risk. 
 The size of this reserve is proportional to the bank’s exposure to risk, i.e. the VaR estimate.
 
-## Project Structure
+## Class Diagram
 
 {% include figure image_path="/assets/images/var/VaR.png" %}
 
 ## Main Class
 
-### Utils
+### Data Ingress
 
 
 ## PercentageChange
