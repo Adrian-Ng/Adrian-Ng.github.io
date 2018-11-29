@@ -54,8 +54,44 @@ The size of this reserve is proportional to the bank’s exposure to risk, i.e. 
 
 ## Main Class
 
-### Data Ingress
+```java
+public class VaR extends DataIngress {
 
+    public static void main(String[] args) {
+        HashMap<String, Double> varEstimates = new HashMap<>();
+
+        MeasureFactory measureFactory = new MeasureFactory();
+        try {
+            for (String str : riskMeasures) {
+                System.out.printf("\t%s\n", str);
+                RiskMeasure riskMeasure = measureFactory.getMeasureType(str);
+
+                Double VaR = riskMeasure.getVar();
+                System.out.printf("\t\tVaR: %f\n", VaR);
+
+                varEstimates.put(str, VaR);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+## Data Ingress
+
+### Variables
+
+
+
+### Methods
+
+* readParameters()
+* readDeltas()
+* getStock()
+* getSize()
+* valuePortfolio()
+* readTxt()
 
 ## PercentageChange
 
