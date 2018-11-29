@@ -36,17 +36,21 @@ The goal of Value at Risk (VaR) is to provide an estimate of risk that summarise
 
 This figure simply answers the question: how bad _could_ it get? 
 An answer is provided with respect to two parameters: the __time horizon__ and __confidence level__. 
-That is, we are $$x%$$ sure that our portfolio will not lose more than a certain amount over the next %%N%% days. 
-That certain amount is our VaR estimate.
+That is, we are $$x%$$ sure that our portfolio will not lose more than a certain amount over the next $$N$$ days. 
 
-This estimate is widely used in industry. 
+
+That certain amount is our VaR estimate. This estimate is widely used in industry. 
+
 Take for instance an investment bank. 
 People deposit their money into this bank and, in turn, the bank invests this money in the stock market and earns money on the returns. 
+
 An investment with high returns is highly risky. 
 The bank needs to keep a certain amount of cash in reserve to mitigate this risk. 
 The size of this reserve is proportional to the bank’s exposure to risk, i.e. the VaR estimate.
 
 ## Project Structure
+
+{% include figure image_path="/assets/images/VaR.png" %}
 
 ## Main Class
 
@@ -89,8 +93,9 @@ public static ArrayList<Double> getArrayList(List<HistoricalQuote> historicalQuo
 }
 ```
 
-
 ### getArray
+
+For our purposes, it's much easier to use `double[]` types than `ArrayList<Double>`.
 
 ```java
 public static double[] getArray(List<HistoricalQuote> historicalQuotes) {
@@ -127,6 +132,13 @@ The only abstract method defined in `VolatilityAbstract.java` is as follows:
 ```java
 abstract public double getVariance(double[] xVector, double[] yVector);
 ```
+
+The classes that implement this method are:
+
+* `VolatilityEW.java`
+* `VolatilityEWMA.java`
+* `VolatilityGARCH.java`
+
 
 
 

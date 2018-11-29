@@ -85,8 +85,6 @@ $$
 
 We therefore want $$N$$ to be as large as possible.
 
-{% include figure image_path="/assets/images/montecarlo/scaling.png" %}
-
 Suppose we want to simulate the change in a stock price over the next year, $$T=1$$.
 It would make sense to divide this time horizon by $$N=365$$ such that each timeslice $$\Delta t$$ represents one day.
 
