@@ -22,6 +22,10 @@ This project looks at three ways of computing Option Prices.
 
 * [Github](https://github.com/Adrian-Ng/OptionPricer){: .btn .btn--success .btn--large}
 
+## Class Diagram
+
+{% include figure image_path="/assets/images/optionpricer/OptionPricer.png" %}
+
 ## Main Class
 
 ### Input
