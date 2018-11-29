@@ -50,7 +50,7 @@ The size of this reserve is proportional to the bank’s exposure to risk, i.e. 
 
 ## Project Structure
 
-{% include figure image_path="/assets/images/VaR.png" %}
+{% include figure image_path="/assets/images/var/VaR.png" %}
 
 ## Main Class
 
