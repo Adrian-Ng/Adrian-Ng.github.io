@@ -1,6 +1,6 @@
 ---
 title: "Java"
-permalink: /java/landing/main2/
+permalink: /java/landing/main/
 excerpt: "Java Projects so far"
 toc: false
 mathjax: true
