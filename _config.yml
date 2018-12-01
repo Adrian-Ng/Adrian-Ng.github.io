@@ -17,7 +17,7 @@ title_separator          : "-"
 name                     : "Adrian Ng"
 description              : "a space for my notes in Data Engineering, Data Science, and Computer Science"
 url                      : "https://adrian.ng" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : "/splash" # the subpath of your site, e.g. "/blog"
+baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "Adrian-Ng/Adrian-Ng.github.io"# GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
