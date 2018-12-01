@@ -10,7 +10,7 @@ actions:
     url: "https://github.com/mmistakes/minimal-mistakes/"
 excerpt: "This is the website of Adrian Ng. Here you will see examples of my _Java_ projects and some notes on working with _SQL_ queries."
 
-java: 
+intro: 
   - excerpt: '__Java projects.__'
 feature_row:
   - image_path: assets/images/unsplash-gallery-image-1-th.jpg
@@ -55,11 +55,12 @@ feature_row4:
     url: "#test-link"
     btn_label: "Read More"
     btn_class: "btn--primary"
-sql:
-  - excerpt: '__SQL notes__'    
+   
 ---
 
-{% include feature_row id="java" type="center" %}
+{% include feature_row id="intro" type="center" %}
+
+# Java Projects
 
 {% include feature_row %}
 
@@ -69,4 +70,4 @@ sql:
 
 {% include feature_row id="feature_row4" type="center" %}
 
-{% include feature_row id="sql" type="center" %}
+# SQL Notes
