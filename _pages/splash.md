@@ -5,10 +5,10 @@ header:
   overlay_color: "#000"
   overlay_filter: "0.5"
   overlay_image: /assets/images/splash/kinabalu.jpg
+  caption: "Photo credit: Adrian Ng 2015"
   actions:
     - label: "Download"
-      url: "https://github.com/mmistakes/minimal-mistakes/"                    
-  caption: "Photo credit: Adrian Ng 2015"
+      url: "https://github.com/mmistakes/minimal-mistakes/"           
 excerpt: ""
 java: 
   - excerpt: 'Here are my Java projects.'
