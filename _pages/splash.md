@@ -6,8 +6,11 @@ header:
   overlay_filter: "0.5"
   overlay_image: /assets/images/splash/kinabalu.jpg
   actions:
-    - label: "Download"
-      url: "https://github.com/mmistakes/minimal-mistakes/"
+    - label: "LinkedIn"
+      url: "https://www.linkedin.com/in/adrian-ng-2a2aa62b/"
+    - label: "GitHub"
+      url: "https://github.com/Adrian-Ng/"
+    - label: "contact@adrian.ng"
 excerpt: "This is the website of Adrian Ng. Here you will see examples of my _Java_ projects and some notes on working with _SQL_ queries."
 
 intro: 
