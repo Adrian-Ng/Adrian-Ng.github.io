@@ -29,7 +29,7 @@ feature_row:
     alt: "Value at Risk"
     title: "Value at Risk"
     excerpt: "How bad could it get for our financial portfolio? This dissertation project looks at a number of ways of estimating VaR."
-    url: "#test-link"
+    url: "/java/var/"
     btn_label: "Read More"
     btn_class: "btn--primary"
   - image_path: /assets/images/unsplash-gallery-image-3-th.jpg
