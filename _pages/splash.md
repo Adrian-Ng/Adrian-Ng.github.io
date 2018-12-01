@@ -55,7 +55,7 @@ feature_row4:
     btn_label: "Read More"
     btn_class: "btn--primary"
 sql:
-  - exerpt: 'Here are my SQL notes'    
+  - excerpt: 'Here are my SQL notes'    
 ---
 
 {% include feature_row id="java" type="center" %}
