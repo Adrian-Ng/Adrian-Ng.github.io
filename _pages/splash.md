@@ -1,16 +1,15 @@
 ---
 layout: splash
 permalink: /
-headline: false
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
   overlay_image: /assets/images/splash/kinabalu.jpg
-  caption: "Photo credit: Adrian Ng 2015"
   actions:
-    - label: "Download"
-      url: "https://github.com/mmistakes/minimal-mistakes/"           
+    - label: 'Download'
+      url: 'https://github.com/mmistakes/minimal-mistakes/'
 excerpt: "This is the website of Adrian Ng."
+
 java: 
   - excerpt: 'Here are my Java projects.'
 feature_row:
@@ -59,6 +58,8 @@ feature_row4:
 sql:
   - excerpt: 'Here are my SQL notes'    
 ---
+
+## Java
 
 {% include feature_row id="java" type="center" %}
 
