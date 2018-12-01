@@ -5,9 +5,9 @@ header:
   overlay_color: "#000"
   overlay_filter: "0.5"
   overlay_image: /assets/images/splash/kinabalu.jpg
-actions:
-  - label: "Download"
-    url: "https://github.com/mmistakes/minimal-mistakes/"
+  actions:
+    - label: "Download"
+      url: "https://github.com/mmistakes/minimal-mistakes/"
 excerpt: "This is the website of Adrian Ng. Here you will see examples of my _Java_ projects and some notes on working with _SQL_ queries."
 
 intro: 
