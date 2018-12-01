@@ -24,7 +24,7 @@ feature_row:
     url: "/java/options/"
     btn_label: "Read More"
     btn_class: "btn--primary"    
-  - image_path: /assets/images/unsplash-gallery-image-2-th.jpg
+  - image_path: /assets/images/var/Normal.png
     image_caption: "Image courtesy of [Unsplash](https://unsplash.com/)"
     alt: "Value at Risk"
     title: "Value at Risk"
