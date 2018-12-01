@@ -12,8 +12,8 @@ header:
       url: "https://www.linkedin.com/in/adrian-ng-2a2aa62b/"              
   caption: "Photo credit: Adrian Ng 2015"
 excerpt: ""
-intro: 
-  - excerpt: 'Here are some of my Java projects.'
+java: 
+  - excerpt: 'Here are my Java projects.'
 feature_row:
   - image_path: assets/images/unsplash-gallery-image-1-th.jpg
     alt: "placeholder image 1"
@@ -54,9 +54,11 @@ feature_row4:
     url: "#test-link"
     btn_label: "Read More"
     btn_class: "btn--primary"
+sql:
+  - exerpt: 'Here are my SQL notes'    
 ---
 
-{% include feature_row id="intro" type="center" %}
+{% include feature_row id="java" type="center" %}
 
 {% include feature_row %}
 
@@ -66,3 +68,4 @@ feature_row4:
 
 {% include feature_row id="feature_row4" type="center" %}
 
+{% include feature_row id="sql" type="center" %}
