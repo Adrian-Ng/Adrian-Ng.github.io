@@ -11,6 +11,7 @@ header:
     - label: "GitHub"
       url: "https://github.com/Adrian-Ng/"
     - label: "contact@adrian.ng"
+      url: "contact@adrian.ng"
 excerpt: "This is the website of Adrian Ng. Here you will see examples of my _Java_ projects and some notes on working with _SQL_ queries."
 
 intro: 
@@ -45,8 +46,8 @@ feature_row2:
 feature_row3:
   - image_path: /assets/images/unsplash-gallery-image-2-th.jpg
     alt: "placeholder image 2"
-    title: "Placeholder Image Right Aligned"
-    excerpt: 'This is some sample content that goes here with **Markdown** formatting. Right aligned with `type="right"`'
+    title: "Hadoop"
+    excerpt: 'Coming Soon'
     url: "#test-link"
     btn_label: "Read More"
     btn_class: "btn--primary"
