@@ -11,7 +11,7 @@ actions:
 excerpt: "This is the website of Adrian Ng. Here you will see examples of my _Java_ projects and some notes on working with _SQL_ queries."
 
 java: 
-  - excerpt: 'Here are my Java projects.'
+  - excerpt: '__Java projects.__'
 feature_row:
   - image_path: assets/images/unsplash-gallery-image-1-th.jpg
     alt: "Option Pricer"
@@ -56,10 +56,8 @@ feature_row4:
     btn_label: "Read More"
     btn_class: "btn--primary"
 sql:
-  - excerpt: 'Here are my SQL notes'    
+  - excerpt: '__SQL notes__'    
 ---
-
-## Java
 
 {% include feature_row id="java" type="center" %}
 
