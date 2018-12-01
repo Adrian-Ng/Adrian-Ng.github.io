@@ -10,8 +10,8 @@ header:
       url: "https://github.com/Adrian-Ng"    
   caption: "Photo credit: Adrian Ng 2015"
 excerpt: ""
-intro: 
-  - excerpt: 'Nullam suscipit et nam, tellus velit pellentesque at malesuada, enim eaque. Quis nulla, netus tempor in diam gravida tincidunt, *proin faucibus* voluptate felis id sollicitudin. Centered with `type="center"`'
+java: 
+  - excerpt: 'Here are some of my Java projects.
 feature_row:
   - image_path: assets/images/unsplash-gallery-image-1-th.jpg
     alt: "placeholder image 1"
@@ -52,9 +52,11 @@ feature_row4:
     url: "#test-link"
     btn_label: "Read More"
     btn_class: "btn--primary"
+sql: 
+  - excerpt: 'Here are some of my SQL notes.    
 ---
 
-{% include feature_row id="intro" type="center" %}
+{% include feature_row id="java" type="center" %}
 
 {% include feature_row %}
 
@@ -63,3 +65,5 @@ feature_row4:
 {% include feature_row id="feature_row3" type="right" %}
 
 {% include feature_row id="feature_row4" type="center" %}
+
+{% include feature_row id="sql" type="center" %}
