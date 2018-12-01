@@ -6,10 +6,8 @@ header:
   overlay_filter: "0.5"
   overlay_image: /assets/images/splash/kinabalu.jpg
   actions:
-    - label: "GitHub"
-      url: "https://github.com/Adrian-Ng"  
-    - label: "LinkedIn"
-      url: "https://www.linkedin.com/in/adrian-ng-2a2aa62b/"              
+    - label: "Download"
+      url: "https://github.com/mmistakes/minimal-mistakes/"                    
   caption: "Photo credit: Adrian Ng 2015"
 excerpt: ""
 java: 
