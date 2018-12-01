@@ -17,8 +17,11 @@ java:
 feature_row:
   - image_path: assets/images/unsplash-gallery-image-1-th.jpg
     alt: "Option Pricer"
-    title: "[Option Pricer](https://adrian.ng/java/options/)"
+    title: "Option Pricer"
     excerpt: "The implementation of three models for pricing options: Binomial Trees, Monte Carlo simulation, and Black Scholes equations"
+    url: "/java/options/"
+    btn_label: "Read More"
+    btn_class: "btn--primary"    
   - image_path: /assets/images/unsplash-gallery-image-2-th.jpg
     image_caption: "Image courtesy of [Unsplash](https://unsplash.com/)"
     alt: "Value at Risk"
