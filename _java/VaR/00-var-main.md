@@ -52,7 +52,7 @@ The size of this reserve is proportional to the bank’s exposure to risk, i.e. 
 
 {% include figure image_path="/assets/images/var/VaR.png" %}
 
-## Main Class
+## VaR.java
 
 ```java
 public class VaR extends DataIngress {
@@ -79,6 +79,18 @@ public class VaR extends DataIngress {
 ```
 
 ## Data Ingress
+
+`DataIngress.java` is where data from local `.txt` files and _Yahoo Finance_ is ingested.
+
+### Text Files
+
+* `symbol.txt`
+* `parameters.txt`
+* `RiskMeasures.txt`
+
+
+
+* `/Deltas/*.txt`
 
 ### Variables
 ```java

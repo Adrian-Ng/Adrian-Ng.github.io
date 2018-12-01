@@ -26,7 +26,7 @@ This project looks at three ways of computing Option Prices.
 
 {% include figure image_path="/assets/images/optionpricer/OptionPricer.png" %}
 
-## Main Class
+## OptionPricer.java
 
 ### Input
 
