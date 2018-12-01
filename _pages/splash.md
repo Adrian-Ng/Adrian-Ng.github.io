@@ -12,7 +12,7 @@ header:
       url: "https://github.com/Adrian-Ng/"
     - label: "contact@adrian.ng"
       url: "contact@adrian.ng"
-excerpt: "This is the website of Adrian Ng. Here you will see examples of my _Java_ projects and some notes on working with _SQL_ queries."
+excerpt: "This is the website of Adrian Ng. _My_ website. Here you will see examples of my _Java_ projects and some notes on working with _SQL_ queries. This is a work in progress."
 
 intro: 
   - excerpt: '__Java projects.__'
