@@ -24,14 +24,15 @@ feature_row:
     url: "/java/options/"
     btn_label: "Read More"
     btn_class: "btn--primary"    
-  - image_path: /assets/images/var/Normal.png
-    image_caption: "Image courtesy of [Unsplash](https://unsplash.com/)"
+
+  - image_path: /assets/images/splash/var.jpg    
     alt: "Value at Risk"
     title: "Value at Risk"
-    excerpt: "How bad could it get for our financial portfolio? This dissertation project looks at a number of ways of estimating VaR."
+    excerpt: "How bad could it get for our financial portfolio? This _dissertation project_ looks at a number of ways of estimating __VaR__."
     url: "/java/var/"
     btn_label: "Read More"
     btn_class: "btn--primary"
+
   - image_path: /assets/images/unsplash-gallery-image-3-th.jpg
     title: "Placeholder 3"
     excerpt: "This is some sample content that goes here with **Markdown** formatting."
