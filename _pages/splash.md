@@ -1,6 +1,7 @@
 ---
 layout: splash
 permalink: /
+headline: false
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
@@ -9,7 +10,7 @@ header:
   actions:
     - label: "Download"
       url: "https://github.com/mmistakes/minimal-mistakes/"           
-excerpt: ""
+excerpt: "This is the website of Adrian Ng."
 java: 
   - excerpt: 'Here are my Java projects.'
 feature_row:
