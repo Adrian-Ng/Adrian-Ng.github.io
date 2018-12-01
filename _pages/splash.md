@@ -16,9 +16,9 @@ java:
   - excerpt: 'Here are my Java projects.'
 feature_row:
   - image_path: assets/images/unsplash-gallery-image-1-th.jpg
-    alt: "placeholder image 1"
-    title: "Placeholder 1"
-    excerpt: "This is some sample content that goes here with **Markdown** formatting."
+    alt: "Option Pricer"
+    title: "Option Pricer"
+    excerpt: "The implementation of three models for pricing options: Binomial, Monte Carlo, and Black Scholes"
   - image_path: /assets/images/unsplash-gallery-image-2-th.jpg
     image_caption: "Image courtesy of [Unsplash](https://unsplash.com/)"
     alt: "placeholder image 2"
