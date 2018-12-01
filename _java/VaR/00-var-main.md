@@ -1,6 +1,6 @@
 ---
 title: "Value at Risk"
-permalink: /java/var/intro/
+permalink: /java/var/
 excerpt: "An intro to VAR by Adrian Ng"
 toc: true
 mathjax: true

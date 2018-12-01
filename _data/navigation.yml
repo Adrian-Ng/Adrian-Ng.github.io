@@ -156,7 +156,7 @@ Java:
 #     - title: "Intro"
 #       url: /java/Hadoop/Intro/  
    - title: Value at Risk
-     url: /java/var/intro/
+     url: /java/var/
      children:
      - title: "Analytical Approach"
        url: /java/var/analytical/      
