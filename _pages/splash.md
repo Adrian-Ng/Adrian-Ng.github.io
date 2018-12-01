@@ -13,7 +13,7 @@ header:
   caption: "Photo credit: Adrian Ng 2015"
 excerpt: ""
 intro: 
-  - excerpt: 'Here are some of my Java projects.
+  - excerpt: 'Here are some of my Java projects.'
 feature_row:
   - image_path: assets/images/unsplash-gallery-image-1-th.jpg
     alt: "placeholder image 1"
