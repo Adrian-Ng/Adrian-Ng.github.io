@@ -17,7 +17,7 @@ excerpt: "This is the website of Adrian Ng. _My_ website. Here you will see exam
 Along the way, you'll also get to see some of my nice mountain photography. Like myself, website is very much a work in progress."
 
 java:
-  - excerpt: "I'm new to Java, initially cutting my teeth on it during my _MSc_ dissertation. But I love it. Since then I fortified my skills by refactoring university projects and creating my own solo projects. "
+  - excerpt: "I'm new to Java, initially cutting my teeth on it during my _MSc_ dissertation project. But I love it. Since then I have fortified my Java with, for instance, interfaces & abstract classes, Java 8 Streams, and multithreading in the form of _callable futures_."
 
 feature_row:
   - image_path: assets/images/splash/optionpricer.jpg
