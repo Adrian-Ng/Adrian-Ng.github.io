@@ -5,7 +5,9 @@ excerpt: "Options Pricing: Three Java Implementations"
 classes: wide
 mathjax: true
 header:
-  image: /assets/images/headers/optionpricer.jpg
+  overlay_color: "#000"
+  overlay_filter: "0.5"
+  overlay_image: /assets/images/headers/optionpricer.jpg
   caption: "Borodur"  
   actions:
     - label: "Download"
