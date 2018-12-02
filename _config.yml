@@ -315,7 +315,7 @@ collections:
   matlab:
     output: true
     permalink: /:collection/:path/
-  gallery:
+  gallery1:
     output: true
     permalink: /:collection/:path/    
 defaults:
@@ -362,7 +362,7 @@ defaults:
   # _gallery
   - scope:
       path: ""
-      type: gallery
+      type: gallery1
     values:
       layout: splash
       author_profile: false
