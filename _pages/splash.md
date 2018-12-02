@@ -39,7 +39,7 @@ feature_row:
     btn_label: "Read More"
     btn_class: "btn--primary"
 
-  - image_path: /assets/images/splash/lombok.jpg
+  - image_path: /assets/images/splash/hadoop.jpg
     image_caption: "Lombok"  
     alt: "Hadoop"
     title: "Hadoop"  
