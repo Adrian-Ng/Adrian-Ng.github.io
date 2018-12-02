@@ -18,6 +18,7 @@ intro:
   - excerpt: '__Java projects.__'
 feature_row:
   - image_path: assets/images/splash/optionpricer.jpg
+    image_caption: "Borodur"  
     alt: "Option Pricer"
     title: "Option Pricer"
     excerpt: "The implementation of three models for pricing options: Binomial Trees, Monte Carlo simulation, and Black Scholes equations"
@@ -26,6 +27,7 @@ feature_row:
     btn_class: "btn--primary"    
 
   - image_path: /assets/images/splash/var.jpg    
+    image_caption: "Kinabalu"  
     alt: "Value at Risk"
     title: "Value at Risk"
     excerpt: "How bad could it get for our financial portfolio? This _dissertation project_ looks at a number of ways of estimating __VaR__."
