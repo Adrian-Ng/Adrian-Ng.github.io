@@ -37,7 +37,7 @@ feature_row:
     image_caption: "Sauðárkrókur"  
     alt: "Monte Carlo Simulation"
     title: "Monte Carlo Simulation"      
-    excerpt: "
+    excerpt: ""
     url: "/java/var/montecarlo/"
     btn_label: "Read More"
     btn_class: "btn--info"  
