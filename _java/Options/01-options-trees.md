@@ -1,5 +1,5 @@
 ---
-title: "Options Pricing: Binomial Trees"
+title: "Option Pricer"
 permalink: /java/options/trees/
 excerpt: "Pricing European and American options using Binomial Trees"
 toc: true

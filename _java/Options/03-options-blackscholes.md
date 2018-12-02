@@ -1,7 +1,7 @@
 ---
-title: "Options Pricing: Black Scholes"
+title: "OptionPricer"
 permalink: /java/options/blackscholes/
-excerpt: "Pricing European options via Black Scholes"
+excerpt: "Pricing European options using the Black Scholes equation"
 toc: true
 mathjax: true
 header:

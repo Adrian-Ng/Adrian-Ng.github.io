@@ -1,7 +1,7 @@
 ---
-title: "Options Pricing: Monte Carlo"
+title: "Option Pricer"
 permalink: /java/options/montecarlo/
-excerpt: "Pricing European and Asian options via diffusion or Monte Carlo method"
+excerpt: "Pricing European and Asian options via Monte Carlo simulation"
 toc: true
 mathjax: true
 header:
