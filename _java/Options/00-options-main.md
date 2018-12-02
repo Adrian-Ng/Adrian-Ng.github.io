@@ -15,7 +15,7 @@ header:
 
 feature_row:
   - image_path: assets/images/splash/binomialTrees.jpg
-    image_caption: "Borobudur"  
+    image_caption: "Angkor Wat"  
     alt: "Option Pricer"
     title: "Binomial Trees"
     excerpt: ""
@@ -26,7 +26,7 @@ feature_row:
   - image_path: /assets/images/splash/var.jpg    
     image_caption: "Kinabalu"  
     alt: "Value at Risk"
-    title: "Monte Carlo Simualation"
+    title: "Monte Carlo Simulation"
     excerpt: ""
     url: "/java/options/montecarlo/"
     btn_label: "Read More"
