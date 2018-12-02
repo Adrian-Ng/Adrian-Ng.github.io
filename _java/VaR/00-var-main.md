@@ -37,7 +37,7 @@ feature_row:
     image_caption: "Sauðárkrókur"  
     alt: "Monte Carlo Simulation"
     title: "Monte Carlo Simulation"      
-    excerpt: $$\frac{\partial f}{\partial t} + rS\cdot \frac{\partial f}{\partial S}+\frac{1}{2}\sigma^2 S^2\cdot\frac{\partial^2 f}{\partial S^2} = rf$$      
+    excerpt: ""
     url: "/java/var/montecarlo/"
     btn_label: "Read More"
     btn_class: "btn--info"  
