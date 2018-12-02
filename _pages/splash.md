@@ -15,14 +15,14 @@ header:
       url: "mailto:contact@adrian.ng"
 excerpt: "This is the website of __Adrian Ng__. _My_ website. Here you will see examples of my _Java_ projects and some notes on working with _SQL_ queries. 
 
-Along the way, you'll also get to see some of my nice _mountain photography_. Like myself, website is very much a work in progress."
+Along the way, you'll also get to nice mountains that I photographed long ago. Like myself, this website is very much a work in progress."
 
 java:
   - excerpt: "I'm new to Java, initially cutting my teeth on it during my _MSc_ dissertation project. But I love it. Since then I have fortified my Java with, for instance, _interfaces & abstract_ classes, _Java 8 Streams_, and multithreading in the form of _callable futures_."
 
 feature_row:
   - image_path: assets/images/splash/optionpricer.jpg
-    image_caption: "Borodur"  
+    image_caption: "Borobudur"  
     alt: "Option Pricer"
     title: "Option Pricer"
     excerpt: "The implementation of three models for pricing options: Binomial Trees, Monte Carlo simulation, and Black Scholes equations"
@@ -50,7 +50,7 @@ feature_row2:
   - image_path: /assets/images/splash/yahoofinance.jpg
     image_caption: "Rinjani 2014"  
     alt: "Yahoo Finance"
-    title: "Fun with Yahoo Finance API"
+    title: "Fun with the Yahoo Finance API"
     excerpt: 'As of March 2018, something happened to Google Finance - it got taken to the __chopping board__ and is now a miserable husk of its former self!
 Long gone are the days where one could simply hook into the API and download a fat, juicy csv-file of historical stock price data... or a sensible JSON of option prices.
 
@@ -74,7 +74,11 @@ feature_row4:
     url: "#test-link"
     btn_label: "Read More"
     btn_class: "btn--primary"
-   
+sql:
+  - excerpt: "In a past life, my expertise lay in working with SQL databases and writing queries and stored procedures. Here are some of my notes"  
+
+datascience:
+  - excerpt: "In 2017, I graduated from Royal Holloway with an MSc in Data Science. I have no aspirations to be a _Data Scientist_. However, I did enjoy the experience of writing my own implementations of algorithms such as _K Nearest Neighbours_, _Neural Networks_, and _Hierarchical Clustering_ in __R__. Also used was __MATLAB__, which no-one uses so projects worked on in this language will be added last."
 ---
 
 
@@ -89,3 +93,10 @@ feature_row4:
 
 
 ## SQL Notes
+
+{% include feature_row id="sql" type="center" %}
+
+## Data Science
+
+{% include feature_row id="datascience" type="center" %}
+
