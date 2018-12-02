@@ -8,7 +8,7 @@ classes: wide
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
-  overlay_image: /assets/images/headers/optionpricer.jpg
+  overlay_image: /assets/images/headers/var.jpg
   caption: "Kinabalu"  
   actions:
     - label: "Download"
