@@ -8,6 +8,9 @@ Long gone are the days where one could simply hook into the API and download a f
 Thankfully, there are many alternatives out there."
 categories: java
 classes: wide
+header:
+  image: /assets/images/splash/yahoofinance.jpg
+  caption: "Photo credit: Mt Rinjani, Lombok - Adrian Ng 2014"
 ---
 
 ## Google Finance API No More!
