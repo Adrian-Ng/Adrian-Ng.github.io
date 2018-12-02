@@ -48,7 +48,7 @@ feature_row:
 
 feature_row2:
   - image_path: /assets/images/splash/yahoofinance.jpg
-    image_caption: "Hardanger 2014"  
+    image_caption: "Breiðamerkurjökull"  
     alt: "Yahoo Finance"
     title: "Fun with the Yahoo Finance API"
     excerpt: 'As of March 2018, something happened to Google Finance - it got taken to the __chopping board__ and is now a miserable husk of its former self!
