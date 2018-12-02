@@ -15,7 +15,7 @@ header:
       url: "mailto:contact@adrian.ng"
 excerpt: "This is the website of __Adrian Ng__. _My_ website. Here you will see examples of my _Java projects_ and my notes on writing _SQL_. 
 
-Along the way, you'll also visit some places I photographed long ago. Like myself, this website is very much a work in progress. Thank you for reading this far."
+Along the way, you'll also visit some places I photographed long ago. Like myself, this website is very much a work in progress."
 
 java:
   - excerpt: "I'm new to Java, initially cutting my teeth on it during my _MSc_ dissertation project. But I love it. Since then I have fortified my Java with, for instance, _interfaces & abstract_ classes, _Java 8 Streams_, and multithreading in the form of _callable futures_."
