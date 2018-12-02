@@ -52,8 +52,9 @@ feature_row2:
     alt: "Yahoo Finance"
     title: "Fun with Yahoo Finance API"
     excerpt: 'As of March 2018, something happened to Google Finance - it got taken to the __chopping board__ and is now a miserable husk of its former self!
-Long gone are the days where one could simply hook into the API and download a fat, juicy csv-file of historical stock price data... or a sensible JSON of option prices.\\
-Thankfully there are many alternatives out there, such as the YahooFinanceAPI'
+Long gone are the days where one could simply hook into the API and download a fat, juicy csv-file of historical stock price data... or a sensible JSON of option prices.
+
+Thankfully there are many alternatives out there, such as the __Yahoo Finance API__'
     url: "/java/yahoofinance/"
     btn_label: "Read More"
     btn_class: "btn--primary"
