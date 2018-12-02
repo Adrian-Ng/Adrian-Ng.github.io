@@ -99,7 +99,7 @@ public class VaR extends DataIngress {
 
 ## Data Ingress
 
-`DataIngress.java` is where data from local `.txt` files and _Yahoo Finance_ is ingested.
+`DataIngress.java` is where data from local `.txt` files and _Yahoo Finance_ are ingested.
 
 ### Text Files
 
@@ -107,7 +107,7 @@ public class VaR extends DataIngress {
 * `parameters.txt`
 * `RiskMeasures.txt`
 
-
+And for each symbol in `symbol.txt`, there should be a corresponding file in `/Deltas/`.
 
 * `/Deltas/*.txt`
 
