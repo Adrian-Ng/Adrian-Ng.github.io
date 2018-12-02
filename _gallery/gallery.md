@@ -13,7 +13,6 @@ iceland:
     image_path: /assets/images/headers/yahoofinance.jpg
     alt: "Iceland 1"
     title: "Timbo on the Ice"
-
 ---
 
 

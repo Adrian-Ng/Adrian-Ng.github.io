@@ -8,7 +8,7 @@ Thankfully, there are many alternatives out there."
 classes: wide
 mathjax: true
 header:
-    image: /assets/images/headers/header-yahoofinance.jpg
+    image: /assets/images/headers/yahoofinance.jpg
 ---
 
 

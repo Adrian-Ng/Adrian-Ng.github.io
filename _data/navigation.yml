@@ -2,7 +2,6 @@
 main:
    - title: "Gallery"
      url: /gallery/
-
 # SQL links
 SQL:
    - title: Data Definition Language
