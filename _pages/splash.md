@@ -12,10 +12,11 @@ header:
       url: "https://github.com/Adrian-Ng/"
     - label: "contact@adrian.ng"
       url: "contact@adrian.ng"
-excerpt: "This is the website of Adrian Ng. _My_ website. Here you will see examples of my _Java_ projects and some notes on working with _SQL_ queries. Along the way, you'll also get to see pictures I took from various _mountains_. Like myself, website is a work in progress."
+excerpt: "This is the website of Adrian Ng. _My_ website. Here you will see examples of my _Java_ projects and some notes on working with _SQL_ queries. 
 
-intro: 
-  - excerpt: '__Java projects.__'
+Along the way, you'll also get to see pictures I took atop various _mountains_. Like myself, website is very much a work in progress."
+
+
 feature_row:
   - image_path: assets/images/splash/optionpricer.jpg
     image_caption: "Borodur"  
@@ -65,9 +66,11 @@ feature_row4:
    
 ---
 
-{% include feature_row id="intro" type="center" %}
+
 
 # Java Projects
+
+{% include feature_row id="java" type="center" %}
 
 {% include feature_row %}
 
