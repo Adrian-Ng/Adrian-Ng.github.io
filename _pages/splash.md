@@ -48,7 +48,7 @@ feature_row:
 
 feature_row2:
   - image_path: /assets/images/splash/yahoofinance.jpg
-    image_caption: "Rinjani 2014"  
+    image_caption: "Hardanger 2014"  
     alt: "Yahoo Finance"
     title: "Fun with the Yahoo Finance API"
     excerpt: 'As of March 2018, something happened to Google Finance - it got taken to the __chopping board__ and is now a miserable husk of its former self!
@@ -58,6 +58,7 @@ Thankfully there are many alternatives out there, such as the __Yahoo Finance AP
     url: "/java/yahoofinance/"
     btn_label: "Read More"
     btn_class: "btn--primary"
+
 feature_row3:
   - image_path: /assets/images/unsplash-gallery-image-2-th.jpg
     alt: "placeholder image 2"
@@ -66,6 +67,7 @@ feature_row3:
     url: "#test-link"
     btn_label: "Read More"
     btn_class: "btn--primary"
+
 feature_row4:
   - image_path: /assets/images/unsplash-gallery-image-2-th.jpg
     alt: "placeholder image 2"
