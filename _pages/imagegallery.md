@@ -1,7 +1,7 @@
 ---
 layout: splash
 title: "Gallery"
-permalink: /gallery/
+permalink: /imagegallery/
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
