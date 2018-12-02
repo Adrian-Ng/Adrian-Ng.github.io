@@ -85,7 +85,7 @@ datascience:
 
 
 
-## Java Projects
+## [Java Projects](/java/)
 
 {% include feature_row id="java" type="center" %}
 
