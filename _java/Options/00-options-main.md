@@ -1,7 +1,7 @@
 ---
 title: "Option Pricer"
 permalink: /java/options/
-excerpt: "This project looks at three implementations of computing _Option Prices_."
+excerpt: "This project looks at three implementations of computing _Option Prices_: the _Binomial Tree_, the _Monte Carlo_ simulation, and the _Black Scholes equations_."
 classes: wide
 mathjax: true
 header:
