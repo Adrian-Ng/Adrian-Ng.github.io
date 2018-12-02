@@ -135,8 +135,7 @@ R Language:
        url: /R/hc/analysis/ 
 # Java links
 Java:   
-   - title: Yahoo Finance
-     url: /java/yahoofinance/    
+    
    - title: Options Pricing
      url: /java/options/
      children:
@@ -173,14 +172,15 @@ Java:
        url: /java/var/matrices/
      - title: "Back Testing"
        url: /java/var/backtest/
-   - title: Multithreading    
+
+   - title: Misc
      children:
-     - title: "Callable Futures"
-       url: /java/threads/callablefutures/
-   - title: Utils
-     children:
-     - title: "readTxt"
-       url: /java/utils/readtxt/        
+      - title: Yahoo Finance
+        url: /java/yahoofinance/       
+      - title: "Callable Futures"
+        url: /java/threads/callablefutures/
+      - title: "readTxt"
+        url: /java/utils/readtxt/        
 
 # MATLAB links
 MATLAB:
