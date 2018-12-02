@@ -77,7 +77,7 @@ feature_row4:
     btn_label: "Read More"
     btn_class: "btn--primary"
 sql:
-  - excerpt: "In a past life, my expertise lay in working with SQL databases and writing queries and stored procedures. Here are some of my notes"  
+  - excerpt: "In a past life, my expertise lay in working with SQL databases and writing queries and stored procedures. [Here are some of my notes](http://adrian.ng/SQL/ddl/intro/)"  
 
 datascience:
   - excerpt: "In 2017, I graduated from Royal Holloway with an MSc in Data Science. I have no aspirations to be a _Data Scientist_. However, I did enjoy the experience of writing my own implementations of algorithms such as _K Nearest Neighbours_, _Neural Networks_, and _Hierarchical Clustering_ in __R__. Also used was __MATLAB__, which no-one uses so projects worked on in this language will be added last."
