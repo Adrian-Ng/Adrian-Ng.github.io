@@ -7,6 +7,8 @@ Long gone are the days where one could simply hook into the API and download a f
 Thankfully, there are many alternatives out there."
 classes: wide
 mathjax: true
+header:
+    image: /assets/images/headers/header-yahoofinance.jpg
 ---
 
 
