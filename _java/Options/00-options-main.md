@@ -12,6 +12,34 @@ header:
   actions:
     - label: "Download"
       url: "https://github.com/Adrian-Ng/OptionPricer"
+
+feature_row:
+  - image_path: assets/images/splash/optionpricer.jpg
+    image_caption: "Borobudur"  
+    alt: "Option Pricer"
+    title: "Binomial Trees"
+    excerpt: ""
+    url: "java/options/trees/"
+    btn_label: "Read More"
+    btn_class: "btn--warning"    
+
+  - image_path: /assets/images/splash/var.jpg    
+    image_caption: "Kinabalu"  
+    alt: "Value at Risk"
+    title: "Monte Carlo Simualation"
+    excerpt: ""
+    url: "/java/options/montecarlo/"
+    btn_label: "Read More"
+    btn_class: "btn--danger"
+
+  - image_path: /assets/images/splash/hadoop.jpg
+    image_caption: "Kinabalu"  
+    alt: "Black Scholes equation"
+    title: "Black Scholes equation"      
+    excerpt: ""      
+    url: "/java/options/blackscholes/"
+    btn_label: "Read More"
+    btn_class: "btn--info"
 ---
 
 This project looks at three ways of computing Option Prices.
