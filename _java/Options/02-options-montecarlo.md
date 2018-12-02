@@ -8,14 +8,14 @@ mathjax: true
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
-  overlay_image: /assets/images/headers/optionpricer.jpg
-  caption: "Borodur"  
+  overlay_image: /assets/images/headers/montecarlo_options.jpg
+  caption: "Angkor Wat"  
   actions:
     - label: "Download"
       url: "https://github.com/Adrian-Ng/OptionPricer"
 ---
 
-The Monte Carlo method is a way of simulating a distribution by way of randomly generating a whole bunch of numbers. 
+With _Monte Carlo_ we can simulate a distribution by way of randomly generating a whole bunch of numbers. 
 In [__Central Limit Theorem__](https://en.wikipedia.org/wiki/Central_limit_theorem), the distribution of the sum of a large number of small contributions is approximately Gaussian.
 
 Stock prices can be described as a _random walk_. That is, a stock price is the linear combination of a number of infinitessimally small changes otherwise known as the __Wiener Process__. Each change is randomly sampled from the standard Gaussian distribution $$\phi(0,1)$$. Our predicted stock price is where ever we end up at the end of the random walk.

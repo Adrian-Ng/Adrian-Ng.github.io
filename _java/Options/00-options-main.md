@@ -23,8 +23,8 @@ feature_row:
     btn_label: "Read More"
     btn_class: "btn--warning"    
 
-  - image_path: /assets/images/splash/var.jpg    
-    image_caption: "Kinabalu"  
+  - image_path: /assets/images/splash/montecarlo_options.jpg    
+    image_caption: "Angkor Wat"  
     alt: "Value at Risk"
     title: "Monte Carlo Simulation"
     excerpt: ""
