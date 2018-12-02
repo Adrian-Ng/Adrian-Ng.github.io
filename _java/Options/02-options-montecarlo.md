@@ -3,6 +3,7 @@ title: "Option Pricer"
 permalink: /java/options/montecarlo/
 excerpt: "Pricing European and Asian options via Monte Carlo simulation"
 toc: true
+toc_sticky: true
 mathjax: true
 header:
   overlay_color: "#000"

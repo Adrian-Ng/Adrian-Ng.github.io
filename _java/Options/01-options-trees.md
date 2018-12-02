@@ -3,8 +3,8 @@ title: "Option Pricer"
 permalink: /java/options/trees/
 excerpt: "Pricing European and American options using Binomial Trees"
 toc: true
+toc_sticky: true
 mathjax: true
-classes: wide
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"

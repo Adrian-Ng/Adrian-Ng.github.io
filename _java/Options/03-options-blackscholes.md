@@ -3,6 +3,7 @@ title: "OptionPricer"
 permalink: /java/options/blackscholes/
 excerpt: "Pricing European options using the Black Scholes equation"
 toc: true
+toc_sticky: true
 mathjax: true
 header:
   overlay_color: "#000"
@@ -49,10 +50,6 @@ d_2=\frac{\ln{\left(\frac{S}{X}\right)}+(r - \frac{\sigma^2}{2})(T-t)}{\sigma\sq
 $$
 
 ## Java
-
-### Download
-
-[Github](https://github.com/Adrian-Ng/OptionPricer)
 
 ### BlackScholes.java
 
