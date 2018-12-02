@@ -136,7 +136,7 @@ R Language:
 # Java links
 Java:   
     
-   - title: Options Pricing
+   - title: Option Pricer
      url: /java/options/
      children:
      - title: Binomial Trees

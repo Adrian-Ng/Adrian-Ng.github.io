@@ -15,10 +15,6 @@ header:
       url: "https://github.com/Adrian-Ng/OptionPricer"
 ---
 
-## Download
-
-[Github](https://github.com/Adrian-Ng/OptionPricer){: .btn .btn--success .btn--large}
-
 ## Parameters
 
 Consider an option with the strike price $$X = 120$$ maturing in $$T = 3$$ months on a stock worth $$S = 115$$ having volatility $$\sigma = 30%$$ and interest rate $$r = 15%$$.
