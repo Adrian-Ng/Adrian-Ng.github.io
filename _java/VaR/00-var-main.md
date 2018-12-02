@@ -17,28 +17,28 @@ header:
 feature_row:
   - image_path: assets/images/splash/binomialTrees.jpg
     image_caption: "Angkor Wat"  
-    alt: "Option Pricer"
-    title: "Binomial Trees"
+    alt: "Analytical Approach"
+    title: "Analytical Approach"
     excerpt: "When pricing options, we don't know whether the price will go _up_ or _down_. This simple model captures that uncertainty."
-    url: "java/options/trees/"
+    url: "java/var/analytical/"
     btn_label: "Read More"
     btn_class: "btn--warning"    
 
   - image_path: /assets/images/splash/montecarlo_options.jpg    
     image_caption: "Angkor Wat"  
-    alt: "Value at Risk"
-    title: "Monte Carlo Simulation"
+    alt: "Historical Simulation"
+    title: "Historical Simulation"
     excerpt: "The behaviour of a stock price is like a random walk. Let's simulate a very large number of these to predict our option price."
-    url: "/java/options/montecarlo/"
+    url: "/java/var/historical/"
     btn_label: "Read More"
     btn_class: "btn--danger"
 
   - image_path: /assets/images/splash/blackscholes.jpg
     image_caption: "Sauðárkrókur"  
-    alt: "Black Scholes equation"
-    title: "Black Scholes equation"      
+    alt: "Monte Carlo Simulation"
+    title: "Monte Carlo Simulation"      
     excerpt: $$\frac{\partial f}{\partial t} + rS\cdot \frac{\partial f}{\partial S}+\frac{1}{2}\sigma^2 S^2\cdot\frac{\partial^2 f}{\partial S^2} = rf$$      
-    url: "/java/options/blackscholes/"
+    url: "/java/var/montecarlo/"
     btn_label: "Read More"
     btn_class: "btn--info"  
 ---
