@@ -8,11 +8,13 @@ mathjax: true
 header:
 
   image: /assets/images/headers/binomialTrees.jpg
-  caption: "Borodur"  
+  caption: "Angkor Wat"  
   actions:
     - label: "Download"
       url: "https://github.com/Adrian-Ng/OptionPricer"
 ---
+
+# Binomial Trees
 
 ## Parameters
 
