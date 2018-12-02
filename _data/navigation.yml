@@ -1,7 +1,7 @@
 # main links
 main:
    - title: "Gallery"
-     url: /gallery1/
+     url: https://adrian.ng/gallery1/
 # SQL links
 SQL:
    - title: Data Definition Language
