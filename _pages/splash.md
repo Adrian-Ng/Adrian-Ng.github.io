@@ -17,7 +17,7 @@ excerpt: "This is the website of Adrian Ng. _My_ website. Here you will see exam
 intro: 
   - excerpt: '__Java projects.__'
 feature_row:
-  - image_path: assets/images/unsplash-gallery-image-1-th.jpg
+  - image_path: assets/images/splash/optionpricer.jpg
     alt: "Option Pricer"
     title: "Option Pricer"
     excerpt: "The implementation of three models for pricing options: Binomial Trees, Monte Carlo simulation, and Black Scholes equations"
