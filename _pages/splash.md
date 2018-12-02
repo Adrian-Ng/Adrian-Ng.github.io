@@ -13,7 +13,7 @@ header:
       url: "https://github.com/Adrian-Ng/"
     - label: "contact@adrian.ng"
       url: "mailto:contact@adrian.ng"
-excerpt: "This is the website of __Adrian Ng__. _My_ website. Here you will see examples of my _Java_ projects and some notes on working with _SQL_ queries. 
+excerpt: "This is the website of __Adrian Ng__. My website. Here you will see examples of my _Java projects_ and my notes on writing _SQL_. 
 
 Along the way, you'll also visit some places that I photographed long ago. Like myself, this website is very much a work in progress."
 

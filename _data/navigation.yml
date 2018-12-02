@@ -4,12 +4,13 @@ main:
  #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
 #   - title: "About"
  #    url: /about/	
-   - title: "SQL"
+   - title: "Java Projects"
+     url: http://adrian.ng/java/ 
+   - title: "SQL Notes"
      url: http://adrian.ng/SQL/ddl/intro/
    #- title: "R Language"
    #  url: http://adrian.ng/R/imp-knn/
-   - title: "Java"
-     url: http://adrian.ng/java/landing/main/
+
    #- title: "MATLAB"
     # url: http://adrian.ng/matlab/Basics/Intro/
 #   - title: "Python"
