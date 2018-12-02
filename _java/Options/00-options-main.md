@@ -13,6 +13,9 @@ header:
     - label: "Download"
       url: "https://github.com/Adrian-Ng/OptionPricer"
 
+intro:
+  - excerpt: "This project looks at three ways of computing Option Prices."       
+
 feature_row:
   - image_path: assets/images/splash/optionpricer.jpg
     image_caption: "Borobudur"  
@@ -42,13 +45,7 @@ feature_row:
     btn_class: "btn--info"
 ---
 
-This project looks at three ways of computing Option Prices.
-
-* [Binomial Trees](/java/options/trees/){: .btn .btn--warning .btn--x-large}
-
-* [Monte Carlo](/java/options/montecarlo/){: .btn .btn--danger .btn--x-large}
-
-* [Black Scholes](/java/options/blackscholes/){: .btn .btn--info .btn--x-large}
+{% include feature_row id="intro" type="center" %}
 
 {% include feature_row %}
 
