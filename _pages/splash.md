@@ -86,8 +86,8 @@ feature_row4:
 
 {% include feature_row id="feature_row2" type="left" %}
 
-{% include feature_row id="feature_row3" type="right" %}
+[//]: # "Comment"{% include feature_row id="feature_row3" type="right" %}
 
-{% include feature_row id="feature_row4" type="center" %}
+[//]: # "Comment"{% include feature_row id="feature_row4" type="center" %}
 
-# SQL Notes
+## SQL Notes
