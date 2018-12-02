@@ -1,20 +1,8 @@
 # main links
-#main:
-#  - title: "Quick-Start Guide"
- #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-#   - title: "About"
- #    url: /about/	
-#   - title: "Java Projects"
-#     url: http://adrian.ng/java/ 
-#   - title: "SQL Notes"
-#     url: http://adrian.ng/SQL/ddl/intro/
-   #- title: "R Language"
-   #  url: http://adrian.ng/R/imp-knn/
+main:
+   - title: "Gallery"
+     url: /gallery/
 
-   #- title: "MATLAB"
-    # url: http://adrian.ng/matlab/Basics/Intro/
-#   - title: "Python"
- #    url: http://adrian.ng/python/Basics/Intro/
 # SQL links
 SQL:
    - title: Data Definition Language
