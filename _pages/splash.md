@@ -41,9 +41,8 @@ feature_row:
 
   - image_path: /assets/images/splash/hadoop.jpg
     image_caption: "Kinabalu"  
-    alt: "Hadoop"
-    title: "Hadoop"  
-    title: "Hadoop"
+    alt: "Apache Spark"
+    title: "Apache Spark"      
     excerpt: "Coming soon... Having worked on some Hadoop projects in the past, it should be interesting to try to translate these to Spark."
 
 feature_row2:
