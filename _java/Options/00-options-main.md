@@ -14,7 +14,7 @@ header:
       url: "https://github.com/Adrian-Ng/OptionPricer"    
 
 feature_row:
-  - image_path: assets/images/splash/optionpricer.jpg
+  - image_path: assets/images/splash/binomialTrees.jpg
     image_caption: "Borobudur"  
     alt: "Option Pricer"
     title: "Binomial Trees"
