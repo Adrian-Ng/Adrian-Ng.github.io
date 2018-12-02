@@ -11,7 +11,7 @@ header:
     - label: "GitHub"
       url: "https://github.com/Adrian-Ng/"
     - label: "contact@adrian.ng"
-      url: "contact@adrian.ng"
+      url: "mailto:contact@adrian.ng"
 excerpt: "This is the website of Adrian Ng. _My_ website. Here you will see examples of my _Java_ projects and some notes on working with _SQL_ queries. 
 
 Along the way, you'll also get to see some of my nice mountain photography. Like myself, website is very much a work in progress."
