@@ -315,6 +315,9 @@ collections:
   matlab:
     output: true
     permalink: /:collection/:path/
+  gallery:
+    output: true
+    permalink: /:collection/:path/    
 defaults:
   # _SQL
   - scope:
@@ -356,3 +359,12 @@ defaults:
       share: true
       sidebar:
          nav: "MATLAB"
+  # _gallery
+  - scope:
+      path: ""
+      type: gallery
+    values:
+      layout: splash
+      author_profile: false
+      share: true
+
