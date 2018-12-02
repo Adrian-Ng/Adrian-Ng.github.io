@@ -32,8 +32,8 @@ feature_row:
     btn_label: "Read More"
     btn_class: "btn--danger"
 
-  - image_path: /assets/images/splash/hadoop.jpg
-    image_caption: "Kinabalu"  
+  - image_path: /assets/images/splash/blackscholes.jpg
+    image_caption: "Sauðárkrókur"  
     alt: "Black Scholes equation"
     title: "Black Scholes equation"      
     excerpt: $$\frac{\partial f}{\partial t} + rS\cdot \frac{\partial f}{\partial S}+\frac{1}{2}\sigma^2 S^2\cdot\frac{\partial^2 f}{\partial S^2} = rf$$      
