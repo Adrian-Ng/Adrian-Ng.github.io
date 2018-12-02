@@ -1,5 +1,5 @@
 ---
-title: "OptionPricer"
+title: "Option Pricer"
 permalink: /java/options/blackscholes/
 excerpt: "Pricing European options using the Black Scholes equation"
 toc: true
@@ -178,6 +178,4 @@ So at maturity, the value of the options is:
 $$
 c\rightarrow 0\\
 p\rightarrow X-S\\
-$$ 
-
-
+$$

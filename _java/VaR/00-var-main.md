@@ -6,8 +6,44 @@ toc: true
 mathjax: true
 classes: wide
 header:
-  image: /assets/images/var/Normal.png
+  overlay_color: "#000"
+  overlay_filter: "0.5"
+  overlay_image: /assets/images/headers/optionpricer.jpg
+  caption: "Kinabalu"  
+  actions:
+    - label: "Download"
+      url: "https://github.com/Adrian-Ng/ValueAtRisk"  
+
+feature_row:
+  - image_path: assets/images/splash/binomialTrees.jpg
+    image_caption: "Angkor Wat"  
+    alt: "Option Pricer"
+    title: "Binomial Trees"
+    excerpt: "When pricing options, we don't know whether the price will go _up_ or _down_. This simple model captures that uncertainty."
+    url: "java/options/trees/"
+    btn_label: "Read More"
+    btn_class: "btn--warning"    
+
+  - image_path: /assets/images/splash/montecarlo_options.jpg    
+    image_caption: "Angkor Wat"  
+    alt: "Value at Risk"
+    title: "Monte Carlo Simulation"
+    excerpt: "The behaviour of a stock price is like a random walk. Let's simulate a very large number of these to predict our option price."
+    url: "/java/options/montecarlo/"
+    btn_label: "Read More"
+    btn_class: "btn--danger"
+
+  - image_path: /assets/images/splash/blackscholes.jpg
+    image_caption: "Sauðárkrókur"  
+    alt: "Black Scholes equation"
+    title: "Black Scholes equation"      
+    excerpt: $$\frac{\partial f}{\partial t} + rS\cdot \frac{\partial f}{\partial S}+\frac{1}{2}\sigma^2 S^2\cdot\frac{\partial^2 f}{\partial S^2} = rf$$      
+    url: "/java/options/blackscholes/"
+    btn_label: "Read More"
+    btn_class: "btn--info"  
 ---
+
+{% include feature_row %}
 
 This dissertation project looks at three ways of computing estimating Value at Risk (VaR) using Java.
 Some may take probabilistic assumptions and/or sample from simulated distributions.

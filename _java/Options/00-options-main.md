@@ -16,7 +16,7 @@ header:
 feature_row:
   - image_path: assets/images/splash/binomialTrees.jpg
     image_caption: "Angkor Wat"  
-    alt: "Option Pricer"
+    alt: "Binomial Trees"
     title: "Binomial Trees"
     excerpt: "When pricing options, we don't know whether the price will go _up_ or _down_. This simple model captures that uncertainty."
     url: "java/options/trees/"
@@ -25,7 +25,7 @@ feature_row:
 
   - image_path: /assets/images/splash/montecarlo_options.jpg    
     image_caption: "Angkor Wat"  
-    alt: "Value at Risk"
+    alt: "Monte Carlo Simulation"
     title: "Monte Carlo Simulation"
     excerpt: "The behaviour of a stock price is like a random walk. Let's simulate a very large number of these to predict our option price."
     url: "/java/options/montecarlo/"
