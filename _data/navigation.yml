@@ -134,7 +134,9 @@ R Language:
      - title: "Analysis"
        url: /R/hc/analysis/ 
 # Java links
-Java:       
+Java:   
+   - title: Yahoo Finance
+     url: /java/yahoofinance/    
    - title: Options Pricing
      url: /java/options/
      children:
