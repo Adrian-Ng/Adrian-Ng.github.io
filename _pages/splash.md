@@ -40,7 +40,7 @@ feature_row:
     btn_class: "btn--primary"
 
   - image_path: /assets/images/splash/hadoop.jpg
-    image_caption: "Lombok"  
+    image_caption: "Kinabalu"  
     alt: "Hadoop"
     title: "Hadoop"  
     title: "Hadoop"
