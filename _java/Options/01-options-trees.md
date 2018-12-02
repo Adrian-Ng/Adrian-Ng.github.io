@@ -17,7 +17,7 @@ header:
 
 ## Parameters
 
-Consider an option with the strike price $$X = 120$$ maturing in $$T = 3$$ months on a stock worth $$S = 115$$ having volatility $$\sigma = 30%$$ and interest rate $$r = 15%$$.
+Consider an option with the strike price $$X = 120$$ maturing in $$T = 3$$ months on a stock worth $$S = 115$$ having volatility $$\sigma = 0.30\%$$ and interest rate $$r = 0.15\%$$.
 
 ### u & d
 
