@@ -1,7 +1,7 @@
 ---
 layout: splash
 title: "adrian.ng"
-permalink: /Gallery/
+permalink: /gallery/
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
