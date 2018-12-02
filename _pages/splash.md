@@ -47,11 +47,12 @@ feature_row:
     excerpt: "Coming soon..."
 
 feature_row2:
-  - image_path: /assets/images/unsplash-gallery-image-2-th.jpg
+  - image_path: /assets/images/splash/yahoofinance.jpg
     alt: "placeholder image 2"
-    title: "Placeholder Image Left Aligned"
-    excerpt: 'This is some sample content that goes here with **Markdown** formatting. Left aligned with `type="left"`'
-    url: "#test-link"
+    title: "Fun with Yahoo Finance API"
+    excerpt: 'As of March 2018, something happened to Google Finance - it got taken to the chopping board and is now a miserable husk of its former self!
+Long gone are the days where one could simply hook into the API and download a fat, juicy csv-file of historical stock price data... or a sensible JSON of option prices.'
+    url: "/java/yahoofinance/"
     btn_label: "Read More"
     btn_class: "btn--primary"
 feature_row3:
