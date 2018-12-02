@@ -50,6 +50,8 @@ This project looks at three ways of computing Option Prices.
 
 * [Black Scholes](/java/options/blackscholes/){: .btn .btn--info .btn--x-large}
 
+{% include feature_row %}
+
 ## Class Diagram
 
 {% include figure image_path="/assets/images/optionpricer/OptionPricer.png" %}
