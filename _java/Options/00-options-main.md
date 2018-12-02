@@ -18,7 +18,7 @@ feature_row:
     image_caption: "Angkor Wat"  
     alt: "Option Pricer"
     title: "Binomial Trees"
-    excerpt: "The problem with pricing options: we don't know whether the price will go _up_ or _down_. This simple model captures that uncertainty."
+    excerpt: "When pricing options, we don't know whether the price will go _up_ or _down_. This simple model captures that uncertainty."
     url: "java/options/trees/"
     btn_label: "Read More"
     btn_class: "btn--warning"    

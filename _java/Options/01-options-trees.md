@@ -14,7 +14,7 @@ header:
       url: "https://github.com/Adrian-Ng/OptionPricer"
 ---
 
-The problem with pricing options: we don't know whether the price will go _up_ or _down_. This simple model captures that uncertainty.
+When pricing options, we don't know whether the price will go _up_ or _down_. This simple model captures that uncertainty.
 
 ## Parameters
 
