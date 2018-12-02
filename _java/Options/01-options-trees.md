@@ -6,9 +6,8 @@ toc: true
 toc_sticky: true
 mathjax: true
 header:
-  overlay_color: "#000"
-  overlay_filter: "0.5"
-  overlay_image: /assets/images/headers/binomialTrees.jpg
+
+  image: /assets/images/headers/binomialTrees.jpg
   caption: "Borodur"  
   actions:
     - label: "Download"
