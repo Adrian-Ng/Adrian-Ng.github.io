@@ -4,6 +4,14 @@ permalink: /java/options/blackscholes/
 excerpt: "Pricing European options via Black Scholes"
 toc: true
 mathjax: true
+header:
+  overlay_color: "#000"
+  overlay_filter: "0.5"
+  overlay_image: /assets/images/headers/optionpricer.jpg
+  caption: "Borodur"  
+  actions:
+    - label: "Download"
+      url: "https://github.com/Adrian-Ng/OptionPricer"
 ---
 
 ## Download

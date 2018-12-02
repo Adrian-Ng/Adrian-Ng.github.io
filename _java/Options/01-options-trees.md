@@ -5,6 +5,14 @@ excerpt: "Pricing European and American options using Binomial Trees"
 toc: true
 mathjax: true
 classes: wide
+header:
+  overlay_color: "#000"
+  overlay_filter: "0.5"
+  overlay_image: /assets/images/headers/optionpricer.jpg
+  caption: "Borodur"  
+  actions:
+    - label: "Download"
+      url: "https://github.com/Adrian-Ng/OptionPricer"
 ---
 
 ## Download

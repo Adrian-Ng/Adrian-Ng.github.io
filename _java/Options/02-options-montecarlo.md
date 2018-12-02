@@ -4,6 +4,14 @@ permalink: /java/options/montecarlo/
 excerpt: "Pricing European and Asian options via diffusion or Monte Carlo method"
 toc: true
 mathjax: true
+header:
+  overlay_color: "#000"
+  overlay_filter: "0.5"
+  overlay_image: /assets/images/headers/optionpricer.jpg
+  caption: "Borodur"  
+  actions:
+    - label: "Download"
+      url: "https://github.com/Adrian-Ng/OptionPricer"
 ---
 
 The Monte Carlo method is a way of simulating a distribution by way of randomly generating a whole bunch of numbers. 
