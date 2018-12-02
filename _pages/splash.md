@@ -70,7 +70,7 @@ feature_row4:
 
 
 
-# Java Projects
+## Java Projects
 
 {% include feature_row id="java" type="center" %}
 
