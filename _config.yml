@@ -346,8 +346,8 @@ defaults:
       share: true
       sidebar:
         nav: "Java"
-    header:
-      image: /assets/images/splash/kinabalu.jpg
+      header:
+        image: /assets/images/splash/kinabalu.jpg
   # _matlab
   - scope:
       path: ""
