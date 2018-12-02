@@ -1,7 +1,7 @@
 ---
 title: "Option Pricer"
 permalink: /java/options/montecarlo/
-excerpt: "Pricing European and Asian options via Monte Carlo simulation"
+excerpt: "Pricing European and Asian options via Monte Carlo simulation. The behaviour of a stock price is like a random walk. Let's simulate a very large number of these to predict our option price."
 toc: true
 toc_sticky: true
 mathjax: true

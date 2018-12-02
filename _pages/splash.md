@@ -25,7 +25,7 @@ feature_row:
     image_caption: "Borobudur"  
     alt: "Option Pricer"
     title: "Option Pricer"
-    excerpt: "The implementation of three models for pricing options: Binomial Trees, Monte Carlo simulation, and Black Scholes equations"
+    excerpt: "The implementation of three models for pricing options: __Binomial Trees__, __Monte Carlo__ simulation, and __Black Scholes__ equations"
     url: "/java/options/"
     btn_label: "Read More"
     btn_class: "btn--primary"    
