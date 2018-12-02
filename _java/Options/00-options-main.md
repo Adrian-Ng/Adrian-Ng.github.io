@@ -1,7 +1,7 @@
 ---
-title: "Options Pricing: Three Java Implementations"
+title: "Option Pricer"
 permalink: /java/options/
-excerpt: "Options Pricing: Three Java Implementations"
+excerpt: "This project looks at three implementations of computing _Option Prices_."
 classes: wide
 mathjax: true
 header:
@@ -11,10 +11,7 @@ header:
   caption: "Borodur"  
   actions:
     - label: "Download"
-      url: "https://github.com/Adrian-Ng/OptionPricer"
-
-intro:
-  - excerpt: "This project looks at three ways of computing Option Prices."       
+      url: "https://github.com/Adrian-Ng/OptionPricer"    
 
 feature_row:
   - image_path: assets/images/splash/optionpricer.jpg
@@ -45,7 +42,6 @@ feature_row:
     btn_class: "btn--info"
 ---
 
-{% include feature_row id="intro" type="center" %}
 
 {% include feature_row %}
 
