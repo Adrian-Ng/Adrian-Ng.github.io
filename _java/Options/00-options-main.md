@@ -17,7 +17,7 @@ feature_row:
   - image_path: assets/images/splash/binomialTrees.jpg
     image_caption: "Angkor Wat"  
     alt: "Option Pricer"
-    title: "Binomial Trees\s\s\s\s"
+    title: "Binomial Trees"
     excerpt: "When pricing options, we don't know whether the price will go _up_ or _down_. This simple model captures that uncertainty."
     url: "java/options/trees/"
     btn_label: "Read More"

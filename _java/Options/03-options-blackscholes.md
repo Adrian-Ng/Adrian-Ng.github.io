@@ -6,8 +6,8 @@ toc: true
 toc_sticky: true
 mathjax: true
 header:
-image: /assets/images/headers/blackscholes.jpg
-  caption: "Sauðárkrókur"  
+    image: /assets/images/headers/blackscholes.jpg
+    caption: "Sauðárkrókur"  
   actions:
     - label: "Download"
       url: "https://github.com/Adrian-Ng/OptionPricer"
