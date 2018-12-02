@@ -18,7 +18,7 @@ excerpt: "This is the website of __Adrian Ng__. _My_ website. Here you will see 
 Along the way, you'll also visit some places I photographed long ago. Like myself, this website is very much a work in progress."
 
 java:
-  - excerpt: "I'm new to Java, initially cutting my teeth on it during my _MSc_ dissertation project. But I love it. Since then I have fortified my Java with, for instance, _interfaces & abstract_ classes, _Java 8 Streams_, and multithreading in the form of _callable futures_."
+  - excerpt: "After cutting my teeth on _Java_ during my _MSc_ dissertation project, I found it stimulating and a joy to work with. Since then I have been fortifying my Java. My code makes use of, for instance, _interfaces & abstract_ classes, _Java 8 Streams_, and multithreading in the form of _callable futures_."
 
 feature_row:
   - image_path: assets/images/splash/optionpricer.jpg

@@ -15,10 +15,6 @@ header:
       url: "https://github.com/Adrian-Ng/OptionPricer"
 ---
 
-## Download
-
-[Github](https://github.com/Adrian-Ng/OptionPricer){: .btn .btn--success .btn--large}
-
 ## Black Scholes differential equation
 
 $$
