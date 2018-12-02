@@ -2,8 +2,6 @@
 title: "Value at Risk"
 permalink: /java/var/
 excerpt: "How bad could it get for our financial portfolio? This _dissertation project_ looks at a number of ways of estimating __VaR__: the _Analytical Approach_, _Historical Simulation_, and _Monte Carlo simulation_."
-toc: true
-toc_sticky: true
 mathjax: true
 header:
   overlay_color: "#000"
