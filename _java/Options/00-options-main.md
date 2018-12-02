@@ -5,8 +5,11 @@ excerpt: "Options Pricing: Three Java Implementations"
 classes: wide
 mathjax: true
 header:
-  image: /assets/images/merapi.jpg
-  caption: "Photo credit: Mt Merapi, Java - Adrian Ng 2015"
+  image: /assets/images/headers/optionpricer.jpg
+  caption: "Borodur"  
+  actions:
+    - label: "Download"
+      url: "https://github.com/Adrian-Ng/OptionPricer"
 ---
 
 This project looks at three ways of computing Option Prices.
@@ -16,11 +19,6 @@ This project looks at three ways of computing Option Prices.
 * [Monte Carlo](/java/options/montecarlo/){: .btn .btn--danger .btn--x-large}
 
 * [Black Scholes](/java/options/blackscholes/){: .btn .btn--info .btn--x-large}
-
-
-## Download
-
-* [Github](https://github.com/Adrian-Ng/OptionPricer){: .btn .btn--success .btn--large}
 
 ## Class Diagram
 
