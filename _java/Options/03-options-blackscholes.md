@@ -6,8 +6,10 @@ toc: true
 toc_sticky: true
 mathjax: true
 header:
-    image: /assets/images/headers/blackscholes.jpg
-    caption: "Sauðárkrókur"  
+  overlay_color: "#000"
+  overlay_filter: "0.5"
+  overlay_image: /assets/images/headers/blackscholes.jpg
+  caption: "Sauðárkrókur"  
   actions:
     - label: "Download"
       url: "https://github.com/Adrian-Ng/OptionPricer"
