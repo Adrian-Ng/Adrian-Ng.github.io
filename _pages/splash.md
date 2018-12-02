@@ -14,8 +14,10 @@ header:
       url: "contact@adrian.ng"
 excerpt: "This is the website of Adrian Ng. _My_ website. Here you will see examples of my _Java_ projects and some notes on working with _SQL_ queries. 
 
-Along the way, you'll also get to see pictures I took atop various _mountains_. Like myself, website is very much a work in progress."
+Along the way, you'll also get to see some of my nice mountain photography. Like myself, website is very much a work in progress."
 
+java:
+  - excerpt: "I'm new to Java, initially cutting my teeth on it during my _MSc_ dissertation. But I love it. Since then I fortified my skills by refactoring university projects and creating my own solo projects. "
 
 feature_row:
   - image_path: assets/images/splash/optionpricer.jpg
