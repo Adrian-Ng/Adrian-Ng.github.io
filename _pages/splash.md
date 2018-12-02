@@ -44,7 +44,7 @@ feature_row:
     alt: "Hadoop"
     title: "Hadoop"  
     title: "Hadoop"
-    excerpt: "Coming soon..."
+    excerpt: "Coming soon... Having worked on some Hadoop projects in the past, it should be interesting to try to translate these to Spark."
 
 feature_row2:
   - image_path: /assets/images/splash/yahoofinance.jpg
