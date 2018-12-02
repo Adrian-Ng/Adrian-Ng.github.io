@@ -38,9 +38,13 @@ feature_row:
     btn_label: "Read More"
     btn_class: "btn--primary"
 
-  - image_path: /assets/images/unsplash-gallery-image-3-th.jpg
-    title: "Placeholder 3"
-    excerpt: "This is some sample content that goes here with **Markdown** formatting."
+  - image_path: /assets/images/splash/lombok.jpg
+    image_caption: "Lombok"  
+    alt: "Hadoop"
+    title: "Hadoop"  
+    title: "Hadoop"
+    excerpt: "Coming soon..."
+
 feature_row2:
   - image_path: /assets/images/unsplash-gallery-image-2-th.jpg
     alt: "placeholder image 2"
