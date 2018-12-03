@@ -59,25 +59,8 @@ Thankfully there are many alternatives out there, such as the __Yahoo Finance AP
     btn_label: "Read More"
     btn_class: "btn--primary"
 
-feature_row3:
-  - image_path: /assets/images/unsplash-gallery-image-2-th.jpg
-    alt: "placeholder image 2"
-    title: "Hadoop"
-    excerpt: 'Coming Soon'
-    url: "#test-link"
-    btn_label: "Read More"
-    btn_class: "btn--primary"
-
-feature_row4:
-  - image_path: /assets/images/splash/sqlnotes.jpg
-    alt: "placeholder image 2"
-    title: "Placeholder Image Center Aligned"
-    excerpt: 'This is some sample content that goes here with **Markdown** formatting. Centered with `type="center"`'
-    url: "#test-link"
-    btn_label: "Read More"
-    btn_class: "btn--primary"
 sql:
-  - image_path: /assets/images/unsplash-gallery-image-2-th.jpg
+  - image_path: /assets/images/splash/sqlnotes.jpg
     title: SQL Notes
     excerpt: "In a past life, my expertise lay in working with SQL databases and writing queries and stored procedures. During this period, I spent many occasion mentoring and educating. Here are some of my notes."  
 
