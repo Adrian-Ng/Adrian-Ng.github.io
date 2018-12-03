@@ -5,7 +5,7 @@ permalink: /gallery/
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
-  overlay_image: /assets/images/splash/kinabalu.jpg
+  overlay_image: /assets/images/splash/sqlnotes.jpg
 excerpt: 'Be sure to travel'
 ---
 
