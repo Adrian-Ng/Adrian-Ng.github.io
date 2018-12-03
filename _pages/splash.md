@@ -84,8 +84,8 @@ sql:
 That is, we can divide the language into two broad categories:"  
 
 fr_sql_ddl_dml:
-  - image_path: /assets/images/splash/yahoofinance.jpg
-    image_caption: "Skaftafellsjökull"  
+  - image_path: /assets/images/splash/ddl.jpg
+    image_caption: "Singapore"  
     alt: "Yahoo Finance"
     title: "Data Definition Language"
     excerpt: 'DDL is what we use when we are creating, altering, or dropping database objects. '
@@ -93,8 +93,8 @@ fr_sql_ddl_dml:
     btn_label: "Read More"
     btn_class: "btn--primary"  
 
-  - image_path: /assets/images/splash/yahoofinance.jpg
-    image_caption: "Skaftafellsjökull"  
+  - image_path: /assets/images/splash/dml.jpg
+    image_caption: "Cameron Highlands"  
     alt: "Yahoo Finance"
     title: "Data Manipulation Language"
     excerpt: 'Data Manipulation Language is what we use when are working with the data itself. For example, this could mean: returning data with SELECT, populating a table with INSERT, changing data with UPDATE, removing data with DELETE'
