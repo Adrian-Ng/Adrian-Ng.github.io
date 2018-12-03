@@ -81,7 +81,14 @@ sql:
     excerpt: "In a past life, my expertise lay in working with SQL databases and writing queries and stored procedures. During this period, I spent many occasion mentoring and educating. Here are some of my notes."  
 
 sql2:
-  - excerpt: 'Structured Query Language (SQL) is an easy-to-learn, albeit, high level language that you’ll find being used pretty much wherever you come across relational databases. It is used in essentially two ways: building databases and manipulating data. That is, we can divide the language into two broad categories:'
+  - excerpt: 'Structured Query Language (SQL) is an easy-to-learn, albeit, high level language that you’ll find being used pretty much wherever you come across relational databases. It is used in essentially two ways: building databases and manipulating data. That is, we can divide the language into two broad categories:
+
+  <br/><br/>
+  Data Definition Language (DDL)
+  <br/><br/>
+  &
+  <br/><br/>
+  Data Manipilation Language (DML)'
 
 fr_sql_ddl_dml:
   
@@ -95,8 +102,8 @@ fr_sql_ddl_dml:
   - image_path: /assets/images/splash/ddl.jpg
     image_caption: "Singapore"  
     alt: "Yahoo Finance"
-    title: "Data Definition Language"
-    excerpt: '<br/><br/>DDL is what we use when we are creating, altering, or dropping database objects.
+    title: "DDL"
+    excerpt: 'Data Definition Language is what we use when we are creating, altering, or dropping database objects.
 
     <br/>
     [__Create__](/sql/create/)
@@ -113,11 +120,8 @@ fr_sql_ddl_dml:
   - image_path: /assets/images/splash/dml.jpg
     image_caption: "Cameron Highlands"  
     alt: "Yahoo Finance"
-    title: "Data Manipulation Language"
+    title: "DML"
     excerpt: 'Data Manipulation Language is what we use when are working with the data itself.'
-
-
-
 
 datascience:
   - excerpt: "In 2017, I graduated from Royal Holloway with an MSc in Data Science. While I have no aspirations to be a _Data Scientist_, I did enjoy the experience of writing my own implementations of algorithms such as _K Nearest Neighbours_, _Neural Networks_, and _Hierarchical Clustering_ in __R__. Also used was __MATLAB__, which no-one uses so projects worked on in this language will be added last."
