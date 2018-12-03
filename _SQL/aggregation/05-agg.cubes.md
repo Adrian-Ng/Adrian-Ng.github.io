@@ -5,6 +5,8 @@ excerpt: "Aggregating with Cubes by Adrian Ng"
 toc: true
 classes: wide
 mathjax: true
+header:	
+ 	image: /assets/images/headers/aggregation.jpg
 ---
 
 ## Intro

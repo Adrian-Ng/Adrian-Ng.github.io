@@ -4,6 +4,8 @@ permalink: /SQL/aggregation/having/
 excerpt: "Aggregating with the Having Clause by Adrian Ng"
 toc: true
 mathjax: true
+header:	
+ 	image: /assets/images/headers/aggregation.jpg
 ---
 
 ## Intro to Having
