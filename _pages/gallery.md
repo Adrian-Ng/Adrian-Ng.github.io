@@ -4,8 +4,10 @@ title: "Gallery"
 permalink: /gallery/
 header:
   image: /assets/images/splash/sqlnotes.jpg
-excerpt: 'Be sure to travel'
 ---
+
+Make sure you travel
+
 
 {% include figure image_path="/assets/images/headers/yahoofinance.jpg" alt="Skaftafellsjökull"%}
 {% include figure image_path="/assets/images/headers/binomialTrees.jpg" alt="Angkor Wat"%}
@@ -18,7 +20,6 @@ excerpt: 'Be sure to travel'
 {% include figure image_path="/assets/images/headers/montecarlo_var.jpg" alt=""%}
 {% include figure image_path="/assets/images/headers/ddl.jpg" alt=""%}
 {% include figure image_path="/assets/images/headers/dml.jpg" alt=""%}
-{% include figure image_path="/assets/images/splash/sqlnotes.jpg" alt=""%}
 {% include figure image_path="/assets/images/headers/joins.jpg" alt=""%}
 {% include figure image_path="/assets/images/headers/aggregation.jpg" alt=""%}
 {% include figure image_path="/assets/images/headers/cte.jpg" alt=""%}
