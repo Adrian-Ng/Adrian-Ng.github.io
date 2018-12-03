@@ -90,7 +90,7 @@ fr_sql_ddl_dml:
 
     Testing the br
 
-    <br>
+    <br/><br/>
 
     That is, we can divide the language into two broad categories'
 
