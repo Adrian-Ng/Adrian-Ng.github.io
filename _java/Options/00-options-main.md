@@ -18,7 +18,7 @@ feature_row:
     image_caption: "Angkor Wat"  
     alt: "Binomial Trees"
     title: "Binomial Trees"
-    excerpt: "When pricing options, we don't know whether the price will go _up_ or _down_. This simple model captures that uncertainty."
+    excerpt: "<br/><br/>When pricing options, we don't know whether the price will go _up_ or _down_. This simple model captures that uncertainty."
     url: "java/options/trees/"
     btn_label: "Read More"
     btn_class: "btn--warning"    
@@ -36,7 +36,7 @@ feature_row:
     image_caption: "Sauðárkrókur"  
     alt: "Black Scholes equation"
     title: "Black Scholes equation"      
-    excerpt: $$\frac{\partial f}{\partial t} + rS\cdot \frac{\partial f}{\partial S}+\frac{1}{2}\sigma^2 S^2\cdot\frac{\partial^2 f}{\partial S^2} = rf$$      
+    excerpt: $$\frac{\partial f}{\partial t} + rS\cdot \frac{\partial f}{\partial S}+\frac{1}{2}\sigma^2 S^2\cdot\frac{\partial^2 f}{\partial S^2} = rf$$ <br/><br/>      
     url: "/java/options/blackscholes/"
     btn_label: "Read More"
     btn_class: "btn--info"
