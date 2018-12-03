@@ -118,7 +118,7 @@ datascience:
 
 {% include feature_row id="sql" type="center" %}
 
-{% include fr_sql_dml_ddl %}
+{% include feature_row id="fr_sql_dml_ddl" %}
 
 ## Data Science
 
