@@ -98,10 +98,19 @@ fr_sql_ddl_dml:
     image_caption: "Singapore"  
     alt: "Yahoo Finance"
     title: "Data Definition Language"
-    excerpt: 'DDL is what we use when we are creating, altering, or dropping database objects.'
+    excerpt: 'DDL is what we use when we are creating, altering, or dropping database objects.
+
+    <br/><br/>
+    * [Create Statement](/sql/create/)
+    <br/><br/>
+    * [Alter Statement](/sql/alter/)
+    <br/><br/>
+    * [Drop Statement](/sql/drop/)    
+    <br/><br/>
+    * [Truncate Statement](/sql/truncate/)    
+    '
     url: "/sql/ddl/"
-    btn_label: "Read More"
-    btn_class: "btn--primary"  
+
 
   - image_path: /assets/images/splash/dml.jpg
     image_caption: "Cameron Highlands"  
@@ -109,8 +118,7 @@ fr_sql_ddl_dml:
     title: "Data Manipulation Language"
     excerpt: 'Data Manipulation Language is what we use when are working with the data itself.'
     url: "/sql/dml/"
-    btn_label: "Read More"
-    btn_class: "btn--primary"   
+
 
 
 datascience:
