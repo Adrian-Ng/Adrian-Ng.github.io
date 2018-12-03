@@ -110,9 +110,6 @@ fr_sql_2:
     alt: "Aggregation"
     title: "Aggregation"
     excerpt: ''
-    url: "/SQL/cte/"
-    btn_label: "Read More"
-    btn_class: "btn--primary"
 
   - image_path: /assets/images/splash/cte.jpg
     image_caption: "Vik"  
