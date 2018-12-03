@@ -111,7 +111,7 @@ fr_sql_ddl_dml:
     excerpt: 'Data Manipulation Language is what we use when are working with the data itself.
 
     <br/><br/>
-    [__Select__](/sql/dml/select/){: .btn .btn--success} [__Insert__](/sql/dml/insert/){: .btn .btn--warning} [__Select Into__](/sql/dml/selectinto/){: .btn .btn--danger} [__Update__](/sql/dml/update/){: .btn .btn--info} [__Delete__](/sql/dml/delete/){: .btn .btn--invserse}
+    [__Select__](/sql/dml/select/){: .btn .btn--success} [__Insert__](/sql/dml/insert/){: .btn .btn--warning} [__Select Into__](/sql/dml/selectinto/){: .btn .btn--danger} [__Update__](/sql/dml/update/){: .btn .btn--info} [__Delete__](/sql/dml/delete/){: .btn .btn--inverse}
     '
 
 datascience:
