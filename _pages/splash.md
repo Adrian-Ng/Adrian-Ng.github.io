@@ -88,7 +88,7 @@ fr_sql_ddl:
     image_caption: "Singapore"  
     alt: "Yahoo Finance"
     title: "Data Definition Language"
-    excerpt: 'DDL is what we use when we are creating, altering, or dropping database objects. '
+    excerpt: 'DDL is what we use when we are creating, altering, or dropping database objects.'
     url: "/sql/ddl/"
     btn_label: "Read More"
     btn_class: "btn--primary"  
@@ -121,7 +121,7 @@ datascience:
 {% include feature_row id="sql2" type="left" %}
 
 {% include feature_row id="fr_sql_ddl" type="right" %}
-{% include feature_row id="fr_sql_dml" type"right" %}
+{% include feature_row id="fr_sql_dml" type="right" %}
 
 
 
