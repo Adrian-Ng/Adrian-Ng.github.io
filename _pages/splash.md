@@ -60,8 +60,7 @@ Thankfully there are many alternatives out there, such as the __Yahoo Finance AP
     btn_class: "btn--primary"
 
 sql:
-  - image_path: /assets/images/splash/sqlnotes.jpg
-    title: SQL Notes
+  - title: SQL Notes
     excerpt: "In a past life, my expertise lay in working with SQL databases and writing queries and stored procedures. During this period, I spent many occasion mentoring and educating. Here are some of my notes."  
 
 fr_sql_ddl_dml:
