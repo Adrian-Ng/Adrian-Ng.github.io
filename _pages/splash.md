@@ -77,13 +77,13 @@ feature_row4:
     btn_class: "btn--primary"
 sql:
   - title: SQL Notes
-    excerpt: "In a past life, my expertise lay in working with SQL databases and writing queries and stored procedures. [Here are some of my notes](http://adrian.ng/SQL/ddl/intro/)
-
-  Structured Query Language (SQL) is an easy-to-learn, albeit, high level language that you’ll find being used pretty much wherever you come across relational databases. It is used in essentially two ways: building databases and manipulating data.
-
-That is, we can divide the language into two broad categories:"  
+    excerpt: "In a past life, my expertise lay in working with SQL databases and writing queries and stored procedures. [Here are some of my notes](http://adrian.ng/SQL/ddl/intro/)"  
 
 fr_sql_ddl_dml:
+
+  - excerpt: 'Structured Query Language (SQL) is an easy-to-learn, albeit, high level language that you’ll find being used pretty much wherever you come across relational databases. It is used in essentially two ways: building databases and manipulating data. That is, we can divide the language into two broad categories:'
+
+
   - image_path: /assets/images/splash/ddl.jpg
     image_caption: "Singapore"  
     alt: "Yahoo Finance"
