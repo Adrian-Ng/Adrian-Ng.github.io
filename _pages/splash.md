@@ -78,25 +78,25 @@ feature_row4:
 sql:
   - excerpt: "In a past life, my expertise lay in working with SQL databases and writing queries and stored procedures. [Here are some of my notes](http://adrian.ng/SQL/ddl/intro/)"  
 
-fr_sql_dml_ddl:
-  - image_path: assets/images/splash/optionpricer.jpg
-    image_caption: "Borobudur"  
-    alt: "Option Pricer"
-    title: "DDL"
-    excerpt: "The implementation of three models for pricing options: __Binomial Trees__, __Monte Carlo__ simulation, and __Black Scholes__ equations"
-    url: "/java/options/"
+fr_sql_ddl:
+  - image_path: /assets/images/splash/yahoofinance.jpg
+    image_caption: "Skaftafellsjökull"  
+    alt: "Yahoo Finance"
+    title: "Data Definition Language"
+    excerpt: 'DDL is....'
+    url: "/sql/ddl/"
     btn_label: "Read More"
-    btn_class: "btn--primary"    
+    btn_class: "btn--primary"  
 
-  - image_path: /assets/images/splash/var.jpg    
-    image_caption: "Kinabalu"  
-    alt: "Value at Risk"
-    title: "DML"
-    excerpt: "How bad could it get for our financial portfolio? This _dissertation project_ looks at a number of ways of estimating __VaR__."
-    url: "/java/var/"
+fr_sql_dml:
+  - image_path: /assets/images/splash/yahoofinance.jpg
+    image_caption: "Skaftafellsjökull"  
+    alt: "Yahoo Finance"
+    title: "Data Manipulation Language"
+    excerpt: 'DML is....'
+    url: "/sql/dml/"
     btn_label: "Read More"
-    btn_class: "btn--primary"
-
+    btn_class: "btn--primary"   
 
 
 datascience:
@@ -118,7 +118,9 @@ datascience:
 
 {% include feature_row id="sql" type="center" %}
 
-{% include feature_row id="fr_sql_dml_ddl" layout="half"%}
+{% include feature_row id="fr_sql_ddl"%}
+
+{% include feature_row id="fr_sql_dml"%}
 
 ## Data Science
 
