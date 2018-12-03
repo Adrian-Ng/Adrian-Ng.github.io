@@ -100,11 +100,9 @@ fr_sql_ddl_dml:
     title: "DDL"
     excerpt: 'Data Definition Language is what we use when we are creating, altering, or dropping database objects.
 
-    <br/><br/>
-    [__Create__](/sql/ddl/create/){: .btn .btn--success} | [__Alter__](/sql/ddl/alter/){: .btn .btn--warning} | [__Drop__](/sql/ddl/drop/){: .btn .btn--danger} | [__Truncate__](/sql/dd/truncate/){: .btn .btn--info}    
+    <br/>
+    [__Create__](/sql/ddl/create/){: .btn .btn--success} [__Alter__](/sql/ddl/alter/){: .btn .btn--warning} [__Drop__](/sql/ddl/drop/){: .btn .btn--danger} [__Truncate__](/sql/dd/truncate/){: .btn .btn--info}    
     '
-
-
 
   - image_path: /assets/images/splash/dml.jpg
     image_caption: "Cameron Highlands"  
