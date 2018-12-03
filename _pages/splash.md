@@ -83,7 +83,7 @@ sql:
 fr_sql_ddl_dml:
   
   - title: 'Structured Query Language '
-    excerpt: '<br/><br/>An easy-to-learn, albeit, high level language that you’ll find being used pretty much wherever you come across relational databases. It is used in essentially two ways - building databases and manipulating data. 
+    excerpt: '<br/><br/>SQL is used in essentially two ways - _building databases_ and _manipulating data_. 
 
     <br/><br/>
 
