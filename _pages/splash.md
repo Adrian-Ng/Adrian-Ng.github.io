@@ -101,7 +101,7 @@ fr_sql_ddl_dml:
     excerpt: 'Data Definition Language is what we use when we are creating, altering, or dropping database objects.
 
     <br/><br/>
-    [__Create__](/sql/ddl/create/){: .btn .btn--success} [__Alter__](/sql/ddl/alter/){: .btn .btn--warning} [__Drop__](/sql/ddl/drop/){: .btn .btn--danger} [__Truncate__](/sql/ddl/truncate/){: .btn .btn--info}    
+    [__Create__](/SQL/ddl/create/){: .btn .btn--success} [__Alter__](/SQL/ddl/alter/){: .btn .btn--warning} [__Drop__](/SQL/ddl/drop/){: .btn .btn--danger} [__Truncate__](/SQL/ddl/truncate/){: .btn .btn--info}    
     '
 
   - image_path: /assets/images/splash/dml.jpg
@@ -111,7 +111,7 @@ fr_sql_ddl_dml:
     excerpt: 'Data Manipulation Language is what we use when are working with the data itself.
 
     <br/><br/><br/>
-    [__Select__](/sql/dml/select/){: .btn .btn--success} [__Insert__](/sql/dml/insert/){: .btn .btn--warning} [__Select Into__](/sql/dml/selectinto/){: .btn .btn--danger} [__Update__](/sql/dml/update/){: .btn .btn--info} [__Delete__](/sql/dml/delete/){: .btn .btn--inverse}
+    [__Select__](/SQL/dml/select/){: .btn .btn--success} [__Insert__](/SQL/dml/insert/){: .btn .btn--warning} [__Select Into__](/SQL/dml/selectinto/){: .btn .btn--danger} [__Update__](/SQL/dml/update/){: .btn .btn--info} [__Delete__](/SQL/dml/delete/){: .btn .btn--inverse}
     '
 
 datascience:
