@@ -90,11 +90,9 @@ fr_sql_ddl_dml:
     That is, we can divide the language into two broad categories:
 
     <br/><br/>
-    Data Definition Language (DDL)
-    <br/><br/>
-    &
-    <br/><br/>
-    Data Manipilation Language (DML)'
+    __Data Definition Language__ (DDL)
+    <br/>   &<br/>
+    __Data Manipilation Language__ (DML)'
 
   - image_path: /assets/images/splash/ddl.jpg
     image_caption: "Singapore"  
