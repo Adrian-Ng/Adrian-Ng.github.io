@@ -88,8 +88,6 @@ fr_sql_ddl_dml:
   - title: 'Structured Query Language (SQL)'
     excerpt: 'An easy-to-learn, albeit, high level language that you’ll find being used pretty much wherever you come across relational databases. It is used in essentially two ways: building databases and manipulating data. 
 
-    Testing the br
-
     <br/><br/>
 
     That is, we can divide the language into two broad categories'
@@ -98,18 +96,18 @@ fr_sql_ddl_dml:
     image_caption: "Singapore"  
     alt: "Yahoo Finance"
     title: "Data Definition Language"
-    excerpt: 'DDL is what we use when we are creating, altering, or dropping database objects.
+    excerpt: '<br/><br/>DDL is what we use when we are creating, altering, or dropping database objects.
 
-    <br/><br/>
-    * [Create Statement](/sql/create/)
-    <br/><br/>
-    * [Alter Statement](/sql/alter/)
-    <br/><br/>
-    * [Drop Statement](/sql/drop/)    
-    <br/><br/>
-    * [Truncate Statement](/sql/truncate/)    
+    <br/>
+    [__Create__](/sql/create/)
+    <br/>
+    [__Alter__](/sql/alter/)
+    <br/>
+    [__Drop__](/sql/drop/)    
+    <br/>
+    [__Truncate__](/sql/truncate/)    
     '
-    url: "/sql/ddl/"
+
 
 
   - image_path: /assets/images/splash/dml.jpg
@@ -117,7 +115,7 @@ fr_sql_ddl_dml:
     alt: "Yahoo Finance"
     title: "Data Manipulation Language"
     excerpt: 'Data Manipulation Language is what we use when are working with the data itself.'
-    url: "/sql/dml/"
+
 
 
 
