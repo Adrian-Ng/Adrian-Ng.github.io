@@ -18,7 +18,8 @@ excerpt: "This is the website of __Adrian Ng__. _My_ website. Here you will see 
 Along the way, you'll also visit some places I photographed long ago. Like myself, this website is very much a work in progress."
 
 java:
-  - excerpt: "After cutting my teeth on _Java_ during my _MSc_ dissertation project, I found it stimulating and a joy to work with. Since then I have been fortifying my Java. My code makes use of, for instance, _interfaces & abstract_ classes, _Java 8 Streams_, and multithreading in the form of _callable futures_."
+  - title: Java Projects
+    excerpt: "After cutting my teeth on _Java_ during my _MSc_ dissertation project, I found it stimulating and a joy to work with. Since then I have been fortifying my Java. My code makes use of, for instance, _interfaces & abstract_ classes, _Java 8 Streams_, and multithreading in the form of _callable futures_."
 
 feature_row:
   - image_path: assets/images/splash/optionpricer.jpg
@@ -80,7 +81,6 @@ sql:
     excerpt: "In a past life, my expertise lay in working with SQL databases and writing queries and stored procedures. [Here are some of my notes](http://adrian.ng/SQL/ddl/intro/)"  
 
 fr_sql_ddl_dml:
-
   - excerpt: 'Structured Query Language (SQL) is an easy-to-learn, albeit, high level language that you’ll find being used pretty much wherever you come across relational databases. It is used in essentially two ways: building databases and manipulating data. That is, we can divide the language into two broad categories:'
 
 
@@ -97,7 +97,7 @@ fr_sql_ddl_dml:
     image_caption: "Cameron Highlands"  
     alt: "Yahoo Finance"
     title: "Data Manipulation Language"
-    excerpt: 'Data Manipulation Language is what we use when are working with the data itself.
+    excerpt: 'Data Manipulation Language is what we use when are working with the data itself.'
     url: "/sql/dml/"
     btn_label: "Read More"
     btn_class: "btn--primary"   
@@ -109,16 +109,12 @@ datascience:
 
 
 
-## [Java Projects](/java/)
-
 {% include feature_row id="java" type="center" %}
 
 {% include feature_row %}
 
 {% include feature_row id="feature_row2" type="left" %}
 
-
-## SQL Notes
 
 {% include feature_row id="sql" type="center" %}
 
