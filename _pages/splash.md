@@ -96,7 +96,7 @@ fr_sql_ddl_dml:
 
   - image_path: /assets/images/splash/ddl.jpg
     image_caption: "Singapore"  
-    alt: "Yahoo Finance"
+    alt: "DDL"
     title: "DDL"
     excerpt: 'Data Definition Language is what we use when we are creating, altering, or dropping database objects.
 
@@ -106,13 +106,32 @@ fr_sql_ddl_dml:
 
   - image_path: /assets/images/splash/dml.jpg
     image_caption: "Cameron Highlands"  
-    alt: "Yahoo Finance"
+    alt: "DML"
     title: "DML"
     excerpt: 'Data Manipulation Language is what we use when are working with the data itself.
 
     <br/><br/><br/>
     [__Select__](/SQL/dml/select/){: .btn .btn--success} [__Insert__](/SQL/dml/insert/){: .btn .btn--warning} [__Select Into__](/SQL/dml/selectinto/){: .btn .btn--danger} [__Update__](/SQL/dml/update/){: .btn .btn--info} [__Delete__](/SQL/dml/delete/){: .btn .btn--inverse}
     '
+
+fr_sql_2:  
+  - image_path: /assets/images/splash/ddl.jpg
+    image_caption: "Singapore"  
+    alt: "Joins"
+    title: 'Joins'
+    excerpt: ''
+
+  - image_path: /assets/images/splash/ddl.jpg
+    image_caption: "Singapore"  
+    alt: "Aggregation"
+    title: "Aggregation"
+    excerpt: ''
+
+  - image_path: /assets/images/splash/dml.jpg
+    image_caption: "Cameron Highlands"  
+    alt: "Yahoo Finance"
+    title: "CTEs"
+    excerpt: ''
 
 datascience:
   - excerpt: "In 2017, I graduated from Royal Holloway with an MSc in Data Science. While I have no aspirations to be a _Data Scientist_, I did enjoy the experience of writing my own implementations of algorithms such as _K Nearest Neighbours_, _Neural Networks_, and _Hierarchical Clustering_ in __R__. Also used was __MATLAB__, which no-one uses so projects worked on in this language will be added last."
@@ -130,6 +149,8 @@ datascience:
 {% include feature_row id="sql" type="center" %}
 
 {% include feature_row id="fr_sql_ddl_dml" %}
+
+{% include feature_row id="fr_sql_2" %}
 
 
 
