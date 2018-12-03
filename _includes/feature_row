@@ -4,14 +4,6 @@
   {% assign feature_row = page.feature_row %}
 {% endif %}
 
-{% if feature_row.size == 2 %}
-   {% assign feature_row_width = 'style="width:45%;"' %}
-{% elsif feature_row.size == 3 %}
-   {% assign feature_row_width = 'style="width:30%;"' %}
-{% else %}
-  {% assign feature_row_width = '' %}
-{% endif %}
-
 <div class="feature__wrapper">
 
   {% for f in feature_row %}
@@ -22,7 +14,7 @@
       {% capture f_url %}{{ f.url | relative_url }}{% endcapture %}
     {% endif %}
 
-    <div class="feature__item{% if include.type %}--{{ include.type }}{% endif %}" {{ feature_row_width }}>
+    <div class="feature__item{% if include.type %}--{{ include.type }}{% endif %}">
       <div class="archive__item">
         {% if f.image_path %}
           <div class="archive__item-teaser">

@@ -237,7 +237,8 @@
 
   @include breakpoint($small) {
     float: left;
-    margin-bottom: 0; 
+    margin-bottom: 0;
+    width: span(4 of 12); 
 
     &:nth-child(3n + 1) {
       clear: both;
