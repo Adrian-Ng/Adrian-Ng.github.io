@@ -80,16 +80,6 @@ sql:
   - title: SQL Notes
     excerpt: "In a past life, my expertise lay in working with SQL databases and writing queries and stored procedures. During this period, I spent many occasion mentoring and educating. Here are some of my notes."  
 
-sql2:
-  - excerpt: 'Structured Query Language (SQL) is an easy-to-learn, albeit, high level language that you’ll find being used pretty much wherever you come across relational databases. It is used in essentially two ways: building databases and manipulating data. That is, we can divide the language into two broad categories:
-
-  <br/><br/>
-  Data Definition Language (DDL)
-  <br/><br/>
-  &
-  <br/><br/>
-  Data Manipilation Language (DML)'
-
 fr_sql_ddl_dml:
   
   - title: 'Structured Query Language (SQL)'
@@ -97,7 +87,14 @@ fr_sql_ddl_dml:
 
     <br/><br/>
 
-    That is, we can divide the language into two broad categories'
+    That is, we can divide the language into two broad categories:
+
+    <br/><br/>
+    Data Definition Language (DDL)
+    <br/><br/>
+    &
+    <br/><br/>
+    Data Manipilation Language (DML)'
 
   - image_path: /assets/images/splash/ddl.jpg
     image_caption: "Singapore"  
