@@ -78,7 +78,7 @@ feature_row4:
 sql:
   - excerpt: "In a past life, my expertise lay in working with SQL databases and writing queries and stored procedures. [Here are some of my notes](http://adrian.ng/SQL/ddl/intro/)"  
 
-fr_sql_ddl:
+fr_sql_ddl_dml:
   - image_path: /assets/images/splash/yahoofinance.jpg
     image_caption: "Skaftafellsjökull"  
     alt: "Yahoo Finance"
@@ -88,7 +88,6 @@ fr_sql_ddl:
     btn_label: "Read More"
     btn_class: "btn--primary"  
 
-fr_sql_dml:
   - image_path: /assets/images/splash/yahoofinance.jpg
     image_caption: "Skaftafellsjökull"  
     alt: "Yahoo Finance"
@@ -118,9 +117,9 @@ datascience:
 
 {% include feature_row id="sql" type="center" %}
 
-{% include feature_row id="fr_sql_ddl"%}
+{% include feature_row id="fr_sql_ddl_dml"%}
 
-{% include feature_row id="fr_sql_dml" type="right" %}
+
 
 ## Data Science
 
