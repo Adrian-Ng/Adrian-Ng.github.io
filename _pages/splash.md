@@ -85,8 +85,12 @@ sql2:
 
 fr_sql_ddl_dml:
   
-  - title: 'Structure Query Language (SQL)'
-    excerpt: 'An easy-to-learn, albeit, high level language that you’ll find being used pretty much wherever you come across relational databases. It is used in essentially two ways: building databases and manipulating data. That is, we can divide the language into two broad categories'
+  - title: 'Structured Query Language (SQL)'
+    excerpt: 'An easy-to-learn, albeit, high level language that you’ll find being used pretty much wherever you come across relational databases. It is used in essentially two ways: building databases and manipulating data. 
+
+    $$$$
+
+    That is, we can divide the language into two broad categories'
 
   - image_path: /assets/images/splash/ddl.jpg
     image_caption: "Singapore"  
