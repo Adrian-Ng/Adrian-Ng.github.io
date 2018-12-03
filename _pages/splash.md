@@ -120,7 +120,8 @@ fr_sql_2:
     btn_class: "btn--primary"
 
 datascience:
-  - excerpt: "In 2017, I graduated from Royal Holloway with an MSc in Data Science. While I have no aspirations to be a _Data Scientist_, I did enjoy the experience of writing my own implementations of algorithms such as _K Nearest Neighbours_, _Neural Networks_, and _Hierarchical Clustering_ in __R__. Also used was __MATLAB__, which no-one uses so projects worked on in this language will be added last."
+  - title: Data Science Stuff
+    excerpt: "In 2017, I graduated from Royal Holloway with an MSc in Data Science. While I have no aspirations to be a _Data Scientist_, I did enjoy the experience of writing my own implementations of algorithms such as _K Nearest Neighbours_, _Neural Networks_, and _Hierarchical Clustering_ in __R__. Also used was __MATLAB__, which no-one uses. Therefore projects worked on in these languages will be added last."
 ---
 
 
@@ -137,11 +138,6 @@ datascience:
 {% include feature_row id="fr_sql_ddl_dml" %}
 
 {% include feature_row id="fr_sql_2" %}
-
-
-
-
-## Data Science
 
 {% include feature_row id="datascience" type="center" %}
 
