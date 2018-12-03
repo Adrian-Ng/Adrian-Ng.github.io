@@ -127,9 +127,9 @@ fr_sql_2:
     title: "Aggregation"
     excerpt: ''
 
-  - image_path: /assets/images/splash/dml.jpg
-    image_caption: "Cameron Highlands"  
-    alt: "Yahoo Finance"
+  - image_path: /assets/images/splash/cte.jpg
+    image_caption: "Vik"  
+    alt: "CTE"
     title: "CTEs"
     excerpt: 'The _Common Table Element_ is a powerful subquery that you can assign a name.'
     url: "/SQL/cte/"
