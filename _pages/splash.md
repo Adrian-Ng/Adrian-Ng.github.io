@@ -78,6 +78,27 @@ feature_row4:
 sql:
   - excerpt: "In a past life, my expertise lay in working with SQL databases and writing queries and stored procedures. [Here are some of my notes](http://adrian.ng/SQL/ddl/intro/)"  
 
+fr_sql_dml_ddl:
+  - image_path: assets/images/splash/optionpricer.jpg
+    image_caption: "Borobudur"  
+    alt: "Option Pricer"
+    title: "DDL"
+    excerpt: "The implementation of three models for pricing options: __Binomial Trees__, __Monte Carlo__ simulation, and __Black Scholes__ equations"
+    url: "/java/options/"
+    btn_label: "Read More"
+    btn_class: "btn--primary"    
+
+  - image_path: /assets/images/splash/var.jpg    
+    image_caption: "Kinabalu"  
+    alt: "Value at Risk"
+    title: "DML"
+    excerpt: "How bad could it get for our financial portfolio? This _dissertation project_ looks at a number of ways of estimating __VaR__."
+    url: "/java/var/"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
+
+
+
 datascience:
   - excerpt: "In 2017, I graduated from Royal Holloway with an MSc in Data Science. I have no aspirations to be a _Data Scientist_. However, I did enjoy the experience of writing my own implementations of algorithms such as _K Nearest Neighbours_, _Neural Networks_, and _Hierarchical Clustering_ in __R__. Also used was __MATLAB__, which no-one uses so projects worked on in this language will be added last."
 ---
@@ -96,6 +117,8 @@ datascience:
 ## SQL Notes
 
 {% include feature_row id="sql" type="center" %}
+
+{% include fr_sql_dml_ddl %}
 
 ## Data Science
 
