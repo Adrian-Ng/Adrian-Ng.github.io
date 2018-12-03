@@ -131,7 +131,7 @@ fr_sql_2:
     image_caption: "Vik"  
     alt: "CTE"
     title: "CTEs"
-    excerpt: 'The _Common Table Element_ is a powerful subquery that you can assign a name.'
+    excerpt: 'The _Common Table Element_ is a powerful subquery that you can name.'
     url: "/SQL/cte/"
     btn_label: "Read More"
     btn_class: "btn--primary"

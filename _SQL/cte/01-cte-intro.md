@@ -4,6 +4,8 @@ permalink: /SQL/cte/
 excerpt: "Intro to CTEs"
 toc: true
 mathjax: true
+header:
+ image: /assets/images/splash/cte.jpg
 ---
 
 ## The Common Table Element
