@@ -1,9 +1,9 @@
 ---
-title: "CTEs: Intro"
-permalink: /SQL/cte/intro/
+title: "Common Table Elements"
+permalink: /SQL/cte/
 excerpt: "Intro to CTEs"
 toc: true
-#mathjax: true
+mathjax: true
 ---
 
 ## The Common Table Element

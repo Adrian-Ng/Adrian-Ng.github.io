@@ -53,9 +53,8 @@ SQL:
      - title: "Cubes"
        url: /SQL/aggregation/cubes/
    - title: Common Table Elements
+     url: /SQL/cte/
      children:
-     - title: "Intro"
-       url: /SQL/cte/intro/
      - title: "Deduping"
        url: /SQL/cte/dedupe/
      - title: "Recursion"
