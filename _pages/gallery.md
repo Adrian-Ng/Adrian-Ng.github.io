@@ -11,4 +11,4 @@ excerpt: "This is the website of __Adrian Ng__. _My_ website. Here you will see 
 Along the way, you'll also visit some places I photographed long ago. Like myself, this website is very much a work in progress."
 ---
 
-{% include figure image_path="/assets/images/headers/yahoofinance.jpg" alt="this is a placeholder image" caption="This is a figure caption." %}
+{% include figure image_path="/assets/images/headers/yahoofinance.jpg" alt="Skaftafellsjökull" caption="We took the S1 hiking route at Skaftafell national park. This _relatively_ easy hike took us in close proximity to Skaftafellsjökull. We had a picnic and make espresso, which took around 40 minutes." %}
