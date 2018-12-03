@@ -116,17 +116,20 @@ fr_sql_ddl_dml:
     '
 
 fr_sql_2:  
-  - image_path: /assets/images/splash/ddl.jpg
-    image_caption: "Singapore"  
+  - image_path: /assets/images/splash/joins.jpg
+    image_caption: "Iceland"  
     alt: "Joins"
     title: 'Joins'
-    excerpt: ''
+    excerpt: ''   
 
   - image_path: /assets/images/splash/aggregation.jpg
     image_caption: "Rinjani"  
     alt: "Aggregation"
     title: "Aggregation"
     excerpt: ''
+    url: "/SQL/cte/"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
 
   - image_path: /assets/images/splash/cte.jpg
     image_caption: "Vik"  
