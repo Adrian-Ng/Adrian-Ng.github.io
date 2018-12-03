@@ -5,6 +5,14 @@ excerpt: "Estimating Value at Risk via Historical Simulation"
 toc: true
 mathjax: true
 classes: wide
+header:
+  overlay_color: "#000"
+  overlay_filter: "0.5"
+  overlay_image: /assets/images/headers/historical.jpg
+  caption: "Skaftafellsjökull"  
+  actions:
+    - label: "Download"
+      url: "https://github.com/Adrian-Ng/ValueAtRisk"  
 ---
 
 Here we make no probabilistic assumptions. 

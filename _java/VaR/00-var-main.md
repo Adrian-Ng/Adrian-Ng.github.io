@@ -23,8 +23,8 @@ feature_row:
     btn_label: "Read More"
     btn_class: "btn--warning"    
 
-  - image_path: /assets/images/splash/montecarlo_options.jpg    
-    image_caption: "Angkor Wat"  
+  - image_path: /assets/images/splash/historical.jpg    
+    image_caption: "Skaftafellsjökull"  
     alt: "Historical Simulation"
     title: "Historical Simulation"
     excerpt: ""
