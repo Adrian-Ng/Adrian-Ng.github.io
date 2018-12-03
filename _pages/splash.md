@@ -83,7 +83,11 @@ sql:
 sql2:
   - excerpt: 'Structured Query Language (SQL) is an easy-to-learn, albeit, high level language that you’ll find being used pretty much wherever you come across relational databases. It is used in essentially two ways: building databases and manipulating data. That is, we can divide the language into two broad categories:'
 
-fr_sql_ddl:
+fr_sql_ddl_dml:
+  
+  - title: 'Structure Query Language (SQL)'
+    excerpt: 'An easy-to-learn, albeit, high level language that you’ll find being used pretty much wherever you come across relational databases. It is used in essentially two ways: building databases and manipulating data. That is, we can divide the language into two broad categories'
+
   - image_path: /assets/images/splash/ddl.jpg
     image_caption: "Singapore"  
     alt: "Yahoo Finance"
@@ -92,7 +96,7 @@ fr_sql_ddl:
     url: "/sql/ddl/"
     btn_label: "Read More"
     btn_class: "btn--primary"  
-fr_sql_dml:
+
   - image_path: /assets/images/splash/dml.jpg
     image_caption: "Cameron Highlands"  
     alt: "Yahoo Finance"
@@ -118,10 +122,8 @@ datascience:
 
 {% include feature_row id="sql" type="center" %}
 
-{% include feature_row id="sql2" type="left" %}
+{% include feature_row id="fr_sql_ddl_dml" %}
 
-{% include feature_row id="fr_sql_ddl" type="right" %}
-{% include feature_row id="fr_sql_dml" type="right" %}
 
 
 
