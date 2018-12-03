@@ -6,6 +6,7 @@ header:
   overlay_color: "#000"
   overlay_filter: "0.5"
   overlay_image: /assets/images/splash/kinabalu.jpg
+excerpt: 'Be sure to travel'
 ---
 
 {% include figure image_path="/assets/images/headers/yahoofinance.jpg" alt="Skaftafellsjökull"%}
