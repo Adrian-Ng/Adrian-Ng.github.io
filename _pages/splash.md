@@ -105,13 +105,13 @@ fr_sql_2:
     excerpt: ''   
 
   - image_path: /assets/images/splash/aggregation.jpg
-    image_caption: "Rinjani"  
+    image_caption: "Reynisdrangar"  
     alt: "Aggregation"
     title: "Aggregation"
     excerpt: ''
 
   - image_path: /assets/images/splash/cte.jpg
-    image_caption: "Vik"  
+    image_caption: "Vík"  
     alt: "CTE"
     title: "CTEs"
     excerpt: 'The _Common Table Element_ is a powerful subquery that you can name.'
