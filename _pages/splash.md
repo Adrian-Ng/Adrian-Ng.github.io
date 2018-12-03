@@ -106,7 +106,7 @@ fr_sql_ddl_dml:
     excerpt: 'Data Definition Language is what we use when we are creating, altering, or dropping database objects.
 
     <br/>
-    [__Create__](/sql/create/)|[__Alter__](/sql/alter/)|[__Drop__](/sql/drop/)|[__Truncate__](/sql/truncate/)    
+    [__Create__](/sql/ddl/create/){: .btn .btn--success} | [__Alter__](/sql/ddl/alter/) | [__Drop__](/sql/ddl/drop/) | [__Truncate__](/sql/dd/truncate/)    
     '
 
 
