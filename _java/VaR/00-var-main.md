@@ -32,8 +32,8 @@ feature_row:
     btn_label: "Read More"
     btn_class: "btn--danger"
 
-  - image_path: /assets/images/splash/blackscholes.jpg
-    image_caption: "Sauðárkrókur"  
+  - image_path: /assets/images/splash/montecarlo_var.jpg
+    image_caption: "Låtefossen"  
     alt: "Monte Carlo Simulation"
     title: "Monte Carlo Simulation"      
     excerpt: ""
