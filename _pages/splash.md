@@ -83,7 +83,7 @@ sql:
 fr_sql_ddl_dml:
   
   - title: 'Structured Query Language '
-    excerpt: '<br/><br/>SQL is used in essentially two ways - _building databases_ and _manipulating data_. 
+    excerpt: 'SQL is used in essentially two ways - _building databases_ and _manipulating data_. 
 
     <br/><br/>
 
