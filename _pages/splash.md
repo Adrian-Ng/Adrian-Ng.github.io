@@ -1,6 +1,6 @@
 ---
 layout: splash
-title: "Hi"
+title: "adrian.ng"
 permalink: /
 header:
   overlay_color: "#000"

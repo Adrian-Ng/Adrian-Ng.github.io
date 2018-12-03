@@ -12,9 +12,9 @@ minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "
 
 # Site Settings
 locale                   : "en-GB"
-title                    : "adrian.ng"
-title_separator          : "-"
-name                     : "Adrian Ng"
+title                    : ""
+title_separator          : ""
+name                     : "adrian.ng"
 description              : "This is the website of __Adrian Ng__. _My_ website. Here you will see examples of my _Java projects_ and my notes on writing _SQL_"
 url                      : "https://adrian.ng" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
