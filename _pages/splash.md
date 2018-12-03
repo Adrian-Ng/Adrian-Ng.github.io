@@ -100,7 +100,7 @@ fr_sql_dml_ddl:
 
 
 datascience:
-  - excerpt: "In 2017, I graduated from Royal Holloway with an MSc in Data Science. I have no aspirations to be a _Data Scientist_. However, I did enjoy the experience of writing my own implementations of algorithms such as _K Nearest Neighbours_, _Neural Networks_, and _Hierarchical Clustering_ in __R__. Also used was __MATLAB__, which no-one uses so projects worked on in this language will be added last."
+  - excerpt: "In 2017, I graduated from Royal Holloway with an MSc in Data Science. While I have no aspirations to be a _Data Scientist_, I did enjoy the experience of writing my own implementations of algorithms such as _K Nearest Neighbours_, _Neural Networks_, and _Hierarchical Clustering_ in __R__. Also used was __MATLAB__, which no-one uses so projects worked on in this language will be added last."
 ---
 
 
@@ -118,7 +118,7 @@ datascience:
 
 {% include feature_row id="sql" type="center" %}
 
-{% include feature_row id="fr_sql_dml_ddl" %}
+{% include feature_row id="fr_sql_dml_ddl" layout="half"%}
 
 ## Data Science
 
