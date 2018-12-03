@@ -82,8 +82,8 @@ sql:
 
 fr_sql_ddl_dml:
   
-  - title: 'Structured Query Language (SQL)'
-    excerpt: '<br/><br/>An easy-to-learn, albeit, high level language that you’ll find being used pretty much wherever you come across relational databases. It is used in essentially two ways: building databases and manipulating data. 
+  - title: 'Structured Query Language '
+    excerpt: '<br/><br/>An easy-to-learn, albeit, high level language that you’ll find being used pretty much wherever you come across relational databases. It is used in essentially two ways - building databases and manipulating data. 
 
     <br/><br/>
 
@@ -100,15 +100,19 @@ fr_sql_ddl_dml:
     title: "DDL"
     excerpt: 'Data Definition Language is what we use when we are creating, altering, or dropping database objects.
 
-    <br/>
-    [__Create__](/sql/ddl/create/){: .btn .btn--success} [__Alter__](/sql/ddl/alter/){: .btn .btn--warning} [__Drop__](/sql/ddl/drop/){: .btn .btn--danger} [__Truncate__](/sql/dd/truncate/){: .btn .btn--info}    
+    <br/><br/>
+    [__Create__](/sql/ddl/create/){: .btn .btn--success} [__Alter__](/sql/ddl/alter/){: .btn .btn--warning} [__Drop__](/sql/ddl/drop/){: .btn .btn--danger} [__Truncate__](/sql/ddl/truncate/){: .btn .btn--info}    
     '
 
   - image_path: /assets/images/splash/dml.jpg
     image_caption: "Cameron Highlands"  
     alt: "Yahoo Finance"
     title: "DML"
-    excerpt: 'Data Manipulation Language is what we use when are working with the data itself.'
+    excerpt: 'Data Manipulation Language is what we use when are working with the data itself.
+
+    <br/><br/>
+    [__Select__](/sql/dml/select/){: .btn .btn--success} [__Insert__](/sql/dml/insert/){: .btn .btn--warning} [__Select Into__](/sql/dml/selectinto/){: .btn .btn--danger} [__Update__](/sql/dml/update/){: .btn .btn--info} [__Delete__](/sql/dml/delete/){: .btn .btn--invserse}
+    '
 
 datascience:
   - excerpt: "In 2017, I graduated from Royal Holloway with an MSc in Data Science. While I have no aspirations to be a _Data Scientist_, I did enjoy the experience of writing my own implementations of algorithms such as _K Nearest Neighbours_, _Neural Networks_, and _Hierarchical Clustering_ in __R__. Also used was __MATLAB__, which no-one uses so projects worked on in this language will be added last."
