@@ -6,7 +6,7 @@ header:
   image: /assets/images/splash/sqlnotes.jpg
 ---
 
-Make sure you travel
+Make sure to travel
 
 
 {% include figure image_path="/assets/images/headers/yahoofinance.jpg" alt="Skaftafellsjökull"%}
