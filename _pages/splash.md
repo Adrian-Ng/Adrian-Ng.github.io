@@ -97,7 +97,7 @@ fr_sql_ddl_dml:
     image_caption: "Cameron Highlands"  
     alt: "Yahoo Finance"
     title: "Data Manipulation Language"
-    excerpt: 'Data Manipulation Language is what we use when are working with the data itself. For example, this could mean: returning data with SELECT, populating a table with INSERT, changing data with UPDATE, removing data with DELETE'
+    excerpt: 'Data Manipulation Language is what we use when are working with the data itself.
     url: "/sql/dml/"
     btn_label: "Read More"
     btn_class: "btn--primary"   
