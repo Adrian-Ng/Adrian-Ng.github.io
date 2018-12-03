@@ -17,4 +17,7 @@ header:
 {% include figure image_path="/assets/images/headers/analytical_approach.jpg" alt=""%}
 {% include figure image_path="/assets/images/headers/historical.jpg" alt=""%}
 {% include figure image_path="/assets/images/headers/montecarlo_var.jpg" alt=""%}
+{% include figure image_path="/assets/images/headers/ddl.jpg" alt=""%}
+{% include figure image_path="/assets/images/headers/dml.jpg" alt=""%}
+
 
