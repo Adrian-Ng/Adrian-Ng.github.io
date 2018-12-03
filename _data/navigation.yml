@@ -1,7 +1,7 @@
 # main links
 main:
-   - title: "Home"
-     url: http://adrian.ng/  
+#   - title: "Home"
+ #    url: http://adrian.ng/  
    - title: "Gallery"
      url: http://adrian.ng/gallery/
 # SQL links
