@@ -5,7 +5,7 @@ excerpt: "Intro to CTEs"
 toc: true
 mathjax: true
 header:
- image: /assets/images/splash/cte.jpg
+ image: /assets/images/headers/cte.jpg
 ---
 
 ## The Common Table Element

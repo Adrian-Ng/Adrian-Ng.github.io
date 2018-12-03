@@ -121,8 +121,8 @@ fr_sql_2:
     title: 'Joins'
     excerpt: ''
 
-  - image_path: /assets/images/splash/ddl.jpg
-    image_caption: "Singapore"  
+  - image_path: /assets/images/splash/aggregation.jpg
+    image_caption: "Rinjani"  
     alt: "Aggregation"
     title: "Aggregation"
     excerpt: ''
