@@ -120,7 +120,7 @@ datascience:
 
 {% include feature_row id="fr_sql_ddl"%}
 
-{% include feature_row id="fr_sql_dml"%}
+{% include feature_row id="fr_sql_dml" type="right%}
 
 ## Data Science
 
