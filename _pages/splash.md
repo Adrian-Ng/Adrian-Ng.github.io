@@ -82,8 +82,8 @@ fr_sql_ddl_dml:
   - image_path: /assets/images/splash/yahoofinance.jpg
     image_caption: "Skaftafellsjökull"  
     alt: "Yahoo Finance"
-    title: "DDL is what we use when we are creating, altering, or removing database objects. That is, when working with tables, views, or what-have-you, you may be using CREATE, ALTER, or DROP statements"
-    excerpt: 'DDL is....'
+    title: "Data Definition Language"
+    excerpt: 'DDL is what we use when we are creating, altering, or dropping database objects. '
     url: "/sql/ddl/"
     btn_label: "Read More"
     btn_class: "btn--primary"  
