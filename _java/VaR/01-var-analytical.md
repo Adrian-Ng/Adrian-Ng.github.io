@@ -5,6 +5,14 @@ excerpt: "Estimating Value at Risk via the Analytical Approach"
 toc: true
 mathjax: true
 classes: wide
+header:
+  overlay_color: "#000"
+  overlay_filter: "0.5"
+  overlay_image: /assets/images/headers/analytical_approach.jpg
+  caption: "Kinabalu"  
+  actions:
+    - label: "Download"
+      url: "https://github.com/Adrian-Ng/ValueAtRisk"  
 ---
 
 In the __Analytical Approach__ we have a direct formula for estimating VaR:

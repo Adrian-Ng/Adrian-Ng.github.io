@@ -14,8 +14,8 @@ header:
       url: "https://github.com/Adrian-Ng/ValueAtRisk"  
 
 feature_row:
-  - image_path: assets/images/splash/binomialTrees.jpg
-    image_caption: "Angkor Wat"  
+  - image_path: assets/images/splash/analytical_approach.jpg
+    image_caption: "Kinabalu"  
     alt: "Analytical Approach"
     title: "Analytical Approach"
     excerpt: ""
