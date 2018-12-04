@@ -18,7 +18,7 @@ feature_row:
     image_caption: "Angkor Wat"  
     alt: "Binomial Trees"
     title: "Binomial Trees"
-    excerpt: "<br/><br/>When pricing options, we don't know whether the price will go _up_ or _down_. This simple model captures that uncertainty."
+    excerpt: "When pricing options, we don't know whether the price will go _up_ or _down_. This simple model captures that uncertainty."
     url: "java/options/trees/"
     btn_label: "Read More"
     btn_class: "btn--warning"    
@@ -27,7 +27,7 @@ feature_row:
     image_caption: "Angkor Wat"  
     alt: "Monte Carlo Simulation"
     title: "Monte Carlo Simulation"
-    excerpt: "<br/>The behaviour of a stock price is like a random walk. Let's simulate a very large number of these to predict our option price."
+    excerpt: "The behaviour of a stock price is like a random walk. Let's simulate a very large number of these to predict our option price."
     url: "/java/options/montecarlo/"
     btn_label: "Read More"
     btn_class: "btn--danger"
@@ -35,7 +35,7 @@ feature_row:
   - image_path: /assets/images/splash/blackscholes.jpg
     image_caption: "Sauðárkrókur"  
     alt: "Black Scholes equation"
-    title: "Black Scholes equation<br/><br/>"      
+    title: "Black Scholes equation"      
     excerpt: $$\frac{\partial f}{\partial t} + rS\cdot \frac{\partial f}{\partial S}+\frac{1}{2}\sigma^2 S^2\cdot\frac{\partial^2 f}{\partial S^2} = rf$$     
     url: "/java/options/blackscholes/"
     btn_label: "Read More"

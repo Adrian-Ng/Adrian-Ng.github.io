@@ -88,7 +88,7 @@ fr_sql_ddl_dml:
     '
 
   - image_path: /assets/images/splash/dml.jpg
-    image_caption: "Cameron Highlands"  
+    image_caption: "Boh Tea Plantation"  
     alt: "DML"
     title: "DML"
     excerpt: 'Data Manipulation Language is what we use when are working with the data itself.
