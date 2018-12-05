@@ -67,56 +67,6 @@ SQL:
        url: /SQL/misc/openquery-xml/
    - title: Music DB
      url: /SQL/musicDB/
-# R links
-R Language:
-   - title: "k Nearest Neighbours"   
-     children:
-     - title: "k = 1"
-       url: /R/knn/kequals1/
-     - title: "Implementation"
-       url: /R/knn/imp/
-     - title: "Analysis"
-       url: /R/knn/analysis/ 
-   - title: "Discriminant Analysis"
-     children:
-     - title: "Theory"
-       url: /R/da/theory/
-     - title: "Implementation"
-       url: /R/da/implementation/
-     - title: "Analysis"
-       url: /R/da/analysis/ 
-   - title: "Kernel Ridge Regression"
-     children:
-     - title: "Theory"
-       url: /R/krr/theory/
-     - title: "Implementation"
-       url: /R/krr/implementation/
-     - title: "Analysis"
-       url: /R/krr/analysis/ 
-   - title: "Regression Neural Network"
-     children:
-     - title: "Theory"
-       url: /R/rnn/theory/
-     - title: "Implementation"
-       url: /R/rnn/implementation/
-     - title: "Analysis"
-       url: /R/rnn/analysis/ 
-   - title: "Decision Stumps"
-     children:
-     - title: "Theory"
-       url: /R/ds/theory/
-     - title: "Implementation"
-       url: /R/ds/implementation/
-     - title: "Analysis"
-       url: /R/ds/analysis/ 
-   - title: "Hierachical Clustering"
-     children:
-     - title: "Theory"
-       url: /R/hc/theory/
-     - title: "Implementation"
-       url: /R/hc/implementation/
-     - title: "Analysis"
-       url: /R/hc/analysis/ 
 # Java links
 Java:   
     
@@ -129,18 +79,7 @@ Java:
        url: /java/options/montecarlo/  
      - title: Black Scholes
        url: /java/options/blackscholes/  
-#  - title: PageRank
-#    children:
-#     - title: "UrlExtractor"
-#       url: /java/PageRank/UrlExtractor/
-#     - title: "ArticleIndexer"
-#       url: /java/PageRank/ArticleIndexer/
-#     - title: "PageRank"
-#       url: /java/PageRank/PageRank/
-#   - title: Hadoop
-#     children:
-#     - title: "Intro"
-#       url: /java/Hadoop/Intro/  
+
    - title: Value at Risk
      url: /java/var/
      children:
@@ -166,24 +105,3 @@ Java:
       - title: "readTxt"
         url: /java/utils/readtxt/        
 
-# MATLAB links
-MATLAB:
-   - title: Basics
-     children: 
-     - title: "Intro"
-       url: /matlab/Basics/Intro/
-   - title: Hidden Markov Models
-     children:
-     - title: "alpha"
-       url: /matlab/hmm/alpha/
-     - title: "beta"
-       url: /matlab/hmm/beta/
-     - title: "gamma"
-       url: /matlab/hmm/gamma/
-
-# Python links
-Python:
-    - title: Basics
-      children:
-      - title: "Intro"
-        url: /python/Basics/Intro/
