@@ -4,7 +4,9 @@ permalink: /SQL/aggregation/functions/
 excerpt: "Aggregation functions by Adrian Ng"
 toc: false
 header:
- image: /assets/images/headers/aggregation.jpg
+  overlay_color: "#000"
+  overlay_filter: "0.5"
+  overlay_image: /assets/images/headers/aggregation.jpg
 ---
 
 ## COUNT()

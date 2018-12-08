@@ -1,12 +1,14 @@
 ---
-title: "Aggregation: Data Cubes"
+title: "Summarizing Data: Data Cubes"
 permalink: /SQL/aggregation/cubes/
 excerpt: "Aggregating with Cubes by Adrian Ng"
 toc: true
 classes: wide
 mathjax: true
 header:
- image: /assets/images/headers/aggregation.jpg
+  overlay_color: "#000"
+  overlay_filter: "0.5"
+  overlay_image: /assets/images/headers/aggregation.jpg
 ---
 
 ## Intro

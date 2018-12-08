@@ -1,11 +1,13 @@
 ---
-title: "Aggregation: Over Clause"
+title: "Summarizing Data: Over Clause"
 permalink: /SQL/aggregation/over/
 excerpt: "Aggregating with the Over Clause by Adrian Ng"
 toc: true
 mathjax: true
 header:
- image: /assets/images/headers/aggregation.jpg
+  overlay_color: "#000"
+  overlay_filter: "0.5"
+  overlay_image: /assets/images/headers/aggregation.jpg
 ---
 
 ## Intro to Over
