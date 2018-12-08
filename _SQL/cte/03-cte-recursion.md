@@ -1,7 +1,7 @@
 ---
-title: "CTEs: Recursion"
+title: "The Common Table Element"
 permalink: /SQL/cte/Recursion/
-excerpt: "Recursive CTEs in SQL"
+excerpt: "Recursion"
 toc: true
 classes: wide
 mathjax: true

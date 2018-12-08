@@ -1,7 +1,7 @@
 ---
 title: "The Common Table Element"
 permalink: /SQL/cte/
-excerpt: "Intro to CTEs"
+excerpt: "Intro"
 toc: true
 mathjax: true
 header:

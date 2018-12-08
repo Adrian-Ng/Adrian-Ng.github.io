@@ -1,7 +1,7 @@
 ---
-title: "CTEs: Segmentation"
+title: "The Common Table Element"
 permalink: /SQL/cte/Segmentation/
-excerpt: "Segmenting a set in SQL"
+excerpt: "Segmentation"
 toc: true
 mathjax: true
 header:
