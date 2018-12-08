@@ -1,14 +1,13 @@
 ---
-title: "Aggregation: Functions"
+title: "Summarizing Data: Functions"
 permalink: /SQL/aggregation/functions/
 excerpt: "Aggregation functions by Adrian Ng"
 toc: false
 header:
-image: /assets/images/headers/aggregation.jpg
+ image: /assets/images/headers/aggregation.jpg
 ---
 
-## COUNT
-
+## COUNT()
 
 How many accounts do we have in music.Account?
 
@@ -28,7 +27,7 @@ FROM	music.Users;
 ```
 
 
-## SUM
+## SUM()
 
 What's the total listening time of all the songs in our database?
 

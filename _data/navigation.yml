@@ -40,7 +40,7 @@ SQL:
        url: /SQL/joins/associativity/
      - title: "Commutativity"
        url: /SQL/joins/commutativity/       
-   - title: Aggregation
+   - title: Summarizing Data
      children:
      - title: "Sum & Count"
        url: /SQL/aggregation/functions/
