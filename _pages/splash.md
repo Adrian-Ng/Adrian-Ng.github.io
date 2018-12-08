@@ -105,7 +105,7 @@ fr_sql_2:
     excerpt: '
 
     <br/><br/><br/>
-    [__Cartesian Joins__](/SQL/joins/cartesian/){: .btn .btn--success} [__Semi Joins__](/SQL/joins/semi/){: .btn .btn--warning} [__Aliasing__](/SQL/joins/aliases/){: .btn .btn--danger} [__Associativity__](/SQL/joins/associativity/){: .btn .btn--info} [__Commutativity__](/SQL/joins/commutativity/){: .btn .btn--inverse}''   
+    [__Cartesian Joins__](/SQL/joins/cartesian/){: .btn .btn--success} [__Semi Joins__](/SQL/joins/semi/){: .btn .btn--warning} [__Aliasing__](/SQL/joins/aliases/){: .btn .btn--danger} [__Associativity__](/SQL/joins/associativity/){: .btn .btn--info} [__Commutativity__](/SQL/joins/commutativity/){: .btn .btn--inverse}'   
 
   - image_path: /assets/images/splash/aggregation.jpg
     image_caption: "Reynisdrangar"  
