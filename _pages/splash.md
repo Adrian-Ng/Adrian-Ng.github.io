@@ -102,7 +102,10 @@ fr_sql_2:
     image_caption: "Iceland"  
     alt: "Joins"
     title: 'Joins'
-    excerpt: ''   
+    excerpt: '
+
+    <br/><br/><br/>
+    [__Cartesian Joins__](/SQL/joins/cartesian/){: .btn .btn--success} [__Semi Joins__](/SQL/joins/semi/){: .btn .btn--warning} [__Aliasing__](/SQL/joins/aliases/){: .btn .btn--danger} [__Associativity__](/SQL/joins/associativity/){: .btn .btn--info} [__Commutativity__](/SQL/joins/commutativity/){: .btn .btn--inverse}''   
 
   - image_path: /assets/images/splash/aggregation.jpg
     image_caption: "Reynisdrangar"  
@@ -111,7 +114,7 @@ fr_sql_2:
     excerpt: '    
 
     <br/><br/><br/>
-    [__Functions__](/SQL/aggregation/functions/){: .btn .btn--success} [__Group By__](/SQL/aggregation/groupby/){: .btn .btn--warning} [__Having__](/SQL/aggregation/having/){: .btn .btn--danger} [__Over__](/SQL/aggregation/over/){: .btn .btn--info} [__Data Cubes__](/SQL/aggregation/cubes/){: .btn .btn--inverse}'
+    [__Operations__](/SQL/aggregation/functions/){: .btn .btn--success} [__Group By__](/SQL/aggregation/groupby/){: .btn .btn--warning} [__Having__](/SQL/aggregation/having/){: .btn .btn--danger} [__Over__](/SQL/aggregation/over/){: .btn .btn--info} [__Data Cubes__](/SQL/aggregation/cubes/){: .btn .btn--inverse}'
 
   - image_path: /assets/images/splash/cte.jpg
     image_caption: "Vík"  
