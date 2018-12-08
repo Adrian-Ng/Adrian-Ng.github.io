@@ -106,9 +106,12 @@ fr_sql_2:
 
   - image_path: /assets/images/splash/aggregation.jpg
     image_caption: "Reynisdrangar"  
-    alt: "Aggregation"
-    title: "Aggregation"
-    excerpt: ''
+    alt: "Summarizing Data"
+    title: "Summarizing Data"
+    excerpt: '    
+
+    <br/><br/><br/>
+    [__Functions__](/SQL/aggregation/functions/){: .btn .btn--success} [__Group By__](/SQL/aggregation/groupby/){: .btn .btn--warning} [__Having__](/SQL/aggregation/having/){: .btn .btn--danger} [__Over__](/SQL/aggregation/over/){: .btn .btn--info} [__Data Cubes__](/SQL/aggregation/cubes/){: .btn .btn--inverse}'
 
   - image_path: /assets/images/splash/cte.jpg
     image_caption: "Vík"  
