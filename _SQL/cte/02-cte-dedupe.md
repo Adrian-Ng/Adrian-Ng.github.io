@@ -5,9 +5,11 @@ excerpt: "Using Common Table Elements to remove duplicates in SQL by Adrian Ng"
 toc: False
 classes: wide
 mathjax: True
+header:
+  overlay_color: "#000"
+  overlay_filter: "0.5"
+  overlay_image: /assets/images/headers/cte.jpg
 ---
-
-## Dedupe
 
 Sometimes we don't want to have reptitions of certain values across multiple tuples in our dataset.
 For instance, we might not want to see an email address repeated more than once and simply using `DISTINCT` is not an option. 

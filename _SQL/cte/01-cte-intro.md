@@ -5,10 +5,10 @@ excerpt: "Intro to CTEs"
 toc: true
 mathjax: true
 header:
- image: /assets/images/headers/cte.jpg
+  overlay_color: "#000"
+  overlay_filter: "0.5"
+  overlay_image: /assets/images/headers/cte.jpg
 ---
-
-## The Common Table Element
 
 The Common Table Element (CTE) is essentially a named subquery.
 

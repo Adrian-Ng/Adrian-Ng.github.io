@@ -5,6 +5,10 @@ excerpt: "Recursive CTEs in SQL"
 toc: true
 classes: wide
 mathjax: true
+header:
+  overlay_color: "#000"
+  overlay_filter: "0.5"
+  overlay_image: /assets/images/headers/cte.jpg
 ---
 
 Recursion is possible in SQL via the use of a type of subquery known as a Common Table Element (CTE).

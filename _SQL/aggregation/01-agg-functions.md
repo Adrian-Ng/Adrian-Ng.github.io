@@ -1,5 +1,5 @@
 ---
-title: "Summarizing Data: Functions"
+title: "Summarizing Data: Operations"
 permalink: /SQL/aggregation/functions/
 excerpt: "Aggregation functions by Adrian Ng"
 toc: false

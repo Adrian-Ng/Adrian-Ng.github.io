@@ -4,6 +4,10 @@ permalink: /SQL/cte/Segmentation/
 excerpt: "Segmenting a set in SQL"
 toc: true
 mathjax: true
+header:
+  overlay_color: "#000"
+  overlay_filter: "0.5"
+  overlay_image: /assets/images/headers/cte.jpg
 ---
 
 ## Business "reasons"
