@@ -1,5 +1,5 @@
 ---
-title: "Common Table Elements"
+title: "The Common Table Element"
 permalink: /SQL/cte/
 excerpt: "Intro to CTEs"
 toc: true

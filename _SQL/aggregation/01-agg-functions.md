@@ -3,8 +3,8 @@ title: "Aggregation: Functions"
 permalink: /SQL/aggregation/functions/
 excerpt: "Aggregation functions by Adrian Ng"
 toc: false
-header:	
- 	image: /assets/images/headers/aggregation.jpg
+header:
+image: /assets/images/headers/aggregation.jpg
 ---
 
 ## COUNT
