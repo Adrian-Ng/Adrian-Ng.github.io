@@ -4,8 +4,8 @@ permalink: /SQL/aggregation/over/
 excerpt: "Aggregating with the Over Clause by Adrian Ng"
 toc: true
 mathjax: true
-header:	
- 	image: /assets/images/headers/aggregation.jpg
+header:
+ image: /assets/images/headers/aggregation.jpg
 ---
 
 ## Intro to Over

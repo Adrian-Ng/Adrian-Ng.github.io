@@ -1,10 +1,10 @@
 ---
-title: "Aggregation: Group By"
+title: "Summarizing Data: Group By"
 permalink: /SQL/aggregation/groupby/
 excerpt: "Aggregating with the group by clause by Adrian Ng"
 toc: false
-header:	
- 	image: /assets/images/headers/aggregation.jpg
+header:
+ image: /assets/images/headers/aggregation.jpg
 ---
 
 ## Intro
