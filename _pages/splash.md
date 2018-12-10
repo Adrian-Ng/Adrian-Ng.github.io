@@ -78,7 +78,7 @@ fr_sql_ddl_dml:
     __Data Manipilation Language__ (DML)'
 
   - image_path: /assets/images/splash/ddl.jpg
-    image_caption: "Singapore"  
+    image_caption: "People's Park Complex"  
     alt: "DDL"
     title: "DDL"
     excerpt: 'Data Definition Language is what we use when we are creating, altering, or dropping database objects.
