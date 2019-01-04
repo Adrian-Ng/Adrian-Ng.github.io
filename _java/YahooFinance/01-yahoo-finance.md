@@ -6,6 +6,7 @@ Long gone are the days where one could simply hook into the API and download a f
 
 Thankfully, there are many alternatives out there."
 toc: True
+toc_sticky: True
 mathjax: true
 header:
     image: /assets/images/headers/yahoofinance.jpg
