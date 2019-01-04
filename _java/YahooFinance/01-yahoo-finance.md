@@ -220,7 +220,6 @@ public class YahooAPI {
                 .range(0, history.size())
                 .mapToObj(i -> history.get(i).getClose().subtract(mean))
                 .map(bd -> bd.multiply(bd))
-                //.mapToObj(i -> history1.get(i).getClose().multiply(history2.get(i).getClose()))
                 .reduce(BigDecimal.ZERO, BigDecimal::add);
         return totalProduct.divide(new BigDecimal(history.size() - 1), RoundingMode.HALF_UP);
     }
