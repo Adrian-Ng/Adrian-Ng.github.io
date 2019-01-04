@@ -47,7 +47,7 @@ for(HistoricalQuote historicalQuote : historyGoogle)
 ```
 Looking at the [documentation](https://financequotes-api.com/javadoc/yahoofinance/YahooFinance.html), we can see that this method (and others like it) returns a `BigDecimal`.
 
-### Stream()
+## Stream()
 
 If you want, you can `stream()` instead of iterating through the collection.
 
@@ -61,7 +61,7 @@ System.out.printf("Total close: %s\n", totalClose);
 ```            
 All we are doing here is totalling every closing price.
 
-In `map`, we simply specify what data we want to reduce.
+In `map`, we _map_ from the stream to create a tuple.
 In this case, we use the `getClose()` method to emit a singleton of `BigDecimal`.
 
 In `reduce` we aggregate. 
@@ -76,7 +76,7 @@ That is, _zero_.
 
 The latter is the part that adds the `BigDecimal` element to the running total of closing prices.
 
-### Averaging Closing Price
+### Average Closing Price
 
 To calculate any average, we need both a _total_ and a _count_.
 We will again use `stream()` and return both these values.
@@ -108,6 +108,52 @@ As before, we use zero in _identity_.
 But now, the _accumulator_ now has two parameters: `(a,b)`.
 Where `a` is a two-element array which contains the running _total_ and _count_ in the first and second elements respectively.
 Likewise, `b` is a two element array, but it contains the next two elements to add to `a`.
+
+### Equal Weighted Variance
+
+How would we go about computing a simple variance from the stream?
+
+Suppose our variance is defined as:
+
+$$
+\sigma^2 = \frac{1}{n-1} \sum_{i=1}^n (x_i-\mu)^2
+$$
+
+Our method is defined as 
+```java
+public BigDecimal varianceEqualWeighted(List<HistoricalQuote> history, BigDecimal mean)
+```
+
+This requires that we have computed our _mean_ in a prior step.
+
+
+```java
+BigDecimal totalProduct = IntStream
+            .range(0, history.size())
+```
+
+This time our stream is an instantiation of an `IntStream`, which we use to address the index of `history`.
+
+```java
+            .mapToObj(i -> history.get(i).getClose().subtract(mean))
+            .map(bd -> bd.multiply(bd))
+```
+Now we map the difference between the mean and the closing price. 
+
+Then we emit a tuple containing the square of the previous map.
+
+```java
+			.reduce(BigDecimal.ZERO, BigDecimal::add);
+```
+
+Next, we aggregate the square. `BigDecimal.ZERO` is our zero element, necessary for computing the partial total at the first element. 
+
+```java
+    return totalProduct.divide(new BigDecimal(history.size() - 1), RoundingMode.HALF_UP);
+```
+
+When all is said and done, we return `BigDecimal totalProduct` and divide it by the number of elements in the stream. We subtract 1 from this divisor to reduce error caused by bias.
+
 
 ## Yahoo!
 
