@@ -5,7 +5,6 @@ excerpt: "As of March 2018, something happened to Google Finance - it got taken 
 Long gone are the days where one could simply hook into the API and download a fat, juicy csv-file of historical stock price data... or a sensible JSON of option prices.
 
 Thankfully, there are many alternatives out there."
-classes: wide
 mathjax: true
 header:
     image: /assets/images/headers/yahoofinance.jpg
