@@ -200,20 +200,30 @@ public class YahooAPI {
         System.out.printf("Total close: %s\n", totalClose);
     }
 
-    public static void printMean(List<HistoricalQuote> historyGoogle){
+    public static BigDecimal mean(List<HistoricalQuote> historicalQuotes) {
         //https://stackoverflow.com/questions/31881561/how-to-average-bigdecimals-using-streams
-        BigDecimal[] totalWithCount = historyGoogle.stream()
+        BigDecimal[] totalWithCount = historicalQuotes.stream()
                 .map(HistoricalQuote -> new BigDecimal[]{HistoricalQuote.getClose(), BigDecimal.ONE})
                 // accumulator only
                 // a[] = partial sum array
                 // b[] = to be added array
-                .reduce(    new BigDecimal[]{BigDecimal.ZERO, BigDecimal.ZERO},     // identity
-                        (a,b) -> new BigDecimal[]{a[0].add(b[0]), a[1].add(b[1])}   // accumulator
+                .reduce(new BigDecimal[]{BigDecimal.ZERO, BigDecimal.ZERO},         // identity
+                        (a, b) -> new BigDecimal[]{a[0].add(b[0]), a[1].add(b[1])}   // accumulator
                 );
         BigDecimal mean = totalWithCount[0].divide(totalWithCount[1], RoundingMode.HALF_UP);
-        System.out.println(mean);
+        System.out.printf("Mean close: %s\n", mean);
+        return mean;
     }
 
+    public static BigDecimal varianceEqualWeighted(List<HistoricalQuote> history, BigDecimal mean) {
+        BigDecimal totalProduct = IntStream
+                .range(0, history.size())
+                .mapToObj(i -> history.get(i).getClose().subtract(mean))
+                .map(bd -> bd.multiply(bd))
+                //.mapToObj(i -> history1.get(i).getClose().multiply(history2.get(i).getClose()))
+                .reduce(BigDecimal.ZERO, BigDecimal::add);
+        return totalProduct.divide(new BigDecimal(history.size() - 1), RoundingMode.HALF_UP);
+    }
 
     public static void main(String[] args){
 
@@ -228,6 +238,9 @@ public class YahooAPI {
             printClose(historyGoogle);
             printTotal(historyGoogle);
             printMean(historyGoogle);
+            BigDecimal mean = mean(historyGoogle);
+            BigDecimal variance = varianceEqualWeighted(historyGoogle, mean)
+            System.out.printf("Variance: %s\n", variance);
         } catch (IOException e){
             e.printStackTrace();
         }
