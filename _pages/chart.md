@@ -21,14 +21,10 @@ permalink: /chart/
     dataTable.addColumn({ type: 'date', id: 'Start' });
     dataTable.addColumn({ type: 'date', id: 'End' });
     dataTable.addRows([
-      [ 'President', 'George Washington', new Date(1789, 3, 30), new Date(1797, 2, 4) ],
-      [ 'President', 'John Adams', new Date(1797, 2, 4), new Date(1801, 2, 4) ],
-      [ 'President', 'Thomas Jefferson', new Date(1801, 2, 4), new Date(1809, 2, 4) ],
-      [ 'Vice President', 'John Adams', new Date(1789, 3, 21), new Date(1797, 2, 4)],
-      [ 'Vice President', 'Thomas Jefferson', new Date(1797, 2, 4), new Date(1801, 2, 4)],
-      [ 'Vice President', 'Aaron Burr', new Date(1801, 2, 4), new Date(1805, 2, 4)],
-      [ 'Vice President', 'George Clinton', new Date(1805, 2, 4), new Date(1812, 3, 20)],
-    ]);
+      [ 'CPU', 'George Washington', new Date(1789, 3, 30), new Date(1797, 2, 4) ],
+      [ 'CPU', 'John Adams', new Date(1797, 2, 4), new Date(1801, 2, 4) ],
+      [ 'CPU', 'Thomas Jefferson', new Date(1801, 2, 4), new Date(1809, 2, 4) ],
+     ]);
 
     chart.draw(dataTable);
   }
