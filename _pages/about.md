@@ -63,13 +63,17 @@ permalink: /about/
 	    [	'Monitor',	'Dell Ultrasharp 2407WFP 24', new Date(2007,5,30), new Date(2015,8,9)],
 	    [	'Monitor',	'Samsung 34 Curved Ultrawide S34E790C', new Date(2015,8,9), new Date()],  
 
+
+	    [	'Mouse',	'Logitech Cordless Trackman Wheel', new Date(2004, 11, 11), new Date(2006,11,11)],
 	    [	'Mouse',	'Logitech G7', new Date(2006, 11, 11), new Date(2008,5,9)],
 	    [	'Mouse',	'Logitech MX Revolution', new Date(2008, 5, 9), new Date(2012,4,15)],
 	    [	'Mouse',	'Logitech MX Performance', new Date(2012, 4, 15), new Date(2014,4,21)],
 	    [	'Mouse',	'Logitech MX Performance', new Date(2014, 4, 21), new Date(2016,4,9)],
 	    [	'Mouse',	'Logitech MX Master', new Date(2016, 4, 9), new Date()],
 
-	    
+		[	'Keyboard',	'Logitech Wave', new Date(2009, 4, 21), new Date(2016,2,30)],
+		[	'Keyboard',	'Corsair K70 Cherry MX Blue', new Date(2016, 2, 30), new Date()],
+
 
     ]);
 
