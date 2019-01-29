@@ -4,6 +4,9 @@ layout: single
 permalink: /computerTimeline/
 ---
 
+
+<html>
+<head>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
 <script type="text/javascript">
@@ -49,5 +52,8 @@ permalink: /computerTimeline/
     chart.draw(dataTable);
   }
 </script>
-
+</head>
+<body>
 <div id="example3.1" style="height: 200px;"></div>
+</body>
+</html>
