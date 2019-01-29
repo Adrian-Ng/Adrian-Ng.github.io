@@ -24,7 +24,7 @@ permalink: /computer/
     dataTable.addColumn({ type: 'date', id: 'Start' });
     dataTable.addColumn({ type: 'date', id: 'End' });
     dataTable.addRows([
-    	[ 'CPU', 'AMD Athlon 64', new Date(204, 6, 8), new Date(2007, 7, 25) ],
+    	[ 'CPU', 'AMD Athlon 64', new Date(2004, 6, 8), new Date(2007, 7, 25) ],
 	    [ 'CPU', 'Intel Core 2 Duo E6750 2.66GHz', new Date(2007, 7, 25), new Date(2011, 8, 19) ],
 	    [ 'CPU', 'Intel Pentium E6600', new Date(2011, 8, 19), new Date(2012, 11, 27) ],
 	    [ 'CPU', 'Intel i5 3570k', new Date(2012, 11, 27), new Date() ],
