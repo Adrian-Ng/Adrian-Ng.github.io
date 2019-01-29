@@ -20,7 +20,9 @@ permalink: /chart/
     dataTable.addColumn({ type: 'string', id: 'Position' });
     dataTable.addColumn({ type: 'string', id: 'Name' });
     dataTable.addColumn({ type: 'date', id: 'Start' });
-    dataTable.addColumn({ type: 'date', id: 'End' });[ 'CPU', 'Intel i5 3570k', new Date(2012, 11, 27), new Date() ],
+    dataTable.addColumn({ type: 'date', id: 'End' });
+    dataTable.addRows([
+    	[ 'CPU', 'Intel i5 3570k', new Date(2012, 11, 27), new Date() ],
       [ 'CPU', 'Intel Pentium E6600', new Date(2011, 8, 19), new Date(2012, 11, 27) ],
       [ 'CPU', 'Intel Core 2 Duo E6750 2.66GHz', new Date(2007, 7, 25), new Date(2011, 8, 19) ],      
       [ 'Motherboard', 'Asus P8Z77-V Motherboard LGA 1150', new Date(2012, 11, 27), new Date() ],
