@@ -37,13 +37,14 @@ permalink: /about/
 	    [ 'Motherboard', 'Asus P5Q SE Plus Socket 775', new Date(2010, 7, 24), new Date(2012, 11, 27) ],  
 	    [ 'Motherboard', 'Asus P8Z77-V Motherboard LGA 1150', new Date(2012, 11, 27), new Date() ],       
 	      
-	    [	'GPU',	'PalitDaytona nVidia Riva TNT2 m64', new Date(1999, 0, 1), new Date(2001, 0, 1) ],
-	 	[	'GPU',	'Geforce 4 440mx', new Date(2001, 0, 1), new Date(2004, 0, 1) ],
+	    [	'GPU',	'PalitDaytona nVidia Riva TNT2 m64', new Date(1999, 0, 1), new Date(2000, 0, 1) ],
+	 	[	'GPU',	'Geforce 2 mx400 64mb', new Date(2000, 0, 1), new Date(2001, 0, 1) ],
+	 	[	'GPU',	'Geforce 4 4200Ti 128mb', new Date(2001, 0, 1), new Date(2004, 0, 1) ],
 	 	[	'GPU',	'Sapphire 9800 Pro', new Date(2004, 0, 1), new Date(2006, 0, 1) ],     
 		[	'GPU',	'BFG 7800 GS OC 256MB', new Date(2006, 0, 1), new Date(2007, 8, 22) ],
 		[	'GPU',	'EVGA 8800GTS 320MB', new Date(2007, 8, 22), new Date(2012, 11, 27) ],
-		[	'GPU',	'EVGA GTX 670 2GB', new Date(2012, 11, 27), new Date(2016, 7, 8) ],
-		[ 'GPU',	'Asus GeForce GTX 670 DirectCU II OC', new Date(2013,7,13), new Date(2016,7,8) ],
+		[	'GPU',	'EVGA GTX 670 2GB', new Date(2012, 11, 27), new Date(2014, 6, 14) ],
+		[ 	'GPU',	'Asus GeForce GTX 670 DirectCU II OC', new Date(2013,7,13), new Date(2016,7,8) ],
 		[	'GPU',	'Asus GeForce GTX 670 DirectCU II OC', new Date(2014, 6, 9), new Date(2016, 7, 8)], 
 	    [	'GPU',	'MSI 1080 Armor OC 8GB', new Date(2016, 7, 8), new Date() ],
 
@@ -61,6 +62,15 @@ permalink: /about/
 	      //[	'Monitor',	'Dell 1907 fpt', new Date(2007,5,30), new Date(2015,8,9)],      
 	    [	'Monitor',	'Dell Ultrasharp 2407WFP 24', new Date(2007,5,30), new Date(2015,8,9)],
 	    [	'Monitor',	'Samsung 34 Curved Ultrawide S34E790C', new Date(2015,8,9), new Date()],  
+
+	    [	'Mouse',	'Logitech G7', new Date(2006, 11, 11), new Date(2008,5,9)],
+	    [	'Mouse',	'Logitech MX Revolution', new Date(2008, 5, 9), new Date(2012,4,15)],
+	    [	'Mouse',	'Logitech MX Performance', new Date(2012, 4, 15), new Date(2014,4,21)],
+	    [	'Mouse',	'Logitech MX Performance', new Date(2014, 4, 21), new Date(2016,4,9)],
+	    [	'Mouse',	'Logitech MX Master', new Date(2016, 4, 9), new Date()],
+
+	    
+
     ]);
 
     chart.draw(dataTable);
