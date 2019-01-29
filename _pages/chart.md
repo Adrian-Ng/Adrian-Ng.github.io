@@ -36,11 +36,11 @@ classes: wide
       [	'GPU',	'PalitDaytona nVidia Riva TNT2 m64', new Date(1999, 0, 1), new Date(2001, 0, 1) ],
  	  [	'GPU',	'Geforce 4 440mx', new Date(2001, 0, 1), new Date(2004, 0, 1) ],
  	  [	'GPU',	'Sapphire 9800 Pro', new Date(2004, 0, 1), new Date(2006, 0, 1) ],     
-	  [	'GPU',	'BFG  7800 GS OC 256MB', new Date(2006, 0, 1), new Date(2007, 8, 22) ],
-	  [	'GPU',	'EVGA 8800GTS 320MB', new Date(2007, 8, 22), new Date(2012, 11, 27) ],
-	  [	'GPU',	'EVGA GTX 670 2GB', new Date(2012, 11, 27), new Date(2016, 7, 8) ],
-	  [	'GPU',	'EVGA GTX 670 2GB', new Date(2014, 6, 9), new Date(2016, 7, 8)], 
-      [	'GPU',	'MSI 1080 Armor OC 8GB', new Date(2016, 7, 8), Date() ],
+	  //[	'GPU',	'BFG  7800 GS OC 256MB', new Date(2006, 0, 1), new Date(2007, 8, 22) ],
+	  //[	'GPU',	'EVGA 8800GTS 320MB', new Date(2007, 8, 22), new Date(2012, 11, 27) ],
+	  //[	'GPU',	'EVGA GTX 670 2GB', new Date(2012, 11, 27), new Date(2016, 7, 8) ],
+	  //[	'GPU',	'EVGA GTX 670 2GB', new Date(2014, 6, 9), new Date(2016, 7, 8)], 
+      //[	'GPU',	'MSI 1080 Armor OC 8GB', new Date(2016, 7, 8), Date() ],
      ]);
 
     chart.draw(dataTable);
