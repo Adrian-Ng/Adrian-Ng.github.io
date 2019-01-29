@@ -14,27 +14,29 @@ permalink: /computerTimeline/
   google.charts.setOnLoadCallback(drawChart);
   function drawChart() {
 
-    var container = document.getElementById('example3.1');
+    var container = document.getElementById('timeline');
     var chart = new google.visualization.Timeline(container);
     var dataTable = new google.visualization.DataTable();
-    var today = new Date();
+    var date = new Date();
+    var today = date.getDate();
+
 
     dataTable.addColumn({ type: 'string', id: 'Position' });
     dataTable.addColumn({ type: 'string', id: 'Name' });
     dataTable.addColumn({ type: 'date', id: 'Start' });
     dataTable.addColumn({ type: 'date', id: 'End' });
     dataTable.addRows([
-      [ 'CPU', 'Intel i5 3570k', new Date(2012, 11, 27), today.getDate() ],
+      [ 'CPU', 'Intel i5 3570k', new Date(2012, 11, 27), today ],
       [ 'CPU', 'Intel Pentium E6600', new Date(2011, 8, 19), new Date(2012, 11, 27) ],
       [ 'CPU', 'Intel Core 2 Duo E6750 2.66GHz', new Date(2007, 7, 25), new Date(2011, 8, 19) ],
       
-      [ 'Motherboard', 'Asus P8Z77-V Motherboard LGA 1150', new Date(2012, 11, 27), today.getDate() ],
+      [ 'Motherboard', 'Asus P8Z77-V Motherboard LGA 1150', new Date(2012, 11, 27), today ],
       [ 'Motherboard', 'Asus P5Q SE Plus Socket 775', new Date(2010, 7, 24), new Date(2012, 11, 27) ],      
       [ 'Motherboard', 'ASUS P5B Socket 775', new Date(2007, 7, 25), new Date(2012, 11, 27) ],
       [ 'Motherboard', 'ASUS A7M-266', new Date(1999, 0, 1), new Date(2007, 7, 25) ],
 
 
-      [	'GPU 1',	'MSI 1080 Armor OC 8GB', new Date(2016, 7, 8), today.getDate() ],
+      [	'GPU 1',	'MSI 1080 Armor OC 8GB', new Date(2016, 7, 8), today ],
       [	'GPU 1',	'EVGA GTX 670 2GB', new Date(2012, 11, 27), new Date(2016, 7, 8) ],
       [	'GPU 1',	'EVGA 8800GTS 320MB', new Date(2007, 8, 22), new Date(2012, 11, 27) ],
       [	'GPU 1',	'BFG  7800 GS OC 256MB', new Date(2007, 8, 22), new Date(2007, 8, 22) ],
@@ -54,6 +56,6 @@ permalink: /computerTimeline/
 </script>
 </head>
 <body>
-<div id="example3.1" style="height: 200px;"></div>
+<div id="timeline" style="height: 200px;"></div>
 </body>
 </html>
