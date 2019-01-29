@@ -1,6 +1,6 @@
 ---
 title: About
-layout: single
+layout: splash
 classes: wide
 permalink: /about/
 ---
