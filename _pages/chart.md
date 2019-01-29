@@ -39,8 +39,8 @@ classes: wide
 	  [	'GPU',	'BFG 7800 GS OC 256MB', new Date(2006, 0, 1), new Date(2007, 8, 22) ],
 	  [	'GPU',	'EVGA 8800GTS 320MB', new Date(2007, 8, 22), new Date(2012, 11, 27) ],
 	  [	'GPU',	'EVGA GTX 670 2GB', new Date(2012, 11, 27), new Date(2016, 7, 8) ],
-	  //[	'GPU',	'EVGA GTX 670 2GB', new Date(2014, 6, 9), new Date(2016, 7, 8)], 
-      //[	'GPU',	'MSI 1080 Armor OC 8GB', new Date(2016, 7, 8), Date() ],
+	  [	'GPU',	'EVGA GTX 670 2GB', new Date(2014, 6, 9), new Date(2016, 7, 8)], 
+      [	'GPU',	'MSI 1080 Armor OC 8GB', new Date(2016, 7, 8), Date() ],
      ]);
 
     chart.draw(dataTable);
