@@ -53,8 +53,8 @@ classes: wide
       [ 'Soundcard', 'M-Audio Audiophile 2496', new Date(2011, 3, 3), new Date(2014,6,22)],
       [ 'Soundcard', 'Asus Xonar Essence STX', new Date(2014, 6, 22), new Date()],
 
-      [	'Monitor',	'Dell Ultrasharp 2407WFP 24', new Date(2007,5,30), new Date(2015,8,9)]
-      [	'Monitor',	'Samsung 34" Curved Ultrawide S34E790C', new Date(2015,8,9), new Date()]
+      [	'Monitor',	'Dell Ultrasharp 2407WFP 24', new Date(2007,5,30), new Date(2015,8,9)],
+      [	'Monitor',	'Samsung 34 Curved Ultrawide S34E790C', new Date(2015,8,9), new Date()],
      ]);
 
     chart.draw(dataTable);
