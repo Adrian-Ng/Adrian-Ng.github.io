@@ -56,6 +56,6 @@ classes: wide
 
   </head>
   <body>
-    <div id="Computer Timeline" style="height: 200px;"></div>
+    <div id="Computer Timeline" style="height: 500;"></div>
   </body>
 </html>
