@@ -2,6 +2,7 @@
 title: Chart Test
 layout: single
 permalink: /chart/
+classes: wide
 ---
 
 <html>
