@@ -45,8 +45,9 @@ classes: wide
       [ 'RAM',	'Corsair Vengeance 8GB DDR3', new Date(2017, 3, 14), new Date()],
       [ 'RAM',	'Corsair Vengeance 8GB DDR3', new Date(2012, 11, 27), new Date()],
 
-      [ 'Soundcard', 'Asus Xonar Essence STX', new Date(2014, 6, 22), new Date()],
+      
       [ 'Soundcard', 'M-Audio Audiophile 2496', new Date(2011, 3, 3), new Date(2014,6,22)],
+      [ 'Soundcard', 'Asus Xonar Essence STX', new Date(2014, 6, 22), new Date()],
      ]);
 
     chart.draw(dataTable);
