@@ -67,7 +67,7 @@ permalink: /about/
 </script>
 </head>
 <body>
-<div id="timeline" style="height: 1000px;"></div>
+<div id="timeline" style="height: 500px;"></div>
 </body>
 </html>
 
