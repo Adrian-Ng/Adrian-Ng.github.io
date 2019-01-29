@@ -25,7 +25,7 @@ permalink: /chart/
     dataTable.addRows([
       [ 'CPU', 'George Washington', new Date(1789, 3, 30), new Date(1797, 2, 4) ],
       [ 'CPU', 'John Adams', new Date(1797, 2, 4), new Date(1801, 2, 4) ],
-      [ 'CPU', 'Thomas Jefferson', new Date(1801, 2, 4), today.Date() ],
+      [ 'CPU', 'Thomas Jefferson', new Date(1801, 2, 4), new Date(today.Date()) ],
      ]);
 
     chart.draw(dataTable);
