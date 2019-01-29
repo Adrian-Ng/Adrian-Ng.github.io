@@ -15,6 +15,9 @@ permalink: /chart/
         var chart = new google.visualization.Timeline(container);
         var dataTable = new google.visualization.DataTable();
 
+        var date = new Date();
+
+
         dataTable.addColumn({ type: 'string', id: 'President' });
         dataTable.addColumn({ type: 'date', id: 'Start' });
         dataTable.addColumn({ type: 'date', id: 'End' });
