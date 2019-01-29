@@ -43,6 +43,8 @@ classes: wide
       [	'GPU',	'MSI 1080 Armor OC 8GB', new Date(2016, 7, 8), new Date() ],
 
       [ 'RAM',	'Extra Value 1GB DDR2', new Date(2007,8,22), new Date(2012,11,27)],
+      [ 'RAM',	'Crucial 4GB DDR2', new Date(2009,4,19), new Date(2012,11,27)],
+      [ 'RAM', 	'Corsair 4GB DDR2', new Date(2011,11,22), new Date(2012,11,27)],
       [ 'RAM',	'Corsair Vengeance 8GB DDR3', new Date(2017, 3, 14), new Date()],
       [ 'RAM',	'Corsair Vengeance 8GB DDR3', new Date(2012, 11, 27), new Date()],
 
