@@ -40,7 +40,7 @@ classes: wide
 	  [	'GPU',	'EVGA 8800GTS 320MB', new Date(2007, 8, 22), new Date(2012, 11, 27) ],
 	  [	'GPU',	'EVGA GTX 670 2GB', new Date(2012, 11, 27), new Date(2016, 7, 8) ],
 	  [	'GPU',	'EVGA GTX 670 2GB', new Date(2014, 6, 9), new Date(2016, 7, 8)], 
-      [	'GPU',	'MSI 1080 Armor OC 8GB', new Date(2016, 7, 8), Date() ],
+      [	'GPU',	'MSI 1080 Armor OC 8GB', new Date(2016, 7, 8), new Date() ],
      ]);
 
     chart.draw(dataTable);
