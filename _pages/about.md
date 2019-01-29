@@ -67,7 +67,7 @@ permalink: /about/
 </script>
 </head>
 <body>
-<div id="timeline" style="height: 2000px;"></div>
+<div id="timeline" style="height: 1000px;"></div>
 </body>
 </html>
 
@@ -107,6 +107,6 @@ permalink: /about/
 
   </head>
   <body>
-    <div id="Computer Timeline" style="height: 2000px;"></div>
+    <div id="Computer Timeline" style="height: 1000px;"></div>
   </body>
 </html>
