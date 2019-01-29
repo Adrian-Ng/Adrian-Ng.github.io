@@ -40,7 +40,8 @@ classes: wide
 	  [	'GPU',	'BFG 7800 GS OC 256MB', new Date(2006, 0, 1), new Date(2007, 8, 22) ],
 	  [	'GPU',	'EVGA 8800GTS 320MB', new Date(2007, 8, 22), new Date(2012, 11, 27) ],
 	  [	'GPU',	'EVGA GTX 670 2GB', new Date(2012, 11, 27), new Date(2016, 7, 8) ],
-	  [	'GPU',	'EVGA GTX 670 2GB', new Date(2014, 6, 9), new Date(2016, 7, 8)], 
+	  [ 'GPU',	'Asus GeForce GTX 670 DirectCU II OC', new Date(2013,7,13), new Date(2016,7,8) ],
+	  [	'GPU',	'Asus GeForce GTX 670 DirectCU II OC', new Date(2014, 6, 9), new Date(2016, 7, 8)], 
       [	'GPU',	'MSI 1080 Armor OC 8GB', new Date(2016, 7, 8), new Date() ],
 
       [ 'RAM',	'Extra Value 1GB DDR2', new Date(2007,8,22), new Date(2012,11,27)],
@@ -53,8 +54,14 @@ classes: wide
       [ 'Soundcard', 'M-Audio Audiophile 2496', new Date(2011, 3, 3), new Date(2014,6,22)],
       [ 'Soundcard', 'Asus Xonar Essence STX', new Date(2014, 6, 22), new Date()],
 
+
+      //[	'Monitor',	'Dell 1907 fpt', new Date(2007,5,30), new Date(2015,8,9)],      
       [	'Monitor',	'Dell Ultrasharp 2407WFP 24', new Date(2007,5,30), new Date(2015,8,9)],
       [	'Monitor',	'Samsung 34 Curved Ultrawide S34E790C', new Date(2015,8,9), new Date()],
+
+	  [	'Phone',	'HTC 10', new Date(2016,4,30), new Date(2018,0,30)],
+      [	'Phone',	'Sony Xperia XZ1 Compact', new Date(2018,0,30), new Date()],
+
      ]);
 
     chart.draw(dataTable);
