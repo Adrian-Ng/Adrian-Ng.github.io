@@ -16,7 +16,6 @@ permalink: /chart/
     var container = document.getElementById('example3.1');
     var chart = new google.visualization.Timeline(container);
     var dataTable = new google.visualization.DataTable();
-    var today = new Date();
 
     dataTable.addColumn({ type: 'string', id: 'Position' });
     dataTable.addColumn({ type: 'string', id: 'Name' });
@@ -25,7 +24,7 @@ permalink: /chart/
     dataTable.addRows([
       [ 'CPU', 'George Washington', new Date(1789, 3, 30), new Date(1797, 2, 4) ],
       [ 'CPU', 'John Adams', new Date(1797, 2, 4), new Date(1801, 2, 4) ],
-      [ 'CPU', 'Thomas Jefferson', new Date(1801, 2, 4), new Date(today.Date()) ],
+      [ 'CPU', 'Thomas Jefferson', new Date(1801, 2, 4), new Date() ],
      ]);
 
     chart.draw(dataTable);
