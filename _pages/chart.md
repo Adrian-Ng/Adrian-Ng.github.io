@@ -29,6 +29,7 @@ classes: wide
       [ 'CPU', 'Intel i5 3570k', new Date(2012, 11, 27), new Date() ],
 
       [ 'Motherboard', 'ASUS A7M-266', new Date(1999, 0, 1), new Date(2007, 7, 25) ],
+      [ 'Motherboard', 'ASUS K8V-SE Deluxe S754', new Date(2004, 6, 8), new Date(2007, 7, 25) ],
       [ 'Motherboard', 'ASUS P5B Socket 775', new Date(2007, 7, 25), new Date(2010, 7, 24) ],      
       [ 'Motherboard', 'Asus P5Q SE Plus Socket 775', new Date(2010, 7, 24), new Date(2012, 11, 27) ],  
       [ 'Motherboard', 'Asus P8Z77-V Motherboard LGA 1150', new Date(2012, 11, 27), new Date() ],       
@@ -51,6 +52,9 @@ classes: wide
       
       [ 'Soundcard', 'M-Audio Audiophile 2496', new Date(2011, 3, 3), new Date(2014,6,22)],
       [ 'Soundcard', 'Asus Xonar Essence STX', new Date(2014, 6, 22), new Date()],
+
+      [	'Monitor',	'Dell Ultrasharp 2407WFP 24', new Date(2007,5,30), new Date(2015,8,9)]
+      [	'Monitor',	'Samsung 34" Curved Ultrawide S34E790C', new Date(2015,8,9), new Date()]
      ]);
 
     chart.draw(dataTable);
@@ -60,6 +64,6 @@ classes: wide
 
   </head>
   <body>
-    <div id="Computer Timeline" style="height: 1000;"></div>
+    <div id="Computer Timeline" style="height: 2000;"></div>
   </body>
 </html>
