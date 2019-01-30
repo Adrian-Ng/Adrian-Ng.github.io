@@ -107,9 +107,9 @@ permalink: /about/
     dataTable.addRows([
 
 		[	'Phone',	'Sony Ericsson k700i', new Date(2004,10,14), new Date(2006,4,14)],
-		[	'Phone',	'Sony Ericsson k750i', new Date(2006,4,14), new Date(2007,10,14)],
-		[	'Phone',	'Sony Ericsson V640i', new Date(2007,10,14), new Date(2009,4,14)],
-		[	'Phone',	'Nokia 5800 Music Xpress', new Date(2009,4,14), new Date(2010,7,23)],
+		[	'Phone',	'Sony Ericsson k750i', new Date(2006,4,14), new Date(2008,1,14)],
+		[	'Phone',	'Sony Ericsson V640i', new Date(2008,1,14), new Date(2009,7,14)],
+		[	'Phone',	'Nokia 5800 Music Xpress', new Date(2009,7,14), new Date(2010,7,23)],
 		[	'Phone',	'Samsung Galaxy SI', new Date(2010,7,23), new Date(2012,1,16)],
 		[	'Phone',	'Samsung Galaxy SII', new Date(2012,1,16), new Date(2013,9,31)],
 		[	'Phone',	'Nexus 5', new Date(2013,9,31), new Date(2016,4,30)],
@@ -121,7 +121,7 @@ permalink: /about/
 	    [	'Headphones',	'Sony MDR-EX500LP', new Date(2009, 2, 10), new Date(2011, 9,1)],
 	    [	'Headphones',	'Sony MDR EX510LPB', new Date(2011, 9,1), new Date()],
 	    [	'Headphones',	'Philips X1', new Date(2012, 9,30), new Date(2013,3,29)],
-	    [	'Headphones',	'Philips X1', new Date(2012, 9,30), new Date()],
+	    [	'Headphones',	'Philips X1', new Date(2013,3,29), new Date()],
 	    [	'Headphones',	'AGK K550', new Date(2013, 8,1), new Date()],
 
      ]);
