@@ -5,6 +5,10 @@ classes: wide
 permalink: /about/
 ---
 
+## Reference
+
+[https://developers.google.com/chart/interactive/docs/gallery/timeline](https://developers.google.com/chart/interactive/docs/gallery/timeline)
+
 ## Computer
 
 <html>
