@@ -53,7 +53,6 @@ permalink: /about/
 	    [ 'RAM', 	'Corsair 4GB DDR2', new Date(2011,11,22), new Date(2012,11,27)],
 	    [ 'RAM',	'Corsair Vengeance 8GB DDR3', new Date(2017, 3, 14), new Date()],
 	    [ 'RAM',	'Corsair Vengeance 8GB DDR3', new Date(2012, 11, 27), new Date()],
-
 	      
 	    [ 'Soundcard', 'M-Audio Audiophile 2496', new Date(2011, 3, 3), new Date(2014,6,22)],
 	    [ 'Soundcard', 'Asus Xonar Essence STX', new Date(2014, 6, 22), new Date()],
@@ -86,7 +85,7 @@ permalink: /about/
 </body>
 </html>
 
-## Phone
+## Phones
 
 <html>
   <head>
@@ -112,6 +111,14 @@ permalink: /about/
 		[	'Phone',	'Nexus 5', new Date(2013,9,31), new Date(2016,4,30)],
 		[	'Phone',	'HTC 10', new Date(2016,4,30), new Date(2018,0,30)],
 	    [	'Phone',	'Sony Xperia XZ1 Compact', new Date(2018,0,30), new Date()],
+
+	    [	'Headphones',	'Sony MDR EX90LP',	new Date(2008, 3, 18), new Date(2009, 2, 3)]
+	    [	'Headphones',	'Sony MDR EX90LP',	new Date(2009, 2, 3), new Date(2009, 2, 10)]
+	    [	'Headphones',	'Sony MDR-EX500LP', new DatE(2009, 2, 10), new Date(2011, 9,1)]
+	    [	'Headphones',	'Sony MDR EX510LPB', new Date(2011, 9,1), new Date()],
+	    [	'Headphones',	'Philips X1', new Date(2012, 9,30), new Date(2013,3,29)],
+	    [	'Headphones',	'Philips X1', new Date(2012, 9,30), new Date()],
+	    [	'Headphones',	'AGK K550', new Date(2013, 8,1), new Date()],
 
      ]);
 
