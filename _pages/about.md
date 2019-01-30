@@ -118,7 +118,7 @@ permalink: /about/
 
 	    [	'Headphones',	'Sony MDR EX90LP',	new Date(2008, 3, 18), new Date(2009, 2, 3)]
 	    [	'Headphones',	'Sony MDR EX90LP',	new Date(2009, 2, 3), new Date(2009, 2, 10)]
-	    [	'Headphones',	'Sony MDR-EX500LP', new DatE(2009, 2, 10), new Date(2011, 9,1)]
+	    [	'Headphones',	'Sony MDR-EX500LP', new Date(2009, 2, 10), new Date(2011, 9,1)]
 	    [	'Headphones',	'Sony MDR EX510LPB', new Date(2011, 9,1), new Date()],
 	    [	'Headphones',	'Philips X1', new Date(2012, 9,30), new Date(2013,3,29)],
 	    [	'Headphones',	'Philips X1', new Date(2012, 9,30), new Date()],
