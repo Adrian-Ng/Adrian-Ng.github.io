@@ -106,6 +106,10 @@ permalink: /about/
     dataTable.addColumn({ type: 'date', id: 'End' });
     dataTable.addRows([
 
+		[	'Phone',	'Sony Ericsson k700i', new Date(2004,10,14), new Date(2006,4,14)],
+		[	'Phone',	'Sony Ericsson k750i', new Date(2006,4,14), new Date(2007,10,14)],
+		[	'Phone',	'Sony Ericsson V640i', new Date(2007,10,14), new Date(2009,4,14)],
+		[	'Phone',	'Nokia 5800 Music Xpress', new Date(2009,4,14), new Date(2010,7,23)],
 		[	'Phone',	'Samsung Galaxy SI', new Date(2010,7,23), new Date(2012,1,16)],
 		[	'Phone',	'Samsung Galaxy SII', new Date(2012,1,16), new Date(2013,9,31)],
 		[	'Phone',	'Nexus 5', new Date(2013,9,31), new Date(2016,4,30)],
