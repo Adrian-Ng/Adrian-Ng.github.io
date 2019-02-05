@@ -22,13 +22,16 @@ To launch the REPL, run the following in the terminal:
 ```
 
 
-Pull datafrom HDFS.
+Pull Enron data from HDFS.
 ```scala
 val seq20 = sc.wholeTextFiles("hdfs://localhost:54310/user/hduser/in/enron20.seq").first._2.split("\n\n").filter(line => line.contains("Date:"))
 ```
 
 
-and then I define a Scala function:
+and then I define a Scala function. This function scrapes each email and via _Regex_, parses the following info:
+* sender
+* recipient
+* date 
 
 ```scala
 def emitRecipTriplet (email:String) : Seq[String] = {

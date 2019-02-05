@@ -346,6 +346,16 @@ defaults:
       share: true
       sidebar:
         nav: "Java"
+  # _scala
+  - scope:
+      path: ""
+      type: scala
+    values:
+      layout: single
+      author_profile: false
+      share: true
+      sidebar:
+        nav: "Scala"
   # _matlab
   - scope:
       path: ""
