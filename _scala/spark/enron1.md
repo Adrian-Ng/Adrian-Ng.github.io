@@ -6,7 +6,15 @@ toc: true
 mathjax: true
 ---
 
-I downloaded Apache Spark from here: (spark.apache.org/downloads.html)[spark.apache.org/downloads.html].
+## Intro
+
+I wrote a number of _Apache Hadoop_ applications in Java. I found writing these applications a frustrating exercise in verbosity.
+
+One in particular involved some data mining of the _Enron Corpus_. This is my so-called _Timeslicer_, which can be found on GitHub.
+
+On this page, I will attempt to do the same in `spark`. To accomplish this, I've downloaded and installed it on top of my `Hadoop` installation. As such, Spark can simply pull data from HDFS, where all my Enron data already lives.
+
+I downloaded Apache Spark from here: [spark.apache.org/downloads.html](spark.apache.org/downloads.html).
 and installed it via terminal:
 
 ```bash
@@ -82,6 +90,8 @@ for(email <- seq20) {
 	buf ++= emitRecipTriplet(email)
 }
 ```
+`++=` lets me add (union?) a collection to a collection. In this case, I'm adding a `Seq` to a `ListBuffer`. Each element in `buf` is a `String` and not a `Seq` (I didn't believe it myself, so I checked).
+
 
 Lastly, I sort the collection, cast to RDD type and save in HDFS.
 
@@ -89,4 +99,10 @@ Lastly, I sort the collection, cast to RDD type and save in HDFS.
 val enronRDD = sc.parallelize(buf.sorted)
 enronRDD.saveAsTextFile("hdfs://localhost:54310/user/hduser/out/enronRDD1")
 ```
+Problem with this is it does not overwrite. I'll have to write this in terminal:
 
+```bash
+hadoop fs -rm -r /user/hduser/out/enronRDD1/
+```
+
+Also, I think `hadoop fs` is deprecated - I will have to fix that!
