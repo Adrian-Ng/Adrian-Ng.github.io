@@ -312,6 +312,9 @@ collections:
   java:
     output: true
     permalink: /:collection/:path/
+  scala:
+    output: true
+    permalink: /:collection/:path/
   matlab:
     output: true
     permalink: /:collection/:path/
