@@ -67,26 +67,6 @@ Since we are only interested in the value, we specify `_2` to indicate the secon
 
 This file contains only one tuple (=line). As such, `first` is redundant but nonetheless we can split and filter such that each block of email header is on its own line.
 
-This would look something like:
-
-```
-Date: Mon, 28 Aug 2000 06:57:00 -0700 (PDT)
-From: mark.rodriguez@enron.com
-To: george.mcclellan@enron.com, daniel.reck@enron.com, stuart.staley@enron.com,
- michael.beyer@enron.com, kevin.mcgowan@enron.com,
- jeffrey.shankman@enron.com, mike.mcconnell@enron.com,
- paula.harris@enron.com
-Subject: Hotsheet Update
-Mime-Version: 1.0
-Content-Type: text/plain; charset=us-ascii
-Content-Transfer-Encoding: 7bit
-X-From: Mark Anthony Rodriguez
-X-To: George McClellan, Daniel Reck, Stuart Staley, Michael J Beyer, Kevin McGowan, Jeffrey A Shankman, Mike McConnell, Paula Harris
-X-cc:
-X-bcc:
-X-Folder: \Mark_McConnell_June2001\N..
-```
-
 ## Parsing 
 
 We are interested in scraping three bits of information:
@@ -95,13 +75,42 @@ We are interested in scraping three bits of information:
 * recipient
 * date 
 
-Let's look at how to do this in a single email. Given that `seq20` contains a number of emails, we can 
+Let's look at how to do this in a single email. Given that `Seq` types are indexed, we just write:
 
 ```scala
-val email = seq20(0)
+val email = seq20(1)
+```
+This returns the second email in this collection, which looks like:
+
+```
+M.A.
+??????? ?folder-2???�Message-ID: <4152796.1075843929751.JavaMail.evans@thyme>
+Date: Sun, 29 Apr 2001 11:54:00 -0700 (PDT)
+From: george.mcclellan@enron.com
+To: sven.becker@enron.com
+Subject: RE: Summary on Bremen Deal
+Cc: stuart.staley@enron.com, manfred.ungethum@enron.com,
+ mike.mcconnell@enron.com, jeffrey.shankman@enron.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=ANSI_X3.4-1968
+Content-Transfer-Encoding: quoted-printable
+Bcc: stuart.staley@enron.com, manfred.ungethum@enron.com,
+ mike.mcconnell@enron.com, jeffrey.shankman@enron.com
+X-From: George Mcclellan
+X-To: Sven Becker
+X-cc: Stuart Staley, Manfred Ungethum, Mike McConnell, Jeffrey A Shankman
+X-bcc:
+X-Folder: \Mark_McConnell_June2001\Notes Folders\Coal
+X-Origin: MCCONNELL-M
+X-FileName: mmcconn.nsf
 ```
 
-### Sender
+
+### Singleton Fields
+
+To scrape the sender and date, we look for either `From: ` and `Date: ` and scrape the remainer of the line:
+
+#### From
 
 ```scala
 val sender = email.replace("\n\t","").
@@ -111,7 +120,7 @@ val sender = email.replace("\n\t","").
     trim()
 ```
 
-### Date
+#### Date
 
 ```scala
 val date = email.
@@ -122,7 +131,7 @@ val date = email.
     trim() 
 ```
 
-### Recipients
+### Multiple Elements
 
 A recipient is denoted in multiple ways:
 
@@ -135,30 +144,121 @@ We want to scrape all these prefixes. So I just throw these in a collection:
 ```scala
 val recipPrefix = Seq("To:","Cc:","Bcc:")
 ```
+So we want to iterate through each prefix and scrape the header. We can do this via an anonymous function known as a _For Comprehension_. I suppose this is analogous to a _List Comprehension_ in Python, _apply_ in R, and _lambda_ in Java.
 
-I want to iterate through each prefix and scrape the header. We can do this via an anonymous function known as a _For Comprehension_. I suppose this is analogous to a _List Comprehension_ in Python, _apply_ in R, and _lambda_ in Java.
-
-This is the end result:
+The below is an example of _For Comprehension_
 
 ```scala
-	val recipientSeq = (
-		for {
-		prefix <- recipPrefix
-		x <- email. // this is a flatmap
-			replace("\n\t","").
-			split("\n").
-			filter(line => line.startsWith(prefix)).
-			collect { case s if (s.contains(":")) =>
-				s.substring(prefix.length + 1)
-			}
-		y <- x.split(", ") //another flatmap
-		} yield 
-		{
-			y
-		}// comprehension "body"	
-	).toSet.toSeq
+for (prefix <- recipPrefix){
+	println(prefix)
+}
 ```
-This returns a `Seq` of email addresses. It looks like:
+
+It iterates through `recipPrefix` and prints each element:
+
+```
+To:
+Cc:
+Bcc:
+```
+
+But if I want it to return something (instead of printing), I can write `yield`:
+
+```scala
+for (prefix <- recipPrefix) yield{
+	prefix
+}
+```
+This will return the same type as the input. In this case, `Seq`.
+
+Now we can perform a similar regex as before:
+
+```scala
+for (prefix <- recipPrefix) yield{
+	email.
+	replace("\n\t","").
+	split("\n").
+	filter(line => line.startsWith(prefix))
+}
+```
+This returns a `Seq` of three elements (one for each prefix).
+
+
+```
+res0: Seq[Array[String]] = List(Array(To: george.mcclellan@enron.com, daniel.reck@enron.com, stuart.staley@enron.com, michael.beyer@enron.com, kevin.mcgowan@enron.com, jeffrey.shankman@enron.com, mike.mcconnell@enron.com, paula.harris@enron.com), Array(), Array())
+```
+There are some issues with this output
+
+* Each element is of type `Array[String]`. This is due to our use of `split()`. 
+* Notice how some of these arrays are empty. This is because `Cc: ` and `Bcc: ` prefixes for this email did not appear in the header (because those fields had not been populated).
+* Lastly, the prefixes have not yet been removed from the string. I.e., `To:` is still present in the first element.
+
+Let's first tackle the last bullet first. As with any _regex_ problem like this, we can solve with `substring()`, which returns a smaller portion of the string -- a _substring_!
+
+```scala
+val recipients =  for (prefix <- recipPrefix) yield{
+	email.
+	replace("\n\t","").
+	split("\n").
+	filter(line => line.startsWith(prefix)).
+	map(_.substring(prefix.length + 1)).
+}
+```
+
+```
+recipients: Seq[Array[String]] = List(Array(sven.becker@enron.com), Array(stuart.staley@enron.com, manfred.ungethum@enron.com, mike.mcconnell@enron.com, jeffrey.shankman@enron.com), Array(stuart.staley@enron.com, manfred.ungethum@enron.com, mike.mcconnell@enron.com, jeffrey.shankman@enron.com))
+```
+Great, the prefix no longer appears in each `Array[String]`.
+
+### Nested For Comprehension
+
+A `For Comprehension` translates to:
+
+```scala
+recipPrefix.forEach(prefix => println(prefix))
+```
+Indeed, we could have nested `For Comprehension`. This is especially useful in our case, as we now need to loop through each element in `Array[String]` and `split()` it:
+
+```scala
+val recipients =  for {
+	prefix <- recipPrefix
+	x <- email.
+		replace("\n\t","").
+		split("\n").
+		filter(line => line.startsWith(prefix)).
+		map(_.substring(prefix.length + 1))
+	y <- x.split(", ")
+	}
+	yield{
+	y
+}
+```
+
+```
+recipients: Seq[String] = List(sven.becker@enron.com, stuart.staley@enron.com, manfred.ungethum@enron.com, mike.mcconnell@enron.com, jeffrey.shankman@enron.com,stuart.staley@enron.com, manfred.ungethum@enron.com, mike.mcconnell@enron.com, jeffrey.shankman@enron.com)
+```
+
+We can cast to `Set` to remove duplicates and then cast back to `Seq`. the final `For Comprehension` is written thus:
+
+```scala
+val recipientSeq = (
+for {
+	prefix <- recipPrefix
+	x <- email. // this is a flatmap
+		replace("\n\t","").
+		split("\n").
+		filter(line => line.startsWith(prefix)).
+		collect { case s if (s.contains(":")) =>
+			s.substring(prefix.length + 1)
+		}
+	y <- x.split(", ") //another flatmap
+} yield 
+{
+	y
+}// comprehension "body"	
+).toSet.toSeq
+```
+It looks like:
 
 ```
 recipientSeq: Seq[String] = ArrayBuffer(michael.beyer@enron.com, kevin.mcgowan@enron.com, stuart.staley@enron.com, george.mcclellan@enron.com, mike.mcconnell@enron.com, paula.harris@enron.com, jeffrey.shankman@enron.com, daniel.reck@enron.com)
@@ -166,7 +266,7 @@ recipientSeq: Seq[String] = ArrayBuffer(michael.beyer@enron.com, kevin.mcgowan@e
 
 ## Encapsulation
 
-We can wrap all of the above in a function:
+We can wrap all of the above in a class:
 
 ```scala
 def emitRecipTriplet (email:String) : Seq[String] = {
@@ -201,14 +301,14 @@ def emitRecipTriplet (email:String) : Seq[String] = {
 }
 ```
 
-This function takes a single email as input. For each input, it returns a collection (Seq) of tuples.
+This class takes a single email as input. For each input, it returns a collection (Seq) of tuples.
 Each tuple would look like:
 ```
 from:			to:				date:
 bill.cordes@enron.com	mike.mcconnell@enron.com	Mon, 24 Jul 2000 00:28:00 -0700 (PDT)
 ```
 
-Given that each line in the data represents an email, we need to use a `For Comprehension` to iterate through the email corpus and add each output to a mutable collection, `buf`.
+Now we can use this class over the entire corpus.
 
 ```scala
 val buf = scala.collection.mutable.ListBuffer.empty[String]
