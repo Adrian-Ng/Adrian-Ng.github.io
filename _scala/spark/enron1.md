@@ -238,30 +238,37 @@ val recipients =  for {
 recipients: Seq[String] = List(sven.becker@enron.com, stuart.staley@enron.com, manfred.ungethum@enron.com, mike.mcconnell@enron.com, jeffrey.shankman@enron.com,stuart.staley@enron.com, manfred.ungethum@enron.com, mike.mcconnell@enron.com, jeffrey.shankman@enron.com)
 ```
 
-We can cast to `Set` to remove duplicates and then cast back to `Seq`. the final `For Comprehension` is written thus:
+We cast (over the entire comprehension) to `Set` to remove duplicates and then cast back to `Seq`. the final `For Comprehension` is written thus:
 
 ```scala
 val recipientSeq = (
 for {
 	prefix <- recipPrefix
-	x <- email. // this is a flatmap
+	x <- email. // this is a forEach -- iterating through Seq
 		replace("\n\t","").
 		split("\n").
 		filter(line => line.startsWith(prefix)).
-		collect { case s if (s.contains(":")) =>
-			s.substring(prefix.length + 1)
-		}
-	y <- x.split(", ") //another flatmap
+		map(_.substring(prefix.length + 1))
+		// the below also worked in place of map()
+		// collect { case s if (s.contains(":")) =>
+			//s.substring(prefix.length + 1)
+	y <- x.split(", ") //another forEach -- iterating through Array[String]
 } yield 
 {
-	y
-}// comprehension "body"	
-).toSet.toSeq
+	y	// return y
+}
+).toSet.toSeq // cast remove duplicates and cast again to initial type
 ```
 It looks like:
 
 ```
-recipientSeq: Seq[String] = ArrayBuffer(michael.beyer@enron.com, kevin.mcgowan@enron.com, stuart.staley@enron.com, george.mcclellan@enron.com, mike.mcconnell@enron.com, paula.harris@enron.com, jeffrey.shankman@enron.com, daniel.reck@enron.com)
+recipientSeq: Seq[String] = ArrayBuffer(stuart.staley@enron.com, mike.mcconnell@enron.com, jeffrey.shankman@enron.com, sven.becker@enron.com, manfred.ungethum@enron.com)
+```
+This returns nine unique email address!
+
+```
+scala> recipients.size
+res19: Int = 9
 ```
 
 ## Encapsulation
@@ -287,9 +294,7 @@ def emitRecipTriplet (email:String) : Seq[String] = {
 			replace("\n\t","").
 			split("\n").
 			filter(line => line.startsWith(prefix)).
-			collect { case s if (s.contains(":")) =>
-				s.substring(prefix.length + 1)
-			}
+			map(_.substring(prefix.length + 1))
 		y <- x.split(", ") //another flatmap
 		} yield 
 		{
@@ -308,7 +313,7 @@ from:			to:				date:
 bill.cordes@enron.com	mike.mcconnell@enron.com	Mon, 24 Jul 2000 00:28:00 -0700 (PDT)
 ```
 
-Now we can use this class over the entire corpus.
+Now we can use this class to iterate and scrape entire corpus.
 
 ```scala
 val buf = scala.collection.mutable.ListBuffer.empty[String]
@@ -319,6 +324,64 @@ for(email <- seq20) {
 ```
 `++=` lets me add (union?) a collection to a collection. In this case, I'm adding a `Seq` to a `ListBuffer`. Each element in `buf` is a `String` and not a `Seq` (I didn't believe it myself, so I checked).
 
+```scala
+for (tuple <- buf){
+	println(tuple)
+}
+```
+
+```
+mark.rodriguez@enron.com        michael.beyer@enron.com Mon, 28 Aug 2000 06:57:00 -0700 (PDT)
+mark.rodriguez@enron.com        kevin.mcgowan@enron.com Mon, 28 Aug 2000 06:57:00 -0700 (PDT)
+mark.rodriguez@enron.com        stuart.staley@enron.com Mon, 28 Aug 2000 06:57:00 -0700 (PDT)
+mark.rodriguez@enron.com        george.mcclellan@enron.com      Mon, 28 Aug 2000 06:57:00 -0700 (PDT)
+mark.rodriguez@enron.com        mike.mcconnell@enron.com        Mon, 28 Aug 2000 06:57:00 -0700 (PDT)
+mark.rodriguez@enron.com        paula.harris@enron.com  Mon, 28 Aug 2000 06:57:00 -0700 (PDT)
+mark.rodriguez@enron.com        jeffrey.shankman@enron.com      Mon, 28 Aug 2000 06:57:00 -0700 (PDT)
+mark.rodriguez@enron.com        daniel.reck@enron.com   Mon, 28 Aug 2000 06:57:00 -0700 (PDT)
+george.mcclellan@enron.com      stuart.staley@enron.com Sun, 29 Apr 2001 11:54:00 -0700 (PDT)
+george.mcclellan@enron.com      mike.mcconnell@enron.com        Sun, 29 Apr 2001 11:54:00 -0700 (PDT)
+george.mcclellan@enron.com      jeffrey.shankman@enron.com      Sun, 29 Apr 2001 11:54:00 -0700 (PDT)
+george.mcclellan@enron.com      sven.becker@enron.com   Sun, 29 Apr 2001 11:54:00 -0700 (PDT)
+george.mcclellan@enron.com      manfred.ungethum@enron.com      Sun, 29 Apr 2001 11:54:00 -0700 (PDT)
+stuart.staley@enron.com mike.mcconnell@enron.com        Fri, 4 May 2001 09:10:00 -0700 (PDT)
+stuart.staley@enron.com jeffrey.shankman@enron.com      Fri, 4 May 2001 09:10:00 -0700 (PDT)
+stuart.staley@enron.com george.mcclellan@enron.com      Sun, 3 Dec 2000 14:59:00 -0800 (PST)
+stuart.staley@enron.com jeffrey.shankman@enron.com      Sun, 3 Dec 2000 14:59:00 -0800 (PST)
+stuart.staley@enron.com mike.mcconnell@enron.com        Sun, 3 Dec 2000 14:59:00 -0800 (PST)
+george.mcclellan@enron.com      michael.beyer@enron.com Mon, 31 Jul 2000 05:48:00 -0700 (PDT)
+george.mcclellan@enron.com      kevin.mcgowan@enron.com Mon, 31 Jul 2000 05:48:00 -0700 (PDT)
+george.mcclellan@enron.com      stuart.staley@enron.com Mon, 31 Jul 2000 05:48:00 -0700 (PDT)
+george.mcclellan@enron.com      mike.mcconnell@enron.com        Mon, 31 Jul 2000 05:48:00 -0700 (PDT)
+george.mcclellan@enron.com      jeffrey.shankman@enron.com      Mon, 31 Jul 2000 05:48:00 -0700 (PDT)
+george.mcclellan@enron.com      daniel.reck@enron.com   Mon, 31 Jul 2000 05:48:00 -0700 (PDT)
+george.mcclellan@enron.com      jordan.mintz@enron.com  Sat, 16 Sep 2000 03:00:00 -0700 (PDT)
+george.mcclellan@enron.com      angie.collins@enron.com Sat, 16 Sep 2000 03:00:00 -0700 (PDT)
+george.mcclellan@enron.com      matthew.arnold@enron.com        Sat, 16 Sep 2000 03:00:00 -0700 (PDT)
+george.mcclellan@enron.com      mike.mcconnell@enron.com        Sat, 16 Sep 2000 03:00:00 -0700 (PDT)
+george.mcclellan@enron.com      jeffrey.shankman@enron.com      Sat, 16 Sep 2000 03:00:00 -0700 (PDT)
+george.mcclellan@enron.com      daniel.reck@enron.com   Sat, 16 Sep 2000 03:00:00 -0700 (PDT)
+george.mcclellan@enron.com      michael.beyer@enron.com Fri, 1 Sep 2000 06:04:00 -0700 (PDT)
+george.mcclellan@enron.com      tom.kearney@enron.com   Fri, 1 Sep 2000 06:04:00 -0700 (PDT)
+george.mcclellan@enron.com      kevin.mcgowan@enron.com Fri, 1 Sep 2000 06:04:00 -0700 (PDT)
+george.mcclellan@enron.com      stuart.staley@enron.com Fri, 1 Sep 2000 06:04:00 -0700 (PDT)
+george.mcclellan@enron.com      mike.mcconnell@enron.com        Fri, 1 Sep 2000 06:04:00 -0700 (PDT)
+george.mcclellan@enron.com      jeffrey.shankman@enron.com      Fri, 1 Sep 2000 06:04:00 -0700 (PDT)
+george.mcclellan@enron.com      daniel.reck@enron.com   Fri, 1 Sep 2000 06:04:00 -0700 (PDT)
+george.mcclellan@enron.com      mike.mcconnell@enron.com        Thu, 30 Nov 2000 07:19:00 -0800 (PST)
+george.mcclellan@enron.com      jeffrey.shankman@enron.com      Thu, 30 Nov 2000 07:19:00 -0800 (PST)
+mary.joyce@enron.com    mike.mcconnell@enron.com        Mon, 11 Sep 2000 02:13:00 -0700 (PDT)
+d.hall@enron.com        mike.mcconnell@enron.com        Thu, 24 Aug 2000 00:40:00 -0700 (PDT)
+d.hall@enron.com        cathy.phillips@enron.com        Thu, 24 Aug 2000 00:40:00 -0700 (PDT)
+cathy.phillips@enron.com        mike.mcconnell@enron.com        Thu, 7 Sep 2000 13:15:00 -0700 (PDT)
+cathy.phillips@enron.com        deb.gebhardt@enron.com  Thu, 7 Sep 2000 13:15:00 -0700 (PDT)
+jay.hatfield@enron.com  mike.mcconnell@enron.com        Mon, 11 Sep 2000 02:04:00 -0700 (PDT)
+bill.cordes@enron.com   mike.mcconnell@enron.com        Mon, 24 Jul 2000 00:28:00 -0700 (PDT)
+enron.announcements@enron.com   all.houston@enron.com   Fri, 8 Sep 2000 14:59:00 -0700 (PDT)
+john.haggerty@enron.com mike.mcconnell@enron.com        Sun, 10 Sep 2000 01:13:00 -0700 (PDT)
+john.nowlan@enron.com   jeffrey.shankman@enron.com      Thu, 21 Sep 2000 10:25:00 -0700 (PDT)
+john.nowlan@enron.com   mike.mcconnell@enron.com        Thu, 21 Sep 2000 10:25:00 -0700 (PDT)
+```
 
 Lastly, I sort the collection, cast to RDD type and save in HDFS.
 
