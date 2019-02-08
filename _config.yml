@@ -318,6 +318,9 @@ collections:
   matlab:
     output: true
     permalink: /:collection/:path/
+  notes: 
+    output: true
+    permalink: /:collection/:path/  
 defaults:
   # _SQL
   - scope:
@@ -369,3 +372,13 @@ defaults:
       share: true
       sidebar:
          nav: "MATLAB"
+  # notes
+  - scope:
+      path: ""
+      type: notes
+    values:
+      layout: single
+      author_profile: false
+      share: true
+      sidebar:
+         nav: "Notes"         
