@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: Portfolio
 title: "Notes"
 permalink: /notes/
 collection: notes
