@@ -15,7 +15,6 @@ gallery:
 - url: /assets/images/headers/montecarlo_options.jpg
   image_path: /assets/images/splash/montecarlo_options.jpg
   alt: ""
-
 - url: /assets/images/headers/optionpricer.jpg
   image_path: /assets/images/splash/optionpricer.jpg
   alt: ""    
