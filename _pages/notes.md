@@ -6,6 +6,8 @@ collection: notes
 mathjax: true
 classes: wide
 entries_layout: grid
+sidebar:
 nav: Notes
 ---
 
+{% include nav_list nav="Notes" %}
