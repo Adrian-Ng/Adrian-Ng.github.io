@@ -6,4 +6,5 @@ collection: notes
 mathjax: true
 classes: wide
 entries_layout: grid
+nav: notes
 ---
