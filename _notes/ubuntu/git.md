@@ -3,6 +3,7 @@ layout: single
 title: "Git"
 permalink: /notes/git/
 toc: true
+categories: ubuntu
 ---
 
 ## git setup
