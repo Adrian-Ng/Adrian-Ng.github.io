@@ -4,6 +4,7 @@ title: "adrian.ng"
 permalink: /notes/ssh/
 toc: true
 excerpt: because I always have problems with localhost
+---
 
 # ssh
 
