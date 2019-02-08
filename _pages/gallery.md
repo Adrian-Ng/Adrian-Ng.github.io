@@ -12,7 +12,10 @@ gallery:
 - url: /assets/images/headers/binomialTrees.jpg
   image_path: /assets/images/splash/binomialTrees.jpg
   alt: "Angkor Wat"
-
+- url: /assets/images/headers/montecarlo_options.jpg
+  image_path: /assets/images/splash/montecarlo_options.jpg
+  alt: ""
+    
 ---
 
 {% include gallery caption="This is a sample gallery with **Markdown support**." %}
