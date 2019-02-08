@@ -2,7 +2,6 @@
 layout: single
 title: "Packages"
 permalink: /notes/packages/
-toc: true
 excerpt: because I can't remember how to install anything on Ubuntu
 categories: ubuntu
 ---
