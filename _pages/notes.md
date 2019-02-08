@@ -1,5 +1,5 @@
 ---
-layout: collection
+layout: category
 title: "Notes"
 permalink: /notes/
 collection: notes
@@ -7,5 +7,3 @@ mathjax: true
 classes: wide
 entries_layout: grid
 ---
-
-$$\leftarrow$$ Notes over here
