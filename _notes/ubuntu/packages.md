@@ -50,20 +50,6 @@ code --verbose
 # if x11 doesn't like your GPU
 code --disable-gpu
 ```
-# github setup
-
-```bash
-git config --global user.name ""
-git config --global user.email ""
-
-git config --global credential.helper store
-```
-# ssh
-
-because I always have problems with `ssh localhost` on `wsl`
-```bash
-sudo service ssh start
-```
 # TeX
 
 ```bash

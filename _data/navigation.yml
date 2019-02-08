@@ -10,6 +10,10 @@ Notes:
      children:
      - title: "Packages"
        url: /notes/packages/
+     - title: "Git"
+       url: /notes/git/
+     - title: "SSH"  
+       url: /notes/ssh/
 # SQL links
 SQL:
    - title: Data Definition Language
