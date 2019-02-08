@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "adrian.ng"
+title: "SSH"
 permalink: /notes/ssh/
 toc: true
 excerpt: because I always have problems with localhost

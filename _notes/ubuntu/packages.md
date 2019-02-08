@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "adrian.ng"
+title: "Packages"
 permalink: /notes/packages/
 toc: true
 excerpt: because I can't remember how to install anything on Ubuntu

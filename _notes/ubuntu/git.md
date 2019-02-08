@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "adrian.ng"
+title: "Git"
 permalink: /notes/git/
 toc: true
 ---

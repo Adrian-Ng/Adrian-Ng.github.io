@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "adrian.ng"
+title: "Notes"
 permalink: /notes/
 mathjax: true
 ---
