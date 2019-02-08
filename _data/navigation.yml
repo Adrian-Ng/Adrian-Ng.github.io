@@ -3,7 +3,9 @@ main:
 #   - title: "Home"
  #    url: http://adrian.ng/  
    - title: "Gallery"
-     url: http://adrian.ng/gallery/
+     url: https://adrian.ng/gallery/
+   - title: "Notes"
+     url: https://adrian.ng/notes/
 # SQL links
 SQL:
    - title: Data Definition Language
@@ -103,5 +105,7 @@ Java:
       - title: "Callable Futures"
         url: /java/threads/callablefutures/
       - title: "readTxt"
-        url: /java/utils/readtxt/        
+        url: /java/utils/readtxt/  
+        
+  
 
