@@ -7,7 +7,7 @@ main:
 # Notes
 Notes:
    - title: Ubuntu
-   children:
+     children:
      - title: "Packages"
        url: /notes/packages/
 # SQL links
@@ -74,8 +74,7 @@ SQL:
    - title: Music DB
      url: /SQL/musicDB/
 # Java links
-Java:   
-    
+Java:       
    - title: Option Pricer
      url: /java/options/
      children:
