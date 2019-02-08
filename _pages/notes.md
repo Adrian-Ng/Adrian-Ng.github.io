@@ -7,7 +7,5 @@ mathjax: true
 classes: wide
 entries_layout: grid
 sidebar:
-nav: Notes
+nav: notes
 ---
-
-{% include nav_list nav="Notes" %}
