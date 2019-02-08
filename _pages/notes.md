@@ -1,5 +1,5 @@
 ---
-layout: category
+layout: categories
 title: "Notes"
 permalink: /notes/
 collection: notes
