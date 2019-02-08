@@ -9,7 +9,10 @@ gallery:
 - url: /assets/images/headers/yahoofinance.jpg
   image_path: /assets/images/splash/yahoofinance.jpg
   alt: "Skaftafellsjökull"
-    
+- url: /assets/images/headers/binomialTrees.jpg
+  image_path: /assets/images/splash/binomialTrees.jpg
+  alt: "Angkor Wat"
+
 ---
 
 {% include gallery caption="This is a sample gallery with **Markdown support**." %}
