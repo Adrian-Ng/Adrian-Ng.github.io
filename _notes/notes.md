@@ -5,4 +5,4 @@ permalink: /notes/
 mathjax: true
 ---
 
-$$\rightarrow$$ Notes over here
+$$\leftarrow$$ Notes over here
