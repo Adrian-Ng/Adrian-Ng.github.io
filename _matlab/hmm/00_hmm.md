@@ -84,5 +84,88 @@ $$
 = p_3^{\text{initial}} p_{3,1} p_{1,2} p_{2,1} p_{3,2} b_{1,2} b_{2,1} b_{1,3} 
 $$
 
-### What questions can we ask?
+## Filtering
+
+Filtering problems are about finding the final states of the HMM.
+
+Suppose we have the following observations:
+
+$$
+v_1, v_2, \ldots, v_T
+$$
+
+We want to find the following probability for all states $$H_T = s_i$$:
+
+$$
+\mathbb{P}(H_T = s_i, v_1, \ldots, v_T)
+$$
+
+### Naive Approach
+
+To do this, we just sum over all paths that end in $$H_T = s_i$$
+
+But if there are $$N$$ states, then there are $$N^{T-1}$$ paths in the chain. So there is actually a better way of doing this.
+
+### Alpha
+
+We are interested in the probability alpha, which is:
+
+$$
+\alpha_T(i) = \mathbb{P}(H_T = s_i, v_1, \ldots, v_T)
+$$
+
+
+$$
+\begin{matrix}
+\text{time} & & \cdots && T-1 && T
+\\
+ &&&&&p_{i,j}  & \tiny \leftarrow \text{(transition probability)}
+\\
+\text{hidden states} 
+
+     &&&&  \bullet & \searrow &&& 
+\\
+
+\\
+     &&&& \bullet & \rightarrow & \bullet s_j
+\\
+\\
+     &&&& \bullet & \nearrow &&& 
+\\
+\\
+\text{emission} &&  \cdots && V_{T-1} && V_T
+
+\end{matrix}
+$$
+
+Now for each alpha we need $$N$$ operations and there are $$NT$$ values of alpha - much better than $$N^{T-1}$$!
+
+This sort of trick goes under the name of _dynamic programming_ (=optimisation).
+
+## Example
+
+$$
+M = \left( 
+\begin{matrix}
+    0.8 & 0.2 \\ 0.3 & 0.7
+\end{matrix}
+\right)
+
+\quad 
+B = \left(
+\begin{matrix}
+    0.3 & 0.4 & 0.1 & 0.2 \\ 0.2 & 0.2 & 0.3 & 0.3
+\end{matrix}
+\right)
+\quad
+p = \left(
+    \begin{matrix}
+    0.4 \\ 0.6
+    \end{matrix}
+    \right)
+$$
+
+Observations in the sequence:
+
+$$ x_4, x_1, x_2 $$
 
