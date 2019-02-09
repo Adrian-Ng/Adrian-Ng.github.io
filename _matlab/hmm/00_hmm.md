@@ -22,13 +22,13 @@ V_1 & & V_2 &  & \cdots &  & V_{T-1} & & V_T
 \end{matrix}
 $$
 
-In a **Hidden Markov Model**, we have a first order stationary process $H_1, H_2, \ldots$
+In a **Hidden Markov Model**, we have a first order stationary process $$H_1, H_2, \ldots$$
   * These can be in a finite number of spaces
   * These have transition probabilities
   
-On top of this, there is a mechanism that produces variables $V$, which are observable - $H$ variables are _hidden_.
+On top of this, there is a mechanism that produces variables $$V$$, which are observable - $$H$$ variables are _hidden_.
 
-In other words, only $V_T$ is impacted by other variables through $H_T$
+In other words, only $$V_T$$ is impacted by other variables through $$H_T$$
 
 ## Use cases of Hidden Markov Models
 
@@ -43,9 +43,9 @@ Speech can be thought of as emissions from text. We can easily find the paramete
 
 Here is a Hidden Markov Chain with:
 
-* Hidden states $s_1, s_2, s_3$
-* Transition probabilities $p$
-* Emission probabilities $b$ (found from the emission matrix $B$)
+* Hidden states $$s_1, s_2, s_3$$
+* Transition probabilities $$p$$
+* Emission probabilities $$b$$ (found from the emission matrix $$B$$)
 
 $$
 \begin{matrix}
@@ -79,7 +79,9 @@ $$
 we calcuate the probability of join state as:
 
 $$
-\mathbb{P}(H_1 = s_3, H_2 = s_1, H_3 = s_2, H_4 = s_1, V_1 = x_2, V_2 = x_2, V_3 = x_1, V_4 = x_3) = p_3^{\text{initial}} p_{3,1} p_{1,2} p_{2,1} p_{3,2} b_{1,2} b_{2,1} b_{1,3} 
+\mathbb{P}(H_1 = s_3, H_2 = s_1, H_3 = s_2, H_4 = s_1, V_1 = x_2, V_2 = x_2, V_3 = x_1, V_4 = x_3) 
+\\
+= p_3^{\text{initial}} p_{3,1} p_{1,2} p_{2,1} p_{3,2} b_{1,2} b_{2,1} b_{1,3} 
 $$
 
 ### What questions can we ask?
