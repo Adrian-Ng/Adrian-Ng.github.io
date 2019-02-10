@@ -106,7 +106,7 @@ To do this, we just sum over all paths that end in $$H_T = s_i$$
 
 But if there are $$N$$ states, then there are $$N^{T-1}$$ paths in the chain. So there is actually a better way of doing this.
 
-### Alpha
+## Alpha
 
 We are interested in the probability alpha, which is:
 
@@ -147,7 +147,7 @@ $$
 
 This sort of trick goes under the name of _dynamic programming_ (=optimisation).
 
-## MATLAB Implementation
+### MATLAB Implementation
 
 
 ```matlab
@@ -174,7 +174,7 @@ function a = alpha_dynamic(M,p,B,v)
 end
 ```
 
-## Example
+### Example
 
 $$
 M = \left( 
@@ -201,7 +201,7 @@ Observations in the sequence:
 
 $$ x_4, x_1, x_2 $$
 
-## Output
+### Output
 
 $$
 \begin{matrix}
