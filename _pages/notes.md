@@ -1,5 +1,5 @@
 ---
-layout: categories
+layout: collections
 title: "Notes"
 permalink: /notes/
 collection: notes
@@ -8,6 +8,7 @@ classes: wide
 entries_layout: grid
 sidebar:
     nav: notes    
+taxonomy: java
 ---
 {% capture written_label %}'None'{% endcapture %}
 
