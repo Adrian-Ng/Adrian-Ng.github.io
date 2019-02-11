@@ -49,6 +49,10 @@ scala>
 ```
 Note: it's `:quit` to quit the REPL.
 
+### VS Code
+
+I find it convenient to write my `Scala` in _VS Code_ and take advantage of the built-in terminal. In this environment, I can simply highlight some code and hit a keybind of my chosing to run it in terminal. I've bound `alt-X` to do this as it's what I'm familiar with from using _SQL Server_.
+
 ## Data Pull
 
 Now we can pull data from _HDFS_.
