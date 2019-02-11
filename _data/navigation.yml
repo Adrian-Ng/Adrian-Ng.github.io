@@ -1,9 +1,19 @@
 # main links
 main:
-#   - title: "Home"
- #    url: http://adrian.ng/  
    - title: "Gallery"
-     url: http://adrian.ng/gallery/
+     url: https://adrian.ng/gallery/
+   - title: "Notes"
+     url: https://adrian.ng/notes/
+# Notes
+Notes:
+   - title: Ubuntu
+     children:
+     - title: "Packages"
+       url: /notes/packages/
+     - title: "Git"
+       url: /notes/git/
+     - title: "SSH"  
+       url: /notes/ssh/
 # SQL links
 SQL:
    - title: Data Definition Language
@@ -68,8 +78,7 @@ SQL:
    - title: Music DB
      url: /SQL/musicDB/
 # Java links
-Java:   
-    
+Java:       
    - title: Option Pricer
      url: /java/options/
      children:
@@ -103,5 +112,4 @@ Java:
       - title: "Callable Futures"
         url: /java/threads/callablefutures/
       - title: "readTxt"
-        url: /java/utils/readtxt/        
-
+        url: /java/utils/readtxt/

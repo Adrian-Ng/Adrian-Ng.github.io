@@ -396,7 +396,7 @@ enronRDD.saveAsTextFile("hdfs://localhost:54310/user/hduser/out/enronRDD1")
 Problem with this is it does not overwrite. I'll have to write this in terminal:
 
 ```bash
-hadoop fs -rm -r /user/hduser/out/enronRDD1/
+hdfs dfs -rm -r /user/hduser/out/enronRDD1/
 ```
 
-Also, I think `hadoop fs` is deprecated - I will have to fix that!
+

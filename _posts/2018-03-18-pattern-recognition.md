@@ -1,7 +1,6 @@
 ---
 layout: single
 title: Pattern Recognition
-categories: other
 ---
 
 It just so happens that my surname and Nigeria's top level domain (TLD) have something in common. You might say that this page is the result of bit of pattern recognition and good timing!

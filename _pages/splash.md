@@ -14,7 +14,7 @@ header:
     - label: "contact@adrian.ng"
       url: "mailto:contact@adrian.ng"
     - label: "CV"
-      url: "https://github.com/Adrian-Ng/cv/blob/master/cv.pdf"
+      url: "cv"
 excerpt: "This is the website of __Adrian Ng__. _My_ website. Here you will see examples of my _Java projects_ and my notes on writing _SQL_. 
 
 Along the way, you'll also visit some places I photographed long ago. Like myself, this website is very much a work in progress."
@@ -129,7 +129,7 @@ fr_sql_2:
 
 datascience:
   - title: Data Science Stuff
-    excerpt: "In 2017, I graduated from Royal Holloway with an MSc in Data Science. While I have no aspirations to be a _Data Scientist_, I did enjoy the experience of writing my own implementations of algorithms such as _K Nearest Neighbours_, _Neural Networks_, and _Hierarchical Clustering_ in __R__. Also used was __MATLAB__, which no-one uses. Therefore projects worked on in these languages will be added last."
+    excerpt: "In 2017, I graduated from Royal Holloway with an MSc in Data Science. Here, I enjoyed the experience of writing my own implementations of algorithms such as _K Nearest Neighbours_, _Neural Networks_, and _Hierarchical Clustering_ in __R__. Also used was __MATLAB__. Projects worked on in these languages will be added last."
 ---
 
 
