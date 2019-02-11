@@ -14,7 +14,7 @@ header:
     - label: "contact@adrian.ng"
       url: "mailto:contact@adrian.ng"
     - label: "CV"
-      url: "https://github.com/Adrian-Ng/cv/blob/master/cv.pdf"
+      url: "cv"
 excerpt: "This is the website of __Adrian Ng__. _My_ website. Here you will see examples of my _Java projects_ and my notes on writing _SQL_. 
 
 Along the way, you'll also visit some places I photographed long ago. Like myself, this website is very much a work in progress."
