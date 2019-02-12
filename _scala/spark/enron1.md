@@ -1,6 +1,6 @@
 ---
 title: "Scraping the Enron Corpus via Spark REPL"
-permalink: /scala/spark/enron1/
+permalink: /scala/enron1/
 excerpt: "Scraping the Enron Corpus via Spark REPL"
 toc: true
 mathjax: true
