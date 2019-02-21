@@ -47,7 +47,7 @@ Type :help for more information.
 
 scala>
 ```
-Note: it's `:quit` to quit the REPL.
+Note: it's `:quit` to quit the REPL. `ctrl-c` works too. If you're like me, you'll find yourself inadvertently quitting the REPL when attempting to copy some lines.
 
 ### VS Code
 
