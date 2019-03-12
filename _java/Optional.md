@@ -56,15 +56,14 @@ if(cred.isEmpty())
 else if(cred.get().equals(password))
     System.out.println("You are now logged into the system!");
 ```
-Not convinced this is a good application of `Optional`. Still, it's a start.
-
-The course's submission system didn't seem to like me using this API, so I rewrote my code:
+Alternatively, I could have avoided `Optional` and written this verbosity:
 
 ```java
-if(credMap.get(username) == null)
+if (credMap.get(username) == null)
     System.out.println("Your username or password was invalid!");
-else if(credMap.get(username).equals(password))
+else if (credMap.get(username).equals(password))
     System.out.println("You are now logged into the system!");
+else System.out.println("Your username or password was invalid!");
 ```
 
 
