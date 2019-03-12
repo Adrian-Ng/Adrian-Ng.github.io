@@ -51,19 +51,12 @@ We can simply wrap the HashMap in an `Optional`. Now:
 
 ```java
 Optional<String> cred = Optional.ofNullable(credMap.get(username));
+
 if(cred.isEmpty())
     System.out.println("Your username or password was invalid!");
 else if(cred.get().equals(password))
     System.out.println("You are now logged into the system!");
 ```
-Alternatively, I could have avoided `Optional` and written this verbosity:
 
-```java
-if (credMap.get(username) == null)
-    System.out.println("Your username or password was invalid!");
-else if (credMap.get(username).equals(password))
-    System.out.println("You are now logged into the system!");
-else System.out.println("Your username or password was invalid!");
-```
 
 
