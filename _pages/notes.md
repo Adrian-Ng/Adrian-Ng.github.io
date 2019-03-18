@@ -1,7 +1,6 @@
 ---
-layout: collections
+layout: archive
 title: "Notes"
 permalink: /notes/
-collection: notes
 mathjax: true
 ---
