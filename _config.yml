@@ -317,9 +317,7 @@ collections:
   matlab:
     output: true
     permalink: /:collection/:path/
-  notes: 
-    output: true
-    permalink: /:collection/:path/  
+
 defaults:
   # _SQL
   - scope:
