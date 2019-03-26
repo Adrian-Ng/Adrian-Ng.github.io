@@ -371,13 +371,4 @@ defaults:
       share: true
       sidebar:
          nav: "MATLAB"
-  # notes
-  - scope:
-      path: ""
-      type: notes
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      sidebar:
-         nav: "Notes"         
+      

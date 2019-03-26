@@ -1,5 +1,5 @@
 ---
-layout: archive
+layout: categories
 title: "Notes"
 permalink: /notes/
 mathjax: true
