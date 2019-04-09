@@ -10,5 +10,5 @@ header:
     - label: "Download"
       url: "https://github.com/Adrian-Ng/cv/raw/master/cv.pdf"
 ---
-<embed src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://github.com/Adrian-Ng/cv/raw/master/cv.pdf" width="100%" height="200">
+<embed src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://github.com/Adrian-Ng/cv/raw/master/cv.pdf" width="100%" height="150">
 
