@@ -47,7 +47,10 @@ gallery:
   alt: ""      
 - url: /assets/images/headers/cte.jpg
   image_path: /assets/images/splash/cte.jpg
-  alt: ""       
+  alt: ""   
+- url: /assets/images/headers/hadoop.jpg
+  image_path: /assets/images/splash/hadoop.jpg
+  alt: ""      
 ---
 
 {% include gallery caption="__Make sure to travel__" %}
