@@ -7,6 +7,11 @@ permalink: /selfies/
 # Selfies
 
 ## Iceland
+
+![Kerid, Iceland Dec 2019](/assets/images/bio/1000-4.jpg)
+![Geysir, Iceland Dec 2019](/assets/images/bio/1003-3.jpg)
+![Kerid, Iceland Dec 2019](/assets/images/bio/1008-2.jpg)
+![Kerid, Iceland Dec 2019](/assets/images/bio/1016.jpg)
 ![Kerid, Iceland Dec 2019](/assets/images/bio/kerid_sun.jpg)
 ![Geysir, Iceland Dec 2019](/assets/images/bio/geysir_landscape.jpg)
 ![Geysir, Iceland Dec 2019](/assets/images/bio/geysir_background.jpg)
