@@ -4,7 +4,7 @@ layout: splash
 classes: wide
 permalink: /fitness/
 categories: fitness dashboard
-excerpt: Tracking push ups and pull ups
+excerpt: Witness the Fitness
 ---
 
 <html>
